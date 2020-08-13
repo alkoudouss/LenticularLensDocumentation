@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>The Lenticular Lens Manual</title>
+
+
+<style type="text/css">
+body {
+  font-family: Garamond, Helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; 
+  text-align: justify}
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 30px;
+  color: black; }
+
+h2 {
+  font-size: 26px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	position: relative;
+	margin: .5em 0;
+	-webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+	-moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
+	border-left: 10px solid #358ccb;
+	background-color: #fdfdfd;
+	background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+	background-size: 3em 3em;
+	background-origin: content-box;
+	overflow: visible;
+	padding: 0;
+}
+
+code[class*="language"] {
+	max-height: inherit;
+	height: 100%;
+	padding: 0 1em;
+	display: block;
+	overflow: auto;
+}
+
+/* Margin bottom to accomodate shadow */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background-color: #fdfdfd;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 1em;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	position: relative;
+	padding: .2em;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-ms-border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	border-radius: 0.3em;
+	color: #c92c2c;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: inline;
+	white-space: normal;
+}
+
+pre[class*="language-"]:before,
+pre[class*="language-"]:after {
+	content: '';
+	z-index: -2;
+	display: block;
+	position: absolute;
+	bottom: 0.75em;
+	left: 0.18em;
+	width: 40%;
+	height: 20%;
+	max-height: 13em;
+	-webkit-box-shadow: 0px 13px 8px #979797;
+	-moz-box-shadow: 0px 13px 8px #979797;
+	box-shadow: 0px 13px 8px #979797;
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg);
+	-o-transform: rotate(-2deg);
+	transform: rotate(-2deg);
+}
+
+:not(pre) > code[class*="language-"]:after,
+pre[class*="language-"]:after {
+	right: 0.75em;
+	left: auto;
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7D8B99;
+}
+
+.token.punctuation {
+	color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+	color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+	font-weight: normal;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+	pre[class*="language-"]:before,
+	pre[class*="language-"]:after {
+		bottom: 14px;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+	color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers {
+	padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers code {
+	padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+	left: 0;
+}
+
+/* Plugin styles: Line Highlight */
+pre[class*="language-"][data-line] {
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+pre[data-line] code {
+	position: relative;
+	padding-left: 4em;
+}
+pre .line-highlight {
+	margin-top: 0;
+}
+</style>
+
+<style type="text/css">
+pre.line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+	position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none;
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+</style>
+
+
+</head>
+
+<body>
+
+<!--# <span style="color:purple"> <div align="center"> THE LENTICULAR LENS </div> </span>-->
+
+<h1 style="font-size:4vw; color:purple"> <div align="center">THE LENTICULAR LENS</h1>
+
+<h6 id="toc_0"><div align="center"> A platform for addressing various aspects of the <span style="color:blue"> disambiguation of Entities </span>. <br> These aspects include the <span style="color:blue">creation</span>, <span style="color:blue"> manipulation</span>, <span style="color:blue"> validation</span>, <span style="color:blue"> provenance</span> and <span style="color:blue"> visualisation </span> of links. <br> Developped in the context of <strong>RISIS</strong> &amp; the <strong>Golden Agents Projec</strong>t</div></h6>
+
+<p><img src="Images/LL.jpg" alt="LL"></p>
+
+<!--https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents/33433098#introduction-->
+
+<!--------------------------------------------------------->
+
+<h1 id="toc_1"></span> <div id='CONTENTS'/></h1>
+
+<h1 id="toc_2"><BR> <span style="color:purple"> TABLE OF CONTENTS (TOC) </span></h1>
+
+<!--------------------------------------------------------->
+
+<!--<ol>
+    <li> **[1. Introduction](#Introduction)** </li>
+    <li> Second item< /li>
+    <li>Third item
+        <ul>
+            <li>Indented item</li>
+            <li>Indented item</li>
+        </ul>
+    </li>
+    <li>Fourth item</li>
+</ol>-->
+
+<p><strong><a href="#Introduction">1. Introduction</a></strong><br>
+<strong><a href="#Terminology">2. Terminology</a></strong><br>
+<strong><a href="#The-Lenticular-Lens-Menu">3. The Lenticular Lens Menu</a></strong><br>
+<strong><a href="#Link-Construction">4. Link Construction</a></strong></p>
+
+<ul>
+<li><a href="#Defining-the-Researchs-Scope">4.1 Defining the Research’s Scope</a></li>
+<li><p><a href="#Data-Selection-and-Restrictions">4.2 Data Selection and Restrictions</a></p>
+
+<ul>
+<li><a href="#Data-Selections">4.2.1 Data Selections</a></li>
+<li><a href="#Data-Exploration">4.2.2 Data Exploration</a></li>
+<li><a href="#Entity-Restrictions">4.2.3 Entity Restrictions</a></li>
+<li><a href="#Entity-restriction-options">4.2.3.1 Entity restriction options</a> </li>
+</ul></li>
+<li><p><a href="#Entity-Resolution/Matching">4.3 Entity Resolution/Matching</a></p>
+
+<ul>
+<li><a href="#Resolution-Methods">4.3.1 Resolution Methods</a></li>
+<li><a href="#Complex-Methods">4.3.2 Complex Methods</a>
+
+<ul>
+<li><a href="#T-norms">4.3.2.1 T-norms </a></li>
+<li><a href="#T-conorms">4.3.2.1 T-conorms </a><br></li>
+</ul></li>
+<li><a href="#Matching-in-Practice">4.3.3 Matching in Practice</a>
+
+<ul>
+<li><a href="#Case-Study-1">4.3.3.1 Case Study: </a></li>
+<li><a href="#Case-Study-2">4.3.3.2 Case Study: </a></li>
+<li><a href="#Case-Study-3">4.3.3.3 Case Study: </a></li>
+<li><a href="#Case-Study-4">4.3.3.4 Case Study: </a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong><a href="#Link-Manipulation">5. Link Manipulation</a></strong></p>
+
+<ul>
+<li><a href="#Union">5.1 Union</a></li>
+<li><a href="#Intersection">5.2 Intersection</a></li>
+<li><a href="#Difference">5.3 Difference</a></li>
+<li><a href="#Composition">5.4 Composition</a></li>
+<li><a href="#InSet">5.5 In Set</a></li>
+</ul>
+
+<p><strong><a href="#Link-Validation">6. Link Validation</a></strong><br>
+<strong><a href="#Link-Export">7. Link Export</a></strong></p>
+
+<ul>
+<li><a href="#Export-Structure">7.1 Export Structure</a></li>
+<li><a href="#Export-Restrictions">7.2 Export Restrictions</a></li>
+<li><a href="#Export-Formats">7.3 Export Formats</a></li>
+<li><a href="#Default-Export-Table">7.4 Default Export Table</a></li>
+</ul>
+
+<p><strong><a href="#Data-Integration">8. Data Integration</a></strong><br></p>
+
+<ul>
+<li><a href="#Integration-Model">8.1 Integration Model</a></li>
+<li><a href="#Data-Extraction">8.2 Data Extraction</a></li>
+</ul>
+
+<p><strong><a href="#Installation">9. Installation</a></strong></p>
+
+<p><strong><a href="#API">10. API</a></strong></p>
+
+<h1 id="toc_3"></span> <div id=''/></h1>
+
+<!--------------------------------------------------------->
+
+<h1 id="toc_4"></span> <div id='Introduction'/></h1>
+
+<h1 id="toc_5"><BR> <span style="color:purple">  1. INTRODUCTION (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!--------------------------------------------------------->
+
+<p>Time and again, researchers are presented with problems for which they postulate and test hypotheses in order to provide us with robust explanations for research questions successfully investigated. Often enough, solid explanations for complex problems require exploring a multitude of datasources. This is the case, for example, in domains such as e-science (multiple scientific datasets), e-commerce (multiple product vendors), tourism (multiple data providers), e-social science, digital humanities, etc. </p>
+
+<p><span style="color: purple"> <strong>DATA INTEGRATION.</strong> </span> The use of various datasources come at the expense of heterogeneity which obfuscates the path to data integration and thereby hinders accurately addressing complex problems.
+Dealing with multiple datasources or data providers highlights the freedom at which providers document facets of the same entity. Indeed, this feature of oriented freedom for entity descriptions can explain, to a certain extent, the inherent difficulty to integrate heterogeneous datasources.
+<!--The inherent difficulty to integrate heterogeneous datasources can be explained, to a certain extent, by the lack of uniform entity description or vocabulary when the feature of oriented freedom for entity descriptions is exploited. 
+-->
+In the Semantic Web, this problem is partially circumvented as any pair of resources can be linked regardless to the uniformity of data representation or vocabulary used, i.e. uniformizing data/schema <!--uniform view --> is not a prerequisite for data integration provided that links between co-referent entities across heterogeneous datasets exist.</p>
+
+<p><span style="color: purple"> <strong>RESULT QUALITY.</strong> </span> The quality of supporting evidence for accepting or rejecting the hypothesis under investigation for a complex problem greatly depends on the correctness of the links integrating the underlying datasources. 
+This begs for questions regarding the aboutness and correctness of the links, such as: <br></p>
+
+<ul>
+<li>How to create correct links? More specifically, are there reliable tools for linking co-referent descriptions of entity scattered across various heterogeneous datasets? Can different tolls be combined?</li>
+<li>How to judge the applicability of links? Can their quality be estimated? Can they be improved, manipulated, visualised for validation purposes, reproduced? More specifically, is there a platform that supports all of the aforementioned concerns?</li>
+</ul>
+
+<!--
+<span style="color:blue"> **CONNECTING DATASOURCES.** </span> 
+Links connecting datasources are created under a context that provides evidence for its quality, on the basis of which they will be accepted or rejected as results supporting the investigation of a complex problem ...
+
+The correctness of the links that integrate heterogenous datasets greatly depends on the quality of supporting evidence for accepting or rejecting the results of the investigation of a complex problem 
+-->
+
+<p><span style="color: purple"> <strong>LINK CONSTRUCTION.</strong> </span> Through the years, a number of entity matching tools have been developed and tested. 
+However, some of theses tools have been developed for specific datasets, while others have limited applicability as they have mainly been tested in domain specific areas using synthetic or simplistic data, generally from at most two datasets. For example, as research in social sciences is increasingly based on multiple heterogeneous datasources, it becomes problematic to be limited to the integration of two datasets. 
+Furthermore, in practice, the heterogeneity, messiness, incompleteness of data raise the bar higher in terms of entity matching complexity. <br>
+In other words, most matching algorithms have been successfully applied in limited and controlled environments. This motivates the need for having the means to (re)use and combine generic matching approaches in order to solve specific problems.</p>
+
+<!--This is the case for example in domains such as e-science (multiple scientific datasets), e-commerce (multiple product vendors), tourism (multiple data providers), e-social science, digital humanities, etc. -->
+
+<p><span style="color: purple"> <strong>ENTITY DISAMBIGUATION PROPOSAL.</strong> </span> In this document, we present a tool that supports disambiguation over multiple datasets: the <strong>Lenticular Lens</strong>. As a domain agnostic approach, the <strong>Lenticular Lens</strong> tool reuses existing matching approaches to allow for the user to reach their goals in ways that alleviates some of the main aforementioned issues:</p>
+
+<!--As opposed to black-box approaches, the Lenticular Lens tool allows machine and user to interact in ways that enable alleviating some of the main issues:
+-->
+
+<ul>
+<li>User-dependent and context-specific link discovery.</li>
+<li>User-based explicit concept mapping.</li>
+<li>Integration of more than two datasets.</li>
+<li>Combining entity matching algorithms and results.</li>
+<li>Structure-based evaluation of identity link networks.</li>
+<li>Enabling visualisation to support link/cluster validation.</li>
+<li>Metadata for documenting the link aboutness and enabling reproducibility.</li>
+</ul>
+
+<!--It is a user guided tool for links discovery, links manipulation (combination and validation) and for modelling RDF data integration while documenting links’ provenance.-->
+
+<!--J. Euzenat and P. Shvaiko.Ontology matching. Springer-Verlag, Heidelberg (DE),2nd edition, 2013.-->
+
+<p>The context dependent link discovery idea developed and implemented in the <strong>Lenticular Lens</strong> <mark>[Refs]</mark> is an extension of the Linkset and Lens concepts introduced by the Open PHACTS project  <mark>[Ref]</mark> in the quests for building an infrastructure for integrating pharmacological data. Our extension and broadening of these concepts enabled us to design and build a flexible tool for undertaking entity disambiguation in a broader perspective.</p>
+
+<!---------------------------------------------------------->
+
+<h1 id="toc_6"><br> <div id='Terminology'/></h1>
+
+<h1 id="toc_7"><span style="color:purple">  2. TERMINOLOGY </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!---------------------------------------------------------->
+
+<p>Before diving into how to use the <strong>Lenticular Lens</strong>, we define a number of terms we believe to be important for a better comprehension of what is offered by the tool. For some of the concepts defined here, we opt for a broader scope which fits best problems encounter in every day life
+<!-- definition in [VoID](https://www.w3.org/TR/void/)-->.</p>
+
+<p><span style="color: purple">  <strong>RESOURCE.</strong> </span> <q>Anything can be a resource, including physical things, documents, abstract concepts, numbers and strings.</q> <a href="https://www.w3.org/TR/rdf11-concepts/#data-model">RDF 1.1</a></p>
+
+<p><span style="color: purple">  <strong>IRI - URI - URL - URN .</strong> </span> These constitute ways in which things (resources) in the real world can be referred to in the digital world. <q>The resource denoted by an IRI is called its <strong>referent</strong>, and the resource denoted by a literal is called its literal value.</q> <a href="https://www.w3.org/TR/rdf11-concepts/#data-model">RDF 1.1</a>. In the IRI example provided below, we illustrate six IRIs referents of resources of various types (hero, villain and vocabulary). </p>
+
+<div><pre class="line-numbers"><code class="language-none">Example: IRIs
+-------------
+ A resource&#39;s REFERENT is an IRI.
+ A resource&#39;s LITERAL VALUE is a LITERAL.
+
+    http://example.org/villain#Green-Goblin
+    http://example.org/villain#Thanos
+    http://example.org/hero#Spiderman
+    http://example.org/person#Peter-Parker
+    http://www.perceive.net/schemas/relationship/enemyOf
+    http://xmlns.com/foaf/0.1/name
+
+</code></pre></div>
+
+<p><a href="https://fusion.cs.uni-jena.de/fusion/blog/2016/11/18/iri-uri-url-urn-and-their-differences/">Fusion</a> provides nice wording of all these terms as provided below. In short, URL, URN and URI are all specific types of an IRI. </p>
+
+<ul>
+<li><p><strong>URI.</strong> <q>A Uniform Resource Identifier is a compact sequence of characters that identifies an abstract or physical resource. The set of characters is limited to US-ASCII excluding some reserved characters. Characters outside the set of allowed characters can be represented using Percent-Encoding. A URI can be used as a locator, a name, or both. If a URI is a locator, it describes a resource’s primary access mechanism. If a URI is a name, it identifies a resource by giving it a unique name. The exact specifications of syntax and semantics of a URI depend on the used Scheme that is defined by the characters before the first colon. [RFC3986]</q></p></li>
+<li><p><strong>URN.</strong> <q>A Uniform Resource Name is a URI in the scheme urn intended to serve as persistent, location-independent, resource identifier. Historically, the term also referred to any URI. [RFC3986] A URN consists of a Namespace Identifier (NID) and a Namespace Specific String (NSS): urn:<NID>:<NSS> The syntax and semantics of the NSS is specific specific for each NID. Beside the registered NIDs, there exist several more NIDs, that did not go through the official registration process. [RFC2141]</q></p></li>
+<li><p><strong>URL</strong> <q>A Uniform Resource Locator is a URI that, in addition to identifying a resource, provides a means of locating the resource by describing its primary access mechanism [RFC3986]. As there is no exact definition of URL by means of a set of Schemes, URL is a useful but informal concept, usually referring to a subset of URIs that do not contain URNs [RFC3305].</q></p></li>
+<li><p><strong>IRI</strong> <q>An Internationalized Resource Identifier is defined similarly to a URI, but the character set is extended to the Universal Coded Character Set. Therefore, it can contain any Latin and non Latin characters except the reserved characters. Instead of extending the definition of URI, the term IRI was introduced to allow for a clear distinction and avoid incompatibilities. IRIs are meant to replace URIs in identifying resources in situations where the Universal Coded Character Set is supported. By definition, every URI is an IRI. Furthermore, there is a defined surjective mapping of IRIs to URIs: Every IRI can be mapped to exactly one URI, but different IRIs might map to the same URI. Therefore, the conversion back from a URI to an IRI may not produce the original IRI. [RFC3987]</q></p></li>
+</ul>
+
+<p><span style="color: purple">  <strong>RDF.</strong> </span> As described by the <a href="https://www.w3.org/RDF/">W3C</a>, RDF is a <strong>graph-based data model</strong> for interchanging data on the Web and it stands for Resource Description Framework. In other words, <a href="https://www.Lexico.com/en/definition/rdf">Lexico</a>, the Oxford supported dictionary, emphasises on the semantic aspect by defining it as a model for encoding semantic relationships between items of data so that these relationships can be interpreted computationally. Expressing a relationship between a pair of RDF resources is done as a sequence 〈subject relation object .〉 of three terms. The sequence of terms is called a triple where each of its terms is separated by whitespace and the sequence is terminated by &lsquo;.&rsquo;. The example below illustrates two simple triple syntax. The triples, not only do they provid Spiderman&rsquo;s mane and assert that Spiderman and Peter Parker are the same, but they also provid identification for <code>Spiderman</code>, <code>Peter Parker</code> and the vocabulary terms <code>name</code> and <code>sameAs</code>. <br>
+In RDF, any triple is an <strong>RDF STATEMENT</strong>. There exist various syntaxes for representing triple statements. For further reading, see
+ <a href="https://www.w3.org/TR/n-triples/">N-Triples</a>, <a href="https://www.w3.org/TeamSubmission/n3/">Notation3</a>, <a href="https://www.w3.org/TR/n-quads/">N-Quads</a>, <a href="https://www.w3.org/TR/turtle/">Turtle</a>,  <a href="https://www.w3.org/TR/rdf-syntax-grammar/#:%7E:text=Definition%3A,as%20defined%20in%20this%20document.">RDF XML</a>, <a href="https://www.w3.org/MarkUp/2004/rdf-a">RDFa</a>,<a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a>&hellip; <br></p>
+
+<div><pre class="line-numbers"><code class="language-none">-----------------------------------------
+-- Example: TRIPLES IN N-TRIPLE SYNTAX --
+-----------------------------------------
+&lt;http://example.org/hero#Spiderman&gt;  &lt;http://xmlns.com/foaf/0.1/name&gt;        &quot;Peter-Parker&quot; .
+&lt;http://example.org/hero#Spiderman&gt;  &lt;http://www.w3.org/2002/07/owl#sameAs&gt;  &lt;http://example.org/person#Peter-Parker&gt;
+
+</code></pre></div>
+
+<!--<span style="color: purple">  **URI.** </span> The term stands for Uniform Resource Identifier. As described, literally, it is a string of characters that represents a unique identification of a resource described using the Resource Description Framework model.-->
+
+<div><pre class="line-numbers"><code class="language-none">---------------------------------------
+-- Example: TRIPLES IN TURTLE SYNTAX --
+---------------------------------------
+@prefix  ex: &lt;http://example.org/#&gt; .
+@prefix rel: &lt;http://www.perceive.net/schemas/relationship/&gt; .
+
+ex:green-goblin&gt;  rel:enemyOf  ex:Spiderman .
+ex:spiderman      foaf:name     ex:Peter-Parker.</code></pre></div>
+
+<p><br><span style="color: purple">  <strong>RDF LINK.</strong> </span> It is also known as a <strong>correspondent triple</strong> <span style="color:blue">[<em>Euzenat</em>]</span> or simply <strong>link</strong> in RDF<mark>??</mark> and <span style="color:blue">[<em>VoID</em>]</span>. Links are triples in the form of 〈subject relation object〉 and are meant to exist only between two datasets. However, beside the incentive for providers to link their data to existing datasets, we do not see a good reason for a link not to exist within the same dataset. Thereby, in this document, an RDF link is a  relation between two resources (<em>digital representations of entities presented as URIs</em>) regardless of the datasource they stem from. This means a that a link can involve a minimum of one dataset and a maximum of two.</p>
+
+<p><span style="color: purple">  <strong>IDENTITY LINK.</strong> </span> </span> An <strong>equality relation</strong> between two resources (<em>digital representations of the same real world entity presented as URIs</em>) regardless of the datasource they stem from. In this document we often use the term <strong>link</strong> to denote <strong>identity link</strong> unless otherwise stated. Mainly described using the predicate <code>owl:sameAs</code>, such encoded semantic relationship entails full equality between two resources. This Semantic interpretation applies independently of context even though in real life problems, the equality between resources depends not only on their intrinsic properties but also on the purpose or task for which they are used. In this regard, we present the in the <code>Export</code> menu section the <strong>Lenticular Lens</strong> approach on the use and documentation of identity links in practice.</p>
+
+<p><span style="color: purple">  <strong>LINK VALIDATION.</strong> </span> The process of accepting or rejecting a link. This process is documented with the validation status (accepted or rejected) of the link and the supporting reasons.</p>
+
+<p><span style="color: purple">  <strong>LINK SPECIFICATION.</strong> </span> In the <strong>Lenticular Lens</strong>, a link specification can be view as a reproducibility metadata. It provides information on how set of links came to be. In other worlds, it explicitly defines the context in which a link hold and supports decisions making during the validation process (accepting or rejecting a link). </p>
+
+<p><span style="color: purple">  <strong>LINKSET/ALIGNMENT.</strong> </span> In <span style="color:blue">[<em>VoID</em>]</span>, a linkset is a collection of RDF links between <strong>two datasets</strong> where all subjects stem from one dataset and all objects from the other dataset. In here, we alleviate such strict restriction by allowing a linkset to be a set of triples using the same link predicate (regardless of the link being an equality predicate or not) over one or two datasets. This predicate is called the linktype of the linkset. <br>
+In the <strong>Lenticular Lens</strong>, all links within a linkset share the same generic link-specification.</p>
+
+<p><span style="color: purple">  <strong>LENS.</strong> </span> A type of linkset involving one, two or more datasets and a set-like link manipulation operators such as Union, Intersection, Difference or Transitivity.</p>
+
+<p><span style="color: purple">  <strong>IDENTITY LINK NETWORK.</strong> </span> A set of co-referent entities regardless of the data they stem from. This can also be viewed as an <strong>Identity Cluster</strong> of co-referent entities.</p>
+
+<p><span style="color: purple">  <strong>NAMED GRAPH.</strong> </span>  According to <a href="https://en.wikipedia.org/wiki/Named_graph">Wikipedia</a>, named graphs are a key concept of Semantic Web architecture in which a set of Resource Description Framework statements (a graph) are identified using a IRI, allowing descriptions to be made of that set of statements such as context, provenance information or other such metadata.</p>
+
+<div><pre class="line-numbers"><code class="language-none">--------------------------
+-- Example: NAMED GRAPH --
+--------------------------
+Turtle named graph syntax of a linkset of three links using the owl:sameAs linktype. 
+In the example, http://example.org/#linkset-1 is the IRI of the named graph. For 
+more detail on Turtle RDF syntax, See https://www.w3.org/TR/turtle/#simple-triples. 
+where EXAMPLE 9 illustrates  all the different ways of writing IRIs in Turtle.
+
+@base &lt;http://example.org/&gt; .
+@prefix   ex: &lt;http://example.org/#&gt; .
+@prefix  owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix  sim: &lt;http://purl.org/ontology/similarity/&gt; .
+
+ex:linkset-1
+{
+    ex:Chiara   owl:sameAs  ex:Latronico .
+    ex:Al       owl:sameAs  ex:Al_Idrissou .
+    ex:Al       owl:sameAs  ex:Al_Koudous .
+}</code></pre></div>
+
+<p><br><span style="color: purple">  <strong>DEFAULT GRAPH.</strong> </span> In a triple-store jargon, any triple without a specific named-graph ends up in the default graph. In the example below, the triple at line 4 is located in the default graph while triples at line 8 and 9 are in an <strong>explicitly stated graph</strong>, in the named-graph: ex:linkset-1.</p>
+
+<div><pre class="line-numbers"><code class="language-none">----------------------------------
+-- Example: DEFAULT NAMED-GRAPH --
+----------------------------------
+
+ex:Chiara   owl:sameAs  ex:Latronico .
+
+ex:linkset-1
+{
+    ex:Al       owl:sameAs  ex:Al_Idrissou .
+    ex:Al       owl:sameAs  ex:Al_Koudous .
+}</code></pre></div>
+
+<p><br> <span style="color: purple">  <strong>PREFIX.</strong> </span> Below are the prefixes used in this document:</p>
+
+<div><pre class="line-numbers"><code class="language-none">-----------------------------------------------
+-- Example 5.1: PREFIXES USED IN THIS MANUAL --
+-----------------------------------------------
+
+   @prefix          A: &lt;http://example.org/A#&gt; .
+   @prefix          B: &lt;http://example.org/B#&gt; .
+   @prefix          C: &lt;http://example.org/C#&gt; .
+    @prefix    dataset: &lt;http://example.org/dataset#&gt; .
+    @prefix    dcterms: &lt;http://purl.org/dc/terms/&gt; .
+    @prefix         ex: &lt;http://example.org/#&gt; .
+    @prefix     format: &lt;http://www.w3.org/ns/formats/&gt; .
+    @prefix       hero: &lt;http://example.org/hero#&gt; .
+    @prefix        law: &lt;http://www.opendatacommons.org/&gt;
+    @prefix        owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+    @prefix     person: &lt;http://example.org/person#&gt; .
+    @prefix       prov: &lt;http://www.w3.org/ns/prov#&gt; .
+    @prefix        rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+    @prefix        rel: &lt;http://www.perceive.net/schemas/relationship/&gt; .
+    @prefix        sim: &lt;http://purl.org/ontology/similarity/&gt; .
+    @prefix       void: &lt;http://rdfs.org/ns/void#&gt; .
+    @prefix   voidPlus: &lt;http://vocabulary/voidPlus#&gt; .
+    @prefix validation: &lt;http://vocabulary/validation#&gt; .
+    </code></pre></div>
+
+<!--------------------------------------------------------------------->
+
+<h1 id="toc_8"></span> <div id='The-Lenticular-Lens-Menu'/></h1>
+
+<h1 id="toc_9"><br> <span style="color:purple"> 3. THE LENTICULAR LENS MENUS </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!--------------------------------------------------------------------->
+
+<p><img src="Images/LL.jpg" alt="LL"></p>
+
+<p>As a preview of what can be done with the <strong>Lenticular Lens</strong> tool, we list here the main menus composing the tool and provide a brief description of what can be done in each of the menu. </p>
+
+<ul>
+<li><p><span style="color:blue"> <strong>RESEARCH.</strong> </span> In this menu, we illustrates how to defined the scope of a research.</p></li>
+<li><p><span style="color:blue"> <strong>SELECT.</strong> </span>  In this menu, we illustrates how to:</p>
+
+<ul>
+<li>Use the default Golden Agent&rsquo;s endpoint or to provide other GraphQL locations so that remote datasources can be located and made available to the user;</li>
+<li>Select (datasources and data-types) from the available list of datasources at the remote location so that data can be integrated and vital information can be extracted in order to conduct our experiment; </li>
+<li>Define restrictions over selected entity-types. </li>
+</ul></li>
+<li><p><span style="color:blue"> <strong>CREATE.</strong> </span>  In this menu, we show how to use and combine resolution methods.</p></li>
+<li><p><span style="color:blue"> <strong>MANIPULATE.</strong> </span>  In this menu, we show how to apply set like operations (Union, Intersection, Difference, Composition and In-Set) over linksets and lenses.</p></li>
+<li><p><span style="color:blue"> <strong>VALIDATE.</strong> </span>  In this menu, we show how to validate existing links (accept, reject, validation rational) for analysis or method accuracy. We also show in this menu how to use the visualisation feature to ease to some extent the validation task.</p></li>
+<li><p><span style="color:blue"> <strong>EXPORT.</strong> </span> This menu illustrates the reach options supporting the export of a linkset or lens.</p></li>
+<li><p><span style="color:blue"> <strong>EXTRACT.</strong> </span>  In this last menu, we show how the user can materialise the entity-based integration of her selected datasource for the extraction of information vital to her analysis. </p></li>
+</ul>
+
+<p>The rest of the manual will first discuss <strong>LINK CONSTRUCTION</strong> (it includes the <code>RESEARCH</code>, <code>SELECT</code> and <code>CREATE</code> options), then <strong>LINK MANIPULATION</strong> (it includes the <code>MANIPULATE</code>, and <code>VALIDATION</code> options), followed by <strong>LINK EXPORT</strong> (it is about the <code>EXPORT</code> option) and finally <strong>INTEGRATION MODEL</strong> (it is about the <code>EXTRACT</code> option).</p>
+
+<!--* <span style="color:blue"> **LINK CONSTRUCTION.** </span> It includes the `RESEARCH`, `SELECT` and `CREATE` menus.
+* <span style="color:blue"> **LINK MANIPULATION.** </span> It includes the `MANIPULATE`, and `VALIDATION` menus.
+* <span style="color:blue"> **LINK EXPORT.** </span> It explicitly about the `EXPORT` menus.-->
+
+<!------------------------------------------------------------->
+
+<h1 id="toc_10"></span> <div id='Link-Construction'/></h1>
+
+<h1 id="toc_11"><br> <span style="color:purple"> 4. LINK CONSTRUCTION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!------------------------------------------------------------->
+
+<p>Linking co-referent entities across a variety of datasources is a pragmatic and fast way to seamlessly navigate across datasets without having to agree in a uniform vocabulary. This solution offered in the Semantic Web architecture appears attractive as the ultimate goal for the researcher executing this task is not the integration of data but the extraction of vital information for reaching valid conclusions about problems under scrutiny. 
+This said, the <strong>Lenticular Lens</strong> offers means to reach that ultimate goal of the researcher while making sure that the steps taken by the researcher are documented such that other researchers can easily re-generate the data leading to specific conclusions if need be.</p>
+
+<p>Along the way of entity-based data integration and data extraction, the <strong>Lenticular Lens</strong> aims to document among others: </p>
+
+<ol>
+<li>The datasources to integrate;</li>
+<li>The reasons behind a specific integration; </li>
+<li>The entity types and restrictions that ensure correctness in bridging across datasources of interest; </li>
+<li>The matching methods and specifications justifying the existence of a set of links. </li>
+</ol>
+
+<p>The <strong>Lenticular Lens</strong> tool aims to provide generic methods that allows a broader audience suffering the same need for data integration. The first step in creating and documenting links using the <strong>Lenticular Lens</strong> is defining the scope in witch links are to be created and possibly validated. For that, the tool offers the <code>RESEARCH</code> menu followed by the <code>SELECT</code> and <code>CONSTRUCT</code> menus.</p>
+
+<p>We now go through each of these first three menus underlying the existence of links.</p>
+
+<h1 id="toc_12"></span> <div id="Defining-the-Researchs-Scope"/></h1>
+
+<h2 id="toc_13"><span style="color:purple"> 4.1 Defining the Research&rsquo;s Scope</span></h2>
+
+<!------------------------------------------------------------------->
+
+<p>The <code>RESEARCH</code> menu is the starting point in learning how to interact with the <strong>Lenticular Lens</strong> tool. In general, a research question somehow sets the scope in which link creations, manipulations or validation take place. This provides the first building block supporting the user with defining the context in which a particular alignment is generated. Using this menu, part of the context is made explicit by selecting the datasets and entity types necessary to continue the investigation.</p>
+
+<p>As an overview, the <code>RESEARCH</code> menu provides researchers with means to describe the research of interest in terms of:</p>
+
+<ul>
+<li><code>Research Question</code> for inserting the main research question driving the integration. </li>
+<li><code>Hypothesis</code> for pointing out the hypothesis in mind prior to the data extraction. </li>
+<li><code>Link</code> and <code>Citation</code> to ensure that, if the results happen to be published, the researcher still has the facility to add a link to the publication and and a bibliographic reference for future reuse.</li>
+</ul>
+
+<p>Fig. 4.1 illustrates the different fields to be filled in by the researcher for a quick overview of what can happen in this research project and why. Once providing the information is done, the <code>Save</code> button at the bottom of the page can be clicked to save the provided information and exit the <strong>Lenticular Lens</strong> if the user which to continue with other tasks. Or, should the user choose to continue the alternative <code>Save and next</code> button can be used to save the project and move to the next window.</p>
+
+<p><div align="center"> <img src="Images/LL_Research.jpg" alt="The Lenticular Lens Research window">Fig. 4.1:  Describing the scope of he research question. </div>
+ <br></p>
+
+<h1 id="toc_14"></span> <div id='Data-Selection-and-Restrictions'/></h1>
+
+<h2 id="toc_15"><span style="color:purple"> 4.2 Data Selection and Restrictions </span></h2>
+
+<!----------------------------------------------------------------------->
+
+<p>In the previous step or window, the researcher has defined the scope of the research for which data are to be extracted and analysed. In this second window labelled <code>SELECT</code>, the user is to describe and select the entity types involved in his research. For that, the location of the datasource needs to be provided and the datasets in which the respective entities of interest reside need to be selected.</p>
+
+<h1 id="toc_16"></span> <div id='Data-Selections'/></h1>
+
+<h3 id="toc_17"><span style="color:purple"> 4.2.1 Data Selections </span></h3>
+
+<!--------------------------------------------------------->
+
+<p>As the user activates the <code>Saves and next</code> button at the end of the previous page, she is presented with a new window with a single  card labelled <code>Entity-Type Selection 1</code> as presented in Fig. 4.2.  The plus  <sub><img src="Images/LL_PlusButton.jpg" alt=""></sub> button at the right side of the picture enables the user to create new cards when needed while the arrow-head <sub><img src="Images/LL_ArrowHead.jpg" alt=""></sub> button at the left side of the card&rsquo;s label allows for the unveiling of the card as displayed in Fig 3.</p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection-1.jpg" alt="Explore Sample 1"> Fig. 4.2:  The card view for data selection </div>
+<br></p>
+
+<p>Describing the type of an entity can be done using the <code>Description</code> text box for each entity type. To provide the location of the data, the <code>GraphQL Endpoint</code> text box can be use to fill in the URL of any GraphQL end point. Once the endpoint is given and loaded, a dataset can be selected from the list of datasets available at the provided endpoint. The selection of a dataset will prompt a new dropdown text box as <code>Entity type</code>, providing the user with the facility to select the entity type of interest. After loading the provided URL of the default Golden Agent&rsquo;s endpoint, Fig. 4.3 shows the list of datasets available at that location to choose from.</p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection.jpg" alt="The Lenticular Lens Research window"> Fig. 4.3:  List of datasets available at the default Golden Agent&rsquo;s GraphQL endpoint. </div> <br></p>
+
+<h1 id="toc_18"></span> <div id='Data-Exploration'/></h1>
+
+<h3 id="toc_19"><span style="color:purple"> 4.2.2 Data Exploration</span></h3>
+
+<!---------------------------------------------------------->
+
+<p>At this point, successfully providing the required information (<code>Dataset</code> and <code>Entity-Type</code>) triggers the appearance of the <code>Explore Sample</code> button at the right side of the card&rsquo;s label (<code>Entity-type selection 1</code>) as displayed in Fig. 4.4. As illustrated in Fig. 4.5, with this button, users are now able to explore information of their choice about the entities of interest by selecting properties describing them. Keep in mind that this feature is only intended as exploration alternative to make sure of the choices (dataset, entity-type and restrictions) made.</p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection-2.jpg" alt="Explore Sample 1"> Fig. 4.4:  Example of the <code>Explore sample</code> button showing only after the entity type is selected. </div> <br></p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection-3.jpg" alt="Explore Sample 1"> Fig. 4.5:  Exploring the description of entities of choice, stemmed from the dataset of interest. </div> <br></p>
+
+<h1 id="toc_20"></span> <div id='Entity-Restrictions'/></h1>
+
+<h3 id="toc_21"><span style="color:purple"> 4.2.3 Entity Restrictions </span></h3>
+
+<!-------------------------------------------------------------->
+
+<p>If need be to filter entities based on specific conditions, this is also possible with the <code>Filter</code> card shown in Fig. 4.6. <div align="center"> <img src="Images/LL_Enty-Type-Selection-4-Filter.jpg" alt="Entities Restrictions"> Fig. 4.6: The card for defining entity restrictions. </div> </p>
+
+<p>Once the <sub><img src="Images/LL_PlusButton.jpg" alt=""></sub> button is clicked, this card presents the user with a Filter-Logic box which enable the creation of a relatively complex and versatile entity restrictions. Fig. 4.7 for example show the list of available filtering options while Fig. 4.8 illustrates an example where the <code>has minimum date</code> and <code>has maximum date</code> filtering options are used to isolate entities of interest. These entities are now those between with a registration date between [1600, 1659] and having their respective literal name exempt of trailing dots (&hellip;).</p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection-4-Filter-3.jpg" alt="List of restriction options"> Fig. 4.7: List of restriction options. </div> <br></p>
+
+<p><div align="center"> <img src="Images/LL_Enty-Type-Selection-4-Filter-2.jpg" alt="Entities Restrictions"> Fig. 4.8: The card for defining entity restrictions. </div> <br></p>
+
+<h1 id="toc_22"></span> <div id='Entity-restriction-options'/></h1>
+
+<h4 id="toc_23"><span style="color:purple"> 4.2.3.1 Entity restriction options </span></h4>
+
+<!--------------------------------------------------------------------->
+
+<ul>
+<li><p><span style="color:blue"> <strong>Equal to / Not Equal to.</strong> </span> This option allows one to select entities that have the value of a certain property equal (or not) to a certain value. For example, all entities with property <code>ex:workLocation</code> equal (or not) to <code>Amsterdam</code>.<br></p></li>
+<li><p><span style="color:blue"> <strong>Contains / Does not contain.</strong> </span> This option is used to make sure that the property-value of the entities of interest <strong>contains</strong> or <strong>does not contain</strong> a specific sequence of characters. For example, <code>%...%</code> could be used for (i) excluding people whose names contain trailing dots or (ii) to select those entities to apply a particular modification onto their names, like adding the surname of the father for a baptised child whose surname is given as <code>...</code>.
+<!--notifying that entities with names containing trailing dots are not to be included or that we would like to applied a particular modification onto those names.
+--></p></li>
+<li><p><span style="color:blue"> <strong>Has property / Has no property.</strong> </span> This option is used to select entities based on the existence (or not) of a certain property. Let assume, for example, that the user is interested in entities that are parents. This option allows one to filter all entities for which the a value exists for the property <code>ex:parentOf</code> for example.  It also allows you to exclude all entities that are parents if the option <code>Has no property</code> is used instead.<br></p></li>
+<li><p><span style="color:blue"> <strong>Has minimum / maximum value.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>number</strong> over which the restriction can be applied. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
+<li><p><span style="color:blue"> <strong>Has minimum / maximum date.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>date</strong> over which the restriction can be applied. Within this option, a date format can be specified. The default format is <code>YYYY-MM-DD</code>. The values 10, 300 and 1990 for example will be considered as year while 10-1, 300-1 and 1990-1 will be considered as the first month of the respective year values. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
+<li><p><span style="color:blue"> <strong>Has minimum / maximum appearances.</strong> </span> This option allows for restricting entities for which a given property value occurs <strong>within</strong> a <strong>specified range</strong>. For example, to avoid excessive number of possible matches, one can delimit that only entities whose name value occur less than 5 times in the dataset will be included. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
+<li><p><span style="color:blue"> <strong>In set.</strong> </span> This option allows the filtering of a collection of resources of interest based on a set of resources. These set of resources is not manually provided but can be obtained through a list of existing linksets or lenses. The example below provides a detailed understanding of this filtering approach. </p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------------
+-- Example: IN SET --
+---------------------
+Two collections A and B to be matched via whatever method would create a se of 
+links labelled linkset-AB. However, we are only interested in a subset of 
+linkset-AB, such that it&#39;s resources (subject, object or both) are present in 
+another given set, namely an input-linkset I. For efficiency purposes, 
+linkset-AB does not need to be fully created to be filtered later on. This 
+implies that the collections A and/or B need to be filtered such that 
+A&#39; = A ∩ I and/or B&#39; = B ∩ I before executing the matching algorithm.
+
+    ######################################################
+    #           Linksets as named graphs                 #
+    ######################################################
+
+    ex:input-linkset
+    {
+        A:Chiara  owl:sameAs      C:Latronico .
+        A:Al      owl:sameAs      C:Al_Idrissou .
+        A:Al      owl:sameAs      C:Al_Koudous .
+    }
+
+    ex:linkset-AB
+    {
+        A:Chiara  owl:sameAs     B:Chiara .
+        A:Kerim   owl:sameAs     B:Kerim .
+    }
+
+    ######################################################
+    #               In Resource Set                      #
+    ######################################################
+    ### The set S of resources from input-linkset is:
+    ### S = {A:Chiara, A:Al, C:Latronico, C:Al_Idrissou, C:Al_Koudous}
+
+    ex:linkset-SubjectInSet
+    {
+        A:Chiara    owl:sameAs  B:Chiara .
+    }</code></pre></div>
+
+<p><br></p></li>
+</ul>
+
+<h1 id="toc_24"></span> <div id='Entity-Resolution/Matching'/></h1>
+
+<h2 id="toc_25"><span style="color:purple"> 4.3 Entity Resolution/Matching </span></h2>
+
+<!----------------------------------------------------------------->
+
+<p>So far, the <code>RESEARCH</code> and <code>SELECT</code> menus set the scene for allowing the user to create the links that will enable the integration of datasources selected within the <code>SELECT</code> menus. In the current menu, the <code>CREATE</code> menu, we will describe the built-in entity resolution algorithms for finding links between entities stemmed from the user-selected datasets. Using the <strong>Lenticular Lens</strong> Logic-Box, we will show how the tool makes it possible to combine the available resolution algorithms and matching rules for the discovery of links within and/or across the datasources of interest.</p>
+
+<h1 id="toc_26"></span> <div id='Resolution-Methods'/></h1>
+
+<h3 id="toc_27"><span style="color:purple"> 4.3.1 Resolution Methods </span></h3>
+
+<!----------------------------------------------------------->
+
+<p><p> <span style="color:blue"><strong>​1. Embedded.</strong> </span> The method extracts an alignment already provided within the source dataset. The extraction relies on the value of the linking property, i.e. property of the source that holds the identifier of the target. However, the real mechanism used to create the alignment is not explicitly provided by the source.</p>
+
+<p><span style="color:blue"><strong>2. Exact.</strong> </span> This method is used to align source and target’s IRIs whenever their respective user selected property values are identical.</p>
+
+<p><span style="color:blue"><strong>3. Intermediate.</strong> </span> The method aligns the source and the target’s IRIs via an intermediate database by using properties that potentially present different descriptions of the same entity, such as country name and country code. This is possible by providing an intermediate dataset that binds the two alternative descriptions to the very same identifier.</p>
+
+<div><pre class="line-numbers"><code class="language-none">-----------------------------------
+-- Example: INTERMEDIATE DATASET --
+-----------------------------------
+In the example below, it is possible to align the source and target country 
+entities using the properties country and iso-3 via the intermediate dataset
+because it contains the information described at both, the Source and Target.
+
+dataset:Source-Dataset                       dataset:Intermediate-Dataset
+{                                            {
+    ex:1  rdfs:label  &quot;Benin&quot; .                 ex:7
+    ex:2  rdfs:label  &quot;Cote d&#39;Ivoire&quot; .              ex:name &quot;Cote d&#39;Ivoire&quot; ;
+    ex:3  rdfs:label  &quot;Netherlands&quot; .                ex:code &quot;CIV&quot; .
+}   
+                                                ex:8                             
+dataset:Target-Datas                                ex:name &quot;Benin&quot; ;
+{                                                   ex:code &quot;BEN&quot; .
+    ex:4 ex:iso-3 &quot;CIV&quot; .
+    ex:5 ex:iso-3 &quot;NLD&quot; .                       ex:9
+    ex:6 ex:iso-3 &quot;BEN&quot; .                           ex:name &quot;Netherlands&quot; ;
+}                                                   ex:code &quot;NLD&quot; .
+                                             }
+
+ALIGNMENT: 
+  • If rdfs:label is aligned with ex:name 
+  • AND ex:iso-3 is aligned with ex:code,
+  • We then get the following linkset:
+
+    linkset:Match-Via-Intermediate
+    {
+        ex:1 owl:sameAs ex:6 .
+        ex:2 owl:sameAs ex:4 .
+        ex:3 owl:sameAs ex:5 .
+    }
+
+dataset:Source-Dataset                       dataset:Intermediate-Dataset
+{                                            {
+    ex:10  rdfs:label  &quot;Rembrandt&quot; .             ex:70
+    ex:20  rdfs:label  &quot;van Gogh&quot; .                  ex:name &quot;Vincent Willem van Gogh&quot; ;
+    ex:30  rdfs:label  &quot;Vermeer&quot; .                   ex:name &quot;Vincent van Gogh&quot; ;
+}                                                    ex:name &quot;van Gogh&quot; .
+                                                ex:80                             
+dataset:Target-Datas                                ex:name &quot;Rembrandt&quot; ;
+{                                                   ex:name &quot;Rembrandt van Rijn&quot; .
+    ex:40 schema:name &quot;Rembrandt van Rijn&quot; .
+    ex:50 schema:name &quot;Vincent van Gogh&quot; .       ex:90
+    ex:60 schema:name &quot;Johannes Vermeer&quot; .           ex:name &quot;Johannes Vermeer&quot; ;
+}                                                    ex:name &quot;Vermeer&quot; .
+                                             }
+    
+ALIGNMENT: 
+  • If rdfs:label is aligned with ex:name 
+  • AND schema:name is also aligned with ex:name,
+  • we then get the following linkset:
+
+    linkset:Match-Via-Intermediate
+    {
+        ex:10 owl:sameAs ex:40 .
+        ex:20 owl:sameAs ex:50 .
+        ex:30 owl:sameAs ex:60 .
+    }
+    
+    </code></pre></div>
+
+<p><br> <span style="color:blue"> <strong>4. Levenshtein Distance.</strong> </span> This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective user selected property values are ​​above a given ​Levenshtein Distance threshold​.</p>
+
+<p>Edit distance is a way of quantifying how ​dissimilar two strings (e.g., words) are to one another by counting the minimum number of operations ​ε ​ (​removal, insertion, or substitution of a character in the string)​ required to transform one string into the other. For example, ​the ​Levenshtein distance between <q>kitten</q> and <q>sitting</q> is ​ε ​= 3 as it requires a two substitutions (<q>s</q> for <q>k</q> and <q>i</q> for <q>e</q>) and one insertion of <q>g</q> at the end [<a href="https://en.wikipedia.org/wiki/Edit_distance%5D%E2%80%8B">https://en.wikipedia.org/wiki/Edit_distance]​</a>.</p>
+
+<p><strong>Normalisation ​Ω​:</strong> Because in this application, the ​similarity score ​Ω ​of a matching pair needs to be quantified in the interval ​[0, 1]​, the​ dissimilarity score ​ε expressing the ​minimum number of operations ​between two strings ​is then normalised as ​Ω based on the length of the longest string. The ​dissimilarity score​​ ε​ = 3 ​between ​<q>kitten</q> and <q>sitting</q> is then normalised to a ​similarity score Ω​ ​=​ ​1 - 3 / 7 = 0.57​.​</p>
+
+<p><strong>Minimum threshold ​φ:</strong> Using this algorithm, ​a ​minimum threshold valueφ​ ​must be set in the interval ​[0,1], ​such that finding any matched pairs of IRIs based on the similarity of their respective property values depends on whether or not the computed ​Ω is ​equal or above ​φ​. A threshold ​φ = 1 equates an exact match. In our previous example, if a ​minimum threshold of ​φ = ​0.7 is set, <q>kitten</q> and <q>sitting</q> will not be matched. ​In short, ​φ is the user defined threshold when the similarity score ​Ω is selected for accepting or rejecting a match.</p>
+
+<p><strong>Maximum character error threshold ​𝛿:​</strong> In case the ​original edit distance score ​ε (minimum number of operations score) is preferred, the number of character errors ​𝛿 ​of choice is used instead as threshold for deciding whether a match is accepted or rejected. However, for consistency purposes, the corresponding normalisation value ​Ω is still computed for the minimum number of operations score computed ​ε​. For instance, in our previous example, if a ​maximum ​characters errors i​s set to ​𝛿 = 3, <q>kitten</q> and <q>sitting</q> will be matched but the computed strength will be ​Ω = ​0.57 a​nd ​not ​ε = 3 as is it only serves the purpose of decision maker. I​n short, ​𝛿 i​s the user defined threshold when the dissimilarity score ε​ ​is selected for accepting or rejecting a match.</p>
+
+<div><pre class="line-numbers"><code class="language-none">----------------------------
+-- Example: NORMALIZATION --
+----------------------------
+
+    1. l_dist(Rembrand van Rijn, Rembrandt Harmensz van Rijn) = 10
+    2. Normalised_l_dist ​(Rembrand van Rijn, Rembrandt Harmensz van Rijn) = 0.63
+    
+    &gt;&gt;&gt; If ​φ (Minimum threshold) = 0.7 
+    &gt;&gt;&gt; t​hen ​[​Rembrand van Rijn] owl:sameAs [Rembrandt Harmensz van Rijn] 
+    &gt;&gt;&gt; is rejected​ 
+    &gt;&gt;&gt; because Ω​ = 0.63 &lt; φ​.
+    
+    &gt;&gt;&gt; If ​δ (Maximum character error threshold) = 5 
+    &gt;&gt;&gt; t​hen [​​Rembrand van Rijn] and [Rembrandt Harmensz van Rijn] is ​rejected 
+    &gt;&gt;&gt; because ε ​= 10 &gt;​ ​δ.</code></pre></div>
+
+<p><br> <span style="color:blue"><strong>5. Soundex Distance.</strong> </span> “Soundex is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for homophones to be encoded to the same representation so that they can be matched despite minor differences in spelling. The algorithm mainly encodes consonants; a vowel will not be encoded unless it is the first letter” [ <a href="https://en.wikipedia.org/wiki/Soundex">https://en.wikipedia.org/wiki/Soundex</a>]. &lt;br</p>
+
+<div><pre class="line-numbers"><code class="language-none">--------------------------------
+-- Example: SOUNDEX CODE SIZE --
+--------------------------------
+The examples below shows the encoding of different names. Here, the size 
+parameter indicates a degree of similarity through the length of the 
+respective soundex codes. For example at  size=3, Albert and Albertine 
+have the same soundex representation while at size=5 their  respective 
+representations differ. In the Lenticular lens, the default size is set 
+to 3.
+
+    -----------------------------
+    INPUT        SIZE 3   SIZE 5  
+    -----------------------------
+    A.           A000     A00000                                  
+    AL           A400     A40000                                 
+    ALI          A400     A40000                               
+    ALBERT       A416     A41630                                
+    ALBERTINE    A416     A41635 </code></pre></div>
+
+<p>In the <strong>Lenticular Lens</strong>, Soundex is used as a normaliser in the sense that an edit distance is run over the soundex code version of a name. For example, the in the table below, the normalisation of both <code>Louijs Rocourt</code> and `<code>Lowis Ricourt</code> becomes <code>L200 R263</code> leading to an edit distance of 0 and a relative strength of 1. However, computing the same names using directly an edit distance results in an edit distance of 3 and a relative matching strength of 0.
+79.</p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------------------------------------------------------
+-- Example: THE USE OF SOUNDEX CODE FOR STRING APPROXIMATION --
+---------------------------------------------------------------
+The example below shows the implementation of Soundex Distance 
+in the Lenticular Lens and how it compares with Edit Distance
+over the original names (no soundex-based normalisation).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Source                      Target                     E. Dist  Rel. distance  Source soundex       Target  soundex       Code E. Dist  Code Rel. Dist
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder          2           0.92  J216 C654 L360       J216 C654 L360                   0             1.0
+Barent Teunis               Barent Teunisz gen. Drent       12           0.52  B653 T520            B653 T520 G500 D653             10            0.47
+Louijs Rocourt              Louys Rocourt                    2           0.86  L200 R263            L200 R263                        0             1.0
+Louijs Rocourt              Lowis Ricourt                    3           0.79  L200 R263            L200 R263                        0             1.0
+Louys Rocourt               Lowis Ricourt                    3           0.77  L200 R263            L200 R263                        0             1.0
+Cornelis Dircksz. Clapmus   Cornelis Clapmuts               10            0.6  C654 D620 C415       C654 C415                        5            0.64
+Geertruydt van den Breemde  Geertruijd van den Bremde        4           0.85  G636 V500 D500 B653  G636 V500 D500 B653              0             1.0
+
+</code></pre></div>
+
+<p><br> <span style="color:blue"><strong>6. Gerrit Bloothooft.</strong> </span> This approximation method is specifically tailored for accessing the similarity between a pair of  IRIs for which the user selected property values are Dutch names. The algorithm basically normalises the given names by removing or replacing specific characters…. 
+The resulting normalised names are then pairwise compared using the Approximated Levenshtein Distance (see the description of Approximated Levenshtein Distance).</p>
+
+<div><pre class="line-numbers"><code class="language-none">Example
+-------
+                              </code></pre></div>
+
+<p><br> <span style="color:blue"><strong>7. Word Intersection.</strong> </span> This approximation method is originally designed to find a subset of words within a larger text. However, it could also be used for any  pair of strings regardless of the strings sizes. Several options are available: </p>
+
+<ul>
+<li>Whether or not the order in which the words are found is important.</li>
+<li>Whether or not the computed strength of each word should be approximated or identical.</li>
+<li>Whether or not abbreviation should be detected.</li>
+<li>Whether the default stopping character should be used, not used or modified.</li>
+<li>A threshold on the number of words not approximated/identical.</li>
+<li>An overall  threshold for accepting or rejecting a match.</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-none">---------------------------
+-- Example: EXPECTATIONS --
+---------------------------
+    For example, it can be used for aligning 
+     - [Rembrand van Rijn] and [van Rijn Rembrandt]
+     - [Herdoopers anslagh op Amsterdam] and [Herdoopers anslagh op Amsterdam. 
+        Den x. may: 1535. Treur-spel.]
+    regardless of the words&#39; order.
+</code></pre></div>
+
+<p><br> <span style="color:blue"><strong>9. Numbers.</strong> </span> The method is used to align the source and the target by approximating the match of the (number/date) values of the selected properties according to a delta. For example, if two entities have been aligned based on the similarity of their names but an extra check is to be investigated based on their respective year of birth, setting the delta to 1 will ensure that the two entities are born within the same year, give or take a year. </p>
+
+<p><br> <span style="color:blue"><strong>10. TeAM.</strong> </span> This method allows for the approximation of the relevance of a document to a query. Such approximation can be done using lexical similarity (word level similarity), semantic similarity or hybrid similarities. In this method, the focus is rather on the lexical similarity. Although tailored to text, it has been adapted to also be applicable to name-based similarity. We now provide an overview of the motivation context supporting the design and implementation of the algorithm.</p>
+
+<p>The Amsterdam&rsquo;s city archives (SAA) possesses physical handwritten inventories records where a record may be for example an inventory of goods (paintings, prints, sculpture, furniture, porcelain, etc.) owned by an Amsterdamer and mentioned in a last will. Interested in documenting the ownership of paintings from the 17th century, the Yale University Professor John Michael Montias compiled a database by transcribing 1280 physical handwritten inventories (scattered in the Netherlands) of goods. Now that a number of these physical inventories have been digitised using handwriting recognition, one of the goals of the Golden Agent project is to identify Montias&#39; transcriptions of painting selections within the digitised inventories. This problem can be generically reformulated as, given a <span style="color:blue"><em>source-segment database (e.g. Montias DB)</em></span> and a <span style="color:blue"><em>target-segment database (e.g. SAA)</em></span>, <em>find the best similar target segment  for each source segment</em>. </p>
+
+<p><div align="center"> <img src="Images/Inventory.jpg" alt="Inventory"> Fig 4.9: An example of the digitisation of inventory documents available at the Amsterdam&rsquo;s city archives. </div> </p>
+
+<p><br></p>
+
+<h1 id="toc_28"></span> <div id='Complex-Methods'/></h1>
+
+<h3 id="toc_29"><span style="color:purple"> 4.3.2 Complex Methods </span></h3>
+
+<!--https://en.wikipedia.org/wiki/T-norm-->
+
+<p>This section addresses <strong>Complex Methods</strong> as ways to combine matching methods, not to be confused with the complexity of the underlying the methods. 
+All of the matching methods described earlier generate links with matching strength scores in the interval ]0, 1]. 
+We saw for example that the relative strength score between ​<code>Rembrand van Rijn</code> and <code>Rembrandt Harmensz van Rijn</code> is 0.63 using the Levenshtein algorithm and 0.74 using Soundex. 
+Those methods can be combined at time of creation of the linkset, using logic boxes, or afterwards, using lenses operators.</p>
+
+<p>When such combination happens, a decision is necessary regarding the calculation of the resulting strength score.
+For example, let us assume that links are created whenever a pair of datasets items (subject, object) either <strong>sounds alike</strong> or <strong>looks alike character-wise</strong>. 
+To accomplish that, it means that two methods have to be combined, for example, Soundex and Levenshtein. 
+Although combining the methods seems relatively easy, deciding on the matching score requires some extra thoughts. 
+In the example above of Rembrandt, shall we consider 0.63 or 0.74? Or their product?
+Here we discuss the rationals used in the <strong>Lenticular lens</strong> to support such decision.</p>
+
+<!--In this section, **Complex Method** is not related to the complexity of the underlying method. Instead, here, any user combined matching method is what we denote as a **Complex Method**. All of the matching methods described earlier generate links with matching strength scores in the interval ]0, 1]. We saw for example that, using the Levenshtein algorithm, the relative strength score between ​`Rembrand van Rijn` and `Rembrandt Harmensz van Rijn` is 0.63. 
+Now, let us assume that we want to generate links whenever the pair of datasets items (subject, object) either **sounds alike** or **looks alike character-wise**. To accomplish that, it means that two methods have to be combined, namely Soundex and Levenshtein. Well, combining the methods sounds relatively easy. However deciding on the matching score requires some extra thoughts. Here we discuss the rational used in the **Lenticular lens** for such computations.
+For combining methods, two logic operators are available: Conjunction (AND) and Disjunction (OR). <br>
+When combing methods with the traditional `AND` logic operator its requires both side to be valid. Here, because we are dealing with **fuzzy logic**, we decide to use the **T-norm binary operations** as provided below.
+-->
+
+<!--The two standard logic operators traditionally used are **Conjunction (AND)** and **Disjunction (OR)**. The first takes the minimum strength and the latter takes the maximum.
+-->
+
+<p>The two standard logic operators traditionally used are <strong>Conjunction (AND)</strong> and <strong>Disjunction (OR)</strong>. 
+The first takes the minimum strength and the latter takes the maximum strength. This applies for both <strong>classic values</strong> (True -1- or False -0-) and <strong>fuzzy values</strong> ( between 0 and 1 ). 
+<!--The table bellow illustrates the default behaviour of the Lenticular Lens when combining fuzzy values resulting from matching methods.
+-->
+Since the results from matching methods are <strong>fuzzy values</strong> in the interval ]0,1], the table bellow illustrates the default behaviour of the Lenticular Lens when combining them.</p>
+
+<div><pre class="line-numbers"><code class="language-none">
+Source                      Target                       Levenshtein  Soundex      OR(max)    AND(min)
+------------------------------------------------------------------------------------------------------
+Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder             0.92     1.00        1.00         0.92
+Rembrand van Rijn           Rembrandt Harmensz van Rijn         0.63     0.74        0.74         0.63
+Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47        0.52         0.47
+
+</code></pre></div>
+
+<p>However, more sophisticated operations can also be used, such as the <strong>T-norm binary operations</strong> as alternatives for <strong>Conjunction (AND)</strong> and the <strong>T-conorm binary operations</strong> as alternatives for <strong>Disjunction (OR)</strong> as provided in the next subsections.</p>
+
+<h1 id="toc_30"></span> <div id='T-norms'/></h1>
+
+<h3 id="toc_31"><span style="color:purple"> 4.3.2.1 T-norms </span></h3>
+
+<p>A list of six different operations can be applied when dealing with methods combined by <strong>Conjunction</strong>. Here, we present them:</p>
+
+<ul>
+<li>Minimum t-norm ⊤<sub>min</sub> (a, b) = min{a, b}</li>
+<li>Product t-norm ⊤<sub>prod</sub> (a, b) = a . b</li>
+<li>Łukasiewicz t-norm ⊤<sub>Luk</sub> (a, b) = max(0, a+b-1)</li>
+<li>Drastic t-norm ⊤<sub>D</sub> (a, b) = b (if a = 1) , a (if b = 1), 0 (otherwise)</li>
+<li>Nilpotent minimum ⊤<sub>nM</sub> (a, b) = min{a, b} (if a + b &gt; 1), 0 (otherwise)</li>
+<li>Hamacher product ⊤<sub>H<sub>0</sub></sub> (a, b) = 0 (if a = b = 0), ab / (a + b - ab) (otherwise)</li>
+</ul>
+
+<!--|Source, Target                                                        | Levenshtein, Soundex | T<sub>min</sub> | T<sub>prod</sub> | T<sub>Luk</sub> | T<sub>D</sub>  | T<sub>nM</sub> | <sub>H<sub>0</sub></sub> |
+|--------------------------------------------------------------------------|----------------------|-----------------|------------------|-----------------|----------------|----------------|--------------------------|
+| **Src**: Jasper Cornelisz. Lodder <br> **Trg**: Jaspar Cornelisz Lodder  |           0.92, 1.00 |     0.920       |            0.92  |           0.920 |          0.920 |          0.920 |                    0.920 |
+| **Src**: Rembrand van Rijn <br> **Trg**: Rembrandt Harmensz van Rijn     |           0.63, 0.74 |     0.630       |            0.466 |           0.370 |              0 |          0.630 |                    0.516 |
+| **Src**: Barent Teunis <br> **Trg**: Barent Teunisz gen. Drent           |           0.52, 0.47 |     0.470       |            0.244 |           0.000 |              0 |          0.000 |                    0.328 |-->
+
+<p>The following table provides three case studies to illustrate the application of each of the aforementioned <strong>T-norm binary operations</strong>. They are presented in order from the less strict (<strong>⊤<sub>min</sub></strong>) to the most strict (<strong>⊤<sub>D</sub></strong>).</p>
+
+<table>
+<thead>
+<tr>
+<th>Source, Target</th>
+<th style="text-align: center">Levenshtein, Soundex</th>
+<th>⊤<sub>min</sub></th>
+<th>⊤<sub>H<sub>0</sub></sub></th>
+<th>⊤<sub>prod</sub></th>
+<th>⊤<sub>nM</sub></th>
+<th>⊤<sub>Luk</sub></th>
+<th>⊤<sub>D</sub></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Src</strong>: Jasper Cornelisz. Lodder <br> <strong>Trg</strong>: Jaspar Cornelisz Lodder</td>
+<td style="text-align: center">0.92, 1.00</td>
+<td>0.920</td>
+<td>0.920</td>
+<td>0.920</td>
+<td>0.920</td>
+<td>0.920</td>
+<td>0.920</td>
+</tr>
+<tr>
+<td><strong>Src</strong>: Rembrand van Rijn <br> <strong>Trg</strong>: Rembrandt Harmensz van Rijn</td>
+<td style="text-align: center">0.63, 0.74</td>
+<td>0.630</td>
+<td>0.516</td>
+<td>0.466</td>
+<td>0.630</td>
+<td>0.370</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td><strong>Src</strong>: Barent Teunis <br> <strong>Trg</strong>: Barent Teunisz gen. Drent</td>
+<td style="text-align: center">0.52, 0.47</td>
+<td>0.470</td>
+<td>0.328</td>
+<td>0.244</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="toc_32"></span> <div id='T-conorms'/></h1>
+
+<h3 id="toc_33"><span style="color:purple"> 4.3.2.2 T-conorms </span></h3>
+
+<p>A list of six different operations can also be applied when dealing with methods combined by <strong>Disjunction</strong>. Here, we present them:</p>
+
+<ul>
+<li>Maximum t-conorm ⊥<sub>max</sub> (a, b) = max{a, b}</li>
+<li>Probabilistic sum ⊥<sub>sum</sub> (a, b) = a + b - a.b</li>
+<li>Bounded sum ⊥<sub>Luk</sub> (a, b) = min{a + b, 1}</li>
+<li>Drastic t-conorm ⊥<sub>D</sub> (a, b) = b (if a=0), a (if b=0), 1 (otherwise)</li>
+<li>Nilpotent maximum ⊥<sub>nM</sub> (a, b) = max(a, b) (if a + b &lt; 1), 1 (otherwise)</li>
+<li>Einstein sum ⊥<sub>H<sub>2</sub></sub> (a, b) = (a + b) / (1 + ab)</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Source, Target</th>
+<th style="text-align: center">Levenshtein, Soundex</th>
+<th>⊤<sub>D</sub></th>
+<th>⊤<sub>Luk</sub></th>
+<th>⊤<sub>H<sub>2</sub></sub></th>
+<th>⊤<sub>sum</sub></th>
+<th>⊤<sub>nM</sub></th>
+<th>⊤<sub>max</sub></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>Src</strong>: Jasper Cornelisz. Lodder <br> <strong>Trg</strong>: Jaspar Cornelisz Lodder</td>
+<td style="text-align: center">0.92, 1.00</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>1.000</td>
+</tr>
+<tr>
+<td><strong>Src</strong>: Rembrand van Rijn <br> <strong>Trg</strong>: Rembrandt Harmensz van Rijn</td>
+<td style="text-align: center">0.63, 0.74</td>
+<td>1.000</td>
+<td>1.000</td>
+<td>0.934</td>
+<td>0.904</td>
+<td>1.000</td>
+<td>0.740</td>
+</tr>
+<tr>
+<td><strong>Src</strong>: Barent Teunis <br> <strong>Trg</strong>: Barent Teunisz gen. Drent</td>
+<td style="text-align: center">0.52, 0.47</td>
+<td>1.000</td>
+<td>0.990</td>
+<td>0.796</td>
+<td>0.746</td>
+<td>0.520</td>
+<td>0.520</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="toc_34"></span> <div id='Example-of-complex-methods'/></h1>
+
+<h3 id="toc_35"><span style="color:purple"> 4.3.2.3 Example of complex method </span></h3>
+
+<!--For a higher level of accuracy, let us assume that, two data items representing persons are co-referent, if then pass the following tests:
+-->
+
+<p>Let us assume that, two data items representing persons are co-referent, if then pass the following tests:</p>
+
+<ol>
+<li>AND (score must be greater than 0.8) 
+
+<ul>
+<li>OR: Name Comparison
+
+<ul>
+<li> Levenshtein (score must be greater than 0.7) </li>
+<li> Soundex (score must be greater than 0.7) </li>
+</ul></li>
+<li>OR: Parent Name Comparison
+
+<ul>
+<li> Fathers (Levenshtein greater than 0.6)</li>
+<li> Mothers (Levenshtein greater than 0.6)</li>
+</ul></li>
+<li>OR: Dates Comparison
+
+<ul>
+<li>Identical birth dates<br></li>
+<li>The delta between marriage and child&rsquo;s baptisms is less than 25 years</li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p>Now we take the following data to compute and compare results obtained using different operations:</p>
+
+<div><pre class="line-numbers"><code class="language-none">
+** MATCHING RESULTS: **
+Levenshtein(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn) =&gt; 0.74
+Soundex(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn)     =&gt; 0.85
+Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63
+Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65
+ExactDate(1641-09-22, 1641-09-22)                                    =&gt; 1.00
+Delta(1668-02-28, 1669-03-22, 25)                                    =&gt; 1.00
+
+
+** DISJUNCTIONS **
+names   = t_conorm(0.74, 0.85, &#39;MAXIMUM&#39;)          =&gt; names   = 0.850
+parents = t_conorm(0.62, 0.65, &#39;PROBABILISTIC&#39;)    =&gt; parents = 0.867
+dates   = t_conorm(1.00, 1.00, &#39;MAXIMUM&#39;)          =&gt; dates   = 1.000
+
+
+** PARTIAL CONJUNCTIONS **  ### Ops.t_norm(names, parents, OPERATION)
+partial_1 = Ops.t_norm(0.850, 0.867, &#39;NILPOTENT&#39;)  =&gt; partial_1 = 0.850
+partial_2 = Ops.t_norm(0.850, 0.867, &#39;PRODUCT&#39;)    =&gt; partial_2 = 0.737
+partial_3 = Ops.t_norm(0.850, 0.867, &#39;MINIMUM&#39;)    =&gt; partial_3 = 0.850
+partial_4 = Ops.t_norm(0.850, 0.867, &#39;HAMACHER&#39;)   =&gt; partial_4 = 0.752
+
+
+** FINAL CONJUNCTIONS **  ### Ops.t_norm(partial_i, dates, OPERATION)
+result_1 = Ops.t_norm(0.850, 1.0, &#39;NILPOTENT&#39;)     =&gt; result_1 = 0.850
+result_2 = Ops.t_norm(0.737, 1.0, &#39;DRASTIC&#39;)       =&gt; result_1 = 0.737
+result_3 = Ops.t_norm(0.850, 1.0, &#39;MINIMUM&#39;)       =&gt; result_1 = 0.850
+result_4 = Ops.t_norm(0.752, 1.0, &#39;HAMACHER&#39;)      =&gt; result_1 = 0.752
+
+</code></pre></div>
+
+<p>Given the operations described above, only result<u>1 and result</u>3 would pass the final threshold defined as 0.8.</p>
+
+<h1 id="toc_36"></span> <div id='Matching-in-Practice'/></h1>
+
+<h3 id="toc_37"><span style="color:purple"> 4.3.3 Matching in Practice </span></h3>
+
+<!--------------------------------------------------------------->
+
+<p>Now that we have gone through possible methods available in the <strong>Lenticular Lens</strong>, we show how these methods can be used individually or in combination to align resources stemmed from various datasources of one&rsquo;s choice.</p>
+
+<h1 id="toc_38"></span> <div id='Case-Study-1'/></h1>
+
+<h4 id="toc_39"><span style="color:purple"> Case Study:  </span></h4>
+
+<h1 id="toc_40"></span> <div id='Case-Study-2'/></h1>
+
+<h4 id="toc_41"><span style="color:purple"> Case Study:  </span></h4>
+
+<h1 id="toc_42"></span> <div id='Case-Study-3'/></h1>
+
+<h4 id="toc_43"><span style="color:purple"> Case Study:  </span></h4>
+
+<h1 id="toc_44"></span> <div id='Case-Study-4'/></h1>
+
+<h4 id="toc_45"><span style="color:purple"> Case Study:  </span></h4>
+
+<h1 id="toc_46"></span> <div id='Matching-Results'/></h1>
+
+<h3 id="toc_47"><span style="color:purple"> 4.3.2 Matching Results </span></h3>
+
+<!----------------------------------------------------------->
+
+<p><span style="color: purple">  <strong>LINKSET.</strong> </span></p>
+
+<p><span style="color: purple">  <strong>LENS.</strong> </span></p>
+
+<!------------------------------------------------------------->
+
+<h1 id="toc_48"></span> <div id='Link-Manipulation'/></h1>
+
+<h1 id="toc_49"><br> <span style="color:purple"> 5. LINK MANIPULATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!------------------------------------------------------------->
+
+<p>After generating a number of linksets and lenses, one may want to combine or split some of the links. Others may want to infer new links using existing alignments. The <code>MANIPULATE</code> menu provides means for exacting doing that by making it possible to apply set like operators such as UNION, INTERSECTION, DIFFERENCE, TRANSITIVE and IN-SET over alignments in ways that suits bets the user according to her envisaged final integration goal. <br></p>
+
+<div><pre class="line-numbers"><code class="language-none">-----------------
+-- Example 5.1 --
+-----------------
+Deduplicating Greatest Comics Superheroes.
+
+ex:DCHeroesIdentity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying DC&#39;s comics superheroes&quot; ;
+    void:subjectsTarget   dataset:DC-Comics;
+    void:objectsTarget    dataset:DC-Comics;
+    void:triples          10 ;
+    • • •
+    
+ex:MarvelHeroesIdentity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying Marvel Universes&#39; superheroes&quot; ;
+    void:subjectsTarget   dataset:Marvel-Univers;
+    void:objectsTarget    dataset:Marvel-Univers ;
+    void:triples          10 ;
+    • • •
+
+ex:DCHerosIdentity
+{
+    &lt;&lt;hero:Superman         owl:sameAs  person:Clark-Kent&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:Batman           owl:sameAs  person:Bruce-Wane&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:Flash            owl:sameAs  person:Barry-Allen&gt;&gt;         validation:status &quot;True&quot; .
+    &lt;&lt;hero:GreenLantern     owl:sameAs  person:Alan-Scott&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:WonderWoman      owl:sameAs  person:Diana-Prince&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:Aquaman          owl:sameAs  person:Arthur-Curry&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:GreenArrow       owl:sameAs  person:OliverQueen&gt;&gt;         validation:status &quot;True&quot; .
+    &lt;&lt;hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter&gt;&gt;  validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spider-man       owl:sameAs  person:Piter-Parker&gt;&gt;        validation:status &quot;False&quot; .
+    &lt;&lt;hero:Iron-man         owl:sameAs  person:Tony-Stark&gt;&gt;          validation:status &quot;False&quot; .   
+}
+
+ex:MarvelHerosIdentity
+{
+    &lt;&lt;hero:Captain-Marvel   owl:sameAs  person:Carol-Danvers&gt;&gt;     validation:status &quot;True&quot; .
+    &lt;&lt;hero:Captain-America  owl:sameAs  person:Steve-Rogers&gt;&gt;      validation:status &quot;True&quot; .
+    &lt;&lt;hero:Deadpool         owl:sameAs  person:Wade-Wilson&gt;&gt;       validation:status &quot;True&quot; .
+    &lt;&lt;hero:Black-Panther    owl:sameAs  person:T-Challa&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spider-man       owl:sameAs  person:Piter-Parker&gt;&gt;      validation:status &quot;True&quot; .
+    &lt;&lt;hero:Iron-man         owl:sameAs  person:Tony-Stark&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:Ant-man          owl:sameAs  person:Tony-Stark&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:Black-Widow      owl:sameAs  person:Natasha-Romanoff&gt;&gt;  validation:status &quot;True&quot; .
+    &lt;&lt;hero:Hulk             owl:sameAs  person:Bruce-Banner&gt;&gt;      validation:status &quot;True&quot; .
+    &lt;&lt;hero:Hawkeye          owl:sameAs  person:Clint-Barton&gt;&gt;      validation:status &quot;True&quot; .
+}</code></pre></div>
+
+<h1 id="toc_50"></span> <div id='Union'/></h1>
+
+<h2 id="toc_51"><br> <span style="color:purple"> 5.1 Union </span></h2>
+
+<!------------------------------------------------------------->
+
+<p>Imagine having  </p>
+
+<div><pre class="line-numbers"><code class="language-none">##############################################################
+#     MARVEL: Annotated Linkset of 6 Identity Statements     #
+##############################################################
+
+ex:Marvel-Heroes-Identity-1
+    a                       void:Linkset ;
+    dcterms:subject         &quot;Fictitious Heroes&quot; ;
+    dcterms:description     &quot;Identifying Marvel Universes&#39; superheroes&quot; ;
+    void:subjectsTarget     dataset:Superheroes ;
+    void:objectsTarget      dataset:Fictitious-Persons ;
+    void:triples            6 .
+
+ex:Marvel-Heroes-Identity-1
+{
+    &lt;&lt;hero:Black-Widow      owl:sameAs  person:Natasha-Romanoff&gt;&gt;  validation:status true .
+    &lt;&lt;person:Bruce-Banner   owl:sameAs  hero:Hulk&gt;&gt;                validation:status true .
+    &lt;&lt;hero:Captain-America  owl:sameAs  person:Steve-Rogers&gt;&gt;      validation:status true .
+    &lt;&lt;hero:Captain-Marvel   owl:sameAs  person:Carol-Danvers&gt;&gt;     validation:status true .
+    &lt;&lt;hero:Deadpool         owl:sameAs  person:Wade-Wilson&gt;&gt;       validation:status true .
+    &lt;&lt;hero:Black-Panther    owl:sameAs  person:T-Challa&gt;&gt;          validation:status true .
+}
+
+##############################################################
+#     MARVEL: Annotated Linkset of 4 Identity Statements     #
+##############################################################
+
+ex:Marvel-Heroes-Identity-2
+    a                       void:Linkset ;
+    dcterms:subject         &quot;Fictitious Heroes&quot; ;
+    dcterms:description     &quot;Identifying Marvel Universes&#39; superheroes&quot; ;
+    void:subjectsTarget     dataset:Fictitious-Persons ;
+    void:objectsTarget      dataset:Superheroes ;
+    void:triples            4 .
+
+ex:Marvel-Heroes-Identity-2
+{
+    &lt;&lt;person:Piter-Parker      owl:sameAs  hero:Spider-man&gt;&gt;       validation:status true .
+    &lt;&lt;person:Tony-Stark        owl:sameAs  hero:Iron-man&gt;&gt;         validation:status true .
+    &lt;&lt;person:Tony-Stark        owl:sameAs  hero:Ant-man&gt;&gt;          validation:status true .
+    &lt;&lt;person:Clint-Barton      owl:sameAs  hero:Hawkeye&gt;&gt;          validation:status true .
+}
+
+##############################################################
+# DC-COMICS: Non Annotated Linkset of 10 Identity Statements #
+##############################################################
+ex:Marvel-Heroes-Identity-2
+    a                       void:Linkset ;
+    dcterms:subject         &quot;Fictitious Heroes&quot; ;
+    dcterms:description     &quot;Identifying DC Comics Universes&#39; superheroes&quot; ;
+    void:triples            9 .
+    
+ex:DC-Heros-Identity
+{
+    hero:Superman       owl:sameAs  person:Clark-Kent .
+    hero:Batman         owl:sameAs  person:Bruce-Wane .
+    hero:GreenLantern   owl:sameAs  person:Alan-Scott .
+    hero:WonderWoman    owl:sameAs  person:Diana-Prince .
+    hero:Aquaman        owl:sameAs  person:Arthur-Curry .
+    hero:GreenArrow     owl:sameAs  person:OliverQueen .
+    hero:BoosterGold    owl:sameAs  person:Michael-Jon-Carter .
+    hero:Spider-man     owl:sameAs  person:Piter-Parker .
+    hero:Iron-man       owl:sameAs  person:Tony-Stark .   
+}
+
+
+##############################################################
+#                      UNION of 3 LINKSETS                   #
+##############################################################  
+
+ex:Union-Marvel-DC-Heroes
+    a                       void:Linkset ;
+    dcterms:description     &quot;Identifying Marvel Universes&#39; superheroes&quot; ;
+    void:target             ex:Marvel-Heroes-Identity-1 ;
+    void:target             ex:Marvel-Heroes-Identity-2 ;
+    void:target             ex:DCHerosIdentity-1 ;
+    void:triples            10 .
+    
+ex:Union-Marvel-Heroes
+{
+    &lt;&lt;hero:Black-Widow      owl:sameAs  person:Natasha-Romanoff&gt;&gt;    prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-1 .
+    &lt;&lt;hero:Captain-America  owl:sameAs  person:Steve-Rogers&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-1 .
+    &lt;&lt;hero:Captain-Marvel   owl:sameAs  person:Carol-Danvers&gt;&gt;       prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-1 .
+    &lt;&lt;hero:Deadpool         owl:sameAs  person:Wade-Wilson&gt;&gt;         prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-1 .
+    &lt;&lt;hero:Black-Panther    owl:sameAs  person:T-Challa&gt;&gt;            prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-1 .
+    
+    &lt;&lt;hero:Spider-man       owl:sameAs  person:Piter-Parker&gt;&gt;
+        prov:wasDerivedFrom    ex:Marvel-Heroes-Identity-2 ;
+        prov:wasDerivedFrom    ex:Marvel-Heroes-Identity.
+    
+    &lt;&lt;hero:Iron-man         owl:sameAs  person:Tony-Stark&gt;&gt; 
+        prov:wasDerivedFrom    ex:Marvel-Heroes-Identity-2 ;
+        prov:wasDerivedFrom    ex:Marvel-Heroes-Identity.
+        
+    &lt;&lt;hero:Ant-man          owl:sameAs  person:Tony-Stark&gt;&gt;          prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-2 .
+    &lt;&lt;hero:Hulk             owl:sameAs  person:Bruce-Banner&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-2 .
+    &lt;&lt;hero:Hawkeye          owl:sameAs  person:Clint-Barton&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity-2 .
+
+    &lt;&lt;hero:Superman         owl:sameAs  person:Clark-Kent&gt;&gt;          prov:wasDerivedFrom  ex:Marvel-Heroes-Identity.
+    &lt;&lt;hero:Batman           owl:sameAs  person:Bruce-Wane&gt;&gt;          prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:Flash            owl:sameAs  person:Barry-Allen&gt;&gt;         prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:GreenLantern     owl:sameAs  person:Alan-Scott&gt;&gt;          prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:WonderWoman      owl:sameAs  person:Diana-Prince&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:Aquaman          owl:sameAs  person:Arthur-Curry&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:GreenArrow       owl:sameAs  person:OliverQueen&gt;&gt;         prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
+    &lt;&lt;hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter&gt;&gt;  prov:wasDerivedFrom  ex:Marvel-Heroes-Identity . 
+}</code></pre></div>
+
+<!--```
+----------------------------------------------
+-- Example 5.1: Greatest Comics Superheroes --
+----------------------------------------------
+
+ex:ComicsHeroesIdentity
+    a                     voidPlus:LensUnion ;
+    dcterms:description   "Identifying superheroes from Marvel and DC comics" ;
+    voidPlus:expression   "ex:DCHerosIdentity UNION ex:MarvelHerosIdentity" ;
+    void:target           ex:DCHerosIdentity , ex:MarvelHerosIdentity ;
+    void:triples          22 ;
+    • • •
+    
+ex:ComicsHeroesIdentity
+{
+    • • •
+    <<hero:WonderWoman      owl:sameAs  person:Diana-Prince>>        prov:wasDerivedFrom  ex:DCHerosIdentity .
+    <<hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter>>  prov:wasDerivedFrom  ex:DCHerosIdentity .
+    
+    <<hero:Spider-man       owl:sameAs  person:Piter-Parker>>
+        prov:wasDerivedFrom   ex:DCHerosIdentity ;
+        prov:wasDerivedFrom   ex:MarvelHerosIdentity .
+        
+        
+    <<hero:Iron-man         owl:sameAs  person:Tony-Stark>> 
+        prov:wasDerivedFrom   ex:DCHerosIdentity ;
+        prov:wasDerivedFrom   ex:MarvelHerosIdentity .
+
+    <<hero:Captain-Marvel   owl:sameAs  person:Carol-Danvers>> prov:wasDerivedFrom  ex:MarvelHerosIdentity .
+    <<hero:Captain-America  owl:sameAs  person:Steve-Rogers>>  prov:wasDerivedFrom  ex:MarvelHerosIdentity .    
+    <<hero:Deadpool         owl:sameAs  person:Wade-Wilson>>   prov:wasDerivedFrom  ex:MarvelHerosIdentity .
+    • • •
+}
+```
+-->
+
+<h1 id="toc_52"></span> <div id='Intersection'/></h1>
+
+<h2 id="toc_53"><br> <span style="color:purple"> 5.2 Intersection </span></h2>
+
+<!------------------------------------------------------------->
+
+<div><pre class="line-numbers"><code class="language-none">----------------------------------------------
+-- Example 5.1: Greatest Comics Superheroes --
+----------------------------------------------
+
+ex:ComicsHeroesIdentity
+    a                     voidPlus:LensUnion ;
+    dcterms:description   &quot;Quality Check: Identifying superheroes from both Marvel and DC comics&quot; ;
+    voidPlus:expression   &quot;ex:DCHerosIdentity INTERSECTION ex:MarvelHerosIdentity&quot; ;
+    void:target           ex:DCHerosIdentity , ex:MarvelHerosIdentity ;
+    void:triples          4 ;
+    • • •
+    
+ex:ComicsHeroesIdentity
+{   
+    &lt;&lt;hero:Spider-man       owl:sameAs  person:Piter-Parker &gt;&gt;
+        prov:wasDerivedFrom   ex:DCHerosIdentity ;
+        prov:wasDerivedFrom   ex:MarvelHerosIdentity .
+        
+    &lt;&lt;hero:Iron-man         owl:sameAs  person:Tony-Stark&gt;&gt; 
+        prov:wasDerivedFrom   ex:DCHerosIdentity ;
+        prov:wasDerivedFrom   ex:MarvelHerosIdentity .
+}</code></pre></div>
+
+<h1 id="toc_54"></span> <div id='Difference'/></h1>
+
+<h2 id="toc_55"><br> <span style="color:purple"> 5.3 Difference </span></h2>
+
+<!------------------------------------------------------------->
+
+<div><pre class="line-numbers"><code class="language-none">-----------------
+-- Example 5.1 --
+-----------------
+Greatest Comics Superheroes
+
+ex:ComicsHeroesIdentity
+    a                     voidPlus:LensUnion ;
+    dcterms:description   &quot;Quality Check: Identifying superheroes from both Marvel and DC comics&quot; ;
+    voidPlus:expression   &quot;ex:DCHerosIdentity DIFFERENCE ex:MarvelHerosIdentity&quot; ;
+    void:target           ex:DCHerosIdentity , ex:MarvelHerosIdentity ;
+    void:triples          4 ;
+    • • •
+
+ex:DCHerosIdentity
+{
+    &lt;&lt;hero:Superman         owl:sameAs  person:Clark-Kent&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:Batman           owl:sameAs  person:Bruce-Wane&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:Flash            owl:sameAs  person:Barry-Allen&gt;&gt;         validation:status &quot;True&quot; .
+    &lt;&lt;hero:GreenLantern     owl:sameAs  person:Alan-Scott&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:WonderWoman      owl:sameAs  person:Diana-Prince&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:Aquaman          owl:sameAs  person:Arthur-Curry&gt;&gt;        validation:status &quot;True&quot; .
+    &lt;&lt;hero:GreenArrow       owl:sameAs  person:OliverQueen&gt;&gt;         validation:status &quot;True&quot; .
+    &lt;&lt;hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter&gt;&gt;  validation:status &quot;True&quot; .  
+}</code></pre></div>
+
+<h1 id="toc_56"></span> <div id='Composition'/></h1>
+
+<h2 id="toc_57"><br> <span style="color:purple"> 5.4 Composition </span></h2>
+
+<!------------------------------------------------------------->
+
+<h1 id="toc_58"></span> <div id='InSet'/></h1>
+
+<h2 id="toc_59"><br> <span style="color:purple"> 5.5 In Set </span></h2>
+
+<!------------------------------------------------------------->
+
+<p>To learn on favourite superheroes, we create a linkset between the Marvel superheroes and IMDB. Only, the interest is not on any Marvel superheroes but instead, the interest lies only on those matched in the ex:MarvelHerosIdentity linkset. So, instead of matching Marvel&rsquo;s superheroes against IMDB resources and then filter the resulting links. We rather ran the Marvel&rsquo;s superheroes extracted from </p>
+
+<div><pre class="line-numbers"><code class="language-none">ex:MoviesRate
+{
+    movie:WonderWoman 
+        schema:character        hero:WonderWoman;
+        schema:contentRating   7.4.
+        
+    movie:WonderWoman-Bloodlines 
+        schema:character        hero:Superman;
+        schema:contentRating   5.8.
+        
+    movie:Superman 
+        schema:character        hero:Superman;
+        schema:contentRating   7.3.
+        
+    movie:Superman-Returns 
+        schema:character        hero:Superman;
+        schema:contentRating   6.
+        
+    movie:Man-of-Steel 
+        schema:character        hero:Superman;
+        schema:contentRating   7.
+        
+    movie:Batman 
+        schema:character        hero:Batman;
+        schema:contentRating   7.5.
+    
+    movie:Batman-Returns
+        schema:character        hero:Batman;
+        schema:contentRating   7.
+        
+    movie:Batman-Robin
+        schema:character        hero:Batman;
+        schema:contentRating   3.7.
+        
+    movie:Spider-man  
+        schema:character        hero:Spider-man;
+        schema:contentRating   7.3.
+        
+    movie:The-amazing-Spider-man  
+        schema:character        hero:Spider-man;
+        schema:contentRating   6.5.
+        
+    movie:Spider-man-home-coming 
+        schema:character        hero:Spider-man;
+        schema:contentRating   7.4.
+}</code></pre></div>
+
+<div><pre class="line-numbers"><code class="language-none">ex:MovieCharacter
+{
+    movie:WonderWoman             schema:character  hero:WonderWoman .
+    movie:WonderWoman-Bloodlines  schema:character  hero:Superman .
+    movie:Superman                schema:character  hero:Superman .
+    movie:Superman-Return         schema:character  hero:Superman .
+    movie:Man-of-Steel            schema:character  hero:Superman .
+    movie:Batman                  schema:character  hero:Batman .
+    movie:Batman-Returns          schema:character  hero:Batman .
+    movie:Batman-Robin            schema:character  hero:Batman .
+    movie:Spider-man              schema:character  hero:Spider-man .
+    movie:The-amazing-Spider-man  schema:character  hero:Spider-man .
+    movie:Spider-man-home-coming  schema:character  hero:Spider-man .
+}
+
+-------------------------------------------------------------
+-- Example 5.1: SET OF MATCHED RESOURCES (SOURCE &amp; TARGET) --
+-------------------------------------------------------------
+Derived Marvel&#39;s matched universe set
+{
+    hero:Captain-Marvel,   person:Carol-Danvers,  hero:Captain-America,  person:Steve-Rogers,
+    hero:Deadpool,         person:Wade-Wilson,    hero:Black-Panther,    person:T-Challa,
+    hero:Spider-man,       person:Piter-Parker,   hero:Iron-man,          person:Tony-Stark,
+    hero:Ant-man,          person:Tony-Stark,     hero:Black-Widow,       person:Natasha-Romanoff,
+    hero:Hulk,             person:Bruce-Banner,   hero:Hawkeye,           person:Clint-Barton
+}
+
+---------------------------------------------------------------
+-- Example 5.1: Movie Characters from ex:MovieCharacter that --
+--      are derived from Marvel&#39;s matched universe set       --
+---------------------------------------------------------------
+ex:MovieCharacter
+{
+    movie:Spider-man              schema:character  hero:Spider-man .
+    movie:The-amazing-Spider-man  schema:character  hero:Spider-man .
+    movie:Spider-man-home-coming  schema:character  hero:Spider-man .
+}
+</code></pre></div>
+
+<!--{
+    hero:Superman,     person:Clark-Kent,    hero:Batman,        person:Bruce-Wane,
+    hero:Flash,        person:Barry-Allen,   hero:GreenLantern,  person:Alan-Scott, 
+    hero:WonderWoman,  person:Diana-Prince,  hero:Aquaman,       person:Arthur-Curry, 
+    hero:GreenArrow,   person:OliverQueen,   hero:BoosterGold,   person:Michael-Jon-Carter,
+    hero:Spider-man,   person:Piter-Parker,  hero:Iron-man,      person:Tony-Stark   
+}-->
+
+<!----------------------------------------------------------->
+
+<h1 id="toc_60"></span> <div id='Link-Validation'/></h1>
+
+<h1 id="toc_61"><br> <span style="color:purple"> 6. LINK VALIDATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!----------------------------------------------------------->
+
+<p>Imagine a researcher in the need of integrating data on publications, authors and education institutions. Wrongly executing this integration task could mean, for example, assigning the h-index of author A to author B or wrongly saying that author A is affiliated to an institution he has never been involved with. To reaching a solid investigation result, this highlights the crucial importance of link validation once links have been created and possibly improved.</p>
+
+<h2 id="toc_62"><br> <span style="color:purple"> Validation </span></h2>
+
+<!--------------------------------------------------->
+
+<h2 id="toc_63"><br> <span style="color:purple"> Validation Support </span></h2>
+
+<!----------------------------------------------------------->
+
+<h3 id="toc_64"><span style="color:purple"> Cluster-based validation </span></h3>
+
+<h3 id="toc_65"><span style="color:purple"> Vizualition </span></h3>
+
+<!------------------------------------------------------->
+
+<h1 id="toc_66"></span> <div id='Link-Export'/></h1>
+
+<h1 id="toc_67"><br> <span style="color:purple"> 7. LINK EXPORT </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!------------------------------------------------------->
+
+<p>At this point, links have ben created and possibly improved. Now, interesting questions are:</p>
+
+<ul>
+<li>Could these links be exported for external usage? </li>
+<li>In what format are there available for export? </li>
+<li>What metadata can be exported in combination with the links?</li>
+<li>Can the linktype be modified prior to an export?</li>
+</ul>
+
+<p>All these questions will be answered here. </p>
+
+<h1 id="toc_68"></span> <div id='Export-Structure'/></h1>
+
+<h2 id="toc_69"><span style="color:purple"> 7.1 Export Structure </span></h2>
+
+<!---------------------------------------------------->
+
+<p>The <strong>Lenticular Lens</strong> design imposes to itself and motivates its users to provide as much documentation as possible for explaining why (understandability) and how (reproducibility) a set of links is generated. This metadata in the <strong>Lenticular Lens</strong> can be organised into <strong>Generic</strong> and <strong>Specific</strong> metadata. A <em>generic metadata</em> is the annotation that applies to a set of links as a whole while a <em>specific metadata</em> applies to individual links. 
+Indeed, all links residing in the <strong>Lenticular Lens</strong> can be exported. However, prior to doing that, one has to choose whether the metadata is to be included or not and if it is to be included, should it include Generic and/or Specific metadata? </p>
+
+<p><span style="color:blue"><strong>Identity Set in the Default Graph.</strong></span> In the Example-1, using the turtle RDF syntax, we present a standard identity linkset where equivalent resources are linked with the well known linktype owl:sameAs. </p>
+
+<div><pre class="line-numbers"><code class="language-language-turtle">---------------
+-- Example-1 --
+---------------
+Linkset in the default graph.
+    
+    hero:BlackWidow  owl:sameAs   person:Nat .
+    hero:BlackWidow  owl:sameAs   person:Romanoff .
+    hero:BlackWidow  owl:sameAs   person:Natalia-Romanova .
+    hero:BlackWidow  owl:sameAs   person:Natasha .
+    hero:Spiderman   owl:sameAs   person:Peter-parker  .
+    hero:Spiderman   owl:sameAs   person:Tom-Holland .
+    hero:Superman    owl:sameAs   person:Clark-Kent .
+    hero:Superman    owl:sameAs   person:Joseph .
+    hero:Superman    owl:sameAs   person:Kal-El .
+    </code></pre></div>
+
+<p><br></p>
+
+<p><span style="color:blue"><strong>Identity Set in a Named Graph.</strong></span> In Example-2, the set of links illustrated in Example-1 as triples populating the default graph can now be referred to as the graph with IRI ex:herosIdentity. This IRI can now be used to document any generic information deemed relevant such as the source and target datasets, the aligning method&hellip; </p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------
+-- Example-2 --
+---------------
+Linkset in a named graph syntax.
+    
+ex:herosIdentity
+{
+    hero:BlackWidow  owl:sameAs   person:Nat .
+    hero:BlackWidow  owl:sameAs   person:Romanoff .
+    hero:BlackWidow  owl:sameAs   person:Natalia-Romanova .
+    hero:BlackWidow  owl:sameAs   person:Natasha .
+    hero:Spiderman   owl:sameAs   person:Peter-parker  .
+    hero:Spiderman   owl:sameAs   person:Tom-Holland .
+    hero:Superman    owl:sameAs   person:Clark-Kent .
+    hero:Superman    owl:sameAs   person:Joseph .
+    hero:Superman    owl:sameAs   person:Kal-El .
+}</code></pre></div>
+
+<p><br></p>
+
+<p>Example-3 illustrates the complete structure of linksets and lenses in the <strong>Lenticular Lens</strong>. Here, by default, a linkset/lens is annotated with both, generic and specific metadata. <br>
+<span style="color:blue"> <strong>Generic Metadata.</strong> </span> As shown in Example-3, the generic annotation associated with the superheroes identity linkset is composed of 14 triples, which are all element of the default graph (triple without a specific named graph). Among others, these triples convey information such as the type, subjects, license, description, format, number of triples, number of distinct entities, number of identity clusters&hellip; of the set. 
+<span style="color:blue"> <strong>Specific Metadata.</strong> </span> This type of metadata remains in the linkset&rsquo;s graph (applicable to a lens). It enable the reification of specific triples. One can for example provide the confidence strength of each of linkset&rsquo;s statement. As illustrated in Example-3, the <code>hero:Spiderman   owl:sameAs   person:Tom-Holland</code> is annotated as a non valid statement followed by the rational supporting its rejection. Such annotation enable the selection of specific triples. For example, on can select the 8 validated triples or the 7 triples validated as correct. <br>
+<span style="color:blue"> <strong>Separation of Concern.</strong> </span> The linkset and lens presentation enable separation of concern in the sense that it provides the user with a number of options: <strong>Flat Representation:</strong> non reified triples optionally within a named graph; <strong>Partial Representation:</strong> the choice of exclusively including only the generic or the specific metadata; <strong>Full Representation:</strong> as intended in the <strong>Lenticular Lens</strong>, the linkset comes along with its generic and specific metadata if applicable. </p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------
+-- Example-3 --
+---------------
+Default RDF* turtle syntax annotation structure of a linkset in the the Lenticular Lens.
+    
+ex:heroesIdentity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying Marvel&#39;s superheroes&quot; ;
+    dcterms:license       law:odc-public-domain-dedication-and-licence ;
+    dcterms:subject       &lt;http://example.org/resource/Person&gt; ;
+    dcterms:subject       &lt;http://example.org/resource/Hero&gt; ;
+    void:subjectsTarget   dataset:Fictive-Persons ;
+    void:objectsTarget    dataset:Superheroes ;
+    void:feature          format:Turtle ;
+    void:linkPredicate    owl:sameAs ;
+    void:triples           9 ;
+    void:entities         12 ;
+    void:distinctSubjects  3 ;
+    void:distinctObjects   9 ;
+    voidPlus:clusters      3 ;
+    validation:count       8 ;
+    validation:accepted    7 ;
+    validation:rejected    1 ;
+    validation:remains     1 ;
+    
+ex:heroesIdentity
+{
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Nat&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Romanoff&gt;&gt;     validation:status &quot;True&quot; .
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Natalia-Romanova&gt;&gt; 
+        validation:status &quot;True&quot; . 
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Natasha&gt;&gt;      validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spiderman  owl:sameAs person:Peter-parker&gt;&gt; validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spiderman  owl:sameAs person:Tom-Holland&gt;&gt;  
+        validation:status     &quot;False&quot; .
+        validation:Rational   &quot;Tom-Holland does not have Spiderman properties 
+                               which Peter-parker (fictitious) a.k.a Spiderman has.&quot; .
+    &lt;&lt;hero:Superman   owl:sameAs person:Clark-Kent&gt;&gt;   validation:status &quot;True&quot; .
+    &lt;&lt;hero:Superman   owl:sameAs person:Joseph&gt;&gt;       validation:status &quot;True&quot; .
+    hero:Superman   owl:sameAs person:Kal-El .
+}</code></pre></div>
+
+<p><br></p>
+
+<h1 id="toc_70"></span> <div id='Export-Restrictions'/></h1>
+
+<h2 id="toc_71"><span style="color:purple"> 7.2 Export Restrictions </span></h2>
+
+<!----------------------------------------------------------->
+
+<p>As addressed in the previous section, link annotation provides the user with export options as described below.</p>
+
+<div><pre class="line-numbers"><code class="language-none">• All           : Export all links
+• Accepted      : Export only accepted links.
+• Rejected      : Export only rejected links.
+• Validated     : Export rejected or validated links
+• Not Validated : Export links with no accepted or rejected annotation.
+• Threshold     : Export links that pass a predefined threshold condition. 
+                  This feature applies to links annotated with confidence values.</code></pre></div>
+
+<h1 id="toc_72"></span> <div id='Export-Formats'/></h1>
+
+<h2 id="toc_73"><span style="color:purple"> 7.3 Export Formats </span></h2>
+
+<!------------------------------------------------------>
+
+<p>Indeed, all links residing in the <strong>Lenticular Lens</strong> can be exported. For that, one is provided with three syntax options: <strong>CSV</strong> (Example-4), <strong>JSON-LD</strong> (Example-5), <strong>RDF Turtle</strong> (Example-6), and <strong>RDF* Turtle</strong> (Example-3).</p>
+
+<p><span style="color:blue"> <strong>CSV OUTPUT.</strong> </span> In our attend to export a linkset/lens with its complete metadata, in a CSV format, the <strong>Lenticular Lens</strong> generates two CSV tables. As available in Example-4, the first table is an illustration of the metadata table while the second table is an illustration of the superheroes identity linkset.</p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------
+-- Example-4 --
+---------------
+Linkset in a CSV format. 
+Keep in mind that the table below are a visual representation of a CSV table
+
+--------------------
+-- METADATA TABLE --
+--------------------
+
+---------------------------------------------------------------------------------------------------------  
+| Vocabulary                                                  Value                                     |
+---------------------------------------------------------------------------------------------------------                                                
+  http://www.w3.org/ns/sparql-service-description#namedGraph  http://example.org/#herosIdentity
+  http://www.w3.org/1999/02/22-rdf-syntax-ns#type             http://rdfs.org/ns/void#Linkset
+  http://purl.org/dc/terms/description                        Identifying Marvel&#39;s superheroes
+  http://purl.org/dc/terms/license                            law:odc-public-domain-dedication-and-licence
+  http://purl.org/dc/terms/subject                            http://example.org/resource/Person
+  http://purl.org/dc/terms/subject                            http://example.org/resource/Hero
+  http://rdfs.org/ns/void#subjectsTarget                      dataset:Fictive-Persons
+  http://rdfs.org/ns/void#objectsTarget                       dataset:Superheroes
+  http://rdfs.org/ns/void#feature                             format:Turtle
+  http://rdfs.org/ns/void#linkPredicate                       owl:sameAs
+  http://rdfs.org/ns/void#triples                             9
+  http://rdfs.org/ns/void#entities                            12
+  http://rdfs.org/ns/void#distinctSubjects                    3
+  http://rdfs.org/ns/void#distinctObjects                     9
+  http://vocabulary/voidPlus#clusters                         3
+  http://vocabulary/validation#count                          8
+  http://vocabulary/validation#accepted                       7
+  http://vocabulary/validation#rejected                       1
+  http://vocabulary/validation#remains                        1
+
+------------------------
+-- LINKSET/LENS TABLE --
+------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+| NamedGraph                         Source                              Target                                      ValStatus  ValRational    |
+------------------------------------------------------------------------------------------------------------------------------------------------
+  http://example.org/#herosIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Nat               True         
+  http://example.org/#herosIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Romanoff          True
+  http://example.org/#herosIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Natalia-Romanova  True
+  http://example.org/#herosIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Natasha           True
+  http://example.org/#herosIdentity  http://example.org/hero#Spiderman   http://example.org/person#Peter-parker      True
+  http://example.org/#herosIdentity  http://example.org/hero#Spiderman   http://example.org/person#Tom-Holland       False      Tom-Holland does not have Spiderman properties which Peter-parker (fictitious) a.k.a Spiderman has.
+  http://example.org/#herosIdentity  http://example.org/hero#Superman    http://example.org/person#Clark-Kent        True
+  http://example.org/#herosIdentity  http://example.org/hero#Superman    http://example.org/person#Joseph            True
+  http://example.org/#herosIdentity  http://example.org/hero#Superman    http://example.org/person#Kal-El            True
+
+</code></pre></div>
+
+<p><br></p>
+
+<p><span style="color:blue"> <strong>JSON-LD  OUTPUT.</strong> </span>TODO&hellip;.</p>
+
+<div><pre class="line-numbers"><code class="language-json-ld">---------------
+-- Example-5 --
+---------------
+Linkset in a JSON-LD format.
+
+{
+  &quot;@context&quot;: 
+  {
+    &quot;name&quot;: &quot;http://xmlns.com/foaf/0.1/name&quot;,
+    &quot;homepage&quot;: 
+    {
+      &quot;@id&quot;: &quot;http://xmlns.com/foaf/0.1/workplaceHomepage&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
+    },
+    &quot;Person&quot;: &quot;http://xmlns.com/foaf/0.1/Person&quot;
+  },
+  
+  &quot;@id&quot;: &quot;https://me.example.com&quot;,
+  &quot;@type&quot;: &quot;Person&quot;,
+  &quot;name&quot;: &quot;John Smith&quot;,
+  &quot;homepage&quot;: &quot;https://www.example.com/&quot;
+}</code></pre></div>
+
+<p><br></p>
+
+<p><span style="color:blue"> <strong>RDF TURTLE  OUTPUT.</strong> </span> Our preference goes to an RDF* Turtle Output as illustrated in Example-3. However, because RDF* is not deployed on all triple stores, we provide the singleton representation alternative as well. An example of this representation in available in Example-6.</p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------
+-- Example-6 --
+---------------
+Default RDF turtle syntax annotation structure of a linkset in the the Lenticular Lens.
+Linkset in an RDF Turtle format using singletons.
+    
+ex:heroesIdentity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying Marvel&#39;s heros&quot; ;
+    dcterms:license       law:odc-public-domain-dedication-and-licence ;
+    dcterms:subject       &lt;http://example.org/resource/Person&gt; ;
+    dcterms:subject       &lt;http://example.org/resource/Hero&gt; ;
+    void:subjectsTarget   dataset:Fictive-Persons ;
+    void:objectsTarget    dataset:Superheroes ;
+    void:feature          format:Turtle ;
+    void:linkPredicate    owl:sameAs ;
+    void:triples           9 ;
+    void:entities         12 ;
+    void:distinctSubjects  3 ;
+    void:distinctObjects   9 ;
+    voidPlus:clusters      3 ;
+    validation:count       8 ;
+    validation:accepted    7 ;
+    validation:rejected    1 ;
+    validation:remains     1 ;
+    
+ex:heroesIdentity
+{
+    hero:BlackWidow  singleton:sameAs-1   person:Nat .
+    hero:BlackWidow  singleton:sameAs-2   person:Romanoff .
+    hero:BlackWidow  singleton:sameAs-3   person:Natalia-Romanova .
+    hero:BlackWidow  singleton:sameAs-4   person:Natasha .
+    hero:Spiderman   singleton:sameAs-5   person:Peter-parker  .
+    hero:Spiderman   singleton:sameAs-6   person:Tom-Holland .
+    hero:Superman    singleton:sameAs-7   person:Clark-Kent .
+    hero:Superman    singleton:sameAs-8   person:Joseph .
+    hero:Superman    singleton:sameAs-9   person:Kal-El .
+}</code></pre></div>
+
+<p><br></p>
+
+<h1 id="toc_74"></span> <div id='Default-Export-Table'/></h1>
+
+<h2 id="toc_75"><span style="color:purple"> 7.4 Default Export Table </span></h2>
+
+<!--------------------------------------------------------->
+
+<p>Example-7 summarises the various options for exporting a linkset or lens. In each set of selection category, a default selection is checked in. This means that, by default, an exported linkset or lens comes along with <strong>all its links</strong> and <strong>its complete annotation</strong> in a <strong>CSV format</strong>. </p>
+
+<div><pre class="line-numbers"><code class="language-none">---------------
+-- Example-7 --
+---------------
+    ----------------------------------------------------------------
+    | RESTRICTIONS        STRUCTURE               FORMAT           |
+    ----------------------------------------------------------------
+      [x] All             [x] Complete            [x] CSV                                  
+      [ ] Accepted        [ ] Partial:Generic     [ ] JSON-LD                    
+      [ ] Rejected        [ ] Partial:Specific    [ ] RDF-TURTLE              
+      [ ] Validated                               [ ] RDF*-TURTLE 
+      [ ] Not Validated                                           
+      [ ] Threshold                                                                                      </code></pre></div>
+
+<!----------------------------------------------------------->
+
+<h1 id="toc_76"></span> <div id='Data-Integration'/></h1>
+
+<h1 id="toc_77"><br> <span style="color:purple"> 8. DATA INTEGRATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!----------------------------------------------------------->
+
+<p>The Lenticular Lens is <strong>a mean</strong> (link creation, manipulation and validation for data integration) to <strong>an end</strong> (data extraction for analysis). Here, we show <strong>how one can extract the right information for analysis</strong> given an integration model that can be achieve using existing linksets and lenses.  </p>
+
+<h1 id="toc_78"></span> <div id='Integration-Model'/></h1>
+
+<h2 id="toc_79"><span style="color:purple"> 8.1 Integration Model </span></h2>
+
+<!----------------------------------------------------------->
+
+<h1 id="toc_80"></span> <div id='Data-Extraction'/></h1>
+
+<h2 id="toc_81"><span style="color:purple"> 8.2 Data Extraction </span></h2>
+
+<!----------------------------------------------------------->
+
+<!--------------------------------------------------------->
+
+<h1 id="toc_82"></span> <div id='Installation'/></h1>
+
+<h1 id="toc_83"><br> <span style="color:purple">  9. INSTALLATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!--------------------------------------------------------->
+
+<p>To install a local version of the Lenticular Lens, follow the installation steps described below.</p>
+
+<ol>
+<li>Make sure <code>Docker</code> and <code>Docker Compose</code> are installe
+
+<ul>
+<li>For <code>Windows</code> and <code>Mac users</code>: install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>. </li>
+</ul></li>
+<li> Use the provided <code>docker-compose.yml</code> as a baseline.</li>
+<li> Run <code>docker-compose</code></li>
+<li>Visit <a href="http://localhost:8000">http://localhost:8000</a> in your browser</li>
+</ol>
+
+<p><strong>Note</strong>: <br> This will create a folder pgdata with the database data. 
+<br> To clean up the database and start from scratch, simply remove this folder.</p>
+
+<h1 id="toc_84"></span> <div id='API'/></h1>
+
+<h1 id="toc_85"><br> <span style="color:purple">  10. API </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<!--------------------------------------------------------->
+
+<p>Through Github, the <strong><a href="https://github.com/knaw-huc/lenticular-lenses#api">Lenticular Lens API</a></strong> is made available with a set of functions and procedures allowing for the code to be reused and/or extended .</p>
+
+<h1 id="toc_86"><br> <span style="color:purple"> REFERENCES </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+
+<ul>
+<li><p><strong><span style="color:purple"> [Euzenat] </span></strong> J. Euzenat and P. Shvaiko. Ontology matching. Springer-Verlag, Heidelberg (DE), 2nd edition, 2013.</p></li>
+<li><p><strong><span style="color:purple"> [LINKED-DATA] </span></strong> T. Berners-Lee. Linked Data – Design issues. 27 July 2006. URL: <a href="https://www.w3.org/DesignIssues/LinkedData.html">https://www.w3.org/DesignIssues/LinkedData.html</a> <br></p></li>
+<li><p><strong><span style="color:purple"> [RDF11-CONCEPTS] </span></strong>  Richard Cyganiak, David Wood, Markus Lanthaler. RDF 1.1 Concepts and Abstract Syntax. W3C Recommendation, 25 February 2014. URL: <a href="http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/">http://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/</a>. The latest edition is available at <a href="http://www.w3.org/TR/rdf11-concepts/">http://www.w3.org/TR/rdf11-concepts/</a> <br></p></li>
+<li><p><strong><span style="color:purple"> [RFC2141] </span></strong> R. Moats. URN Syntax. May 1997. RFC. URL: <a href="http://www.ietf.org/rfc/rfc2141.txt">http://www.ietf.org/rfc/rfc2141.txt</a> <br></p></li>
+<li><p><strong><span style="color:purple"> [RFC3305] </span></strong> M. Mealling; R. Denenberg. Report from the Joint W3C/IETF URI Planning Interest Group: Uniform Resource Identifiers (URIs), URLs, and Uniform Resource Names (URNs): Clarifications and Recommendations. August 2002. RFC. URL: <a href="http://www.ietf.org/rfc/rfc3305.txt">http://www.ietf.org/rfc/rfc3305.txt</a></p></li>
+<li><p><strong><span style="color:purple"> [RFC3986] </span></strong> T. Berners-Lee; R. Fielding; L. Masinter. Uniform Resource Identifier (URI): Generic Syntax. January 2005. RFC. URL: <a href="http://www.ietf.org/rfc/rfc3986.txt">http://www.ietf.org/rfc/rfc3986.txt</a></p></li>
+<li><p><strong><span style="color:purple"> [RFC3987] </span></strong> M. Dürst; M. Suignard. Internationalized Resource Identifiers (IRIs). January 2005. RFC. URL: <a href="http://www.ietf.org/rfc/rfc3987.txt">http://www.ietf.org/rfc/rfc3987.txt</a></p></li>
+<li><p><strong><span style="color:purple"> [VoID] </span></strong>  K. Alexander, R. Cyganiak, M. Hausenblas, and J. Zhao. Describing LinkedDatasets with the VoID Vocabulary.  Technical report, 2011.  W3C Note. URL:<a href="https://www.w3.org/TR/void/">https://www.w3.org/TR/void/</a>. <br></p></li>
+</ul>
+
+<!--
+Research Select Construct Manipulate Validate Export
+<div align="center"> </div>
+<sub>![](LL_PlusButton.jpg)</sub> 
+<span style="color:blue">•••</span>
+-->
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+<script type="text/javascript">
+!function(){"undefined"!=typeof self&&self.Prism&&self.document&&Prism.hooks.add("complete",function(e){if(e.code){var t=e.element.parentNode,s=/\s*\bline-numbers\b\s*/;if(t&&/pre/i.test(t.nodeName)&&(s.test(t.className)||s.test(e.element.className))&&!e.element.querySelector(".line-numbers-rows")){s.test(e.element.className)&&(e.element.className=e.element.className.replace(s,"")),s.test(t.className)||(t.className+=" line-numbers");var n,a=e.code.match(/\n(?!$)/g),l=a?a.length+1:1,m=new Array(l+1);m=m.join("<span></span>"),n=document.createElement("span"),n.className="line-numbers-rows",n.innerHTML=m,t.hasAttribute("data-start")&&(t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)),e.element.appendChild(n)}}})}();
+</script>
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
