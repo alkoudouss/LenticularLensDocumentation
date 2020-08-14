@@ -1471,67 +1471,96 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 <!--For a higher level of accuracy, let us assume that, two data items representing persons are co-referent, if then pass the following tests:
 -->
 
-<p>Let us assume that, two data items representing persons are co-referent, if then pass the following tests:</p>
-
-<ol>
-<li>AND (score must be greater than 0.8) 
+<p>Suppose that, two data items E-1 and E-2 have the following information:</p>
 
 <ul>
-<li>OR: Name Comparison
+<li><p>E-1</p>
 
 <ul>
-<li> Levenshtein (score must be greater than 0.7) </li>
-<li> Soundex (score must be greater than 0.7) </li>
+<li><strong>Name</strong>:  Titus Rembrandtsz. van Rijn</li>
+<li><strong>Mather</strong>: Saskia Uylenburgh</li>
+<li><strong>Father</strong>: Rembrand van Rijn</li>
+<li><strong>Parent&rsquo;s Marriage date</strong>: 1644-06-22</li>
 </ul></li>
-<li>OR: Parent Name Comparison
+<li><p>E-2</p>
 
 <ul>
-<li> Fathers (Levenshtein greater than 0.6)</li>
-<li> Mothers (Levenshtein greater than 0.6)</li>
+<li><strong>Name</strong>: T. Rembrandtszoon van Rijn</li>
+<li><strong>Mather</strong>: Saske van Uijlenburg</li>
+<li><strong>Father</strong>: Rembrandt Harmensz van Rijn</li>
+<li><strong>Baptism date</strong>:1641-09-22</li>
 </ul></li>
-<li>OR: Dates Comparison
+</ul>
+
+<p>To interpret E-1 and E-2 as representing co-referent persons, the following four tests are proposed. </p>
 
 <ul>
-<li>Identical birth dates<br></li>
-<li>The delta between marriage and child&rsquo;s baptisms is less than 25 years</li>
-</ul></li>
-</ul></li>
-</ol>
-
-<p>Now we take the following data to compute and compare results obtained using different operations:</p>
+<li><strong>Test-1 OR</strong> : Here, the names of E-1 and E-2 are to be compared using the <strong>Levenshtein</strong> and <strong>Soundex</strong> algorithms at a threshold of <strong>at least 0.7</strong>.</li>
+</ul>
 
 <div><pre class="line-numbers"><code class="language-none">
-** MATCHING RESULTS: **
-Levenshtein(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn) =&gt; 0.74
-Soundex(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn)     =&gt; 0.85
-Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63
-Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65
-ExactDate(1641-09-22, 1641-09-22)                                    =&gt; 1.00
-Delta(1668-02-28, 1669-03-22, 25)                                    =&gt; 1.00
+** MATCHING RESULTS **
+ - Levenshtein(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn) =&gt; 0.74 ✓
+ - Soundex(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn)     =&gt; 0.85 ✓
 
-
-** DISJUNCTIONS **
-names   = t_conorm(0.74, 0.85, &#39;MAXIMUM&#39;)          =&gt; names   = 0.850
-parents = t_conorm(0.62, 0.65, &#39;PROBABILISTIC&#39;)    =&gt; parents = 0.867
-dates   = t_conorm(1.00, 1.00, &#39;MAXIMUM&#39;)          =&gt; dates   = 1.000
-
-
-** PARTIAL CONJUNCTIONS **  ### Ops.t_norm(names, parents, OPERATION)
-partial_1 = Ops.t_norm(0.850, 0.867, &#39;NILPOTENT&#39;)  =&gt; partial_1 = 0.850
-partial_2 = Ops.t_norm(0.850, 0.867, &#39;PRODUCT&#39;)    =&gt; partial_2 = 0.737
-partial_3 = Ops.t_norm(0.850, 0.867, &#39;MINIMUM&#39;)    =&gt; partial_3 = 0.850
-partial_4 = Ops.t_norm(0.850, 0.867, &#39;HAMACHER&#39;)   =&gt; partial_4 = 0.752
-
-
-** FINAL CONJUNCTIONS **  ### Ops.t_norm(partial_i, dates, OPERATION)
-result_1 = Ops.t_norm(0.850, 1.0, &#39;NILPOTENT&#39;)     =&gt; result_1 = 0.850
-result_2 = Ops.t_norm(0.737, 1.0, &#39;DRASTIC&#39;)       =&gt; result_1 = 0.737
-result_3 = Ops.t_norm(0.850, 1.0, &#39;MINIMUM&#39;)       =&gt; result_1 = 0.850
-result_4 = Ops.t_norm(0.752, 1.0, &#39;HAMACHER&#39;)      =&gt; result_1 = 0.752
+** DISJUNCTIONS RESULTS **
+ - names similarity   = t_conorm(0.74, 0.85, &#39;MAXIMUM&#39;)                 =&gt; 0.85 ✓
 
 </code></pre></div>
 
-<p>Given the operations described above, only result<u>1 and result</u>3 would pass the final threshold defined as 0.8.</p>
+<p><br></p>
+
+<ul>
+<li><strong>Test-2 AND</strong> : Names of the postulated mothers and fathers are to be similar at a threshold of at <strong>least 0.6</strong> using the <strong>Levenshtein</strong> algorithm.</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-none">
+** MATCHING RESULTS **
+ - Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65 ✓
+ - Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63 ✓
+
+** CONJUNCTION RESULTS **
+ - Parent&#39;s names similarity  = t_norm(0.65, 0.63, &#39;MINIMUM&#39;)           =&gt; 0.63 ✓
+ - Parent&#39;s names similarity  = t_norm(0.65, 0.63, &#39;HAMACHER&#39;)          =&gt; 0.47 ❌
+ 
+</code></pre></div>
+
+<p><br></p>
+
+<ul>
+<li><strong>Test-3</strong> : The period between the parent&rsquo;s <strong>marriage date</strong> on the one side and the <strong>child&rsquo;s baptism</strong> date on the other side are to be <strong>no more than 25 years apart</strong>.</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-none">
+** MATCHING RESULTS **
+Delta(1668-02-28, 1669-03-22, 25)                                       =&gt; 1.00 ✓
+
+</code></pre></div>
+
+<p><br></p>
+
+<ul>
+<li><strong>Test-4 AND</strong> : Combining all above three tests considering a the conjunction fuzzy operator should result in a similarity score above or equal to 0.8.</li>
+</ul>
+
+<div><pre class="line-numbers"><code class="language-none">
+** FINAL CONJUNCTIONS ** 
+Ops.t_norm_list([0.850, 0.63, 1], &#39;MINIMIUM&#39;)                           =&gt; 0.63 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;HAMACHER&#39;)                           =&gt; 0.57 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;PRODUCT&#39;)                            =&gt; 0.54 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;NILPOTENT&#39;)                          =&gt; 0.63 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;Łuk&#39;)                                =&gt; 0.48 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;DRASTIC&#39;)                            =&gt; 0.00 ❌
+
+
+Ops.t_norm(Ops.t_norm(0.850, 0.63, &#39;HAMACHER&#39;), 1, &#39;MINIMIUM&#39;)          =&gt; 0.57 ❌
+Ops.t_norm(Ops.t_norm(0.850, 0.63, &#39;MINIMIUM&#39;), 1, &#39;HAMACHER&#39;)          =&gt; 0.63 ❌
+
+</code></pre></div>
+
+<p><br></p>
+
+<p><strong>Conclusion</strong>: Given the <strong>evidence</strong> provided for E-1 and E-2  and the <strong>rules</strong> described above, the interpretation resulting from the chosen fuzzy logic operations leads to the conclusion that there is no sufficient evidence to infer that the underlying data items are co-referent. This rejection is mainly due to the low similarity of the parents&#39; names. If the resulting similarity were above 0.8, there would then be a better chance for the data items to be co-referent. Keep in mind that our conjectured rule asserts an identity relation for combination of scores only when above 0.8. A better data or more advanced algorithm could have helped.</p>
 
 <h1 id="toc_36"></span> <div id='Matching-in-Practice'/></h1>
 
