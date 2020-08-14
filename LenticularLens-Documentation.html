@@ -1500,12 +1500,14 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 
 <div><pre class="line-numbers"><code class="language-none">
 ** MATCHING RESULTS **
- - Levenshtein(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn) =&gt; 0.74 ✓
- - Soundex(Titus Rembrandtsz. van Rijn, T. Rembrandtszoon van Rijn)     =&gt; 0.85 ✓
+ - Levenshtein(Titus Rembrandtsz van Rijn, T. Rembrandtszoon van Rijn)  =&gt; 0.73 ✓
+ - sdx_1 = Soundex(Titus Rembrandtsz van Rijn) = T320 R516 V500 R250
+ - sdx_2 = Soundex(T. Rembrandtszoon van Rijn) = T000 R516 V500 R250
+ - Levenshtein(sdx_1, sdx_2)                                            =&gt; 0.89 ✓
 
 ** DISJUNCTIONS RESULTS **
- - names similarity   = t_conorm(0.74, 0.85, &#39;MAXIMUM&#39;)                 =&gt; 0.85 ✓
-
+ - names similarity   = t_conorm(0.73, 0.88, &#39;MAXIMUM&#39;)                 =&gt; 0.89 ✓
+ - names similarity   = t_conorm(0.73, 0.88, &#39;PROBABILISTIC&#39;)           =&gt; 0.97 ✓
 </code></pre></div>
 
 <p><br></p>
@@ -1546,10 +1548,10 @@ Delta(1668-02-28, 1669-03-22, 25)                                       =&gt; 1.
 <div><pre class="line-numbers"><code class="language-none">
 ** FINAL CONJUNCTIONS ** 
 Ops.t_norm_list([0.850, 0.63, 1], &#39;MINIMIUM&#39;)                           =&gt; 0.63 ❌
-Ops.t_norm_list([0.850, 0.63, 1], &#39;HAMACHER&#39;)                           =&gt; 0.57 ❌
-Ops.t_norm_list([0.850, 0.63, 1], &#39;PRODUCT&#39;)                            =&gt; 0.54 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;HAMACHER&#39;)                           =&gt; 0.58 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;PRODUCT&#39;)                            =&gt; 0.56 ❌
 Ops.t_norm_list([0.850, 0.63, 1], &#39;NILPOTENT&#39;)                          =&gt; 0.63 ❌
-Ops.t_norm_list([0.850, 0.63, 1], &#39;Łuk&#39;)                                =&gt; 0.48 ❌
+Ops.t_norm_list([0.850, 0.63, 1], &#39;Łuk&#39;)                                =&gt; 0.52 ❌
 Ops.t_norm_list([0.850, 0.63, 1], &#39;DRASTIC&#39;)                            =&gt; 0.00 ❌
 
 
