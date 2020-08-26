@@ -615,17 +615,19 @@ pre.line-numbers > code {
 
 <h1 style="font-size:4vw; color:purple"> <div align="center">THE LENTICULAR LENS</h1>
 
-<h6 id="toc_0"><div align="center"> A platform for addressing various aspects of the <span style="color:blue"> disambiguation of Entities </span>. <br> These aspects include the <span style="color:blue">creation</span>, <span style="color:blue"> manipulation</span>, <span style="color:blue"> validation</span>, <span style="color:blue"> provenance</span> and <span style="color:blue"> visualisation </span> of links. <br> Developped in the context of <strong>RISIS</strong> &amp; the <strong>Golden Agents Projec</strong>t</div></h6>
+<h6 id="toc_0"><div align="center"> A platform for addressing various aspects of the <span style="color:blue"> disambiguation of Entities </span>. <br> These aspects include the <span style="color:blue">creation</span>, <span style="color:blue"> manipulation</span>, <span style="color:blue"> validation</span>, <span style="color:blue"> provenance</span> and <span style="color:blue"> visualisation </span> of links. <br> Developped in the context of <strong>RISIS</strong> &amp; the <strong>Golden Agents projec</strong>t</div></h6>
 
 <p><img src="Images/LL.jpg" alt="LL"></p>
+
+<h5 id="toc_1"><BR> <div align="center"><span style="color:red"> At present, this documentation is not fully in the image of current <a href="https://recon.diginfra.net/">Lenticular Lens</a>. However, the currently work in progress UI is meant to be inline with the documentation. </div></span></h5>
 
 <!--https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents/33433098#introduction-->
 
 <!--------------------------------------------------------->
 
-<h1 id="toc_1"></span> <div id='CONTENTS'/></h1>
+<h1 id="toc_2"></span> <div id='CONTENTS'/></h1>
 
-<h1 id="toc_2"><BR> <span style="color:purple"> TABLE OF CONTENTS (TOC) </span></h1>
+<h1 id="toc_3"><BR> <span style="color:purple"> TABLE OF CONTENTS (TOC) </span></h1>
 
 <!--------------------------------------------------------->
 
@@ -708,13 +710,13 @@ pre.line-numbers > code {
 
 <p><strong><a href="#API">10. API</a></strong></p>
 
-<h1 id="toc_3"></span> <div id=''/></h1>
+<h1 id="toc_4"></span> <div id=''/></h1>
 
 <!--------------------------------------------------------->
 
-<h1 id="toc_4"></span> <div id='Introduction'/></h1>
+<h1 id="toc_5"></span> <div id='Introduction'/></h1>
 
-<h1 id="toc_5"><BR> <span style="color:purple">  1. INTRODUCTION (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_6"><BR> <span style="color:purple">  1. INTRODUCTION (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!--------------------------------------------------------->
 
@@ -771,9 +773,9 @@ In other words, most matching algorithms have been successfully applied in limit
 
 <!---------------------------------------------------------->
 
-<h1 id="toc_6"><br> <div id='Terminology'/></h1>
+<h1 id="toc_7"><br> <div id='Terminology'/></h1>
 
-<h1 id="toc_7"><span style="color:purple">  2. TERMINOLOGY </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_8"><span style="color:purple">  2. TERMINOLOGY </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!---------------------------------------------------------->
 
@@ -784,8 +786,10 @@ In other words, most matching algorithms have been successfully applied in limit
 
 <p><span style="color: purple">  <strong>IRI - URI - URL - URN .</strong> </span> These constitute ways in which things (resources) in the real world can be referred to in the digital world. <q>The resource denoted by an IRI is called its <strong>referent</strong>, and the resource denoted by a literal is called its literal value.</q> <a href="https://www.w3.org/TR/rdf11-concepts/#data-model">RDF 1.1</a>. In the IRI example provided below, we illustrate six IRIs referents of resources of various types (hero, villain and vocabulary). </p>
 
-<div><pre class="line-numbers"><code class="language-none">Example: IRIs
--------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.1 -- IRIs
+-----------------
  A resource&#39;s REFERENT is an IRI.
  A resource&#39;s LITERAL VALUE is a LITERAL.
 
@@ -811,9 +815,11 @@ In other words, most matching algorithms have been successfully applied in limit
 In RDF, any triple is an <strong>RDF STATEMENT</strong>. There exist various syntaxes for representing triple statements. For further reading, see
  <a href="https://www.w3.org/TR/n-triples/">N-Triples</a>, <a href="https://www.w3.org/TeamSubmission/n3/">Notation3</a>, <a href="https://www.w3.org/TR/n-quads/">N-Quads</a>, <a href="https://www.w3.org/TR/turtle/">Turtle</a>,  <a href="https://www.w3.org/TR/rdf-syntax-grammar/#:%7E:text=Definition%3A,as%20defined%20in%20this%20document.">RDF XML</a>, <a href="https://www.w3.org/MarkUp/2004/rdf-a">RDFa</a>,<a href="https://www.w3.org/TR/json-ld11/">JSON-LD</a>&hellip; <br></p>
 
-<div><pre class="line-numbers"><code class="language-none">-----------------------------------------
--- Example: TRIPLES IN N-TRIPLE SYNTAX --
------------------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.2 -- TRIPLES IN N-TRIPLE SYNTAX 
+-----------------
+
 &lt;http://example.org/hero#Spiderman&gt;  &lt;http://xmlns.com/foaf/0.1/name&gt;        &quot;Peter-Parker&quot; .
 &lt;http://example.org/hero#Spiderman&gt;  &lt;http://www.w3.org/2002/07/owl#sameAs&gt;  &lt;http://example.org/person#Peter-Parker&gt;
 
@@ -821,14 +827,18 @@ In RDF, any triple is an <strong>RDF STATEMENT</strong>. There exist various syn
 
 <!--<span style="color: purple">  **URI.** </span> The term stands for Uniform Resource Identifier. As described, literally, it is a string of characters that represents a unique identification of a resource described using the Resource Description Framework model.-->
 
-<div><pre class="line-numbers"><code class="language-none">---------------------------------------
--- Example: TRIPLES IN TURTLE SYNTAX --
----------------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.3 -- TRIPLES IN TURTLE SYNTAX 
+-----------------
+
 @prefix  ex: &lt;http://example.org/#&gt; .
 @prefix rel: &lt;http://www.perceive.net/schemas/relationship/&gt; .
 
-ex:green-goblin&gt;  rel:enemyOf  ex:Spiderman .
-ex:spiderman      foaf:name     ex:Peter-Parker.</code></pre></div>
+ex:green-goblin  rel:enemyOf  ex:Spiderman .
+ex:spiderman      foaf:name     ex:Peter-Parker.
+
+</code></pre></div>
 
 <p><br><span style="color: purple">  <strong>RDF LINK.</strong> </span> It is also known as a <strong>correspondent triple</strong> <span style="color:blue">[<em>Euzenat</em>]</span> or simply <strong>link</strong> in RDF<mark>??</mark> and <span style="color:blue">[<em>VoID</em>]</span>. Links are triples in the form of 〈subject relation object〉 and are meant to exist only between two datasets. However, beside the incentive for providers to link their data to existing datasets, we do not see a good reason for a link not to exist within the same dataset. Thereby, in this document, an RDF link is a  relation between two resources (<em>digital representations of entities presented as URIs</em>) regardless of the datasource they stem from. This means a that a link can involve a minimum of one dataset and a maximum of two.</p>
 
@@ -847,9 +857,11 @@ In the <strong>Lenticular Lens</strong>, all links within a linkset share the sa
 
 <p><span style="color: purple">  <strong>NAMED GRAPH.</strong> </span>  According to <a href="https://en.wikipedia.org/wiki/Named_graph">Wikipedia</a>, named graphs are a key concept of Semantic Web architecture in which a set of Resource Description Framework statements (a graph) are identified using a IRI, allowing descriptions to be made of that set of statements such as context, provenance information or other such metadata.</p>
 
-<div><pre class="line-numbers"><code class="language-none">--------------------------
--- Example: NAMED GRAPH --
---------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.4 -- NAMED GRAPH
+-----------------
+
 Turtle named graph syntax of a linkset of three links using the owl:sameAs linktype. 
 In the example, http://example.org/#linkset-1 is the IRI of the named graph. For 
 more detail on Turtle RDF syntax, See https://www.w3.org/TR/turtle/#simple-triples. 
@@ -866,13 +878,15 @@ ex:linkset-1
     ex:Chiara   owl:sameAs  ex:Latronico .
     ex:Al       owl:sameAs  ex:Al_Idrissou .
     ex:Al       owl:sameAs  ex:Al_Koudous .
-}</code></pre></div>
+}
+</code></pre></div>
 
 <p><br><span style="color: purple">  <strong>DEFAULT GRAPH.</strong> </span> In a triple-store jargon, any triple without a specific named-graph ends up in the default graph. In the example below, the triple at line 4 is located in the default graph while triples at line 8 and 9 are in an <strong>explicitly stated graph</strong>, in the named-graph: ex:linkset-1.</p>
 
-<div><pre class="line-numbers"><code class="language-none">----------------------------------
--- Example: DEFAULT NAMED-GRAPH --
-----------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.5 -- DEFAULT NAMED-GRAPH
+-----------------
 
 ex:Chiara   owl:sameAs  ex:Latronico .
 
@@ -880,13 +894,17 @@ ex:linkset-1
 {
     ex:Al       owl:sameAs  ex:Al_Idrissou .
     ex:Al       owl:sameAs  ex:Al_Koudous .
-}</code></pre></div>
+}
+
+</code></pre></div>
 
 <p><br> <span style="color: purple">  <strong>PREFIX.</strong> </span> Below are the prefixes used in this document:</p>
 
-<div><pre class="line-numbers"><code class="language-none">-----------------------------------------------
--- Example 5.1: PREFIXES USED IN THIS MANUAL --
------------------------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 2.6 -- PREFIXES USED IN THIS MANUAL
+-----------------
+
 
    @prefix          A: &lt;http://example.org/A#&gt; .
    @prefix          B: &lt;http://example.org/B#&gt; .
@@ -894,13 +912,16 @@ ex:linkset-1
     @prefix    dataset: &lt;http://example.org/dataset#&gt; .
     @prefix    dcterms: &lt;http://purl.org/dc/terms/&gt; .
     @prefix         ex: &lt;http://example.org/#&gt; .
+    @prefix       foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
     @prefix     format: &lt;http://www.w3.org/ns/formats/&gt; .
+    @prefix       grid: &lt;http://www.grid.ac/ontology/&gt; .
     @prefix       hero: &lt;http://example.org/hero#&gt; .
     @prefix        law: &lt;http://www.opendatacommons.org/&gt;
     @prefix        owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
     @prefix     person: &lt;http://example.org/person#&gt; .
     @prefix       prov: &lt;http://www.w3.org/ns/prov#&gt; .
     @prefix        rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+    @prefix       rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
     @prefix        rel: &lt;http://www.perceive.net/schemas/relationship/&gt; .
     @prefix        sim: &lt;http://purl.org/ontology/similarity/&gt; .
     @prefix       void: &lt;http://rdfs.org/ns/void#&gt; .
@@ -910,9 +931,9 @@ ex:linkset-1
 
 <!--------------------------------------------------------------------->
 
-<h1 id="toc_8"></span> <div id='The-Lenticular-Lens-Menu'/></h1>
+<h1 id="toc_9"></span> <div id='The-Lenticular-Lens-Menu'/></h1>
 
-<h1 id="toc_9"><br> <span style="color:purple"> 3. THE LENTICULAR LENS MENUS </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_10"><br> <span style="color:purple"> 3. THE LENTICULAR LENS MENUS </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!--------------------------------------------------------------------->
 
@@ -944,9 +965,9 @@ ex:linkset-1
 
 <!------------------------------------------------------------->
 
-<h1 id="toc_10"></span> <div id='Link-Construction'/></h1>
+<h1 id="toc_11"></span> <div id='Link-Construction'/></h1>
 
-<h1 id="toc_11"><br> <span style="color:purple"> 4. LINK CONSTRUCTION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_12"><br> <span style="color:purple"> 4. LINK CONSTRUCTION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!------------------------------------------------------------->
 
@@ -966,9 +987,9 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 
 <p>We now go through each of these first three menus underlying the existence of links.</p>
 
-<h1 id="toc_12"></span> <div id="Defining-the-Researchs-Scope"/></h1>
+<h1 id="toc_13"></span> <div id="Defining-the-Researchs-Scope"/></h1>
 
-<h2 id="toc_13"><span style="color:purple"> 4.1 Defining the Research&rsquo;s Scope</span></h2>
+<h2 id="toc_14"><span style="color:purple"> 4.1 Defining the Research&rsquo;s Scope</span></h2>
 
 <!------------------------------------------------------------------->
 
@@ -987,17 +1008,17 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 <p><div align="center"> <img src="Images/LL_Research.jpg" alt="The Lenticular Lens Research window">Fig. 4.1:  Describing the scope of he research question. </div>
  <br></p>
 
-<h1 id="toc_14"></span> <div id='Data-Selection-and-Restrictions'/></h1>
+<h1 id="toc_15"></span> <div id='Data-Selection-and-Restrictions'/></h1>
 
-<h2 id="toc_15"><span style="color:purple"> 4.2 Data Selection and Restrictions </span></h2>
+<h2 id="toc_16"><span style="color:purple"> 4.2 Data Selection and Restrictions </span></h2>
 
 <!----------------------------------------------------------------------->
 
 <p>In the previous step or window, the researcher has defined the scope of the research for which data are to be extracted and analysed. In this second window labelled <code>SELECT</code>, the user is to describe and select the entity types involved in his research. For that, the location of the datasource needs to be provided and the datasets in which the respective entities of interest reside need to be selected.</p>
 
-<h1 id="toc_16"></span> <div id='Data-Selections'/></h1>
+<h1 id="toc_17"></span> <div id='Data-Selections'/></h1>
 
-<h3 id="toc_17"><span style="color:purple"> 4.2.1 Data Selections </span></h3>
+<h3 id="toc_18"><span style="color:purple"> 4.2.1 Data Selections </span></h3>
 
 <!--------------------------------------------------------->
 
@@ -1010,9 +1031,9 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 
 <p><div align="center"> <img src="Images/LL_Enty-Type-Selection.jpg" alt="The Lenticular Lens Research window"> Fig. 4.3:  List of datasets available at the default Golden Agent&rsquo;s GraphQL endpoint. </div> <br></p>
 
-<h1 id="toc_18"></span> <div id='Data-Exploration'/></h1>
+<h1 id="toc_19"></span> <div id='Data-Exploration'/></h1>
 
-<h3 id="toc_19"><span style="color:purple"> 4.2.2 Data Exploration</span></h3>
+<h3 id="toc_20"><span style="color:purple"> 4.2.2 Data Exploration</span></h3>
 
 <!---------------------------------------------------------->
 
@@ -1022,9 +1043,9 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 
 <p><div align="center"> <img src="Images/LL_Enty-Type-Selection-3.jpg" alt="Explore Sample 1"> Fig. 4.5:  Exploring the description of entities of choice, stemmed from the dataset of interest. </div> <br></p>
 
-<h1 id="toc_20"></span> <div id='Entity-Restrictions'/></h1>
+<h1 id="toc_21"></span> <div id='Entity-Restrictions'/></h1>
 
-<h3 id="toc_21"><span style="color:purple"> 4.2.3 Entity Restrictions </span></h3>
+<h3 id="toc_22"><span style="color:purple"> 4.2.3 Entity Restrictions </span></h3>
 
 <!-------------------------------------------------------------->
 
@@ -1036,9 +1057,9 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 
 <p><div align="center"> <img src="Images/LL_Enty-Type-Selection-4-Filter-2.jpg" alt="Entities Restrictions"> Fig. 4.8: The card for defining entity restrictions. </div> <br></p>
 
-<h1 id="toc_22"></span> <div id='Entity-restriction-options'/></h1>
+<h1 id="toc_23"></span> <div id='Entity-restriction-options'/></h1>
 
-<h4 id="toc_23"><span style="color:purple"> 4.2.3.1 Entity restriction options </span></h4>
+<h4 id="toc_24"><span style="color:purple"> 4.2.3.1 Entity restriction options </span></h4>
 
 <!--------------------------------------------------------------------->
 
@@ -1051,11 +1072,13 @@ This said, the <strong>Lenticular Lens</strong> offers means to reach that ultim
 <li><p><span style="color:blue"> <strong>Has minimum / maximum value.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>number</strong> over which the restriction can be applied. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
 <li><p><span style="color:blue"> <strong>Has minimum / maximum date.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>date</strong> over which the restriction can be applied. Within this option, a date format can be specified. The default format is <code>YYYY-MM-DD</code>. The values 10, 300 and 1990 for example will be considered as year while 10-1, 300-1 and 1990-1 will be considered as the first month of the respective year values. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
 <li><p><span style="color:blue"> <strong>Has minimum / maximum appearances.</strong> </span> This option allows for restricting entities for which a given property value occurs <strong>within</strong> a <strong>specified range</strong>. For example, to avoid excessive number of possible matches, one can delimit that only entities whose name value occur less than 5 times in the dataset will be included. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p></li>
-<li><p><span style="color:blue"> <strong>In set.</strong> </span> This option allows the filtering of a collection of resources of interest based on a set of resources. These set of resources is not manually provided but can be obtained through a list of existing linksets or lenses. The example below provides a detailed understanding of this filtering approach. </p>
+<li><p><span style="color:blue"> <strong>In set.</strong> </span> This option allows the filtering of a collection of resources of interest based on a set of resources. These set of resources is not manually provided but can be obtained through a list of existing linksets or lenses. The example below provides a detailed understanding of this filtering approach. </p></li>
+</ul>
 
-<div><pre class="line-numbers"><code class="language-none">---------------------
--- Example: IN SET --
----------------------
+<div><pre class="line-numbers"><code class="language-none">    
+-----------------
+-- Example 4.1 -- IN SET
+-----------------
 Two collections A and B to be matched via whatever method would create a se of 
 links labelled linkset-AB. However, we are only interested in a subset of 
 linkset-AB, such that it&#39;s resources (subject, object or both) are present in 
@@ -1063,61 +1086,92 @@ another given set, namely an input-linkset I. For efficiency purposes,
 linkset-AB does not need to be fully created to be filtered later on. This 
 implies that the collections A and/or B need to be filtered such that 
 A&#39; = A ∩ I and/or B&#39; = B ∩ I before executing the matching algorithm.
-
+    
+    
     ######################################################
     #           Linksets as named graphs                 #
     ######################################################
-
+    
     ex:input-linkset
     {
         A:Chiara  owl:sameAs      C:Latronico .
         A:Al      owl:sameAs      C:Al_Idrissou .
         A:Al      owl:sameAs      C:Al_Koudous .
     }
-
+    
     ex:linkset-AB
     {
         A:Chiara  owl:sameAs     B:Chiara .
         A:Kerim   owl:sameAs     B:Kerim .
     }
-
+    
     ######################################################
     #               In Resource Set                      #
     ######################################################
     ### The set S of resources from input-linkset is:
     ### S = {A:Chiara, A:Al, C:Latronico, C:Al_Idrissou, C:Al_Koudous}
-
+    
     ex:linkset-SubjectInSet
     {
         A:Chiara    owl:sameAs  B:Chiara .
-    }</code></pre></div>
+    }
+    </code></pre></div>
 
-<p><br></p></li>
-</ul>
+<p><br></p>
 
-<h1 id="toc_24"></span> <div id='Entity-Resolution/Matching'/></h1>
+<h1 id="toc_25"></span> <div id='Entity-Resolution/Matching'/></h1>
 
-<h2 id="toc_25"><span style="color:purple"> 4.3 Entity Resolution/Matching </span></h2>
+<h2 id="toc_26"><span style="color:purple"> 4.3 Entity Resolution/Matching </span></h2>
 
 <!----------------------------------------------------------------->
 
 <p>So far, the <code>RESEARCH</code> and <code>SELECT</code> menus set the scene for allowing the user to create the links that will enable the integration of datasources selected within the <code>SELECT</code> menus. In the current menu, the <code>CREATE</code> menu, we will describe the built-in entity resolution algorithms for finding links between entities stemmed from the user-selected datasets. Using the <strong>Lenticular Lens</strong> Logic-Box, we will show how the tool makes it possible to combine the available resolution algorithms and matching rules for the discovery of links within and/or across the datasources of interest.</p>
 
-<h1 id="toc_26"></span> <div id='Resolution-Methods'/></h1>
+<h1 id="toc_27"></span> <div id='Resolution-Methods'/></h1>
 
-<h3 id="toc_27"><span style="color:purple"> 4.3.1 Resolution Methods </span></h3>
+<h3 id="toc_28"><span style="color:purple"> 4.3.1 Resolution Methods </span></h3>
 
 <!----------------------------------------------------------->
 
-<p><p> <span style="color:blue"><strong>​1. Embedded.</strong> </span> The method extracts an alignment already provided within the source dataset. The extraction relies on the value of the linking property, i.e. property of the source that holds the identifier of the target. However, the real mechanism used to create the alignment is not explicitly provided by the source.</p>
+<p><p> <span style="color:blue"><strong>​1. Embedded.</strong> </span> The method extracts an alignment already provided within the source dataset. The extraction relies on the value of the linking property, i.e. property of the source that holds the identifier of the target. The inconvenience in generating a linkset in such way is that the real mechanism used to create the existing alignment is not explicitly provided by the source. <br>
+Example 4.2 shows a sample of the grid dataset (<a href="https://www.grid.ac/downloads">https://www.grid.ac/downloads</a>) with embedded links. With such links, Grid connects its instances to external datasets such as Wikidata for example using the link predicate: <code>grid:hasWikidataId</code> illustrated in Example 4.2 with the linkset <code>ex:Grid-embedded-linkset</code>.</p>
+
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.2 -- EXTRACT FROM THE GRID DATASET (https://www.grid.ac/downloads)
+-----------------
+
+&lt;http://www.grid.ac/institutes/grid.1001.0&gt;
+    foaf:homepage          &lt;http://www.anu.edu.au/&gt; ;
+    rdfs:label             &quot;Australian National University&quot; ;
+    grid:isni              &quot;0000 0001 2180 7477&quot; ;
+    grid:hasWikidataId     &lt;http://www.wikidata.org/entity/Q127990&gt; ;
+    • • •
+   
+&lt;http://www.grid.ac/institutes/grid.1002.3&gt; 
+    foaf:homepage          &lt;http://www.monash.edu/&gt; ;
+    rdfs:label             &quot;Monash University&quot; ;
+    grid:isni              &quot;0000 0004 1936 7857&quot; ;
+    grid:hasWikidataId     &lt;http://www.wikidata.org/entity/Q598841&gt; ;
+    • • •
+    
+ex:Grid-embedded-linkset
+{
+    &lt;http://www.grid.ac/institutes/grid.1001.0&gt;   grid:hasWikidataId   &lt;http://www.wikidata.org/entity/Q127990&gt; .
+    &lt;http://www.grid.ac/institutes/grid.1002.3&gt;   grid:hasWikidataId   &lt;http://www.wikidata.org/entity/Q598841&gt; .
+}
+    </code></pre></div>
+
+<p><br></p>
 
 <p><span style="color:blue"><strong>2. Exact.</strong> </span> This method is used to align source and target’s IRIs whenever their respective user selected property values are identical.</p>
 
 <p><span style="color:blue"><strong>3. Intermediate.</strong> </span> The method aligns the source and the target’s IRIs via an intermediate database by using properties that potentially present different descriptions of the same entity, such as country name and country code. This is possible by providing an intermediate dataset that binds the two alternative descriptions to the very same identifier.</p>
 
-<div><pre class="line-numbers"><code class="language-none">-----------------------------------
--- Example: INTERMEDIATE DATASET --
------------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.3 -- INTERMEDIATE DATASET
+-----------------
 In the example below, it is possible to align the source and target country 
 entities using the properties country and iso-3 via the intermediate dataset
 because it contains the information described at both, the Source and Target.
@@ -1175,7 +1229,6 @@ ALIGNMENT:
         ex:20 owl:sameAs ex:50 .
         ex:30 owl:sameAs ex:60 .
     }
-    
     </code></pre></div>
 
 <p><br> <span style="color:blue"> <strong>4. Levenshtein Distance.</strong> </span> This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective user selected property values are ​​above a given ​Levenshtein Distance threshold​.</p>
@@ -1188,9 +1241,10 @@ ALIGNMENT:
 
 <p><strong>Maximum character error threshold ​𝛿:​</strong> In case the ​original edit distance score ​ε (minimum number of operations score) is preferred, the number of character errors ​𝛿 ​of choice is used instead as threshold for deciding whether a match is accepted or rejected. However, for consistency purposes, the corresponding normalisation value ​Ω is still computed for the minimum number of operations score computed ​ε​. For instance, in our previous example, if a ​maximum ​characters errors i​s set to ​𝛿 = 3, <q>kitten</q> and <q>sitting</q> will be matched but the computed strength will be ​Ω = ​0.57 a​nd ​not ​ε = 3 as is it only serves the purpose of decision maker. I​n short, ​𝛿 i​s the user defined threshold when the dissimilarity score ε​ ​is selected for accepting or rejecting a match.</p>
 
-<div><pre class="line-numbers"><code class="language-none">----------------------------
--- Example: NORMALIZATION --
-----------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.4 -- NORMALISATION 
+-----------------
 
     1. l_dist(Rembrand van Rijn, Rembrandt Harmensz van Rijn) = 10
     2. Normalised_l_dist ​(Rembrand van Rijn, Rembrandt Harmensz van Rijn) = 0.63
@@ -1202,13 +1256,15 @@ ALIGNMENT:
     
     &gt;&gt;&gt; If ​δ (Maximum character error threshold) = 5 
     &gt;&gt;&gt; t​hen [​​Rembrand van Rijn] and [Rembrandt Harmensz van Rijn] is ​rejected 
-    &gt;&gt;&gt; because ε ​= 10 &gt;​ ​δ.</code></pre></div>
+    &gt;&gt;&gt; because ε ​= 10 &gt;​ ​δ.
+    </code></pre></div>
 
 <p><br> <span style="color:blue"><strong>5. Soundex Distance.</strong> </span> “Soundex is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for homophones to be encoded to the same representation so that they can be matched despite minor differences in spelling. The algorithm mainly encodes consonants; a vowel will not be encoded unless it is the first letter” [ <a href="https://en.wikipedia.org/wiki/Soundex">https://en.wikipedia.org/wiki/Soundex</a>]. &lt;br</p>
 
-<div><pre class="line-numbers"><code class="language-none">--------------------------------
--- Example: SOUNDEX CODE SIZE --
---------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.5 -- SOUNDEX CODE SIZE
+-----------------
 The examples below shows the encoding of different names. Here, the size 
 parameter indicates a degree of similarity through the length of the 
 respective soundex codes. For example at  size=3, Albert and Albertine 
@@ -1223,14 +1279,16 @@ to 3.
     AL           A400     A40000                                 
     ALI          A400     A40000                               
     ALBERT       A416     A41630                                
-    ALBERTINE    A416     A41635 </code></pre></div>
+    ALBERTINE    A416     A41635 
+    </code></pre></div>
 
 <p>In the <strong>Lenticular Lens</strong>, Soundex is used as a normaliser in the sense that an edit distance is run over the soundex code version of a name. For example, the in the table below, the normalisation of both <code>Louijs Rocourt</code> and `<code>Lowis Ricourt</code> becomes <code>L200 R263</code> leading to an edit distance of 0 and a relative strength of 1. However, computing the same names using directly an edit distance results in an edit distance of 3 and a relative matching strength of 0.
 79.</p>
 
-<div><pre class="line-numbers"><code class="language-none">---------------------------------------------------------------
--- Example: THE USE OF SOUNDEX CODE FOR STRING APPROXIMATION --
----------------------------------------------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.6 -- THE USE OF SOUNDEX CODE FOR STRING APPROXIMATION
+-----------------
 The example below shows the implementation of Soundex Distance 
 in the Lenticular Lens and how it compares with Edit Distance
 over the original names (no soundex-based normalisation).
@@ -1251,8 +1309,10 @@ Geertruydt van den Breemde  Geertruijd van den Bremde        4           0.85  G
 <p><br> <span style="color:blue"><strong>6. Gerrit Bloothooft.</strong> </span> This approximation method is specifically tailored for accessing the similarity between a pair of  IRIs for which the user selected property values are Dutch names. The algorithm basically normalises the given names by removing or replacing specific characters…. 
 The resulting normalised names are then pairwise compared using the Approximated Levenshtein Distance (see the description of Approximated Levenshtein Distance).</p>
 
-<div><pre class="line-numbers"><code class="language-none">Example
--------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.7 --
+-----------------
                               </code></pre></div>
 
 <p><br> <span style="color:blue"><strong>7. Word Intersection.</strong> </span> This approximation method is originally designed to find a subset of words within a larger text. However, it could also be used for any  pair of strings regardless of the strings sizes. Several options are available: </p>
@@ -1266,19 +1326,77 @@ The resulting normalised names are then pairwise compared using the Approximated
 <li>An overall  threshold for accepting or rejecting a match.</li>
 </ul>
 
-<div><pre class="line-numbers"><code class="language-none">---------------------------
--- Example: EXPECTATIONS --
----------------------------
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.8 -- EXPECTATIONS
+-----------------
     For example, it can be used for aligning 
      - [Rembrand van Rijn] and [van Rijn Rembrandt]
      - [Herdoopers anslagh op Amsterdam] and [Herdoopers anslagh op Amsterdam. 
         Den x. may: 1535. Treur-spel.]
     regardless of the words&#39; order.
+    
 </code></pre></div>
 
-<p><br> <span style="color:blue"><strong>9. Numbers.</strong> </span> The method is used to align the source and the target by approximating the match of the (number/date) values of the selected properties according to a delta. For example, if two entities have been aligned based on the similarity of their names but an extra check is to be investigated based on their respective year of birth, setting the delta to 1 will ensure that the two entities are born within the same year, give or take a year. </p>
+<p><br> <span style="color:blue"><strong>8. List Intersection.</strong> </span> This method is better suited for matching events. It helps establishing a relationship between the source and target entities whenever a list of entities from the source dataset intersects another list of entities stemmed from the target dataset. </p>
 
-<p><br> <span style="color:blue"><strong>10. TeAM.</strong> </span> This method allows for the approximation of the relevance of a document to a query. Such approximation can be done using lexical similarity (word level similarity), semantic similarity or hybrid similarities. In this method, the focus is rather on the lexical similarity. Although tailored to text, it has been adapted to also be applicable to name-based similarity. We now provide an overview of the motivation context supporting the design and implementation of the algorithm.</p>
+<p>For illustration, suppose that we have the two events in Example 4.9. (1) Event one, defined by the source event-entities, documents event-entities that lists entities representing persons about to get married. This event is the <code>Intended-Marriage</code> event. (2) Event two is the <code>Marriage</code> event. It lists (i) entities representing persons that got married and (ii) the guests who attended the event. <br>
+Now that the two events are defined, let us imagine that we would like to find out which of the <code>Intended-Marriage</code> couple fulfilled its will to get married. For this to be true, we assume that a couple with the wish to be wed should end-up being present at a <code>Marriage</code> event, hopefully their own marriage. This means that, for a match to occur, a <strong>minimum of two elements from a list from the source</strong> must also belong to a list from the target. In other words, a match is to be generated whenever 100% (all) of the elements in a source&rsquo;s lists intersects a target&rsquo;s list. </p>
+
+<p>In this method, two thresholds are to be defined. The first threshold or <strong>similarity-threshold</strong> imposes a minimum accepted similarity score (generally in ]0, 1]) when elements stemmed from different lists are compared. Passing this threshold is interpreted as the occurrence of an intersection between elements of two lists. The second threshold, the <strong>intersection-threshold</strong> expressed in quantity or percentage, denotes the minimum number of intersections that must occur for a link to be created. <br>
+In practice, looking at Example 4.9, only events <code>ex: intended-1</code> and <code>ex:married-2</code> are a match as the pairs (<code>Catharina Reminck</code> , <code>Catharina Remink</code>) and (<code>Mr. Jean de Melie</code>, <code>Jean de Melie</code>) are respectively similar with a score of 0.94 and 0.82.</p>
+
+<div><pre class="line-numbers"><code class="language-none">
+-----------------
+-- Example 4.9 -- LIST INTERSECTION
+-----------------
+    A source dataset documenting events as lists of couple with the intention of getting married and a 
+    target dataset with list of people at a wedding ceremony. Each of these latter lists is expected to
+    includes the wed couple.
+
+    Similarity-threshold   : 0.8
+    Intersection-threshold : 2 or 100%
+    
+------------------------------------------------------------------------
+Source Dataset                           Target Dataset
+------------------------------------------------------------------------
+
+ex:intended-1                               ex:ceremony-1
+    ex:wife     &quot;Catharina Reminck&quot; ;            ex:participant  &quot;Pieter Jas&quot; ;
+    ex:husband  &quot;Mr. Jean van de Melie&quot; .        ex:participant  &quot;Jacob Poppen&quot; ;
+                                                 ex:participant  &quot;Gillis Graafland&quot; ;
+ex:intended-2                                    ex:participant  &quot;Jacob Fransz. de Witt&quot; ;
+    ex:wife     &quot;Eva Oostrom&quot;  ;                 ex:participant  &quot;Elisabeth van Daaken&quot; ;
+    ex:husband  &quot;Pieter de Vriest&quot; .             ex:participant  &quot;Catharina Berewouts&quot; ;
+                                                 ex:participant  &quot;Aafje Hendricx&quot; ;
+ex:intended-3                                    ex:participant  &quot;Anthony van Paembergh&quot; ;
+    ex:wife     &quot;Eva Oostrom ;                   ex:participant  &quot;Eva van Toorn&quot; ;
+     ex:husband  &quot;Wiggert van Wesick&quot; .          ex:participant  &quot;Maria Bor&quot; .
+                                                 
+                                            ex:married-2
+                                                ex:participant  &quot;J. van de Melie&quot; ,
+                                                    &quot;Bernardus van Vijven&quot; .
+                                                    &quot;Margrita Schrik&quot; ,
+                                                    &quot;Johannes de Bruijn&quot; ,
+                                                    &quot;Maria Gosina Demol&quot; ,
+                                                    &quot;Agneta Swartepaart&quot;,
+                                                    &quot;Hendrik de Lange&quot; ,
+                                                    &quot;Catharina Remink&quot; .
+                                         
+</code></pre></div>
+
+<p><br> <span style="color:blue"><strong>9. Numbers.</strong> </span> The method is used to align the source and the target by approximating the match of the (number/date) values of the selected properties according to a delta. For example, if two entities have been aligned based on the similarity of their names but an extra check is to be investigated based on their respective year of birth, setting the delta to 1 will ensure that the two entities are born within the same year, give or take a year.</p>
+
+<p><br> <span style="color:blue"><strong>10.1 Time Delta.</strong> </span> This function allows for finding co-referent entities on the basis of a <strong>minimum time difference</strong> between the times reported by the source and the target entities. For example, if the value zero is assigned to the time difference parameter, then, for a matched to be found, the time of the target and the one of the source are to be the exact same times. While accounting for margins of error, one may consider a pair of entities to be co-referent if the real entities are born lambda days, months or years apart among other-things (similar name, place..). </p>
+
+<p>Other ways of using time delta are also possible: </p>
+
+<p><span style="color:blue"><strong>10.2 Time Delta before / After.</strong> </span>
+Because Time Delta has no direction or sign (+ or -), it is not possible to require that the time documented at the source entity occurs before or after the one reported by the target&rsquo;s event. With the <code>before / After</code> options, this is possible.</p>
+
+<p><span style="color:blue"><strong>10.3 Time Delta Between.</strong> </span> In here, we make it possible for the user to define the time interval in which both the source and target reported times can be viewed as acceptable.</p>
+
+<p><br> <span style="color:blue"><strong>11. TeAM.</strong> </span> This method allows for the approximation of the relevance of a document to a query. Such approximation can be done using lexical similarity (word level similarity), semantic similarity or hybrid similarities. In this method, the focus is rather on the lexical similarity. Although tailored to text, it has been adapted to also be applicable to name-based similarity. We now provide an overview of the motivation context supporting the design and implementation of the algorithm.</p>
 
 <p>The Amsterdam&rsquo;s city archives (SAA) possesses physical handwritten inventories records where a record may be for example an inventory of goods (paintings, prints, sculpture, furniture, porcelain, etc.) owned by an Amsterdamer and mentioned in a last will. Interested in documenting the ownership of paintings from the 17th century, the Yale University Professor John Michael Montias compiled a database by transcribing 1280 physical handwritten inventories (scattered in the Netherlands) of goods. Now that a number of these physical inventories have been digitised using handwriting recognition, one of the goals of the Golden Agent project is to identify Montias&#39; transcriptions of painting selections within the digitised inventories. This problem can be generically reformulated as, given a <span style="color:blue"><em>source-segment database (e.g. Montias DB)</em></span> and a <span style="color:blue"><em>target-segment database (e.g. SAA)</em></span>, <em>find the best similar target segment  for each source segment</em>. </p>
 
@@ -1286,9 +1404,9 @@ The resulting normalised names are then pairwise compared using the Approximated
 
 <p><br></p>
 
-<h1 id="toc_28"></span> <div id='Complex-Methods'/></h1>
+<h1 id="toc_29"></span> <div id='Complex-Methods'/></h1>
 
-<h3 id="toc_29"><span style="color:purple"> 4.3.2 Complex Methods </span></h3>
+<h3 id="toc_30"><span style="color:purple"> 4.3.2 Complex Methods </span></h3>
 
 <!--https://en.wikipedia.org/wiki/T-norm-->
 
@@ -1320,6 +1438,10 @@ The first takes the minimum strength and the latter takes the maximum strength. 
 Since the results from matching methods are <strong>fuzzy values</strong> in the interval ]0,1], the table bellow illustrates the default behaviour of the Lenticular Lens when combining them.</p>
 
 <div><pre class="line-numbers"><code class="language-none">
+------------------
+-- Example 4.10 -- STANDARD LOGIC OPERATIONS OVER CONJUNCTION (MIN) AND DISJONCTION
+------------------
+
 Source                      Target                       Levenshtein  Soundex      OR(max)    AND(min)
 ------------------------------------------------------------------------------------------------------
 Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder             0.92     1.00        1.00         0.92
@@ -1330,9 +1452,9 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 
 <p>However, more sophisticated operations can also be used, such as the <strong>T-norm binary operations</strong> as alternatives for <strong>Conjunction (AND)</strong> and the <strong>T-conorm binary operations</strong> as alternatives for <strong>Disjunction (OR)</strong> as provided in the next subsections.</p>
 
-<h1 id="toc_30"></span> <div id='T-norms'/></h1>
+<h1 id="toc_31"></span> <div id='T-norms'/></h1>
 
-<h3 id="toc_31"><span style="color:purple"> 4.3.2.1 T-norms </span></h3>
+<h3 id="toc_32"><span style="color:purple"> 4.3.2.1 T-norms </span></h3>
 
 <p>A list of six different operations can be applied when dealing with methods combined by <strong>Conjunction</strong>. Here, we present them:</p>
 
@@ -1401,9 +1523,9 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 </tbody>
 </table>
 
-<h1 id="toc_32"></span> <div id='T-conorms'/></h1>
+<h1 id="toc_33"></span> <div id='T-conorms'/></h1>
 
-<h3 id="toc_33"><span style="color:purple"> 4.3.2.2 T-conorms </span></h3>
+<h3 id="toc_34"><span style="color:purple"> 4.3.2.2 T-conorms </span></h3>
 
 <p>A list of six different operations can also be applied when dealing with methods combined by <strong>Disjunction</strong>. Here, we present them:</p>
 
@@ -1464,9 +1586,9 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 </tbody>
 </table>
 
-<h1 id="toc_34"></span> <div id='Example-of-complex-methods'/></h1>
+<h1 id="toc_35"></span> <div id='Example-of-complex-methods'/></h1>
 
-<h3 id="toc_35"><span style="color:purple"> 4.3.2.3 Example of complex method </span></h3>
+<h3 id="toc_36"><span style="color:purple"> 4.3.2.3 Example of complex method </span></h3>
 
 <!--For a higher level of accuracy, let us assume that, two data items representing persons are co-referent, if then pass the following tests:
 -->
@@ -1579,33 +1701,33 @@ EXAMPLE USING MORE THAN ONE FUZZY LOGIC OPERATOR
 
 <p><strong>Conclusion</strong>: Given the <strong>evidence</strong> provided for E-1 and E-2  and the <strong>rules</strong> described above, the interpretation resulting from the chosen fuzzy logic operations leads to the conclusion that there is no sufficient evidence to infer that the underlying data items are co-referent. This rejection is mainly due to the low similarity of the parents&#39; names. If the resulting similarity were above 0.8, there would then be a better chance for the data items to be co-referent. Keep in mind that our conjectured rule asserts an identity relation for combination of scores only when above 0.8. A better data or more advanced algorithm could have helped.</p>
 
-<h1 id="toc_36"></span> <div id='Matching-in-Practice'/></h1>
+<h1 id="toc_37"></span> <div id='Matching-in-Practice'/></h1>
 
-<h3 id="toc_37"><span style="color:purple"> 4.3.3 Matching in Practice </span></h3>
+<h3 id="toc_38"><span style="color:purple"> 4.3.3 Matching in Practice </span></h3>
 
 <!--------------------------------------------------------------->
 
 <p>Now that we have gone through possible methods available in the <strong>Lenticular Lens</strong>, we show how these methods can be used individually or in combination to align resources stemmed from various datasources of one&rsquo;s choice.</p>
 
-<h1 id="toc_38"></span> <div id='Case-Study-1'/></h1>
+<h1 id="toc_39"></span> <div id='Case-Study-1'/></h1>
 
-<h4 id="toc_39"><span style="color:purple"> Case Study:  </span></h4>
+<h4 id="toc_40"><span style="color:purple"> Case Study:  </span></h4>
 
-<h1 id="toc_40"></span> <div id='Case-Study-2'/></h1>
+<h1 id="toc_41"></span> <div id='Case-Study-2'/></h1>
 
-<h4 id="toc_41"><span style="color:purple"> Case Study:  </span></h4>
+<h4 id="toc_42"><span style="color:purple"> Case Study:  </span></h4>
 
-<h1 id="toc_42"></span> <div id='Case-Study-3'/></h1>
+<h1 id="toc_43"></span> <div id='Case-Study-3'/></h1>
 
-<h4 id="toc_43"><span style="color:purple"> Case Study:  </span></h4>
+<h4 id="toc_44"><span style="color:purple"> Case Study:  </span></h4>
 
-<h1 id="toc_44"></span> <div id='Case-Study-4'/></h1>
+<h1 id="toc_45"></span> <div id='Case-Study-4'/></h1>
 
-<h4 id="toc_45"><span style="color:purple"> Case Study:  </span></h4>
+<h4 id="toc_46"><span style="color:purple"> Case Study:  </span></h4>
 
-<h1 id="toc_46"></span> <div id='Matching-Results'/></h1>
+<h1 id="toc_47"></span> <div id='Matching-Results'/></h1>
 
-<h3 id="toc_47"><span style="color:purple"> 4.3.2 Matching Results </span></h3>
+<h3 id="toc_48"><span style="color:purple"> 4.3.2 Matching Results </span></h3>
 
 <!----------------------------------------------------------->
 
@@ -1615,9 +1737,9 @@ EXAMPLE USING MORE THAN ONE FUZZY LOGIC OPERATOR
 
 <!------------------------------------------------------------->
 
-<h1 id="toc_48"></span> <div id='Link-Manipulation'/></h1>
+<h1 id="toc_49"></span> <div id='Link-Manipulation'/></h1>
 
-<h1 id="toc_49"><br> <span style="color:purple"> 5. LINK MANIPULATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_50"><br> <span style="color:purple"> 5. LINK MANIPULATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!------------------------------------------------------------->
 
@@ -1675,11 +1797,13 @@ ex:Marvel-Heroes-Identity
     &lt;&lt;hero:Black-Widow      owl:sameAs  person:Natasha-Romanoff&gt;&gt;  validation:status &quot;True&quot; .
     &lt;&lt;hero:Hulk             owl:sameAs  person:Bruce-Banner&gt;&gt;      validation:status &quot;True&quot; .
     &lt;&lt;hero:Hawkeye          owl:sameAs  person:Clint-Barton&gt;&gt;      validation:status &quot;True&quot; .
-}</code></pre></div>
+}
 
-<h1 id="toc_50"></span> <div id='Union'/></h1>
+</code></pre></div>
 
-<h2 id="toc_51"><br> <span style="color:purple"> 5.1 Union </span></h2>
+<h1 id="toc_51"></span> <div id='Union'/></h1>
+
+<h2 id="toc_52"><br> <span style="color:purple"> 5.1 Union </span></h2>
 
 <!------------------------------------------------------------->
 
@@ -1753,7 +1877,9 @@ ex:DC-Heroes-Identity
     hero:BoosterGold    owl:sameAs  person:Michael-Jon-Carter .
     hero:Spider-man     owl:sameAs  person:Peter-Parker .
     hero:Iron-man       owl:sameAs  person:Tony-Stark .   
-}</code></pre></div>
+}
+
+</code></pre></div>
 
 <p><br></p>
 
@@ -1807,7 +1933,9 @@ ex:Union-Marvel-Heroes
     &lt;&lt;hero:Aquaman          owl:sameAs  person:Arthur-Curry&gt;&gt;        prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
     &lt;&lt;hero:GreenArrow       owl:sameAs  person:OliverQueen&gt;&gt;         prov:wasDerivedFrom  ex:Marvel-Heroes-Identity .
     &lt;&lt;hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter&gt;&gt;  prov:wasDerivedFrom  ex:Marvel-Heroes-Identity . 
-}</code></pre></div>
+}
+
+</code></pre></div>
 
 <p><br></p>
 
@@ -1849,9 +1977,9 @@ ex:Comics-Heroes-Identity
 ```
 -->
 
-<h1 id="toc_52"></span> <div id='Intersection'/></h1>
+<h1 id="toc_53"></span> <div id='Intersection'/></h1>
 
-<h2 id="toc_53"><br> <span style="color:purple"> 5.2 Intersection </span></h2>
+<h2 id="toc_54"><br> <span style="color:purple"> 5.2 Intersection </span></h2>
 
 <!--------------------------------------------------------->
 
@@ -1880,11 +2008,13 @@ ex:Comics-Heroes-Identity
     &lt;&lt;hero:Iron-man         owl:sameAs  person:Tony-Stark&gt;&gt; 
         prov:wasDerivedFrom   ex:DC-Heroes-Identity ;
         prov:wasDerivedFrom   ex:Marvel-Heroes-Identity .
-}</code></pre></div>
+}
 
-<h1 id="toc_54"></span> <div id='Difference'/></h1>
+</code></pre></div>
 
-<h2 id="toc_55"><br> <span style="color:purple"> 5.3 Difference </span></h2>
+<h1 id="toc_55"></span> <div id='Difference'/></h1>
+
+<h2 id="toc_56"><br> <span style="color:purple"> 5.3 Difference </span></h2>
 
 <!------------------------------------------------------------->
 
@@ -1915,17 +2045,19 @@ ex:DC-Heroes-Identity
     &lt;&lt;hero:Aquaman          owl:sameAs  person:Arthur-Curry&gt;&gt;        validation:status &quot;True&quot; .
     &lt;&lt;hero:GreenArrow       owl:sameAs  person:OliverQueen&gt;&gt;         validation:status &quot;True&quot; .
     &lt;&lt;hero:BoosterGold      owl:sameAs  person:Michael-Jon-Carter&gt;&gt;  validation:status &quot;True&quot; .  
-}</code></pre></div>
+}
 
-<h1 id="toc_56"></span> <div id='Composition'/></h1>
+</code></pre></div>
 
-<h2 id="toc_57"><br> <span style="color:purple"> 5.4 Composition </span></h2>
+<h1 id="toc_57"></span> <div id='Composition'/></h1>
+
+<h2 id="toc_58"><br> <span style="color:purple"> 5.4 Composition </span></h2>
 
 <!------------------------------------------------------------->
 
-<h1 id="toc_58"></span> <div id='InSet'/></h1>
+<h1 id="toc_59"></span> <div id='InSet'/></h1>
 
-<h2 id="toc_59"><br> <span style="color:purple"> 5.5 In Set </span></h2>
+<h2 id="toc_60"><br> <span style="color:purple"> 5.5 In Set </span></h2>
 
 <!------------------------------------------------------------->
 
@@ -2000,7 +2132,9 @@ ex: MoviesInfo
     movie:Spider-man-home-coming 
         schema:character        hero:Spider-man;
         schema:contentRating   7.4.
-}</code></pre></div>
+}
+
+</code></pre></div>
 
 <p><br></p>
 
@@ -2024,7 +2158,9 @@ ex:MovieCharacter
     movie:Spider-man              schema:character  hero:Spider-man .
     movie:The-amazing-Spider-man  schema:character  hero:Spider-man .
     movie:Spider-man-home-coming  schema:character  hero:Spider-man .
-}</code></pre></div>
+}
+
+</code></pre></div>
 
 <p><br></p>
 
@@ -2032,7 +2168,6 @@ ex:MovieCharacter
 Formally this can be translated into: <code>ex:MovieCharacter</code> <code>InSet</code> <code>ex:preference</code>.</p>
 
 <div><pre class="line-numbers"><code class="language-none">
-
 
 ---------------------------------------------------------------
 -- Example 5.9: Movie Characters from ex:MovieCharacter that --
@@ -2044,6 +2179,7 @@ ex:MovieCharacter
     movie:The-amazing-Spider-man  schema:character  hero:Spider-man .
     movie:Spider-man-home-coming  schema:character  hero:Spider-man .
 }
+
 </code></pre></div>
 
 <!--{
@@ -2056,31 +2192,31 @@ ex:MovieCharacter
 
 <!----------------------------------------------------------->
 
-<h1 id="toc_60"></span> <div id='Link-Validation'/></h1>
+<h1 id="toc_61"></span> <div id='Link-Validation'/></h1>
 
-<h1 id="toc_61"><br> <span style="color:purple"> 6. LINK VALIDATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_62"><br> <span style="color:purple"> 6. LINK VALIDATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!----------------------------------------------------------->
 
 <p>Imagine a researcher in the need of integrating data on publications, authors and education institutions. Wrongly executing this integration task could mean, for example, assigning the h-index of author A to author B or wrongly saying that author A is affiliated to an institution he has never been involved with. To reaching a solid investigation result, this highlights the crucial importance of link validation once links have been created and possibly improved.</p>
 
-<h2 id="toc_62"><br> <span style="color:purple"> Validation </span></h2>
+<h2 id="toc_63"><br> <span style="color:purple"> Validation </span></h2>
 
 <!--------------------------------------------------->
 
-<h2 id="toc_63"><br> <span style="color:purple"> Validation Support </span></h2>
+<h2 id="toc_64"><br> <span style="color:purple"> Validation Support </span></h2>
 
 <!----------------------------------------------------------->
 
-<h3 id="toc_64"><span style="color:purple"> Cluster-based validation </span></h3>
+<h3 id="toc_65"><span style="color:purple"> Cluster-based validation </span></h3>
 
-<h3 id="toc_65"><span style="color:purple"> Vizualition </span></h3>
+<h3 id="toc_66"><span style="color:purple"> Vizualization </span></h3>
 
 <!------------------------------------------------------->
 
-<h1 id="toc_66"></span> <div id='Link-Export'/></h1>
+<h1 id="toc_67"></span> <div id='Link-Export'/></h1>
 
-<h1 id="toc_67"><br> <span style="color:purple"> 7. LINK EXPORT </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_68"><br> <span style="color:purple"> 7. LINK EXPORT </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!------------------------------------------------------->
 
@@ -2095,9 +2231,9 @@ ex:MovieCharacter
 
 <p>All these questions will be answered here. </p>
 
-<h1 id="toc_68"></span> <div id='Export-Structure'/></h1>
+<h1 id="toc_69"></span> <div id='Export-Structure'/></h1>
 
-<h2 id="toc_69"><span style="color:purple"> 7.1 Export Structure </span></h2>
+<h2 id="toc_70"><span style="color:purple"> 7.1 Export Structure </span></h2>
 
 <!---------------------------------------------------->
 
@@ -2195,9 +2331,9 @@ ex:heroes-Identity
 
 <p><br></p>
 
-<h1 id="toc_70"></span> <div id='Export-Restrictions'/></h1>
+<h1 id="toc_71"></span> <div id='Export-Restrictions'/></h1>
 
-<h2 id="toc_71"><span style="color:purple"> 7.2 Export Restrictions </span></h2>
+<h2 id="toc_72"><span style="color:purple"> 7.2 Export Restrictions </span></h2>
 
 <!----------------------------------------------------------->
 
@@ -2211,9 +2347,9 @@ ex:heroes-Identity
 • Threshold     : Export links that pass a predefined threshold condition. 
                   This feature applies to links annotated with confidence values.</code></pre></div>
 
-<h1 id="toc_72"></span> <div id='Export-Formats'/></h1>
+<h1 id="toc_73"></span> <div id='Export-Formats'/></h1>
 
-<h2 id="toc_73"><span style="color:purple"> 7.3 Export Formats </span></h2>
+<h2 id="toc_74"><span style="color:purple"> 7.3 Export Formats </span></h2>
 
 <!------------------------------------------------------>
 
@@ -2345,9 +2481,9 @@ ex:heroes-Identity
 
 <p><br></p>
 
-<h1 id="toc_74"></span> <div id='Default-Export-Table'/></h1>
+<h1 id="toc_75"></span> <div id='Default-Export-Table'/></h1>
 
-<h2 id="toc_75"><span style="color:purple"> 7.4 Default Export Table </span></h2>
+<h2 id="toc_76"><span style="color:purple"> 7.4 Default Export Table </span></h2>
 
 <!--------------------------------------------------------->
 
@@ -2368,31 +2504,31 @@ ex:heroes-Identity
 
 <!----------------------------------------------------------->
 
-<h1 id="toc_76"></span> <div id='Data-Integration'/></h1>
+<h1 id="toc_77"></span> <div id='Data-Integration'/></h1>
 
-<h1 id="toc_77"><br> <span style="color:purple"> 8. DATA INTEGRATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_78"><br> <span style="color:purple"> 8. DATA INTEGRATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!----------------------------------------------------------->
 
 <p>The Lenticular Lens is <strong>a mean</strong> (link creation, manipulation and validation for data integration) to <strong>an end</strong> (data extraction for analysis). Here, we show <strong>how one can extract the right information for analysis</strong> given an integration model that can be achieve using existing linksets and lenses.  </p>
 
-<h1 id="toc_78"></span> <div id='Integration-Model'/></h1>
+<h1 id="toc_79"></span> <div id='Integration-Model'/></h1>
 
-<h2 id="toc_79"><span style="color:purple"> 8.1 Integration Model </span></h2>
+<h2 id="toc_80"><span style="color:purple"> 8.1 Integration Model </span></h2>
 
 <!----------------------------------------------------------->
 
-<h1 id="toc_80"></span> <div id='Data-Extraction'/></h1>
+<h1 id="toc_81"></span> <div id='Data-Extraction'/></h1>
 
-<h2 id="toc_81"><span style="color:purple"> 8.2 Data Extraction </span></h2>
+<h2 id="toc_82"><span style="color:purple"> 8.2 Data Extraction </span></h2>
 
 <!----------------------------------------------------------->
 
 <!--------------------------------------------------------->
 
-<h1 id="toc_82"></span> <div id='Installation'/></h1>
+<h1 id="toc_83"></span> <div id='Installation'/></h1>
 
-<h1 id="toc_83"><br> <span style="color:purple">  9. INSTALLATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_84"><br> <span style="color:purple">  9. INSTALLATION </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!--------------------------------------------------------->
 
@@ -2412,15 +2548,15 @@ ex:heroes-Identity
 <p><strong>Note</strong>: <br> This will create a folder pgdata with the database data. 
 <br> To clean up the database and start from scratch, simply remove this folder.</p>
 
-<h1 id="toc_84"></span> <div id='API'/></h1>
+<h1 id="toc_85"></span> <div id='API'/></h1>
 
-<h1 id="toc_85"><br> <span style="color:purple">  10. API </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_86"><br> <span style="color:purple">  10. API </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <!--------------------------------------------------------->
 
 <p>Through Github, the <strong><a href="https://github.com/knaw-huc/lenticular-lenses#api">Lenticular Lens API</a></strong> is made available with a set of functions and procedures allowing for the code to be reused and/or extended .</p>
 
-<h1 id="toc_86"><br> <span style="color:purple"> REFERENCES </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
+<h1 id="toc_87"><br> <span style="color:purple"> REFERENCES </span> (<span style="font-size:1.7vw"><a href="#CONTENTS">TOC</a></span>)</h1>
 
 <ul>
 <li><p><strong><span style="color:purple"> [Euzenat] </span></strong> J. Euzenat and P. Shvaiko. Ontology matching. Springer-Verlag, Heidelberg (DE), 2nd edition, 2013.</p></li>
@@ -2467,7 +2603,7 @@ if (typeof MathJaxListener !== 'undefined') {
 })();
 </script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 </body>
