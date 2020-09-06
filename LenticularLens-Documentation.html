@@ -1803,7 +1803,7 @@ linkset:Grid
     cc:attributionName                       &quot;LenticularLens&quot; ;
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
-    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/EditDistance-Hd877a122c13d179&gt;
+    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H27f9c563cd82438&gt;
     &quot;&quot;&quot; ;
 
     void:linkPredicate                       skos:exactMatch ; 
@@ -1828,11 +1828,12 @@ linkset:Grid
                ################################################################################               
 
 
-### ll_algo:EditDistance
-&lt;http://data.goldenagents.org/resource/EditDistance-Hd877a122c13d179&gt;
+### ll_algo:Normalised-EditDistance
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H27f9c563cd82438&gt;
 
-    ll:has-matching-method                  ll_algo:EditDistance ;
+    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
     ll:has-matching-threshold               0.9 ;
+    ll:has-threshold-range                  &quot;]0, 1]&quot; ;
     ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
@@ -1849,7 +1850,7 @@ linkset:Grid
                ################################################################################               
 
 
-ll_algo:EditDistance 
+ll_algo:Normalised-EditDistance 
     dcterms:description                      &quot;&quot;&quot;
         This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective 
         user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. 
@@ -1893,7 +1894,7 @@ ll_algo:EditDistance
 #                                             ANNOTATED LINKSET                                              #
 ##############################################################################################################
 
-linkset:demo_linkset_12
+linkset:Grid
 {
     &lt;&lt;institutes_S1:grid.1017.7    skos:exactMatch    institutes_S1:grid.501980.5&gt;&gt;
         ll_val:has-validation               &quot;rejected&quot; :
@@ -1994,6 +1995,8 @@ linkset:Grid_2
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
     ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
+     and &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
+     and &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
     &quot;&quot;&quot; ;
 
     void:linkPredicate                       skos:exactMatch ; 
@@ -2111,6 +2114,7 @@ ll_algo:Normalised-EditDistance
 ##############################################################################################################
 #                                             ANNOTATED LINKSET                                              #
 ##############################################################################################################
+
 
 
 linkset:Grid_2
