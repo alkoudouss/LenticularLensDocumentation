@@ -1993,7 +1993,7 @@ linkset:Grid_2
     cc:attributionName                       &quot;LenticularLens&quot; ;
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
-    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/EditDistance-H55b8f81b407d0ec&gt;
+    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
     &quot;&quot;&quot; ;
 
     void:linkPredicate                       skos:exactMatch ; 
@@ -2018,11 +2018,12 @@ linkset:Grid_2
                ################################################################################               
 
 
-### ll_algo:EditDistance
-&lt;http://data.goldenagents.org/resource/EditDistance-H55b8f81b407d0ec&gt;
+### ll_algo:Normalised-EditDistance
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
 
-    ll:has-matching-method                  ll_algo:EditDistance ;
+    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
     ll:has-matching-threshold               0.9 ;
+    ll:has-threshold-range                  &quot;]0, 1]&quot; ;
     ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
@@ -2032,11 +2033,12 @@ linkset:Grid_2
     ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; .
 
 
-### ll_algo:EditDistance
-&lt;http://data.goldenagents.org/resource/EditDistance-Hba6059a770a897e&gt;
+### ll_algo:Normalised-EditDistance
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
 
-    ll:has-matching-method                  ll_algo:EditDistance ;
+    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
     ll:has-matching-threshold               0.9 ;
+    ll:has-threshold-range                  &quot;]0, 1]&quot; ;
     ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
@@ -2046,11 +2048,12 @@ linkset:Grid_2
     ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
 
 
-### ll_algo:EditDistance
-&lt;http://data.goldenagents.org/resource/EditDistance-Hdeae619de615865&gt;
+### ll_algo:Normalised-EditDistance
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
 
-    ll:has-matching-method                  ll_algo:EditDistance ;
+    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
     ll:has-matching-threshold               0.9 ;
+    ll:has-threshold-range                  &quot;]0, 1]&quot; ;
     ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
@@ -2065,7 +2068,7 @@ linkset:Grid_2
                ################################################################################               
 
 
-ll_algo:EditDistance 
+ll_algo:Normalised-EditDistance 
     dcterms:description                      &quot;&quot;&quot;
         This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective 
         user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. 
@@ -2283,10 +2286,10 @@ linkset:Getty
 
                ################################################################################               
                #                             METHOD DESCRIPTIONS                              #
-               ################################################################################                
+               ################################################################################               
 
 
-ll_algo:Soundex 
+ll_algo:Normalised-Soundex 
     dcterms:description                      &quot;&quot;&quot;
         &quot;Soundex is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for ho-
         mophones to be encoded to the same representation so that they can be matched despite minor differences in
@@ -2323,7 +2326,7 @@ ll_algo:Exact
         Aligns source and target’s IRIs whenever their respective user selected property values are identical.&quot;&quot;&quot;@en .
 
 
-ll_algo:TimeDelta 
+ll_algo:Time-Delta 
     dcterms:description                      &quot;&quot;&quot;
         10.1 Time Delta. This function allows for finding co-referent entities on the basis of a minimum time dif-
         ference between the times reported by the source and the target entities. For example, if the value zero is 
