@@ -1717,49 +1717,52 @@ EXAMPLE USING MORE THAN ONE FUZZY LOGIC OPERATOR
 
 <!--------------------------------------------------------------->
 
-<p>Now that we have gone through possible methods available in the <strong>Lenticular Lens</strong>, we show how these methods can be used individually or in combination to align resources stemmed from various datasources of one&rsquo;s choice.</p>
+<p>Now that we have gone through available matching methods and how to combine them in the <strong>Lenticular Lens</strong>, we show their application in some case-studies aligning resources stemmed from various datasources of one&rsquo;s choice.
+We also provide example on the rdf export of the resulting linksets with metadata. For this purpose we choose as syntax the turtle format and RDFStar reification.</p>
 
 <h3 id="toc_39"></span> <div id='Case-Study-1'/></h3>
 
 <h3 id="toc_40"><span style="color:purple"> 4.4.1 Simple Methods  </span></h3>
 
-<p>This case-study section aims to showcase <strong>matching problems involving a single matching method</strong> (Embedded, Exact, Intermediate, Levenshtein Distance, Soundex Distance, Gerrit Bloothooft, Word Intersection, List Intersection, Numbers and TeAM) run over one or multiple datasets.</p>
+<p>This case-study section aims to showcase <strong>matching problems involving a SINGLE matching method</strong> (Embedded, Exact, Intermediate, Levenshtein Distance, Soundex Distance, Gerrit Bloothooft, Word Intersection, List Intersection, Numbers and TeAM) run over one or multiple datasets.</p>
 
-<p>keep in mind that <strong>Simple Method is not to be confused with the complexity of the underlying the method</strong>. </p>
+<p>We call them <strong>Simple Methods</strong> as opposed to <strong>Complex Methods</strong> illustrated in the sequel. Keep in mind that the terms <strong>Simple</strong> and <strong>Complex</strong> refer to the use of single or combined methods and not to the algorithm complexity of the underlying the method(s).</p>
 
 <h3 id="toc_41"></span> <div id='Case-Study-1a'/></h3>
 
 <h4 id="toc_42"><span style="color:purple"> Case-Study-1: Deduplicating the Grid&rsquo;s dataset  </span></h4>
 
-<p>In this show case as displayed in Fig 4.10, the goal is to find out whether their exits duplicates Education Instances within the Grid&rsquo;s dataset. The dataset is composed of nine types of institutions which includes 27715 <strong>Companies</strong>, 19353 <strong>Educations</strong>, 12547 <strong>Nonprofit</strong> institutes, 12465  <strong>Healthcare</strong> institutes, 8499 <strong>Facility</strong> institutes, 5762 <strong>Government</strong> institutes, 2724 <strong>Archive</strong> institutes and 7823 institutes of <strong>Other</strong> types. </p>
+<p>In this case study, displayed in Fig 4.10, the goal is to find out whether there exist duplicates Education Instances within the Grid&rsquo;s dataset. The dataset is composed of nine types of institutions including 27715 <strong>Companies</strong>, 19353 <strong>Educations</strong>, 12547 <strong>Nonprofit</strong> institutes, 12465  <strong>Healthcare</strong> institutes, 8499 <strong>Facility</strong> institutes, 5762 <strong>Government</strong> institutes, 2724 <strong>Archive</strong> institutes and 7823 institutes with no type specified. 
+Although the dataset is of multiple types of entities, the case-study here aims only to deduplicate instances of type <strong>Education</strong>. This is depicted in Fig 4.10 where the <code>Sources</code> and <code>Targets</code> cards are <code>GRID[Education]</code> showing that the entity type <code>Education</code> has been selected within the <code>GRID</code> dataset.</p>
 
-<p>Although the dataset is of multiple types of entities, the display in Fig 4.10 shows that the deduplication case-study here aims only to deduplicate instances of type <strong>Education</strong>. This can be seen in the <code>Sources</code> and <code>Targets</code> cards where <code>GRID[Education]</code> shows that the entity type <code>Education</code> has been selected within the <code>GRID</code> dataset.</p>
+<p>Also in the <code>Matching Methods</code> card, it can be seen that on both sides (source and target) two properties are selected for checking whether duplicates exist. This check relies on whether there exist entities that are documented within the GRID dataset with similar names using <code>rdfs_label</code> and <code>skos_prefLabel</code>.
+As the similarity score is measured in the interval 0 (not similar) to 1 (exactly similar), the threshold defined as 0.9 ensures that only paired entities with a high similarity (0.9 or above) are accepted.</p>
 
-<p>Running the <code>Levenshtein Distance</code> algorithm (the only method selected in the <code>Matching Methods</code> card) over two predicates (<code>rdfs_label</code> and <code>skos_prefLabel</code>) documenting GRID&rsquo;s educations names, the tool generated 1,692 distinct links as shown in the statistic card. This card also provides statistics on:</p>
-
-<ul>
-<li>The <code>number of entities</code> (education in this particular case) at the <code>source</code> and <code>target</code> providing thereby hints on a maximum links to find.</li>
-<li>The <code>number of entities matched</code> at the <code>subject</code> and <code>object</code> positions.</li>
-<li>The <code>number of clusters</code> derived from the links found.</li>
-<li><code>Runtime durations</code> on the matching and clustering methods. <div align="center"><br><img src="Images/LL_Case_1_GRID.jpg" alt="Grid&#39;s Education">  Fig 4.10: An example showing how to deduplicate a dataset using an edit distance with threshold 0.9. </div> </li>
-</ul>
-
-<p>In this example, we deliberately choose two properties at both the source and target datasets for the deduplication. Here, choosing for example <code>rdfs_label</code> and <code>skos_prefLabel</code> at the source means that:</p>
+<p>The same card shows the selected algorithm as <code>Levenshtein Distance</code>, which is run over the selected predicates generating 1,692 distinct links as shown in the statistics card (on the top). The latter card also provides statistics on:</p>
 
 <ul>
-<li><strong>ETHER</strong> the source <code>rdfs_label</code> matches the targets <code>rdfs_label</code> or <code>skos_prefLabel</code>.</li>
-<li><strong>OR</strong> the source <code>skos_prefLabel</code> matches the targets <code>rdfs_label</code> or <code>skos_prefLabel</code>.</li>
+<li><p>The <code>number of entities</code> at the <code>Source</code> and <code>Target</code>. In this particular case, over 19K educational institutes at both source and target as they are the same dataset. Such information provides hints on the maximum number of links to expect in the worst case scenario  as well as an idea on how long the running algorithm could take.</p></li>
+<li><p>The <code>number of entities matched</code> at the <code>subject</code> and <code>object</code> positions.</p></li>
+<li><p>The <code>number of clusters</code> derived from the links found. Here, this provides a potentially better picture on the number of real entities, as co-referent are grouped together in clusters of varoius sizes.</p></li>
+<li><p>The <code>Runtime durations</code> informing on the elapsed time for (1) finding links and for (2) clustering them. <div align="center"><br><img src="Images/LL_Case_1_GRID.jpg" alt="Grid&#39;s Education">  Fig 4.10: An example showing how to deduplicate a dataset using edit distance with a user-defined threshold of 0.9. </div> </p></li>
 </ul>
 
-<p>An alternative of this is available in the next section (4.4.2 Complex Methods). There, we achieve the same goal using three times the <code>Levenshtein Distance</code> algorithm. </p>
+<p>In this example, we deliberately choose two properties at both the <code>Source</code> and <code>Target</code> datasets for the deduplication. Choosing for more than one property either for the <code>Source</code> or <code>Target</code> triggers a combination of pairwise property-value matching joined with the logic operator <strong>OR</strong>. For example choosing properties x and y at the source while choosing only z at the target triggers the following pairwise combinations: (<code>x AND z</code>) <strong>OR</strong> (<code>y AND z</code>). </p>
+
+<p>In the current use-case, choosing for example <code>rdfs_label</code> and <code>skos_prefLabel</code> at both <code>Source</code> AND <code>Target</code> generates the following combination: <code>rdfs_label AND rdfs_label</code> <strong>OR</strong> <code>rdfs_label AND skos_prefLabel</code> <strong>OR</strong> <code>skos_prefLabel AND skos_prefLabel</code>. 
+This explicit combination is implemented as an alternative complex method in the next section, where three executions of the <code>Levenshtein Distance</code> algorithm is required, instead of one. </p>
 
 <h3 id="toc_43"></span> <div id='Case-Study-1b'/></h3>
 
 <h4 id="toc_44"><span style="color:purple"> Case-Study-1: RDF Results  </span></h4>
 
-<p>For space reasons, the entire RDF Linkset could not be displayed Example 4.15. However, as the complete metadata of the linkset shows, a number of statistics such as the number of distinct triples in the linkset, the number of links validated and so on&hellip; The metadata also reveals a detail description on the method used to generate the link. </p>
+<p>This section provides the complete metadata of the resulting Linkset for the specification above in Example 4.15, plus a sample of 9 links due to space limitation.</p>
 
-<p>Furthermore, a specific annotation is provided in an RDFStar format for each generated link. In this example, we have the strength of the link and whether the link has been validate (<code>accepted</code>, <code>rejected</code> or <code>not_validated</code> ). <br></p>
+<p>From this metadata, a number of general statistical information on the linkset can be obtained, such as the number of distinct <code>triples</code>, <code>entities</code> or <code>clusters</code>, the number of links <code>accepted</code> or <code>rejected</code> and more.</p>
+
+<p>The metadata also presents a detailed description on the methods used to generate the links. For example, for each algorithm used, a <code>uri</code> and <code>description</code> is provided. This algorithm can be used in one or more methods, provided the link acceptance <code>threshold</code>, the <code>range</code> of the similarity score, the <code>datasets</code>, <code>data-types</code> and <code>predicates</code> uris used for link findings.</p>
+
+<p>Furthermore, a specific annotation is provided in an RDFStar format for each generated link. In this example, we have the <code>strength</code> of the link and whether the link has been validated (<code>accepted</code>, <code>rejected</code> or <code>not_validated</code> ). <br></p>
 
 <div><pre class="line-numbers"><code class="language-none">------------------
 -- Example 4.15 --
@@ -1995,8 +1998,8 @@ linkset:Grid_2
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
     ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
-     and &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
-     and &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
     &quot;&quot;&quot; ;
 
     void:linkPredicate                       skos:exactMatch ; 
@@ -2208,8 +2211,8 @@ linkset:Getty
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
     ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H5a82161c3bab923&gt;
-     and &lt;http://data.goldenagents.org/resource/Exact-H0c2d27f003feb51&gt;
-     and &lt;http://data.goldenagents.org/resource/Time-Delta-H3a005c2a7439bd9&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Exact-H0c2d27f003feb51&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Time-Delta-H3a005c2a7439bd9&gt;
     &quot;&quot;&quot; ;
 
     void:linkPredicate                       owl:sameAs ; 
