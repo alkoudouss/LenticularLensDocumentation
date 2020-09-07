@@ -1806,8 +1806,7 @@ linkset:Grid
     cc:attributionName                       &quot;LenticularLens&quot; ;
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
-    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H27f9c563cd82438&gt;
-    &quot;&quot;&quot; ;
+    ll:has-logic-formulation                 &lt;http://data.goldenagents.org/resource/PHbb54a8dab0d2954&gt; ;
 
     void:linkPredicate                       skos:exactMatch ; 
     void:subjectsTarget                      &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ; 
@@ -1827,25 +1826,40 @@ linkset:Grid
 
 
                ################################################################################               
+               #                             LOGIC FORMULA PARTS                              #
+               ################################################################################               
+
+
+&lt;http://data.goldenagents.org/resource/PHbb54a8dab0d2954&gt;
+
+    a                                       ll:LogicFormulation ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt; ;
+
+    ll:has-formula-description              &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt;
+    &quot;&quot;&quot; .
+
+
+               ################################################################################               
                #                              METHOD SIGNATURES                               #
                ################################################################################               
 
 
 ### ll_algo:Normalised-EditDistance
-&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H27f9c563cd82438&gt;
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt;
 
-    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
-    ll:has-matching-threshold               0.9 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;
+    ll:has-threshold                        0.9 ;
     ll:has-threshold-range                  &quot;]0, 1]&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
 
 
                ################################################################################               
@@ -1854,6 +1868,7 @@ linkset:Grid
 
 
 ll_algo:Normalised-EditDistance 
+    a                                       ll:MatchingAlgorithm ;
     dcterms:description                      &quot;&quot;&quot;
         This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective 
         user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. 
@@ -1872,8 +1887,9 @@ ll_algo:Normalised-EditDistance
 
 ### ENTITY SELECTION [SOURCE] N0: 1
 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; 
-    ll:has-selected-dataset                 &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;
-    ll:has-selected-data_type               &lt;http://www.grid.ac/ontology/Education&gt; .
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;
+    ll:has-entity-type                      &lt;http://www.grid.ac/ontology/Education&gt; .
 
 
                ################################################################################               
@@ -1883,14 +1899,16 @@ ll_algo:Normalised-EditDistance
 
 ### PREDICATE SELECTED [SOURCE]  N0: 1
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate                   &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 2
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate                   &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .
 
 
 ##############################################################################################################
@@ -1997,10 +2015,7 @@ linkset:Grid_2
     cc:attributionName                       &quot;LenticularLens&quot; ;
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
-    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
-     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
-     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
-    &quot;&quot;&quot; ;
+    ll:has-logic-formulation                 &lt;http://data.goldenagents.org/resource/PH1ec0ee6f368dd62&gt; ;
 
     void:linkPredicate                       skos:exactMatch ; 
     void:subjectsTarget                      &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ; 
@@ -2020,53 +2035,74 @@ linkset:Grid_2
 
 
                ################################################################################               
+               #                             LOGIC FORMULA PARTS                              #
+               ################################################################################               
+
+
+&lt;http://data.goldenagents.org/resource/PH1ec0ee6f368dd62&gt;
+
+    a                                       ll:LogicFormulation ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt; ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt; ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt; ;
+
+    ll:has-formula-description              &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt;
+    &quot;&quot;&quot; .
+
+
+               ################################################################################               
                #                              METHOD SIGNATURES                               #
                ################################################################################               
 
 
 ### ll_algo:Normalised-EditDistance
-&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H90e0a32deb86911&gt;
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt;
 
-    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
-    ll:has-matching-threshold               0.9 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;
+    ll:has-threshold                        0.9 ;
     ll:has-threshold-range                  &quot;]0, 1]&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; .
 
 
 ### ll_algo:Normalised-EditDistance
-&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H675bea2784d5fc4&gt;
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt;
 
-    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
-    ll:has-matching-threshold               0.9 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;
+    ll:has-threshold                        0.9 ;
     ll:has-threshold-range                  &quot;]0, 1]&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
 
 
 ### ll_algo:Normalised-EditDistance
-&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-Ha2d40f1bcbaff8f&gt;
+&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt;
 
-    ll:has-matching-method                  ll_algo:Normalised-EditDistance ;
-    ll:has-matching-threshold               0.9 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;
+    ll:has-threshold                        0.9 ;
     ll:has-threshold-range                  &quot;]0, 1]&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .
 
 
                ################################################################################               
@@ -2075,6 +2111,7 @@ linkset:Grid_2
 
 
 ll_algo:Normalised-EditDistance 
+    a                                       ll:MatchingAlgorithm ;
     dcterms:description                      &quot;&quot;&quot;
         This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective 
         user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. 
@@ -2093,8 +2130,9 @@ ll_algo:Normalised-EditDistance
 
 ### ENTITY SELECTION [SOURCE] N0: 1
 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; 
-    ll:has-selected-dataset                 &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;
-    ll:has-selected-data_type               &lt;http://www.grid.ac/ontology/Education&gt; .
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;
+    ll:has-entity-type                      &lt;http://www.grid.ac/ontology/Education&gt; .
 
 
                ################################################################################               
@@ -2104,14 +2142,16 @@ ll_algo:Normalised-EditDistance
 
 ### PREDICATE SELECTED [SOURCE]  N0: 1
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-subj-predicate                   &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 2
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
-    ll:has-obj-predicate                    &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .
 
 
 ##############################################################################################################
@@ -2193,6 +2233,8 @@ linkset:Grid_2
     @prefix              dataset: &lt;http://data.goldenagents.org/resource/dataset/&gt; .
 
 ### AUTOMATED NAMESPACES
+    @prefix                 skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+    @prefix        institutes_S1: &lt;http://www.grid.ac/institutes/&gt; .
     @prefix                 time: &lt;http://www.w3.org/2006/time#&gt; .
     @prefix                  owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
     @prefix            Person_S1: &lt;http://goldenagents.org/uva/SAA/Person/&gt; .
@@ -2210,14 +2252,11 @@ linkset:Getty
     cc:attributionName                       &quot;LenticularLens&quot; ;
     void:feature                             format:Turtle ;
     cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
-    ll:has-matching-logic-formulation        &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H5a82161c3bab923&gt;
-     and (⊤min) &lt;http://data.goldenagents.org/resource/Exact-H0c2d27f003feb51&gt;
-     and (⊤min) &lt;http://data.goldenagents.org/resource/Time-Delta-H3a005c2a7439bd9&gt;
-    &quot;&quot;&quot; ;
+    ll:has-logic-formulation                 &lt;http://data.goldenagents.org/resource/PH6d47b550d1695d5&gt; ;
 
     void:linkPredicate                       owl:sameAs ; 
-    void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604&gt; ;
-    void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604&gt; ; 
+    void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604&gt; ;
+    void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604&gt; ; 
     void:objectsTarget                       &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202&gt; ;
     dcterms:description                      &quot;Deduplication of entities of type Education in the GRID dataset&quot;@en ;
 
@@ -2231,64 +2270,85 @@ linkset:Getty
 
 
                ################################################################################               
+               #                             LOGIC FORMULA PARTS                              #
+               ################################################################################               
+
+
+&lt;http://data.goldenagents.org/resource/PH6d47b550d1695d5&gt;
+
+    a                                       ll:LogicFormulation ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f&gt; ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Exact-H918a02351d48ca9&gt; ;
+    ll:has-method                           &lt;http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9&gt; ;
+
+    ll:has-formula-description              &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Exact-H918a02351d48ca9&gt;
+     and (⊤min) &lt;http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9&gt;
+    &quot;&quot;&quot; .
+
+
+               ################################################################################               
                #                              METHOD SIGNATURES                               #
                ################################################################################               
 
 
 ### ll_algo:Normalised-Soundex
-&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H5a82161c3bab923&gt;
+&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f&gt;
 
-    ll:has-matching-method                  ll_algo:Normalised-Soundex ;
-    ll:has-matching-threshold               0.85 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Normalised-Soundex ;
+    ll:has-threshold                        0.85 ;
     ll:has-threshold-range                  &quot;]0, 1]&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d&gt; .
 
 
 ### ll_algo:Exact
-&lt;http://data.goldenagents.org/resource/Exact-H0c2d27f003feb51&gt;
+&lt;http://data.goldenagents.org/resource/Exact-H918a02351d48ca9&gt;
 
-    ll:has-matching-method                  ll_algo:Exact ;
-    ll:has-matching-threshold               1 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Exact ;
+    ll:has-threshold                        1 ;
     ll:has-threshold-range                  &quot;1&quot; ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Equal&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Equal&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH267db0e33535f5c&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH799eba1e96ed6bb&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH46d91d4f6e2209e&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0df0471cb5df515&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0f795278fe00df4&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PHae021ca5acc44b6&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PHfbed503b30d4957&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHe3cb3236c5b11b1&gt; ;
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHb2a681013fbb430&gt; ;
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH9f7bd41ea902bd0&gt; .
 
 
 ### ll_algo:Time-Delta
-&lt;http://data.goldenagents.org/resource/Time-Delta-H3a005c2a7439bd9&gt;
+&lt;http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9&gt;
 
-    ll:has-matching-method                  ll_algo:Time-Delta ;
-    ll:has-matching-threshold               0 ;
+    a                                       ll:MatchingMethod ;
+    ll:has-algorithm                        ll_algo:Time-Delta ;
+    ll:has-threshold                        0 ;
     ll:has-threshold-range                  &quot;ℕ&quot; ;
     time:unitType                           time:unitYear ;
-    ll:link-acceptance-threshold-operator   &lt;http://data.goldenagents.org/resource/Equal&gt; ;
+    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Equal&gt; ;
 
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
     ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHca68d19cb37fdd5&gt; ;
-    ll:has-subj-predicate-selected          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHe54ed0bec7c957a&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHeb98e7f77b22fce&gt; ;
+    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHf741a098569afb1&gt; ;
 
     ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH1e754827d63d4bb&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH76e29ee46647c90&gt; ;
-    ll:has-obj-predicate-selected           &lt;http://data.goldenagents.org/resource/PredicateSelection-PH3fa7b46c4c830eb&gt; .
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHee886bb3d021a6a&gt; ;
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH715d032180bd40c&gt; ;
+    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHe349eb18e5ba638&gt; .
 
 
                ################################################################################               
@@ -2297,6 +2357,7 @@ linkset:Getty
 
 
 ll_algo:Normalised-Soundex 
+    a                                       ll:MatchingAlgorithm ;
     dcterms:description                      &quot;&quot;&quot;
         &quot;Soundex is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for ho-
         mophones to be encoded to the same representation so that they can be matched despite minor differences in
@@ -2329,11 +2390,13 @@ ll_algo:Normalised-Soundex
 
 
 ll_algo:Exact 
+    a                                       ll:MatchingAlgorithm ;
     dcterms:description                      &quot;&quot;&quot;
         Aligns source and target’s IRIs whenever their respective user selected property values are identical.&quot;&quot;&quot;@en .
 
 
 ll_algo:Time-Delta 
+    a                                       ll:MatchingAlgorithm ;
     dcterms:description                      &quot;&quot;&quot;
         10.1 Time Delta. This function allows for finding co-referent entities on the basis of a minimum time dif-
         ference between the times reported by the source and the target entities. For example, if the value zero is 
@@ -2351,20 +2414,23 @@ ll_algo:Time-Delta
 
 ### ENTITY SELECTION [SOURCE] N0: 1
 &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; 
-    ll:has-selected-dataset                 &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604&gt; ;
-    ll:has-selected-data_type               &lt;https://data.goldenagents.org/datasets/SAA/ontology/Person&gt; .
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604&gt; ;
+    ll:has-entity-type                      &lt;https://data.goldenagents.org/datasets/SAA/ontology/Person&gt; .
 
 
 ### ENTITY SELECTION [SOURCE] N0: 2
 &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; 
-    ll:has-selected-dataset                 &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604&gt; ;
-    ll:has-selected-data_type               &lt;https://data.goldenagents.org/datasets/SAA/ontology/Person&gt; .
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604&gt; ;
+    ll:has-entity-type                      &lt;https://data.goldenagents.org/datasets/SAA/ontology/Person&gt; .
 
 
 ### ENTITY SELECTION [TARGET] N0: 3
 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; 
-    ll:has-selected-dataset                 &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202&gt; ;
-    ll:has-selected-data_type               &lt;https://w3id.org/pnv#PersonName&gt; .
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202&gt; ;
+    ll:has-entity-type                      &lt;https://w3id.org/pnv#PersonName&gt; .
 
 
                ################################################################################               
@@ -2374,29 +2440,34 @@ ll_algo:Time-Delta
 
 ### PREDICATE SELECTED [SOURCE]  N0: 1
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
-    ll:has-subj-predicate                   &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 2
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
-    ll:has-subj-predicate                   &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 3
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 4
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH267db0e33535f5c&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
-    ll:has-subj-predicate                   &lt;http://data.goldenagents.org/resource/PH0fd24cbe729e7d7&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PH46d91d4f6e2209e&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH0fd24cbe729e7d7&gt;
+&lt;http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Inventory&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/documentedIn&gt; ;
@@ -2405,96 +2476,112 @@ ll_algo:Time-Delta
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 5
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH799eba1e96ed6bb&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
-    ll:has-subj-predicate                   &lt;http://data.goldenagents.org/resource/PH0fd24cbe729e7d7&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PH0df0471cb5df515&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 6
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH0f795278fe00df4&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PH6430e9feb085784&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHe3cb3236c5b11b1&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH7334cc09b832a17&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH6430e9feb085784&gt;
+&lt;http://data.goldenagents.org/resource/PH7334cc09b832a17&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 7
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PHae021ca5acc44b6&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PH255d50efeb04100&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHb2a681013fbb430&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH00d91362d72928f&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH255d50efeb04100&gt;
+&lt;http://data.goldenagents.org/resource/PH00d91362d72928f&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 8
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PHfbed503b30d4957&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PHe7089c3df3c4301&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PH9f7bd41ea902bd0&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH9f325d76d5fa623&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PHe7089c3df3c4301&gt;
+&lt;http://data.goldenagents.org/resource/PH9f325d76d5fa623&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber&gt; .
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 9
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PHca68d19cb37fdd5&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
-    ll:has-subj-predicate                   &lt;http://data.goldenagents.org/resource/PH2d1952c9339f565&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHeb98e7f77b22fce&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH22c48ebe6b24223&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH2d1952c9339f565&gt;
+&lt;http://data.goldenagents.org/resource/PH22c48ebe6b24223&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Inventory&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/registrationDate&gt; .
 
 
 ### PREDICATE SELECTED [SOURCE]  N0: 10
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PHe54ed0bec7c957a&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
-    ll:has-subj-predicate                   &lt;http://data.goldenagents.org/resource/PH2d1952c9339f565&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHf741a098569afb1&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH22c48ebe6b24223&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 11
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH1e754827d63d4bb&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PH228d6de9041638f&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHee886bb3d021a6a&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PHda68158d0b9f392&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH228d6de9041638f&gt;
+&lt;http://data.goldenagents.org/resource/PHda68158d0b9f392&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/registrationDate&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 12
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH76e29ee46647c90&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PH3fd8b4f76bd2e5b&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PH715d032180bd40c&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH956023596f37d1b&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH3fd8b4f76bd2e5b&gt;
+&lt;http://data.goldenagents.org/resource/PH956023596f37d1b&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/registrationDate&gt; .
 
 
 ### PREDICATE SELECTED [TARGET]  N0: 13
-&lt;http://data.goldenagents.org/resource/PredicateSelection-PH3fa7b46c4c830eb&gt; 
-    ll:has-entity-selected                  &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
-    ll:has-obj-predicate                    &lt;http://data.goldenagents.org/resource/PH2dcab9319fc80f3&gt; .
+&lt;http://data.goldenagents.org/resource/PredicateSelection-PHe349eb18e5ba638&gt; 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+    ll:has-predicate                        &lt;http://data.goldenagents.org/resource/PH0ef342da86f3226&gt; .
 
 
-&lt;http://data.goldenagents.org/resource/PH2dcab9319fc80f3&gt;
+&lt;http://data.goldenagents.org/resource/PH0ef342da86f3226&gt;
+    a                                       ll:SequenceSelection ;
     rdf:_1                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/isInRecord&gt; ;
     rdf:_2                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding&gt; ;
     rdf:_3                                  &lt;https://data.goldenagents.org/datasets/SAA/ontology/registrationDate&gt; .
@@ -2503,6 +2590,7 @@ ll_algo:Time-Delta
 ##############################################################################################################
 #                                             ANNOTATED LINKSET                                              #
 ##############################################################################################################
+
 
 
 linkset:Getty
