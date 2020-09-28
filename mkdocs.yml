@@ -1,0 +1,21 @@
+site_name: Lenticular Lens
+
+nav:
+    
+    - 1. Introduction: 1.Introduction.md
+    - 2. Terminology: 2.Terminology.md
+    - 3. Link Annotation Ontology: 3.Ontology.md
+    - 4. Linkset - Link Construction: 4.LinkConstruction.md
+    - 5. Lens - Link Manipulation: 5.LinkManipulation.md
+    - 6. Link Validation: 6. LinkValidation.md
+    - 7. Link Export: 7.LinkExport.md
+    - 8. Data Integration: 8.DataIntegration.md
+    - 9. Using Lenticular Lens: 9.Installation.md
+    - 10. References: 10.References.md
+    
+theme: readthedocs
+
+
+extra_css:
+    - GitHub2.css
+
