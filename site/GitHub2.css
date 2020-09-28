@@ -1,0 +1,36 @@
+body {
+  font-family: Garamond, Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; 
+  text-align: justify}
+  
+h1 {
+  font-size: 30px;
+  color: red; }
+  
+  
+
+h2 {
+  font-size: 26px;
+  border-bottom: 1px solid #cccccc;
+  color: red; }
+
+h3 {font-size: 24px; color: red;}
+
+h4 {font-size: 22px; color: red;}
+
+h5 {font-size: 20px; color: red;}
+
+h6 {color: #777777; font-size: 14px; color: red;}
+  
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+  
+  

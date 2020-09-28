@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>7. Link Export - Lenticular Lens</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../GitHub2.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "7. Link Export";
+    var mkdocs_page_input_path = "7.LinkExport.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Lenticular Lens</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.Introduction/">1. Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.Terminology/">2. Terminology</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.Ontology/">3. Link Annotation Ontology</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.LinkConstruction/">4. Linkset - Link Construction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../5.LinkManipulation/">5. Lens - Link Manipulation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../6.%20LinkValidation/">6. Link Validation</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">7. Link Export</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#71-export-structure">7.1 Export Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#72-export-restrictions">7.2 Export Restrictions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#73-export-formats">7.3 Export Formats</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#74-default-export-table">7.4 Default Export Table</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../8.DataIntegration/">8. Data Integration</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../9.Installation/">9. Using Lenticular Lens</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../10.References/">10. References</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Lenticular Lens</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>7. Link Export</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="7-link-export">7. LINK EXPORT</h1>
+<p>At this point, links have ben created and possibly improved. Now, interesting questions are:</p>
+<ul>
+<li>
+<p>Could these links be exported for external usage? </p>
+</li>
+<li>
+<p>In what format are there available for export? </p>
+</li>
+<li>
+<p>What metadata can be exported in combination with the links?</p>
+</li>
+<li>
+<p>Can the linktype be modified prior to an export?</p>
+</li>
+</ul>
+<p>All these questions will be answered here. </p>
+<h2 id="71-export-structure">7.1 Export Structure</h2>
+<p>The <strong>Lenticular Lens</strong> design imposes to itself and motivates its users to provide as much documentation as possible for explaining why (understandability) and how (reproducibility) a set of links is generated. This metadata in the <strong>Lenticular Lens</strong> can be organised into <strong>Generic</strong> and <strong>Specific</strong> metadata. A <em>generic metadata</em> is the annotation that applies to a set of links as a whole while a <em>specific metadata</em> applies to individual links. 
+Indeed, all links residing in the <strong>Lenticular Lens</strong> can be exported. However, prior to doing that, one has to choose whether the metadata is to be included or not and if it is to be included, should it include Generic and/or Specific metadata? </p>
+<p><span style="color:blue"><strong>Identity Set in the Default Graph.</strong></span> In the Example-1, using the turtle RDF syntax, we present a standard identity linkset where equivalent resources are linked with the well known linktype owl:sameAs. </p>
+<pre><code class="language-turtle">---------------
+-- Example 1 --
+---------------
+Linkset in the default graph.
+
+    hero:BlackWidow  owl:sameAs   person:Nat .
+    hero:BlackWidow  owl:sameAs   person:Romanoff .
+    hero:BlackWidow  owl:sameAs   person:Natalia-Romanova .
+    hero:BlackWidow  owl:sameAs   person:Natasha .
+    hero:Spiderman   owl:sameAs   person:Peter-parker  .
+    hero:Spiderman   owl:sameAs   person:Tom-Holland .
+    hero:Superman    owl:sameAs   person:Clark-Kent .
+    hero:Superman    owl:sameAs   person:Joseph .
+    hero:Superman    owl:sameAs   person:Kal-El .
+
+</code></pre>
+
+<p><br></p>
+<p><span style="color:blue"><strong>Identity Set in a Named Graph.</strong></span> In Example-2, the set of links illustrated in Example-1 as triples populating the default graph can now be referred to as the graph with IRI ex:heroes-Identity. This IRI can now be used to document any generic information deemed relevant such as the source and target datasets, the aligning method... </p>
+<pre><code>---------------
+-- Example 2 --
+---------------
+Linkset in a named graph syntax.
+
+ex:heroes-Identity
+{
+    hero:BlackWidow  owl:sameAs   person:Nat .
+    hero:BlackWidow  owl:sameAs   person:Romanoff .
+    hero:BlackWidow  owl:sameAs   person:Natalia-Romanova .
+    hero:BlackWidow  owl:sameAs   person:Natasha .
+    hero:Spiderman   owl:sameAs   person:Peter-parker  .
+    hero:Spiderman   owl:sameAs   person:Tom-Holland .
+    hero:Superman    owl:sameAs   person:Clark-Kent .
+    hero:Superman    owl:sameAs   person:Joseph .
+    hero:Superman    owl:sameAs   person:Kal-El .
+}
+</code></pre>
+
+<p><br></p>
+<p>Example-3 illustrates the complete structure of linksets and lenses in the <strong>Lenticular Lens</strong>. Here, by default, a linkset/lens is annotated with both, generic and specific metadata. <br>
+<span style="color:blue"> <strong>Generic Metadata.</strong> </span> As shown in Example-3, the generic annotation associated with the superheroes identity linkset is composed of 14 triples, which are all element of the default graph (triple without a specific named graph). Among others, these triples convey information such as the type, subjects, license, description, format, number of triples, number of distinct entities, number of identity clusters... of the set. 
+<span style="color:blue"> <strong>Specific Metadata.</strong> </span> This type of metadata remains in the linkset's graph (applicable to a lens). It enable the reification of specific triples. One can for example provide the confidence strength of each of linkset's statement. As illustrated in Example-3, the <code>hero:Spiderman   owl:sameAs   person:Tom-Holland</code> is annotated as a non valid statement followed by the rational supporting its rejection. Such annotation enable the selection of specific triples. For example, on can select the 8 validated triples or the 7 triples validated as correct. <br>
+<span style="color:blue"> <strong>Separation of Concern.</strong> </span> The linkset and lens presentation enable separation of concern in the sense that it provides the user with a number of options: <strong>Flat Representation:</strong> non reified triples optionally within a named graph; <strong>Partial Representation:</strong> the choice of exclusively including only the generic or the specific metadata; <strong>Full Representation:</strong> as intended in the <strong>Lenticular Lens</strong>, the linkset comes along with its generic and specific metadata if applicable. </p>
+<pre><code>---------------
+-- Example 3 --
+---------------
+Default RDF* turtle syntax annotation structure of a linkset in the the Lenticular Lens.
+
+ex:heroes-Identity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying Marvel's superheroes&quot; ;
+    dcterms:license       law:odc-public-domain-dedication-and-licence ;
+    dcterms:subject       &lt;http://example.org/resource/Person&gt; ;
+    dcterms:subject       &lt;http://example.org/resource/Hero&gt; ;
+    void:subjectsTarget   dataset:Fictive-Persons ;
+    void:objectsTarget    dataset:Superheroes ;
+    void:feature          format:Turtle ;
+    void:linkPredicate    owl:sameAs ;
+    void:triples           9 ;
+    void:entities         12 ;
+    void:distinctSubjects  3 ;
+    void:distinctObjects   9 ;
+    voidPlus:clusters      3 ;
+    validation:count       8 ;
+    validation:accepted    7 ;
+    validation:rejected    1 ;
+    validation:remains     1 ;
+
+ex:heroes-Identity
+{
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Nat&gt;&gt;          validation:status &quot;True&quot; .
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Romanoff&gt;&gt;     validation:status &quot;True&quot; .
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Natalia-Romanova&gt;&gt; 
+        validation:status &quot;True&quot; . 
+    &lt;&lt;hero:BlackWidow owl:sameAs person:Natasha&gt;&gt;      validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spiderman  owl:sameAs person:Peter-parker&gt;&gt; validation:status &quot;True&quot; .
+    &lt;&lt;hero:Spiderman  owl:sameAs person:Tom-Holland&gt;&gt;  
+        validation:status     &quot;False&quot; .
+        validation:Rational   &quot;Tom-Holland does not have Spiderman properties 
+                               which Peter-parker (fictitious) a.k.a Spiderman has.&quot; .
+    &lt;&lt;hero:Superman   owl:sameAs person:Clark-Kent&gt;&gt;   validation:status &quot;True&quot; .
+    &lt;&lt;hero:Superman   owl:sameAs person:Joseph&gt;&gt;       validation:status &quot;True&quot; .
+    hero:Superman   owl:sameAs person:Kal-El .
+}
+</code></pre>
+
+<h2 id="72-export-restrictions">7.2 Export Restrictions</h2>
+<p>As addressed in the previous section, link annotation provides the user with export options as described below.</p>
+<pre><code>• All           : Export all links
+• Accepted      : Export only accepted links.
+• Rejected      : Export only rejected links.
+• Validated     : Export rejected or validated links
+• Not Validated : Export links with no accepted or rejected annotation.
+• Threshold     : Export links that pass a predefined threshold condition. 
+                  This feature applies to links annotated with confidence values.
+</code></pre>
+
+<h2 id="73-export-formats">7.3 Export Formats</h2>
+<p>Indeed, all links residing in the <strong>Lenticular Lens</strong> can be exported. For that, one is provided with three syntax options: <strong>CSV</strong> (Example-4), <strong>JSON-LD</strong> (Example-5), <strong>RDF Turtle</strong> (Example-6), and <strong>RDF* Turtle</strong> (Example-3).</p>
+<p><span style="color:blue"> <strong>CSV OUTPUT.</strong> </span> In our attend to export a linkset/lens with its complete metadata, in a CSV format, the <strong>Lenticular Lens</strong> generates two CSV tables. As available in Example-4, the first table is an illustration of the metadata table while the second table is an illustration of the superheroes identity linkset.</p>
+<pre><code>---------------
+-- Example 4 --
+---------------
+Linkset in a CSV format. 
+Keep in mind that the table below are a visual representation of a CSV table
+
+--------------------
+-- METADATA TABLE --
+--------------------
+
+---------------------------------------------------------------------------------------------------------  
+| Vocabulary                                                  Value                                     |
+---------------------------------------------------------------------------------------------------------                                                
+  http://www.w3.org/ns/sparql-service-description#namedGraph  http://example.org/#heroesIdentity
+  http://www.w3.org/1999/02/22-rdf-syntax-ns#type             http://rdfs.org/ns/void#Linkset
+  http://purl.org/dc/terms/description                        Identifying Marvel's superheroes
+  http://purl.org/dc/terms/license                            law:odc-public-domain-dedication-and-licence
+  http://purl.org/dc/terms/subject                            http://example.org/resource/Person
+  http://purl.org/dc/terms/subject                            http://example.org/resource/Hero
+  http://rdfs.org/ns/void#subjectsTarget                      dataset:Fictive-Persons
+  http://rdfs.org/ns/void#objectsTarget                       dataset:Superheroes
+  http://rdfs.org/ns/void#feature                             format:Turtle
+  http://rdfs.org/ns/void#linkPredicate                       owl:sameAs
+  http://rdfs.org/ns/void#triples                             9
+  http://rdfs.org/ns/void#entities                            12
+  http://rdfs.org/ns/void#distinctSubjects                    3
+  http://rdfs.org/ns/void#distinctObjects                     9
+  http://vocabulary/voidPlus#clusters                         3
+  http://vocabulary/validation#count                          8
+  http://vocabulary/validation#accepted                       7
+  http://vocabulary/validation#rejected                       1
+  http://vocabulary/validation#remains                        1
+
+------------------------
+-- LINKSET/LENS TABLE --
+------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+| NamedGraph                         Source                              Target                                      ValStatus  ValRational    |
+------------------------------------------------------------------------------------------------------------------------------------------------
+  http://example.org/#heroesIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Nat               True         
+  http://example.org/#heroesIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Romanoff          True
+  http://example.org/#heroesIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Natalia-Romanova  True
+  http://example.org/#heroesIdentity  http://example.org/hero#BlackWidow  http://example.org/person#Natasha           True
+  http://example.org/#heroesIdentity  http://example.org/hero#Spiderman   http://example.org/person#Peter-parker      True
+  http://example.org/#heroesIdentity  http://example.org/hero#Spiderman   http://example.org/person#Tom-Holland       False      Tom-Holland does not have Spiderman properties which Peter-parker (fictitious) a.k.a Spiderman has.
+  http://example.org/#heroesIdentity  http://example.org/hero#Superman    http://example.org/person#Clark-Kent        True
+  http://example.org/#heroesIdentity  http://example.org/hero#Superman    http://example.org/person#Joseph            True
+  http://example.org/#heroesIdentity  http://example.org/hero#Superman    http://example.org/person#Kal-El            True
+
+
+</code></pre>
+
+<p><br></p>
+<p><span style="color:blue"> <strong>JSON-LD  OUTPUT.</strong> </span>TODO....</p>
+<pre><code class="json-ld">---------------
+-- Example 5 --
+---------------
+Linkset in a JSON-LD format.
+
+{
+  &quot;@context&quot;: 
+  {
+    &quot;name&quot;: &quot;http://xmlns.com/foaf/0.1/name&quot;,
+    &quot;homepage&quot;: 
+    {
+      &quot;@id&quot;: &quot;http://xmlns.com/foaf/0.1/workplaceHomepage&quot;,
+      &quot;@type&quot;: &quot;@id&quot;
+    },
+    &quot;Person&quot;: &quot;http://xmlns.com/foaf/0.1/Person&quot;
+  },
+
+  &quot;@id&quot;: &quot;https://me.example.com&quot;,
+  &quot;@type&quot;: &quot;Person&quot;,
+  &quot;name&quot;: &quot;John Smith&quot;,
+  &quot;homepage&quot;: &quot;https://www.example.com/&quot;
+}
+</code></pre>
+
+<p><br></p>
+<p><span style="color:blue"> <strong>RDF TURTLE  OUTPUT.</strong> </span> Our preference goes to an RDF<em> Turtle Output as illustrated in Example-3. However, because RDF</em> is not deployed on all triple stores, we provide the singleton representation alternative as well. An example of this representation in available in Example-6.</p>
+<pre><code>---------------
+-- Example 6 --
+---------------
+Default RDF turtle syntax annotation structure of a linkset in the the Lenticular Lens.
+Linkset in an RDF Turtle format using singletons.
+
+ex:heroes-Identity
+    a                     void:Linkset ;
+    dcterms:description   &quot;Identifying Marvel's heroes&quot; ;
+    dcterms:license       law:odc-public-domain-dedication-and-licence ;
+    dcterms:subject       &lt;http://example.org/resource/Person&gt; ;
+    dcterms:subject       &lt;http://example.org/resource/Hero&gt; ;
+    void:subjectsTarget   dataset:Fictive-Persons ;
+    void:objectsTarget    dataset:Superheroes ;
+    void:feature          format:Turtle ;
+    void:linkPredicate    owl:sameAs ;
+    void:triples           9 ;
+    void:entities         12 ;
+    void:distinctSubjects  3 ;
+    void:distinctObjects   9 ;
+    voidPlus:clusters      3 ;
+    validation:count       8 ;
+    validation:accepted    7 ;
+    validation:rejected    1 ;
+    validation:remains     1 ;
+
+ex:heroes-Identity
+{
+    hero:BlackWidow  singleton:sameAs-1   person:Nat .
+    hero:BlackWidow  singleton:sameAs-2   person:Romanoff .
+    hero:BlackWidow  singleton:sameAs-3   person:Natalia-Romanova .
+    hero:BlackWidow  singleton:sameAs-4   person:Natasha .
+    hero:Spiderman   singleton:sameAs-5   person:Peter-parker  .
+    hero:Spiderman   singleton:sameAs-6   person:Tom-Holland .
+    hero:Superman    singleton:sameAs-7   person:Clark-Kent .
+    hero:Superman    singleton:sameAs-8   person:Joseph .
+    hero:Superman    singleton:sameAs-9   person:Kal-El .
+}
+</code></pre>
+
+<h2 id="74-default-export-table">7.4 Default Export Table</h2>
+<p>Example-7 summarises the various options for exporting a linkset or lens. In each set of selection category, a default selection is checked in. This means that, by default, an exported linkset or lens comes along with <strong>all its links</strong> and <strong>its complete annotation</strong> in a <strong>CSV format</strong>. </p>
+<pre><code>---------------
+-- Example 7 --
+---------------
+    ----------------------------------------------------------------
+    | RESTRICTIONS        STRUCTURE               FORMAT           |
+    ----------------------------------------------------------------
+      [x] All             [x] Complete            [x] CSV                                  
+      [ ] Accepted        [ ] Partial:Generic     [ ] JSON-LD                    
+      [ ] Rejected        [ ] Partial:Specific    [ ] RDF-TURTLE              
+      [ ] Validated                               [ ] RDF*-TURTLE 
+      [ ] Not Validated                                           
+      [ ] Threshold                                                                                      
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../8.DataIntegration/" class="btn btn-neutral float-right" title="8. Data Integration">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../6.%20LinkValidation/" class="btn btn-neutral" title="6. Link Validation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../6.%20LinkValidation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../8.DataIntegration/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
