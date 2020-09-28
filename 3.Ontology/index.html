@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>3. Link Annotation Ontology - Lenticular Lens</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../GitHub2.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "3. Link Annotation Ontology";
+    var mkdocs_page_input_path = "3.Ontology.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Lenticular Lens</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.Introduction/">1. Introduction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.Terminology/">2. Terminology</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">3. Link Annotation Ontology</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#31-resource-selection">3.1 Resource Selection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#32-matching-formulation">3.2 Matching Formulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#33-linkset">3.3 Linkset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#34-lens">3.4 Lens</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.LinkConstruction/">4. Linkset - Link Construction</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../5.LinkManipulation/">5. Lens - Link Manipulation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../6.%20LinkValidation/">6. Link Validation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../7.LinkExport/">7. Link Export</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../8.DataIntegration/">8. Data Integration</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../9.Installation/">9. Using Lenticular Lens</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../10.References/">10. References</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Lenticular Lens</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>3. Link Annotation Ontology</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="3-ontology">3. ONTOLOGY</h2>
+<p>This section presents an Ontology meant for describing in detail processes of generation and validation of links, so that decisions made such as resource selections and matching options are made explicit. Those processes are implemented in the Lenticular Lens tool and result in the creation of <strong>Linksets</strong> or <strong>Lenses</strong> according to a specification. 
+The proposed ontology reuses (part of) the VoID vocabulary, as depicted in Fig 2.1 highlighting in yellow the use of VoID terms and in blue the new terminology. The VoID vocabulary provides means to describe datasets and linksets, but not the details of how they were generated, nor it provides means to describe Lenses or Validations. Moreover, their concept of linkset is not quite the same as ours. Those issues are further discussed in this section.</p>
+<p>In the attempt to describe the proposed ontology, we dissect Fig 2.1 into four parts. First, a <code>Resource Selection</code> is elucidated. Second, we go about describing a <code>Matching Formulation</code> and show how it connects with a <code>Resource Selection</code>. The third step highlights that the description of a <code>Linkset</code> metadata involves specifying the <code>Resource Selections</code> used at the source and target positions of an entity matching process, the <code>Matching Formulation</code>, eventual validations plus statistics and authority information. The fourth and final step focuses on the annotation of a <code>Lens</code> by describing the combination of one or more Linksets and/or Lenses. 
+ <div align="center"><br><img alt="Ontology" src="../Images/Ontology.jpg" /> <br>Fig 2.1: The Lenticular Lens Ontology</div>
+<br></p>
+<h3 id="31-resource-selection">3.1 Resource Selection</h3>
+<p>This step concerns the <strong>selection of the resources under scrutiny</strong>, that can potentially end up co-referent entities across or within datasources during an entity matching process. To therefore perform a matching, one first needs not only to select datasource(s) but also restrict which resources will undergo the matching. The first way of doing so is by applying a type (class) restriction. This is mandatory in the Lenticular Lens process as matching algorithms are not fully automated. Down this line, further restrictions can be applied by forcing the value of a number of properties to lie within a certain range. A <code>Resource Selection</code> is thereby, the annotation of such process.</p>
+<p>In the ontology excerpt depicted in Figure 2.2 we propose the entity type <code>Resource Selection</code>, which is also a <code>void:Dataset</code> that is a <code>void:subset</code> of one or more <code>void:Dataset(s)</code>. It can also have further restrictions defined as <code>void:classPartion</code> and/or <code>void:propertyPartition</code>. While a <code>void:classPartion</code> solely consists in specifying the <strong>type of entity</strong> under scrutiny, the <code>void:propertyPartition</code> entails a little more. It consists in specifying a <strong>property</strong> or <strong>property path</strong> and the <strong>restriction</strong> that the selected property should undergo for the selection of the right entities for the further down the road entity matching process. Those restriction can be combined using a <code>Formula Description</code> given by <code>ll:hasFormulaDescription</code>.
+ <div align="center"><br><img alt="EntitySelection" src="../Images/Ont-EntitySelection.jpg" />  Fig 2.2: Selecting a matching resource </div></p>
+<p>In Example 2.7, the entity <code>resource:ResourceSelection-2</code> is a <code>ll:ResourceSelection</code> (and <code>void:Dataset</code>) subset of <code>resource:index_op_doopregister_raw_20190830</code> and also a collection (partition) of entities of type <code>pnv:PersonName</code> where each entity passed the filter test of (1) name in the English language which appears without trailing dots <code>"%...%"@en</code> and (2) birthdates within the interval [1600, 1699]. Finally, <code>resource:ResourceSelection-2</code> lists all entities of type <code>ll:PropertyConstraint</code> (<code>resource:PropertyConstraint-PHea6802ef02f99a848859</code>, <code>resource:PropertyConstraint-PHce78383e3ff6e9dd73b6</code> and <code>resource:PropertyConstraint-PH2580641bbdd572759cb9</code>) and elaborates on the logic expression that binds all restrictions. For example, the property restriction described by <code>resource:PropertyConstraint-PHce78383e3ff6e9dd73b6</code> documents that, applying the function <code>"minimal_date"@en</code> over dates in the format  <code>"YYYY-MM-DD"@en</code> with the year restriction of 1600 makes sure that only persons born on 1600 onwards are admitted.</p>
+<pre><code>-----------------
+-- Example 2.7 -- RESOURCE SELECTIONS
+-----------------       
+
+### RESOURCE 2
+resource:ResourceSelection-2
+
+    a                                        void:dataset, ll:ResourceSelection ;
+    rdfs:label                               &quot;Baptisms in the 17th Century&quot;@en ;
+    void:subset                              resource:index_op_doopregister_raw_20190830 ;
+    void:classPartition                      [ void:class pnv:PersonName ] ;
+
+    void:propertyPartition                   resource:PropertyConstraint-PHea6802ef02f99a848859 ;
+    void:propertyPartition                   resource:PropertyConstraint-PHce78383e3ff6e9dd73b6 ;
+    void:propertyPartition                   resource:PropertyConstraint-PH2580641bbdd572759cb9 ;
+
+    ll:hasFormulaDescription                 &quot;&quot;&quot;
+        resource:PropertyConstraint-PHce78383e3ff6e9dd73b6 
+        AND resource:PropertyConstraint-PH2580641bbdd572759cb9  
+        AND  (resource:PropertyConstraint-PHea6802ef02f99a848859)&quot;&quot;&quot;@en .
+
+
+resource:PropertyConstraint-PHea6802ef02f99a848859
+    a                                        ll:PropertyConstraint ;
+    void:property
+        [
+            a                                        rdfs:Sequence ;
+            rdf:_1                                   pnv:literalName 
+        ] ;
+
+    ll:hasFilterFunction                     &quot;not_ilike&quot;@en ;
+    ll:hasValueFunction                      &quot;%...%&quot;@en .
+
+
+resource:PropertyConstraint-PHce78383e3ff6e9dd73b6
+    a                                        ll:PropertyConstraint ;
+    void:property
+        [
+            a                                        rdfs:Sequence ;
+            rdf:_1                                   saa:isInRecord ;
+            rdf:_2                                   saa:IndexOpDoopregisters ;
+            rdf:_3                                   saa:birthDate&gt; 
+        ] ;
+
+    ll:hasFilterFunction                     &quot;minimal_date&quot;@en ;
+    ll:hasValueFunction                      1600 ;
+    ll:hasFormatFunction                     &quot;YYYY-MM-DD&quot;@en .
+
+
+resource:PropertyConstraint-PH2580641bbdd572759cb9
+    a                                        ll:PropertyConstraint ;
+    void:property
+        [
+            a                                        rdfs:Sequence ;
+            rdf:_1                                   saa:isInRecord ;
+            rdf:_2                                   saa:IndexOpDoopregisters ;
+            rdf:_3                                   saa:birthDate 
+        ] ;
+
+    ll:hasFilterFunction                     &quot;maximum_date&quot;@en ;
+    ll:hasValueFunction                      &quot;1699&quot;@en ;
+    ll:hasFormatFunction                     &quot;YYYY-MM-DD&quot;@en .
+
+
+</code></pre>
+
+<p><br></p>
+<h3 id="32-matching-formulation">3.2 Matching Formulation</h3>
+<p>For simple matching problems, finding co-referents can be done using a single matching algorithm (matcher). However, time and again the data reality often imposes the use of a number of matchers instead. In this latter scenario, clearly reporting on how these matchers work together for detecting co-referents is essential. A <code>Matching Formulation</code> entity is a resource for just doing the aforementioned, as depicted in Figure 2.3.</p>
+<p>Once resources of type <code>Resource Restriction</code> are created, one can go ahead and used them for specifying the restricted collections to be used in a particular <code>Matching Method</code>, which also specifies the Matching Algorithm and its parameters such as threshold, range and operrator.
+In the end, all <code>Matching Methods</code> used in a matching process are documented in the <code>Matching Formulation</code> resource as well as how they bind together in a logic expression given by the predicate <code>ll:hasFormulaDescription</code>. <div align="center"><br><img alt="MathingFormulation" src="../Images/Ont-MathingFormulation.jpg" /> <br>Fig 2.3: Specifying the way in which methods are logically combined </div> <BR></p>
+<p>In Example 2.8, the <code>resource:PHb99da2ecd91ad533af65</code> is a <code>ll:MatchingFormulation</code> listing eight <code>ll:MatchingMethods</code> used for creating a linkset. They their logic combination is described as <code>ll:hasFormulaDescription</code>.
+Among the <code>ll:MatchingMethods</code>, the <code>resource:TIME_DELTA-PHfdc744f6bd0ced4e283a</code> is the only method detailes in this example, documenting the four <code>ll:ResourceSelections</code> involved, as well as the chosen <code>ll:MatchingAlgorithm</code>, namely <code>resource:TIME_DELTA</code>, besides the threshold (20), threshold-unit ("Year"@en), threshold-operator (&gt;=) and threshold-range  "ℕ" of the matching method.</p>
+<pre><code>-----------------
+-- Example 2.8 -- LINKSET LOGIC EXPRESSION
+-----------------              
+
+               ################################################################################               
+               #                           LINKSET LOGIC EXPRESSION                           #
+               ################################################################################ 
+
+
+resource:PHb99da2ecd91ad533af65
+
+    a                                        ll:MatchingFormulation ;
+    ll:hasMethod                             resource:TIME_DELTA-PHfdc744f6bd0ced4e283a ;
+    ll:hasMethod                             resource:Exact-PH6491d1db6855098a70be ;
+    ll:hasMethod                             resource:LL_SOUNDEX-PH0ad3ad579d7a29347753 ;
+    ll:hasMethod                             resource:BLOOTHOOFT_REDUCT-PH10433274b57dafdd1335 ;
+    ll:hasMethod                             resource:Exact-PH4d4187a08c3ba4c1cf0d ;
+    ll:hasMethod                             resource:TIME_DELTA-PHe40547b9d3b6381347b4 ;
+    ll:hasMethod                             resource:LEVENSHTEIN_APPROX-PH10f4c17bbf933cae647f ;
+    ll:hasMethod                             resource:BLOOTHOOFT_REDUCT-PH98a9575087817b951447 ;
+
+    ll:hasFormulaDescription                 &quot;&quot;&quot;
+        resource:TIME_DELTA-PHe40547b9d3b6381347b4  
+        AND  resource:TIME_DELTA-PHfdc744f6bd0ced4e283a  
+        AND (       
+            resource:Exact-PH4d4187a08c3ba4c1cf0d  
+            OR (
+                    resource:BLOOTHOOFT_REDUCT-PH98a9575087817b951447  
+                    AND resource:BLOOTHOOFT_REDUCT-PH10433274b57dafdd1335)  
+                    OR (                
+                            resource:Exact-PH6491d1db6855098a70be  
+                            AND  (resource:LL_SOUNDEX-PH0ad3ad579d7a29347753  
+                            AND  resource:LEVENSHTEIN_APPROX-PH10f4c17bbf933cae647f
+                        )
+                )
+        )&quot;&quot;&quot;@en .
+
+
+               ################################################################################               
+               #                              METHOD SIGNATURES                               #
+               ################################################################################
+
+
+### METHOD SPECIFICATIONS TIME_DELTA
+resource:TIME_DELTA-PHe40547b9d3b6381347b4
+
+    a                                        ll:MatchingMethod ;
+    ll:hasAlgorithm                          resource:TIME_DELTA ;
+    ll:hasThresholdRange                     &quot;ℕ&quot; ;
+
+    ### SOURCE PREDICATE CONFIGURATION
+    ll:hasSubjResourceSelection              resource:ResourceSelection-PHbe38976fdf884b6c4a8e ;
+    ll:hasSubjResourceSelection              resource:ResourceSelection-PHe8fa664d04ad00aaa697 ;
+
+    ### TARGET PREDICATE CONFIGURATION
+    ll:hasObjResourceSelection               resource:ResourceSelection-PH71818c17d54a8fbec22b ;
+    ll:hasObjResourceSelection               resource:ResourceSelection-PHc8a3c6e494d230b79a6b .
+
+• • •
+
+</code></pre>
+
+<p><br></p>
+<h3 id="33-linkset">3.3 Linkset</h3>
+<p>This step documents a linkset metadata including WHAT - HOW - WHEN - WHO and other processes explaining the aboutness of links. The <code>Matching Formulation</code>  specifies <strong>HOW</strong> entities are matched and <code>Resource Selection</code> specifies <strong>WHAT</strong> to match as subject and object targets. Also some statistic on the matching results can be reported such as the number of links found, the numbers of entities linked, <strong>WHO</strong> created the linkset and <strong>WHEN</strong>. Finally, a `Validation' entity can also be specified, comprising metadata with statitics and auhtority information on the validation process. Observe that when one or more validations are provided, statistics on this matter can be included in the linkset metadata, including eventual contradictions if one validation says a link is correct while another says it is not.</p>
+<p>As discussed earlier in this section, according to the VoID documentation, the <code>void:Linkset</code> definition expects as datasources exactly one source and one target, different from each other. This means it is more restrictive than the <code>ll:Linkset</code> here proposed, since the latter also expects a linkset to contain links within a datasource or across more than two. Therefore, we do not directly reuse that concept (and its correspoding properties void:subjects/objectsTarget). Naturally, one could still use <code>void:Linkset</code> for other purposes, but at the risk of abusing the VoID vocabulary if its instances do not really fit the required restrictions. Moreover, a <code>void:Linkset</code> (i.e. a resource representing a linkset's metadata) is also not  an instance of <code>ll:Linkset</code> since the later requires the description of the processes underlying the creation of the links, which is not the case for the first.</p>
+<p><div align="center"><br><img alt="Linkset" src="../Images/Ont-Linkset.jpg" /> <br>Fig 2.4: Specifying the linkset's context</div>
+<br></p>
+<h3 id="34-lens">3.4 Lens</h3>
+<p><br> <span style="color: purple">  <strong>LENS.</strong> </span>
+==Another process relevant to document is the creation of Lenses. In short, a lens is the result of a set-like operation over one or more Linkset and or Lens. Therefore, the entity <code>Lens</code> documents them as <code>ll:hasTarget</code>==</p>
+<p><div align="center"><br><img alt="Lens" src="../Images/Ont-Lens.jpg" /> <br>Fig 2.5: Specifying the linkset's context</div>
+<br></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../4.LinkConstruction/" class="btn btn-neutral float-right" title="4. Linkset - Link Construction">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2.Terminology/" class="btn btn-neutral" title="2. Terminology"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../2.Terminology/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../4.LinkConstruction/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
