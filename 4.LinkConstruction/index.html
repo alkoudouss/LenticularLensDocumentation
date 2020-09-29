@@ -129,15 +129,15 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#442-complex-methods"> 4.4.2 Complex Methods  </a>
+    <li class="toctree-l3"><a class="reference internal" href="#442-complex-methods">4.4.2 Complex Methods</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#case-1-alternative"> Case-1: Alternative </a>
+    <li class="toctree-l4"><a class="reference internal" href="#case-1-alternative">Case-1: Alternative</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#case-1-rdf-results_1"> Case-1: RDF Results </a>
+    <li class="toctree-l4"><a class="reference internal" href="#case-1-rdf-results_1">Case-1: RDF Results</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#case-2-getty"> Case-2: Getty </a>
+    <li class="toctree-l4"><a class="reference internal" href="#case-2-getty">Case-2: Getty</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#case-2-rdf-results"> Case-2: RDF Results </a>
+    <li class="toctree-l4"><a class="reference internal" href="#case-2-rdf-results">Case-2: RDF Results</a>
     </li>
         </ul>
     </li>
@@ -753,6 +753,7 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 </tr>
 </tbody>
 </table>
+<p><br></p>
 <h4 id="4323-examples">4.3.2.3 Examples</h4>
 <p>Suppose that, two data items E-1 and E-2 have the following information:</p>
 <ul>
@@ -780,25 +781,25 @@ Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47   
 <li><strong>Test-1 OR</strong> : Here, the names of E-1 and E-2 are to be compared using the <strong>Levenshtein</strong> and <strong>Soundex</strong> algorithms at a threshold of <strong>at least 0.7</strong>.</li>
 </ul>
 <pre><code>MATCHING RESULTS
- - Levenshtein(Titus Rembrandtsz van Rijn, T. Rembrandtszoon van Rijn)  =&gt; 0.73 ✓
+ - Levenshtein(Titus Rembrandtsz van Rijn, T. Rembrandtszoon van Rijn)  =&gt; 0.73 ✅
  - sdx_1 = Soundex(Titus Rembrandtsz van Rijn) = T320 R516 V500 R250
  - sdx_2 = Soundex(T. Rembrandtszoon van Rijn) = T000 R516 V500 R250
- - Levenshtein(sdx_1, sdx_2)                                            =&gt; 0.89 ✓
+ - Levenshtein(sdx_1, sdx_2)                                            =&gt; 0.89 ✅
 
 DISJUNCTIONS RESULTS
- - names similarity   = t_conorm(0.73, 0.88, 'MAXIMUM')                 =&gt; 0.89 ✓
- - names similarity   = t_conorm(0.73, 0.88, 'PROBABILISTIC')           =&gt; 0.97 ✓
+ - names similarity   = t_conorm(0.73, 0.88, 'MAXIMUM')                 =&gt; 0.89 ✅
+ - names similarity   = t_conorm(0.73, 0.88, 'PROBABILISTIC')           =&gt; 0.97 ✅
 </code></pre>
 
 <ul>
 <li><strong>Test-2 AND</strong> : Names of the postulated mothers and fathers are to be similar at a threshold of at <strong>least 0.6</strong> using the <strong>Levenshtein</strong> algorithm.</li>
 </ul>
 <pre><code>MATCHING RESULTS
- - Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65 ✓
- - Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63 ✓
+ - Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65 ✅
+ - Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63 ✅
 
 CONJUNCTION RESULTS
- - Parent's names similarity  = t_norm(0.65, 0.63, 'MINIMUM')           =&gt; 0.63 ✓
+ - Parent's names similarity  = t_norm(0.65, 0.63, 'MINIMUM')           =&gt; 0.63 ✅
  - Parent's names similarity  = t_norm(0.65, 0.63, 'HAMACHER')          =&gt; 0.47 ❌
 </code></pre>
 
@@ -806,7 +807,7 @@ CONJUNCTION RESULTS
 <li><strong>Test-3</strong> : The period between the parent's <strong>marriage date</strong> on the one side and the <strong>child's baptism</strong> date on the other side are to be <strong>no more than 25 years apart</strong>.</li>
 </ul>
 <pre><code>MATCHING RESULTS
- - Delta(1668-02-28, 1669-03-22, 25)                                       =&gt; 1.00 ✓
+ - Delta(1668-02-28, 1669-03-22, 25)                                       =&gt; 1.00 ✅
 </code></pre>
 
 <ul>
@@ -825,10 +826,10 @@ FINAL CONJUNCTIONS WITH A TRUTH VALUE LIST OF [0.850, 0.63, 1]
 --------------------------------------------------------------------------------------
 CONJUNCTIONS WITH A DIFFERENT LIST OF TRUTH VALUES [0.89, 0.82, 1]
 --------------------------------------------------------------------------------------
- - t_norm_list([0.89, 0.82, 1], &quot;MINIMUM&quot;)                              =&gt; 0.82 ✓
+ - t_norm_list([0.89, 0.82, 1], &quot;MINIMUM&quot;)                              =&gt; 0.82 ✅
  - t_norm_list([0.89, 0.82, 1], &quot;HAMACHER&quot;)                             =&gt; 0.74 ❌
  - t_norm_list([0.89, 0.82, 1], &quot;PRODUCT&quot;)                              =&gt; 0.73 ❌
- - t_norm_list([0.89, 0.82, 1], &quot;NILPOTENYT&quot;)                           =&gt; 0.82 ✓
+ - t_norm_list([0.89, 0.82, 1], &quot;NILPOTENYT&quot;)                           =&gt; 0.82 ✅
  - t_norm_list([0.89, 0.82, 1], &quot;LUK&quot;)                                  =&gt; 0.71 ❌
  - t_norm_list([0.89, 0.82, 1], &quot;DRASTIC&quot;)                              =&gt; 0.0  ❌
 
@@ -1066,11 +1067,11 @@ linkset:Grid
 </code></pre>
 
 <p><br></p>
-<h3 id="442-complex-methods"><span style="color:purple"> 4.4.2 Complex Methods  </span></h3>
-<h4 id="case-1-alternative"><span style="color:purple"> Case-1: Alternative </span></h4>
+<h3 id="442-complex-methods">4.4.2 Complex Methods</h3>
+<h4 id="case-1-alternative">Case-1: Alternative</h4>
 <p>In Fig 4.11 is displayed an alternative where  <div align="center"><br><img alt="Grid's Education" src="../Images/LL_Case_3_GRID.jpg" />  Fig 4.11: An example showing how to deduplicate a dataset using an edit distance with threshold 0.9. </div>
 <br></p>
-<h4 id="case-1-rdf-results_1"><span style="color:purple"> Case-1: RDF Results </span></h4>
+<h4 id="case-1-rdf-results_1">Case-1: RDF Results</h4>
 <pre><code>###########################################
 #               NAMESPACES               #
 ###########################################
@@ -1221,7 +1222,7 @@ ll_algo:Normalised-EditDistance
                ################################################################################               
 
 
-### ENTITY SELECTION [SOURCE] N0: 1
+### ENTITY SELECTION [SOURCE] N0: 1 ###
 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; 
     a                                       ll:EntitySelection ;
     ll:has-dataset                          &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;
@@ -1233,14 +1234,14 @@ ll_algo:Normalised-EditDistance
                ################################################################################               
 
 
-### PREDICATE SELECTED [SOURCE]  N0: 1
+### PREDICATE SELECTED [SOURCE]  N0: 1 ###
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; 
     a                                       ll:PropertySelection ;
     ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
     ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .
 
 
-### PREDICATE SELECTED [TARGET]  N0: 2
+### PREDICATE SELECTED [TARGET]  N0: 2 ###
 &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; 
     a                                       ll:PropertySelection ;
     ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;
@@ -1292,9 +1293,9 @@ linkset:Grid_2
 </code></pre>
 
 <p><BR></p>
-<h4 id="case-2-getty"><span style="color:purple"> Case-2: Getty </span></h4>
+<h4 id="case-2-getty">Case-2: Getty</h4>
 <p>In Fig 4.12 is displayed an alternative where <div align="center"><br><img alt="Getty case" src="../Images/LL_Case_1_Getty.jpg" />  Fig 4.12: An example showing how to deduplicate a dataset using an edit distance with threshold 0.9. </div></p>
-<h4 id="case-2-rdf-results"><span style="color:purple"> Case-2: RDF Results </span></h4>
+<h4 id="case-2-rdf-results">Case-2: RDF Results</h4>
 <pre><code>
 ##############################################################################################################
 #                                                 NAMESPACES                                                 #
@@ -1693,8 +1694,11 @@ linkset:Getty
 <p><br></p>
 <!----------------------------------------------------------->
 
-<p><span style="color: purple">  <strong>LINKSET.</strong> </span></p>
-<p><span style="color: purple">  <strong>LENS.</strong> </span></p>
+<!--
+
+<span style="color: purple">  **LINKSET.** </span>
+
+<span style="color: purple">  **LENS.** </span>-->
               
             </div>
           </div>
