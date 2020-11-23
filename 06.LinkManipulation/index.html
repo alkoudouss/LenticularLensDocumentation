@@ -1,0 +1,875 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>7. Lens - Link Manipulation - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#link-manipulation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              7. Lens - Link Manipulation
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        7. Lens - Link Manipulation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="7. Lens - Link Manipulation" class="md-nav__link md-nav__link--active">
+      7. Lens - Link Manipulation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-union" class="md-nav__link">
+    1. Union
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-intersection" class="md-nav__link">
+    2. Intersection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-difference" class="md-nav__link">
+    3. Difference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-composition" class="md-nav__link">
+    4. Composition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-in-set" class="md-nav__link">
+    5. In Set
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-union" class="md-nav__link">
+    1. Union
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-intersection" class="md-nav__link">
+    2. Intersection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-difference" class="md-nav__link">
+    3. Difference
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-composition" class="md-nav__link">
+    4. Composition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-in-set" class="md-nav__link">
+    5. In Set
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="link-manipulation">LINK MANIPULATION <img alt="🔧" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f527.svg" title=":wrench:" /><a class="headerlink" href="#link-manipulation" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+</div>
+<p>After generating a number of sets of linksets, one may want to merge, split or filter out some links while others may want to infer new links using existing alignments. The <span class="inline">LENS</span> menu provides means for exactly doing that. The <span class="inline">LENS</span> menu makes it possible to apply set like operators such as UNION, INTERSECTION, DIFFERENCE, TRANSITIVE and IN-SET over alignments in ways that suit best the user according to her envisaged final integration goal. 
+<br></p>
+<p>For the purpose of illustration, we provide two linksets (<span class="inline">ex:DC-Heroes-Identity</span>, <span class="inline">ex:Marvel-Heroes-Identity</span>) of superheroes from the DC and Marvel Universe. According to the metadata of these linksets, they originate from an attempt to de-duplicate the datasets of each universe. This can be observed as the source and target entities composing the links in each linkset are respectively from the same dataset. From the metadata we also observe that, the value of the property <span class="inline">void:triples</span> highlights that each linkset is composed of ten identity links. Furthermore, When taking a look at the links within each linkset, the RDF* format of the triples informs that a link validation took place for each link in the set.</p>
+<p>Theses sets will be used for illustrating the set-like operators discussed in this section.</p>
+<details class="example"><summary>Example 1: <span style="color:blue">Linksets originating from deduplications.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                     </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">   </span><span class="s">&quot;Identifying DC&#39;s comics superheroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">subjectsTarget</span><span class="w">     </span><span class="nn">dataset:</span><span class="nt">DC-Comics</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">objectsTarget</span><span class="w">      </span><span class="nn">dataset:</span><span class="nt">DC-Comics</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">          </span><span class="mi">10</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                     </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">   </span><span class="s">&quot;Identifying Marvel Universes&#39; superheroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">subjectsTarget</span><span class="w">     </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">objectsTarget</span><span class="w">      </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">          </span><span class="mi">10</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clark-Kent</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w">           </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Wane</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Flash</span><span class="w">            </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Barry-Allen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenLantern</span><span class="w">     </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Alan-Scott</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Diana-Prince</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Aquaman</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Arthur-Curry</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenArrow</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">OliverQueen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">BoosterGold</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Michael-Jon-Carter</span><span class="err">&gt;&gt;</span><span class="w">  </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;rejected&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;rejected&quot;</span><span class="w"> </span><span class="p">.</span><span class="w">   </span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-Marvel</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Carol-Danvers</span><span class="err">&gt;&gt;</span><span class="w">     </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-America</span><span class="w">  </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Steve-Rogers</span><span class="err">&gt;&gt;</span><span class="w">      </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Deadpool</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Wade-Wilson</span><span class="err">&gt;&gt;</span><span class="w">       </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Panther</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">T-Challa</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="err">&gt;&gt;</span><span class="w">      </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Ant-man</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Widow</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Natasha-Romanoff</span><span class="err">&gt;&gt;</span><span class="w">  </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Hulk</span><span class="w">             </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Banner</span><span class="err">&gt;&gt;</span><span class="w">      </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Hawkeye</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clint-Barton</span><span class="err">&gt;&gt;</span><span class="w">      </span><span class="nn">validation:</span><span class="nt">status</span><span class="w">  </span><span class="s">&quot;accepted&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p><br></p>
+<h2 id="1-union">1. Union<a class="headerlink" href="#1-union" title="Permanent link">&para;</a></h2>
+<p>Imagine having three linksets <span class="inline">ex:Marvel-Heroes-Identity-1</span>, <span class="inline">ex:Marvel-Heroes-Identity-2</span> and <span class="inline">ex:DC-Heroes-Identity<span>. </p>
+<details class="example"><summary>Example 2: <span style="color:blue">Sample of three linksets to merge.</span></summary><div class="highlight"><pre><span></span><code><span class="c">##############################################################</span><span class="w"></span>
+<span class="c">#     MARVEL: Annotated Linkset of 6 Identity Statements     #</span><span class="w"></span>
+<span class="c">##############################################################</span><span class="w"></span>
+<span class="c"># Superheroes vs Fictitious-Persons</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                       </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">subject</span><span class="w">         </span><span class="s">&quot;Fictitious Heroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">     </span><span class="s">&quot;Identifying Marvel Universes&#39; superheroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">subjectsTarget</span><span class="w">       </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">objectsTarget</span><span class="w">        </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">            </span><span class="mi">6</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Widow</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Natasha-Romanoff</span><span class="err">&gt;&gt;</span><span class="w">  </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">person:</span><span class="nt">Bruce-Banner</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Hulk</span><span class="err">&gt;&gt;</span><span class="w">                </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-America</span><span class="w">  </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Steve-Rogers</span><span class="err">&gt;&gt;</span><span class="w">      </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-Marvel</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Carol-Danvers</span><span class="err">&gt;&gt;</span><span class="w">     </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Deadpool</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Wade-Wilson</span><span class="err">&gt;&gt;</span><span class="w">       </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Panther</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">T-Challa</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">##############################################################</span><span class="w"></span>
+<span class="c">#     MARVEL: Annotated Linkset of 4 Identity Statements     #</span><span class="w"></span>
+<span class="c">##############################################################</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                       </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">subject</span><span class="w">         </span><span class="s">&quot;Fictitious Heroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">     </span><span class="s">&quot;Identifying Marvel Universes&#39; superheroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">subjectsTarget</span><span class="w">       </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">objectsTarget</span><span class="w">        </span><span class="nn">dataset:</span><span class="nt">Marvel-Universe</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">            </span><span class="mi">4</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="err">&gt;&gt;</span><span class="w">       </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="w">        </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="w">        </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Ant-man</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">False</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">person:</span><span class="nt">Clint-Barton</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Hawkeye</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="l">true</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">##############################################################</span><span class="w"></span>
+<span class="c"># DC-COMICS: Non Annotated Linkset of 10 Identity Statements #</span><span class="w"></span>
+<span class="c">##############################################################</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                       </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">subject</span><span class="w">         </span><span class="s">&quot;Fictitious Heroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">     </span><span class="s">&quot;Identifying DC Comics Universes&#39; superheroes&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">            </span><span class="mi">9</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clark-Kent</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Wane</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">GreenLantern</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Alan-Scott</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Diana-Prince</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">Aquaman</span><span class="w">        </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Arthur-Curry</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">GreenArrow</span><span class="w">     </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">OliverQueen</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">BoosterGold</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Michael-Jon-Carter</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w">     </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="w"> </span><span class="p">.</span><span class="w">   </span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p>As the above linksets individually make an attempt to align superheroes and fictitious persons in their respective universe, how about unifying these sets as the set of links identifying superheroes in the limited universe of DC and Marvel. To generate such a lens, the <span class="inline">UNION</span> set-like operator is required.</p>
+<p>Using such operator over the three linksets generates the <span class="inline">ex:Union-Marvel-DC-Heroes</span> lens. Here, each link is annotated with its provenance as they all originate from one or more linksets. For example, the identity triple 
+<span class="inline">hero:Iron-man owl:sameAs person:Tony-Stark</span> is derive from the linksets <span class="inline">ex:Marvel-Heroes-Identity-2</span> and <span class="inline">ex:DC-Heroes-Identity</span>. This enables the links in the newly created lens to carry their own annotations while being able to still use the annotations present it their respective linkset of origin (linkset they are derived from).</p>
+<details class="example"><summary>Example 3: <span style="color:blue">UNION of three linksets.</span></summary><p>With the <span class="inline">UNION</span> operator, the same link appearing in various sets (linksets and/or lenses) regardless of its direction is represented only once in the resulting lens of <span class="inline">UNION</span>. In a linkset for example, the subject and object targets are explicitly defined. As such, <span class="inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟨</mo><mtext> ex:e1 owl:sameAs ex:e2 </mtext><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\lang \text{ ex:e1 owl:sameAs ex:e2 } \rang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span><span class="mord text"><span class="mord"> ex:e1 owl:sameAs ex:e2 </span></span><span class="mclose">⟩</span></span></span></span></span> and <span class="inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟨</mo><mtext> ex:e2 owl:sameAs ex:e1 </mtext><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\lang \text{ ex:e2 owl:sameAs ex:e1 } \rang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span><span class="mord text"><span class="mord"> ex:e2 owl:sameAs ex:e1 </span></span><span class="mclose">⟩</span></span></span></span></span> are different and stem from different linksets. However, in the resulting <span class="inline">UNION</span>, a distinction between the two triples is not explicitly made, meaning that the direction is not of much importance here. This can be observed in the metadata of the union where only the property <span class="inline">void:target</span> is used instead of <span class="inline">void:subjectsTarget</span> and <span class="inline">void:objectsTarget</span>.</p>
+<div class="highlight"><pre><span></span><code><span class="c">### Lens metadata</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">Union-Marvel-DC-Heroes</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                            </span><span class="nn">voidPlus:</span><span class="nt">Lens</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">voidPlus:</span><span class="nt">has-lens-operator</span><span class="w">   </span><span class="nn">voidPlus:</span><span class="nt">Union</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">          </span><span class="s">&quot;Identifying superheroes from DC and Marvel Universes&#39;&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">target</span><span class="w">                    </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">target</span><span class="w">                    </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">target</span><span class="w">                    </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity-1</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">                 </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">### The annotated Lens</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">Union-Marvel-Heroes</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Panther</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">T-Challa</span><span class="err">&gt;&gt;</span><span class="w">            </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Black-Widow</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Natasha-Romanoff</span><span class="err">&gt;&gt;</span><span class="w">    </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-America</span><span class="w">  </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Steve-Rogers</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Captain-Marvel</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Carol-Danvers</span><span class="err">&gt;&gt;</span><span class="w">       </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Deadpool</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Wade-Wilson</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Hulk</span><span class="w">             </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Banner</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-1</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Ant-man</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Hawkeye</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clint-Barton</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">    </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">    </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="err">&gt;&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">    </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity-2</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">    </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clark-Kent</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w">           </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Wane</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Flash</span><span class="w">            </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Barry-Allen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenLantern</span><span class="w">     </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Alan-Scott</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Diana-Prince</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Aquaman</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Arthur-Curry</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenArrow</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">OliverQueen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">BoosterGold</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Michael-Jon-Carter</span><span class="err">&gt;&gt;</span><span class="w">  </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">  </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"> </span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p><br></p>
+<h2 id="2-intersection">2. Intersection<a class="headerlink" href="#2-intersection" title="Permanent link">&para;</a></h2>
+<p>Intersecting the DC (<span class="inline">ex:DC-Heroes-Identity</span>) and Marvel (<span class="inline">ex:Marvel-Heroes-Identity</span>) linksets of superheroes results in  <span class="inline">ex:Comics-Heroes-Identity</span>, a lens which reveals the only two links shared by the sets. The first link in this lens establishes an identity relation between <span class="inline">hero:Spider-man</span> the hero and <span class="inline">person:Peter-Parker</span> the fictitious character, while the second link asserts that the superhero <span class="inline">hero:Iron-man</span> and the fictitious entity representing <span class="inline">Tony Stark</span> are co-referent entities.</p>
+<details class="example"><summary>Example 4: <span style="color:blue">Intersection: Extracting shared links.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">Comics-Heroes-Identity</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                            </span><span class="nn">voidPlus:</span><span class="nt">Lens</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">voidPlus:</span><span class="nt">has-lens-operator</span><span class="w">   </span><span class="nn">voidPlus:</span><span class="nt">Intersection</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">          </span><span class="s">&quot;Quality Check: Identifying superheroes from both Marvel and DC comics&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">voidPlus:</span><span class="nt">expression</span><span class="w">          </span><span class="s">&quot;ex:DC-Heroes-Identity INTERSECTION ex:Marvel-Heroes-Identity&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">target</span><span class="w">                  </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">                 </span><span class="mi">4</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">Comics-Heroes-Identity</span><span class="w"></span>
+<span class="p">{</span><span class="w">   </span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="err">&gt;&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">   </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">   </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="err">&gt;&gt;</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">   </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">prov:</span><span class="nt">wasDerivedFrom</span><span class="w">   </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p><br></p>
+<h2 id="3-difference">3. Difference<a class="headerlink" href="#3-difference" title="Permanent link">&para;</a></h2>
+<p>Contrarily to the <span class="inline">UNION</span> and <span class="inline">INTERSECTION</span> operators, the <span class="inline">DIFFERENCE</span> operator requires assigning values to the following two properties: <span class="inline">void:subjectsTarget</span> and <span class="inline">void:objectsTarget</span>. This allows for the explicit and accurate documentation of the lens resulting from performing the <span class="inline">Difference</span> manipulation over linksets, lenses or the combination of both a linkset and a lens. This specification is not to put a particular emphasis on the direction of the links instead, it is for knowing the linkset or lens from which the resulting links will stem from.</p>
+<details class="example"><summary>Example 5: <span style="color:blue">DIFFERENCE for extracting triples only existing in <span class="inline">void:subjectsTarget</span>.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">Comics-Heroes-Identity</span><span class="w"></span>
+<span class="w">    </span><span class="kt">a</span><span class="w">                            </span><span class="nn">voidPlus:</span><span class="nt">Lens</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">voidPlus:</span><span class="nt">has-lens-operator</span><span class="w">   </span><span class="nn">voidPlus:</span><span class="nt">Difference</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">          </span><span class="s">&quot;Quality Check: Identifying superheroes from both Marvel and DC comics&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">voidPlus:</span><span class="nt">expression</span><span class="w">          </span><span class="s">&quot;ex:DC-Heroes-Identity DIFFERENCE ex:Marvel-Heroes-Identity&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">target</span><span class="w">                  </span><span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nn">ex:</span><span class="nt">Marvel-Heroes-Identity</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">                 </span><span class="mi">8</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"> </span><span class="err">•</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">DC-Heroes-Identity</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w">         </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Clark-Kent</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w">           </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Bruce-Wane</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Flash</span><span class="w">            </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Barry-Allen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenLantern</span><span class="w">     </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Alan-Scott</span><span class="err">&gt;&gt;</span><span class="w">          </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Diana-Prince</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">Aquaman</span><span class="w">          </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Arthur-Curry</span><span class="err">&gt;&gt;</span><span class="w">        </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">GreenArrow</span><span class="w">       </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">OliverQueen</span><span class="err">&gt;&gt;</span><span class="w">         </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">hero:</span><span class="nt">BoosterGold</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Michael-Jon-Carter</span><span class="err">&gt;&gt;</span><span class="w">  </span><span class="nn">validation:</span><span class="nt">status</span><span class="w"> </span><span class="s">&quot;True&quot;</span><span class="w"> </span><span class="p">.</span><span class="w">  </span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<h2 id="4-composition">4. Composition<a class="headerlink" href="#4-composition" title="Permanent link">&para;</a></h2>
+<h2 id="5-in-set">5. In Set<a class="headerlink" href="#5-in-set" title="Permanent link">&para;</a></h2>
+<p>Imagine being a movie fan particularly interested in knowing more on a set of ten fictional characters carefully handpicked. This intellectual knowledge includes discovering for example knowing in what movies a fictional character played in, what was the rate of the movies, and so on&hellip; Example 6 exhaustively lists these movie characters of interest.</p>
+<details class="example"><summary>Example 6:  <span class="inline">ex:preference</span>, <span style="color:blue">set of movie characters.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">preference</span><span class="w"></span>
+<span class="w">    </span><span class="err">rdf</span><span class="p">:</span><span class="err">_</span><span class="mi">4735532571260424746</span><span class="w"></span>
+<span class="w">        </span><span class="nn">hero:</span><span class="nt">Captain-Marvel</span><span class="p">,</span><span class="w">   </span><span class="nn">person:</span><span class="nt">Carol-Danvers</span><span class="p">,</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Captain-America</span><span class="p">,</span><span class="w">  </span><span class="nn">person:</span><span class="nt">Steve-Rogers</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">hero:</span><span class="nt">Deadpool</span><span class="p">,</span><span class="w">         </span><span class="nn">person:</span><span class="nt">Wade-Wilson</span><span class="p">,</span><span class="w">    </span><span class="nn">hero:</span><span class="nt">Black-Panther</span><span class="p">,</span><span class="w">    </span><span class="nn">person:</span><span class="nt">T-Challa</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="p">,</span><span class="w">       </span><span class="nn">person:</span><span class="nt">Peter-Parker</span><span class="p">,</span><span class="w">   </span><span class="nn">hero:</span><span class="nt">Iron-man</span><span class="p">,</span><span class="w">          </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">hero:</span><span class="nt">Ant-man</span><span class="p">,</span><span class="w">          </span><span class="nn">person:</span><span class="nt">Tony-Stark</span><span class="p">,</span><span class="w">     </span><span class="nn">hero:</span><span class="nt">Black-Widow</span><span class="p">,</span><span class="w">       </span><span class="nn">person:</span><span class="nt">Natasha-Romanoff</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">hero:</span><span class="nt">Hulk</span><span class="p">,</span><span class="w">             </span><span class="nn">person:</span><span class="nt">Bruce-Banner</span><span class="p">,</span><span class="w">   </span><span class="nn">hero:</span><span class="nt">Hawkeye</span><span class="p">,</span><span class="w">           </span><span class="nn">person:</span><span class="nt">Clint-Barton</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p>To know more about these handpicked characters, we have isolated <span class="inline">ex:MovieInfo</span>, a dataset where information such as movie&rsquo;s fictional character and movie&rsquo;s rate are documented. </p>
+<details class="example"><summary>Example 7: <span class="inline">ex:MovieCharacter</span>, <span style="color:blue">a movie database.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">MovieInfo</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">WonderWoman</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">7.4</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">WonderWoman-Bloodlines</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="err">hero</span><span class="p">:</span><span class="w"> </span><span class="err">WonderWoman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">5.8</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Superman</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">7.3</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Superman-Returns</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mi">6</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Man-of-Steel</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mi">7</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">7.5</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman-Returns</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mi">7</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman-Robin</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">3.7</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man</span><span class="w">  </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">7.3</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">The-amazing-Spider-man</span><span class="w">  </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">6.5</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man-home-coming</span><span class="w"> </span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">        </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">schema:</span><span class="nt">contentRating</span><span class="w">   </span><span class="mf">7.4</span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p>From the dataset <span class="inline">ex:MovieInfo</span>, an embedded linkset defined by the link predicate <span class="inline">schema:character</span> is extracted and presented in Example 8. In this example, four fictional characters (hero:WonderWoman, Superman, Batman and Spider-man) are linked to various superhero-movies leading to a total of eleven links. </p>
+<details class="example"><summary>Example 8: <span class="inline">ex:LinksetMovieCharacter</span>, <span style="color:blue">the movie character linkset.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">LinksetMovieCharacter</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">WonderWoman</span><span class="w">             </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">WonderWoman-Bloodlines</span><span class="w">  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">WonderWoman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Superman</span><span class="w">                </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Superman-Return</span><span class="w">         </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Man-of-Steel</span><span class="w">            </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Superman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman</span><span class="w">                  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman-Returns</span><span class="w">          </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Batman-Robin</span><span class="w">            </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Batman</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man</span><span class="w">              </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">The-amazing-Spider-man</span><span class="w">  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man-home-coming</span><span class="w">  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<p>A close look at Example 6 reveals that the set of handpicked characters is a subset of the Marvel Universe. Now, overlaying this set (<span class="inline">ex:preference</span>) onto the linkset of movie characters (<span class="inline">ex:LinksetMovieCharacter</span>) implies extracting the links in <span class="inline">ex:LinksetMovieCharacter</span> where entities at the <span class="inline">subject</span> or <span class="inline">object</span> position of the link can be find in <span class="inline">ex:preference</span>. 
+Formally, this can be translated into: <span class="inline">ex:LinksetMovieCharacter</span> <code>InSet</code> </span> <span class="inline">ex:preference</span>.</p>
+<details class="example" open="open"><summary>Example 9: <span style="color:blue">Movie Characters from <span class="inline">ex:LinksetMovieCharacter</span> that <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are derived from Marvel&rsquo;s matched universe set.</span></summary><div class="highlight"><pre><span></span><code><span class="nn">ex:</span><span class="nt">MovieCharacter</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man</span><span class="w">              </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">The-amazing-Spider-man</span><span class="w">  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="nn">movie:</span><span class="nt">Spider-man-home-coming</span><span class="w">  </span><span class="nn">schema:</span><span class="nt">character</span><span class="w">  </span><span class="nn">hero:</span><span class="nt">Spider-man</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<!--{
+    hero:Superman,     person:Clark-Kent,    hero:Batman,        person:Bruce-Wane,
+    hero:Flash,        person:Barry-Allen,   hero:GreenLantern,  person:Alan-Scott, 
+    hero:WonderWoman,  person:Diana-Prince,  hero:Aquaman,       person:Arthur-Curry, 
+    hero:GreenArrow,   person:OliverQueen,   hero:BoosterGold,   person:Michael-Jon-Carter,
+    hero:Spider-man,   person:Peter-Parker,  hero:Iron-man,      person:Tony-Stark   
+}-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                6. Linkset - Link Construction
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                8. Visualising link Network
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

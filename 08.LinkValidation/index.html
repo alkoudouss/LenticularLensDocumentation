@@ -1,0 +1,728 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>9. Link Validation - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#link-validation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              9. Link Validation
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        9. Link Validation
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="9. Link Validation" class="md-nav__link md-nav__link--active">
+      9. Link Validation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-uncertainty-vs-vagueness" class="md-nav__link">
+    1. Uncertainty vs. Vagueness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-validation-and-links-context" class="md-nav__link">
+    1. Validation and Links' Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-voting-strategies" class="md-nav__link">
+    2. Voting Strategies
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Voting Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-consistent-validations" class="md-nav__link">
+    2.1 Consistent Validations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-disputed-validations" class="md-nav__link">
+    2.2 Disputed Validations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-validation-support" class="md-nav__link">
+    3. Validation Support
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validation Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-individual-validation" class="md-nav__link">
+    3.1 Individual Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-group-validation" class="md-nav__link">
+    3.2 Group Validation
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Group Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-linkset" class="md-nav__link">
+    3.2.1 Linkset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-lens" class="md-nav__link">
+    3.2.2 Lens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-cluster-based-validation" class="md-nav__link">
+    3.2.3 Cluster-based validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-visualisation" class="md-nav__link">
+    3.3 Visualisation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-uncertainty-vs-vagueness" class="md-nav__link">
+    1. Uncertainty vs. Vagueness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-validation-and-links-context" class="md-nav__link">
+    1. Validation and Links' Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-voting-strategies" class="md-nav__link">
+    2. Voting Strategies
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Voting Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-consistent-validations" class="md-nav__link">
+    2.1 Consistent Validations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-disputed-validations" class="md-nav__link">
+    2.2 Disputed Validations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-validation-support" class="md-nav__link">
+    3. Validation Support
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Validation Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-individual-validation" class="md-nav__link">
+    3.1 Individual Validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-group-validation" class="md-nav__link">
+    3.2 Group Validation
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Group Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-linkset" class="md-nav__link">
+    3.2.1 Linkset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-lens" class="md-nav__link">
+    3.2.2 Lens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-cluster-based-validation" class="md-nav__link">
+    3.2.3 Cluster-based validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-visualisation" class="md-nav__link">
+    3.3 Visualisation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="link-validation">LINK VALIDATION <img alt="🔍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f50d.svg" title=":mag:" /><a class="headerlink" href="#link-validation" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+</div>
+<p>Imagine a researcher in the need of integrating data on publications, authors and education institutions. Wrongly executing this integration task could mean, for example, assigning the h-index of author A to author B or wrongly saying that author A is affiliated to an institution he has never been involved with. Hardly any matching algorithm returns only perfect results. In light of this, to reach a solid investigation result, it is of importance to support human validation once links have been created and optionally improved.</p>
+<h2 id="1-uncertainty-vs-vagueness">1. Uncertainty vs. Vagueness<a class="headerlink" href="#1-uncertainty-vs-vagueness" title="Permanent link">&para;</a></h2>
+<p>Referring to propositions (<em>the sky is blue, the bottle is full, the tomato is ripe&hellip;</em>) in logic, the use of degree of <em>(un)certainty, belief or confidence</em> is to emphasise an <em>evaluation</em> of the assignment of a <em>truth value</em> to a proposition which may or may not qualify as <em>vague</em> (<em>&ldquo;the tomato is ripe&rdquo;</em>). For example, how certain are we in saying that the proposition <em>&ldquo;the tomato is ripe&rdquo;</em> is <em>true</em>? As [Lukasiewicz2008] illustrates, saying that <em>&ldquo;John is a teacher&rdquo;</em> and <em>&ldquo;John is a student&rdquo;</em> with respectively 0.3 and 0.7 as degrees of certainty is roughly saying that <em>&ldquo;John is either a teacher or a student, but more likely a student&rdquo;</em>. However, the vague statement “<em>John is tall&rdquo;</em> with the assignment of 0.9 as degree of truth can be roughly translated as <em>&ldquo;John is quite tall&rdquo;</em>.</p>
+<p>The transition from <em>assigning boolean truth values {0, 1}</em> to <em>assigning continuous values in the unit interval [0, 1]</em> to propositions (event) is clearly the change from <em>classical logic</em> to <em>fuzzy logic</em> which is in the modelling paradigm of <em>many-valued Logics</em>. The latter truth space (unit interval) is motivated by the presence of <em>vague concepts</em> in a proposition, making it hard or sometimes even impossible to establish whether the proposition is completely true or false [<a href="../12.References/#Lukasiewicz2008">Lukasiewicz2008</a>]. Now, whatever truth value is assigned to an event, sometimes, one wonders about the <em>chance</em> that the even <em>will happen</em> (Probability) or <em>might happen</em> (Possibility)[<a href="../12.References/#Kovalerchuk2017">Kovalerchuk2017</a>].</p>
+<p><span class="SmallCaps"><em>Degrees of Truth</em></span> is not to be confused with the <span class="SmallCaps"><em>Degrees of Certainty / Confidence</em></span> as the latter is not an assignment of truth  value as opposed to the former, but rather an <em>evaluation</em> of a <em>weighted</em> proposition (proposition with an assigned truth value) regardless of its truth value space ({0, 1} or [0, 1]).</p>
+<h2 id="1-validation-and-links-context">1. Validation and Links&rsquo; Context<a class="headerlink" href="#1-validation-and-links-context" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="inline">intrinsic properties</span> </li>
+<li>the <span class="inline">purpose</span> or <span class="inline">task</span> for which the links are used.</li>
+</ul>
+<h2 id="2-voting-strategies">2. Voting Strategies<a class="headerlink" href="#2-voting-strategies" title="Permanent link">&para;</a></h2>
+<p>In the Semantic Web, the standard semantic <a href="../02.Terminology/#owldl">OWL/DL</a> interpretation of identity  between two resources entails full equality , i.e. they are necessarily the same and share all their properties. Such semantic applies independently of context and therefore no validation or dispute apply since that semantic does not take any of it into account: things are either the same or they are not. [<a href="../12.References/#Idrissou2017">Idrissou 2017</a>]</p>
+<p>In real life problems, the equality between resources may depend (i) not only on their <span class="inline">intrinsic properties</span> (ii) but also on the <span class="inline">purpose</span> or <span class="inline">task</span> for which they are used. For example, an organisation A and B are the same in context 1 but not not the same in context 2.</p>
+<p>Instead of the rigid <span class="inline">owl:sameAs</span> standard semantics, if an alternative semantics is considered where <span class="inline">context</span> is taken into account, then things can be the same or not depending on the context that applies. Moreover, within a <span class="inline">common context</span> there can still be divergences when, for example, there is not enough information for reaching a correct (indisputable) outcome. In other words, for the same identity link, multiple <span class="inline">&ldquo;truths&rdquo;</span> (multiple possible interpretations) can co-exist once we agree on the context in which these <span class="inline">&ldquo;truths&rdquo;</span> are cast. </p>
+<p>As a result, the <strong>Lenticular Lens</strong> tool allows for a <em>single link</em> to be both (i) established within a context and (ii) validated countless times, and then, by continuity, it allows for a collection of links (linkset or lens) to have various validations by different users. Even thought this is a desirable feature, before using the links for integration one needs to make a decision about their validity. This brings us to what we denote as <strong>Voting</strong> which is the merging of <strong>Validations</strong> sharing the same context.</p>
+<p>The <strong>Lenticular Lens</strong> tool provides five ways for merging validations. These include: <span class="inline">Accepted Once</span>, <span class="inline">Rejected Once</span>,  <span class="inline">Majority</span>, <span class="inline">Disputed</span>, <span class="inline">Weighted Experts.</span> and <span class="inline">Highest Ranking Experts</span>. In the next section, we discuss the aforementioned options.</p>
+<h3 id="21-consistent-validations">2.1 Consistent Validations<a class="headerlink" href="#21-consistent-validations" title="Permanent link">&para;</a></h3>
+<p>This is the best scenario. A link has been validated several times with the same outcome, meaning not once a contradiction has occurred. The validation is consistent and therefore remains as it is.</p>
+<h3 id="22-disputed-validations">2.2 Disputed Validations<a class="headerlink" href="#22-disputed-validations" title="Permanent link">&para;</a></h3>
+<p>Disputes occur when a link has been validated several times but with contradicting truth statements (inconsistently). For example, when a links has been <span class="inline">ACCEPTED</span> three times but <span class="inline">REJECTED</span> twice. In this scenario, we follow a simple protocol:</p>
+<ul>
+<li>
+<p>The link with contradicting validations is flagged as <span class="inline">DISPUTED</span>.</p>
+</li>
+<li>
+<p>The following options can be chosen for reaching an agreement:</p>
+<blockquote>
+<p><span class="inline"><strong>Majority.</strong></span>
+Consider the link as <span class="inline">ACCEPTED</span> if  it has been accepted more times than being rejected, otherwise consider the link as <span class="inline">REJECTED</span>. <!--In the even of a **tie**, the link is considered <span class="inline">REJECTED</span> unless stated otherwise by the user.--></p>
+<p><span class="inline"><strong>Rejected Once.</strong></span>
+Consider the link as <span class="inline">REJECTED</span> if it has been rejected at least once.</p>
+<p><span class="inline"><strong>Accepted Once.</strong></span>
+ Consider the link as <span class="inline">ACCEPTED</span> if it has been accepted at least once.</p>
+<p><span class="inline"><strong>Weighted Experts.</strong></span> In this situation, a weighted sum is performed within each voting group (<span class="inline">ACCEPTED vs REJECTED</span>). The group with the highest weighted sum gets to cast its vote. <!--However, in the even of a **tie**, the link is considered <span class="inline">REJECTED</span>.--> </p>
+<p><span class="inline"><strong>Highest Ranking Experts.</strong></span>
+Deciding on how to merge several validations on the basis of the authority with the highest rank is also possible. The decision to accept or reject the link is solely made by the highest ranking expert. It is easy to see here that there can be still disputes among highest ranked experts. In this case, the majority among experts applies.</p>
+</blockquote>
+</li>
+<li>
+<p>No matter the option, in the event of a <strong>tie</strong>, the link is <span class="inline">REJECTED</span> unless stated otherwise by the user.</p>
+</li>
+</ul>
+<h2 id="3-validation-support">3. Validation Support<a class="headerlink" href="#3-validation-support" title="Permanent link">&para;</a></h2>
+<h3 id="31-individual-validation">3.1 Individual Validation<a class="headerlink" href="#31-individual-validation" title="Permanent link">&para;</a></h3>
+<h3 id="32-group-validation">3.2 Group Validation<a class="headerlink" href="#32-group-validation" title="Permanent link">&para;</a></h3>
+<h4 id="321-linkset">3.2.1 Linkset<a class="headerlink" href="#321-linkset" title="Permanent link">&para;</a></h4>
+<h4 id="322-lens">3.2.2 Lens<a class="headerlink" href="#322-lens" title="Permanent link">&para;</a></h4>
+<h4 id="323-cluster-based-validation">3.2.3 Cluster-based validation<a class="headerlink" href="#323-cluster-based-validation" title="Permanent link">&para;</a></h4>
+<h3 id="33-visualisation">3.3 Visualisation<a class="headerlink" href="#33-visualisation" title="Permanent link">&para;</a></h3>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                8. Visualising link Network
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../09.LinkExport/" title="10. Link Export" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                10. Link Export
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

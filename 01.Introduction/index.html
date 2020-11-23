@@ -1,0 +1,636 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>1. Introduction - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              1. Introduction
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        1. Introduction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="1. Introduction" class="md-nav__link md-nav__link--active">
+      1. Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-context" class="md-nav__link">
+    1. Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gui-menus" class="md-nav__link">
+    2. GUI Menus
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-context" class="md-nav__link">
+    1. Context
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gui-menus" class="md-nav__link">
+    2. GUI Menus
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="introduction">INTRODUCTION <img alt="☝️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/261d.svg" title=":point_up:" /><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<!--https://stackabuse.com/levenshtein-distance-and-text-similarity-in-python/-->
+
+<p>Time and again, researchers are presented with problems for which they postulate and test hypotheses in order to provide us with robust explanations for research questions successfully investigated. Often enough, solid explanations for complex problems require exploring a multitude of datasources. This is the case, for example, in domains such as e-science (multiple scientific datasets), e-commerce (multiple product vendors), tourism (multiple data providers), e-social science, digital humanities, etc. </p>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><span style="color: purple"> <strong>DATA INTEGRATION.</strong> </span> The use of various datasources come at the expense of heterogeneity which obfuscates the path to data integration and thereby hinders accurately addressing complex problems.
+Dealing with multiple datasources or data providers highlights the freedom at which providers document facets of the same entity. Indeed, this feature of oriented freedom for entity descriptions can explain, to a certain extent, the inherent difficulty to integrate heterogeneous datasources. <br>
+In the Semantic Web, this problem is partially circumvented as any pair of resources can be linked regardless to the uniformity of data representation or vocabulary used, i.e. uniformizing data/schema <!--uniform view --> is not a prerequisite for data integration provided that links between co-referent entities across heterogeneous datasets exist.</p>
+<p><span style="color: purple"> <strong>RESULT QUALITY.</strong> </span> The quality of supporting evidence for accepting or rejecting the hypothesis under investigation for a complex problem greatly depends on the correctness of the links integrating the underlying datasources. 
+This begs for questions regarding the aboutness and correctness of the links, such as: <br></p>
+<ul>
+<li>
+<p>How to create correct links? More specifically, are there reliable tools or macthing algorithms for linking co-referent descriptions of entity scattered across various heterogeneous datasets? Can different tools or algorithms be combined?</p>
+</li>
+<li>
+<p>How to judge the applicability of links? Can their quality be estimated? Can they be improved, manipulated, visualised for validation purposes, reproduced? More specifically, is there a platform that supports all of the aforementioned concerns?</p>
+</li>
+</ul>
+<p><span style="color: purple"> <strong>LINK CONSTRUCTION.</strong> </span> Through the years, a number of entity matching tools have been developed and tested. 
+However, some of theses tools have been developed for specific datasets, while others have limited applicability as they have mainly been tested in domain specific areas using synthetic or simplistic data, generally from at most two datasets. For example, as research in social sciences is increasingly based on multiple heterogeneous datasources, it becomes problematic to be limited to the integration of two datasets. 
+Furthermore, in practice, the heterogeneity, messiness, incompleteness of data raise the bar higher in terms of entity matching complexity. <br>
+In other words, most matching algorithms have been successfully applied in limited and controlled environments. This motivates the need for having the means to (re)use and combine generic matching approaches in order to solve specific problems.</p>
+<p><span style="color: purple"> <strong>ENTITY DISAMBIGUATION PROPOSAL.</strong> </span> In this document, we present a tool that supports disambiguation over multiple datasets: the <strong>Lenticular Lens</strong>. As a domain agnostic approach, the <strong>Lenticular Lens</strong> tool reuses existing matching approaches to allow for the user to reach their goals in ways that alleviates some of the main aforementioned issues:</p>
+<ul>
+<li>
+<p>User-dependent and context-specific link discovery.</p>
+</li>
+<li>
+<p>User-based explicit concept mapping.</p>
+</li>
+<li>
+<p>Integration of more than two datasets.</p>
+</li>
+<li>
+<p>Combining entity matching algorithms and results.</p>
+</li>
+<li>
+<p>Structure-based evaluation of identity link networks.</p>
+</li>
+<li>
+<p>Enabling visualisation to support link/cluster validation.</p>
+</li>
+<li>
+<p>Metadata for documenting the link aboutness and enabling reproducibility.</p>
+</li>
+</ul>
+<p>The context dependent link discovery idea developed and implemented in the <strong>Lenticular Lens</strong> [<a href="../12.References/#Idrissou2017">Idrissou 2017</a>, <a href="../12.References/#Idrissou2018">2018</a>, <a href="../12.References/#Idrissou2018">2019</a>] is an extension of the Linkset and Lens concepts introduced by the [<a href="../12.References/#OpenPhacts">OpenPhacts</a>] project in the quests for building an infrastructure for integrating pharmacological data. Our extension and broadening of these concepts enabled us to design and build a flexible tool for undertaking entity disambiguation in a broader perspective.</p>
+<h2 id="2-gui-menus">2. GUI Menus<a class="headerlink" href="#2-gui-menus" title="Permanent link">&para;</a></h2>
+<p><img alt="LL" src="../Images/LL.jpg" />
+<!---------------------------------------------------------------------></p>
+<p>As a preview of what can be done with the <strong>Lenticular Lens</strong> tool, we list here the main menus composing the tool and provide a brief description of what can be done in each of the menu. </p>
+<div class="admonition info">
+<p class="admonition-title"><span class="inline"><strong>CONTEXT</strong><span></p>
+<p><!--<span style="color: purple"> **CONTEXT** </span> -->
+This menu aims to specify the scope of the research by giving the researcher the opportunity to remind herself and other users the why of the research. This is done by providing a title, describing the goal and possibly linking the work done in this tool to a published result.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><span class="inline"><strong>DATA</strong></span></p>
+<p><!--<span style="color: purple"> **DATA** </span>-->
+This menu provides means to:</p>
+<ul>
+<li>Select a GraphQL endpoint so that remote datasources can be located and made available to the user. The default selection is the Golden Agent&rsquo;s endpoint ;</li>
+<li>Select Datasources and Entity-types from the available list at the remote location so that information can be extracted and integrated in order to conduct an experiment; </li>
+<li>Define restrictions over selected Entity-types. </li>
+<li>Explore data based on pre-defined specifications (Datasource, Entity-type and Property-value Restrictions).</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><span class="inline"><strong>LINKSET</strong></span></p>
+<p><!--<span style="color: purple"> **CREATE** </span>-->
+This menu provides means to:</p>
+<ul>
+<li>
+<p>Specify the conditions in which to use a matching method or combined matching methods for the creation of a LINKSET, which is a set of links sharing the same specifications.</p>
+</li>
+<li>
+<p>Run the specification i.e create set of links and clusters.</p>
+</li>
+<li>
+<p>Get statistics on the result such as the total number of links found, how they cluster&hellip;</p>
+</li>
+<li>
+<p>Validate the resulting links by annotating them with flags such as accept or reject.</p>
+</li>
+<li>
+<p>Export the result in various format.</p>
+</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><span class="inline"><strong>LENS</strong></span></p>
+<p><!--<span style="color: purple"> **CREATE** </span>-->
+This menu provides means to:</p>
+<ul>
+<li>
+<p>Specify the conditions in which to combine LINKSET(S) and/or LENS(ES) for the creation of a new LENS, specifically, the use of set like operations (Union, Intersection, Difference, Composition and In-Set) over linksets and lenses.</p>
+</li>
+<li>
+<p>Run the specification i.e combine Linkset(s) and/or Lens(es) and cluster the links.</p>
+</li>
+<li>
+<p>Get statistics on the result such as the total number of links found, how they cluster&hellip;</p>
+</li>
+<li>
+<p>Visualise and Validate the resulting links by annotating them with flags such as accept or reject.</p>
+</li>
+<li>
+<p>Export the result in various format.</p>
+</li>
+</ul>
+</div>
+<!--!!! info "**LINK  VALIDATION**"
+    <span style="color: purple"> **VALIDATE** </span>
+    This menu allows the validation of existing links (accept, reject, validation rational) for analysis or method accuracy. It also enables the use of the visualisation feature to ease to some extent the validation task.-->
+
+<!--!!! info "**LINK EXPORTATION**"
+    <span style="color: purple"> **EXPORT** </span>
+    This menu presents the rich options supporting the export of a LINKSET or LENS.
+    -->
+
+<div class="admonition info">
+<p class="admonition-title"><span class="inline"><strong>DATA INTEGRATION</strong></span></p>
+<!--<span style="color: purple"> **INTEGRATE** </span>-->
+
+<p>The menu here enables the user to materialise an entity-based integration of her selected datasources for the extraction of information vital to her analysis. </p>
+</div>
+<p><br></p>
+<p>The rest of the manual will first discuss</p>
+<ul>
+<li><strong>Terminology</strong></li>
+<li><strong>Link Annotation Ontology</strong></li>
+<li><strong>Algorithms</strong></li>
+<li><strong>Link Construction</strong> (it includes the <code>RESEARCH</code>, <code>DATA</code> and <code>CREATE</code> options)</li>
+<li><strong>Link Manipulation</strong> (it includes the <code>MANIPULATE</code>, and <code>VALIDATION</code> options)</li>
+<li><strong>Link Export</strong> (it is about the <code>EXPORT</code> option) and </li>
+<li><strong>Data Integration</strong> (it is about the <code>EXTRACT</code> option)</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../02.Terminology/" title="2. Terminology" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2. Terminology
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

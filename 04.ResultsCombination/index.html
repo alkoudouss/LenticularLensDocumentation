@@ -1,0 +1,1173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>5. Understanding Matching Results - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#understanding-matching-results" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              5. Understanding Matching Results
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        5. Understanding Matching Results
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="5. Understanding Matching Results" class="md-nav__link md-nav__link--active">
+      5. Understanding Matching Results
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-vagueness-vs-uncertainty" class="md-nav__link">
+    1. Vagueness vs. Uncertainty
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Vagueness vs. Uncertainty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-scores-of-similarity-algorithms" class="md-nav__link">
+    1.1 Scores of similarity algorithms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-scores-of-matching-methods" class="md-nav__link">
+    1.2 Scores of matching methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-combination-of-the-scores" class="md-nav__link">
+    2. Combination of the Scores
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Combination of the Scores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-combining-truth-values" class="md-nav__link">
+    2.1 Combining truth values
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Combining truth values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-classic-logic" class="md-nav__link">
+    2.1.1 Classic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-fuzzy-logic" class="md-nav__link">
+    2.1.2 Fuzzy Logic
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.2 Fuzzy Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2121-t-norms" class="md-nav__link">
+    2.1.2.1 T-norms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2122-s-norms" class="md-nav__link">
+    2.1.2.2 S-norms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-examples" class="md-nav__link">
+    2.1.3 Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-combining-confidence-values" class="md-nav__link">
+    2.2 Combining Confidence Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-probabilistic-logic" class="md-nav__link">
+    2.2.1 Probabilistic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-possibilistic-logic" class="md-nav__link">
+    2.2.2 Possibilistic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-evidence-theorie" class="md-nav__link">
+    2.2.3 Evidence Theorie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-from-truth-to-confidence" class="md-nav__link">
+    2.3. From Truth to Confidence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-vagueness-vs-uncertainty" class="md-nav__link">
+    1. Vagueness vs. Uncertainty
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Vagueness vs. Uncertainty">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-scores-of-similarity-algorithms" class="md-nav__link">
+    1.1 Scores of similarity algorithms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-scores-of-matching-methods" class="md-nav__link">
+    1.2 Scores of matching methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-combination-of-the-scores" class="md-nav__link">
+    2. Combination of the Scores
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Combination of the Scores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-combining-truth-values" class="md-nav__link">
+    2.1 Combining truth values
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Combining truth values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-classic-logic" class="md-nav__link">
+    2.1.1 Classic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212-fuzzy-logic" class="md-nav__link">
+    2.1.2 Fuzzy Logic
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.2 Fuzzy Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2121-t-norms" class="md-nav__link">
+    2.1.2.1 T-norms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2122-s-norms" class="md-nav__link">
+    2.1.2.2 S-norms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213-examples" class="md-nav__link">
+    2.1.3 Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-combining-confidence-values" class="md-nav__link">
+    2.2 Combining Confidence Values
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221-probabilistic-logic" class="md-nav__link">
+    2.2.1 Probabilistic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-possibilistic-logic" class="md-nav__link">
+    2.2.2 Possibilistic Logic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-evidence-theorie" class="md-nav__link">
+    2.2.3 Evidence Theorie
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-from-truth-to-confidence" class="md-nav__link">
+    2.3. From Truth to Confidence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="understanding-matching-results">Understanding Matching Results <img alt="🤔" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f914.svg" title=":thinking:" /><a class="headerlink" href="#understanding-matching-results" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+</div>
+<p>This section addresses the problem of understanding the results of <a href="../04.Algorithms/">Matching Algorithms</a> (<em>a set of rules followed by a computer for finding pairs of matching resources</em>) supported in the Lenticular Lens tool in order to correctly combine then. To generate matching results, one is expected to (i) choose a similarity algorithm, (ii) provide all required input (datasets, entity-type and property-value restrictions, matching properties…) and (iii) the conditions (threshold) under which a discovered link is outputted by the algorithm along with its score/weight. This process is what we define as a <span class="SmallCaps"><em>matching method</em></span>. Methods involving a single entity matching algorithm are distinguished from those involving more than one: <span class="SmallCaps"><em>simple</em></span> versus <span class="SmallCaps"><em>complex</em></span> (not to be confused with the complexity of the underlying the matching algorithm) method. The latter, naturally, requires the results to be combined.
+<!--In the Lenticular Lens, the results of matching algorithms can be combined at the creation time of a linkset, applying <span class="SmallCaps">*complex methods*</span> by using logic boxes [<a href="">ref</a>], or afterwards using lenses operators [<a href="">ref</a>].--> </p>
+<p>Although combining  matching algorithms seems relatively easy, deciding on the final score and the annotations of links with weights requires some extra thoughts. First of all, it requires deciding what a matching score is about: <span class="SmallCaps"><em>degree of truth</em></span> or <span class="SmallCaps"><em>degree of confidence</em></span>? In order words, <em>is this a problem of Vagueness or Uncertainty or both?</em> (see Sect. 1). Answering the later question opens the doors to Section 2 where we unveil our take on &ldquo;<em>how to compute a truth value in the presence of multiple truth values?</em>&rdquo;. Finally, Section 3 addresses the problem of &ldquo;<em>how to transition from degree of truth to degree of confidence?</em>&rdquo;.</p>
+<!--using the Levenshtein algorithm, the relative matching score for ​<span class="inline">Rembrand van Rijn</span> and <span class="inline">Rembrandt Harmensz van Rijn</span> is 0.63  while it is 0.74 using Soundex. These results can be combined at the creation time of a linkset, using logic boxes, or afterwards, using lenses operators. When such combinations happen, a decision is necessary regarding the calculation of the resulting <span class="SmallCaps">truth value</span>. For example, let us assume that links are created whenever a pair of dataset-items (subject, object) either *sounds alike* or *looks alike character-wise*. 
+Accomplishing this matching task requires the combination of two entity matching algorithms: Soundex and Levenshtein. Although combining the methods seems relatively easy, deciding on the score of the <span class="SmallCaps">truth value</span> requires some extra thoughts. In the example of Rembrandt, shall we consider: 0.63 or 0.74, the product, the average, ...? Here we discuss the rationals used in the Lenticular Lens to support such decision.-->
+
+<h2 id="1-vagueness-vs-uncertainty">1. Vagueness vs. Uncertainty<a class="headerlink" href="#1-vagueness-vs-uncertainty" title="Permanent link">&para;</a></h2>
+<p>We address in this section, the question of &ldquo;<em>how to interpret the various scores in the process of entity matching?</em>&rdquo;. In other terms, &ldquo;<em>What are truth value and vagueness and how are they different from uncertainty?</em>&rdquo;.
+Roughly, <span class="SmallCaps"><em>truth value</em></span> or <span class="SmallCaps"><em>degrees of truth</em></span> (<em>the tomato is ripe with degree of truth 0.7</em>) is not to be confused with <span class="SmallCaps"><em>degrees of certainty / confidence</em></span> (<em>I am 0.9 certain that The tomato is ripe with Degrees of Truth 0.7</em>) as the latter is not an assignment of truth  value as opposed to the former, but rather an <em>evaluation</em> of a <em>weighted</em> proposition regardless of its truth value space ({0, 1} or [0, 1]).</p>
+<p>In the next subsections, the distinction between Vagueness and Uncertainty is outlined based on the interpretation we associate to the output scores of similarity algorithms and matching methods.</p>
+<h3 id="11-scores-of-similarity-algorithms">1.1 Scores of similarity algorithms<a class="headerlink" href="#11-scores-of-similarity-algorithms" title="Permanent link">&para;</a></h3>
+<p><span class="inline" style="color: blue"> Truth value &amp; Vagueness in truth value &nbsp;&nbsp; </span>
+<!--*Truth value & Vagueness in truth value* &nbsp;--> Similarity algorithms (Levenshtein, Soundex, Cosine&hellip;) meant for computing the overlap between a pair of input-arguments (property-value overlap) output values in the unit interval [0, 1] or values convertible in the unit interval. These values are <span class="SmallCaps"><em>truth values</em></span> / <span class="SmallCaps"><em>degrees of truth</em></span>. For example, the input-arguments <span class="inline">&ldquo;Rembrand van Rijn&rdquo;</span> and <span class="inline">&ldquo;Rembrandt Harmensz van Rijn&rdquo;</span> have a similarity degree of truth of 0.63 using the Levenshtein algorithm and a similarity degree of truth of 0.74 using the Soundex algorithm. 
+<!-- Transition -->
+Transitioning from <em>assigning boolean truth values {0, 1}</em> to <em>assigning continuous truth values in the unit interval [0, 1]</em> to propositions (event) is clearly moving from <em>classical logic</em> to <em>fuzzy logic</em> which is in the modelling paradigm of <em>many-valued Logics</em>. The latter truth space (unit interval) is motivated by the presence of <em>vague concepts</em> in a proposition (the use of <em>ripe</em> in the proposition &ldquo;<em>the tomato is ripe</em>&rdquo;), making it hard or sometimes even impossible to establish whether the proposition is completely true or false [<a href="../12.References/#Lukasiewicz2008">Lukasiewicz2008</a>].</p>
+<h3 id="12-scores-of-matching-methods">1.2 Scores of matching methods<a class="headerlink" href="#12-scores-of-matching-methods" title="Permanent link">&para;</a></h3>
+<p><!--Belief (usually denoted Bel) measures the strength of the evidence in favour of a proposition p-->
+Entity matching methods<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> output links optionally annotated with matching scores reflecting (i) the level of confidence of a method (the strength of the evidence) for assimilating a pair of resources to be co-referents and (ii) the lower boundary under which two resources can be view as co-referents.
+For example, given the resources <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">e_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">e_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> respectively labeled <span class="inline">Rembrand van Rijn</span> and <span class="inline">Rembrandt Harmensz van Rijn</span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">e_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">e_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> can be linked with a matching score of 0.63 using the Levenshtein algorithm, provided that it is acceptable doing so at a matching score above 0.60.</p>
+<p><span class="inline" style="color: blue"> Uncertainty &amp; Degree of confidence &nbsp;&nbsp; </span>
+<!--*Uncertainty & Degree of confidence* &nbsp;--> Whatever truth value is assigned to an event, sometimes, one may wonder about the <em>chance</em> that the event <em>will happen</em> or <em>might happen</em> [<a href="../12.References/#Kovalerchuk2017">Kovalerchuk2017</a>]. In these cases the use of Probabilistic or Possibilistic Logic can be considered for the evaluation of a <em>weighted</em> proposition (proposition with an assigned truth value).
+<!---->
+In propositional logic (<em>the sky is blue, the bottle is full, the tomato is ripe&hellip;</em>), the use of <em>degree of (un)certainty, belief or confidence</em> is to emphasise an <em>evaluation</em> of the assignment of a <em>truth value</em> to a proposition which may or may not qualify as <em>vague</em> (<em>&ldquo;the tomato is ripe&rdquo;</em>). For example, how certain are we in asserting that the proposition <em>&ldquo;the tomato is ripe&rdquo;</em> is <em>true</em>? As [Lukasiewicz2008] illustrates, asserting that <em>&ldquo;John is a teacher&rdquo;</em> and <em>&ldquo;John is a student&rdquo;</em> with respectively the values 0.3 and 0.7 as degrees of certainty is roughly saying that <em>&ldquo;John is either a teacher or a student, but more likely a student&rdquo;</em>. However, the vague statement “<em>John is tall&rdquo;</em> with the assignment of 0.9 as degree of truth can be roughly translated as <em>&ldquo;John is quite tall&rdquo;</em>.</p>
+<h2 id="2-combination-of-the-scores">2. Combination of the Scores<a class="headerlink" href="#2-combination-of-the-scores" title="Permanent link">&para;</a></h2>
+<p>Even though scores of similarity algorithms (truth value) and matching methods (degree of confidence) are not be confused, they may be combined (multiple truth values or multiple degrees of confidence) or they me be subject to transition. In fact, it is almost unthinkable to do without combining truth values of multiple similarity algorithms and transition from truth to confidence value  for solving real-life-problems. An example of truth value combination and transition to degree of confidence is the famous abductive reasoning example of the duck test where <em>something is probably is a duck if it (i) looks like a duck, (ii) swims like a duck, (iii) and quacks like a duck</em>. This assumes the assignment (see Sect. 2.1) of the boolean value 1 to propositions (i), (ii) and (iii) to reach the conclusion that this something is probably a duck (see Sect. 2.3).</p>
+<!-- and knowing that there is a need for the combination of similarity algorithms
+
+[Matching Algorithms](04.Algorithms.md) provided in the Lenticular Lens generate links annotated with <span class="SmallCaps">**matching scores**</span> from the truth unit space ]0, 1]. 
+
+ Here we discuss the rationals used in the Lenticular Lens to support such decision.-->
+
+<h3 id="21-combining-truth-values">2.1 Combining truth values<a class="headerlink" href="#21-combining-truth-values" title="Permanent link">&para;</a></h3>
+<p>One thing we know and agreed on is that similarity algorithms output boolean or fuzzy truth values in the range [0, 1]. This allows to make use of logic combination functions offers in <em>conventional logic</em> (Subsection 2.1.1) of <em>fuzzy logic</em> (Subsection 2.1.2) depending on whether we aspect the solution space to be {0, 1} or [0, 1].</p>
+<h4 id="211-classic-logic">2.1.1 Classic Logic<a class="headerlink" href="#211-classic-logic" title="Permanent link">&para;</a></h4>
+<p>The two standard logic operators or combination functions traditionally used are the classical <strong>Boolean</strong> <strong>Conjunction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∧</span></span></span></span>)</strong> and <strong>Disjunction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∨</span></span></span></span>)</strong>. 
+The first takes the <span class="SmallCaps"><em>minimum</em></span> strength and the latter takes the <span class="SmallCaps"><em>maximum</em></span> strength. This applies for both <strong>classic values</strong> (True -1- or False -0-) and <strong>fuzzy values</strong> ( between 0 and 1 ). </p>
+<p>Since the results from matching methods are assigned <strong>fuzzy values</strong> in the interval ]0,1], the table bellow illustrates the default behaviour of the Lenticular Lens when combining them.</p>
+<details class="example" open="open"><summary>Example 18: <span style="color:blue">Standard logic operations over conjunction (min) and disjunction (max).</span></summary><div class="highlight"><pre><span></span><code>Source                      Target                       Levenshtein  Soundex      OR(max)    AND(min)
+------------------------------------------------------------------------------------------------------
+Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder             0.92     1.00        1.00         0.92
+Rembrand van Rijn           Rembrandt Harmensz van Rijn         0.63     0.74        0.74         0.63
+Barent Teunis               Barent Teunisz gen. Drent           0.52     0.47        0.52         0.47
+</code></pre></div>
+
+</details>
+<h4 id="212-fuzzy-logic">2.1.2 Fuzzy Logic<a class="headerlink" href="#212-fuzzy-logic" title="Permanent link">&para;</a></h4>
+<p>As provided in the next subsections, sophisticated combination functions such as <strong>T-norms (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊗</mo></mrow><annotation encoding="application/x-tex">\otimes</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">⊗</span></span></span></span>)</strong> and <strong>S-norms (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">⊕</span></span></span></span>)</strong>, developed by scholars like Łukasiewicz, Gödel, Goguen, Zadeh and others can also be used as alternatives for respectively <strong>Boolean Disjunction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∨</mo></mrow><annotation encoding="application/x-tex">\lor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∨</span></span></span></span>)</strong> and <strong>Conjunction (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∧</mo></mrow><annotation encoding="application/x-tex">\land</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.55556em;vertical-align:0em;"></span><span class="mord">∧</span></span></span></span>)</strong>.</p>
+<h5 id="2121-t-norms">2.1.2.1 T-norms<a class="headerlink" href="#2121-t-norms" title="Permanent link">&para;</a></h5>
+<p>A list of six different operations can be applied when dealing with methods combined by <strong>Conjunction</strong>. Here, we present them:</p>
+<ul>
+<li>
+<p>Minimum t-norm 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><mrow><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(1)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_{min} (a, b) = min(a, b) \tag{1}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span></span><span class="mord">)</span></span></span></span></span></span></p></p>
+</li>
+<li>
+<p>Product t-norm 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>d</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mtext> . </mtext><mi>b</mi></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(2)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_{prod} (a, b) = a \text{ . } b \tag{2}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mord text"><span class="mord"> . </span></span><span class="mord mathnormal">b</span></span><span class="tag"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">2</span></span><span class="mord">)</span></span></span></span></span></span></p></p>
+</li>
+<li>
+<p>Łukasiewicz t-norm 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><mrow><mi>L</mi><mi>u</mi><mi>k</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(3)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_{Luk} (a, b) = max(0, a + b - 1) \tag{3}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">3</span></span><span class="mord">)</span></span></span></span></span></span></p></p>
+</li>
+<li>
+<p>Drastic <!--t-norm ⊤<sub>D</sub> (a, b) = b (if a = 1) , a (if b = 1), 0 (otherwise)--></p>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><mi>D</mi></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>a</mi><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>b</mi><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>otherwise</mtext></mstyle></mtd></mtr></mtable></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(4)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_D(a, b) = \begin{cases}
+   b &amp;\text{if  } a = 1 \\
+   a &amp;\text{if  } b = 1 \\
+   0 &amp;\text{otherwise}
+\end{cases} \tag{4}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:4.32em;vertical-align:-1.9099999999999997em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35002em;"><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.19499em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-2.20499em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.15001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.2950099999999996em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.30501em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.60002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8500199999999998em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-1.5300000000000002em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.9099999999999997em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span></span></span><span style="top:-1.5300000000000002em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">otherwise</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.9099999999999997em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:4.32em;vertical-align:-1.9099999999999997em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">4</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<ul>
+<li>Nilpotent minimum <!--⊤<sub>nM</sub> (a, b) = min{a, b} (if a + b > 1), 0 (otherwise)--></li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><mrow><mi>n</mi><mi>M</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>a</mi><mo>+</mo><mi>b</mi><mo>&gt;</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>otherwise</mtext></mstyle></mtd></mtr></mtable></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(5)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_{nM}(a, b) = \begin{cases}
+   min(a, b) &amp;\text{if  } a + b &gt; 1 \\
+   0 &amp;\text{otherwise}
+\end{cases} \tag{5}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">otherwise</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">5</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<ul>
+<li>Hamacher product <!--⊤<sub>H<sub>0</sub></sub> (a, b) = 0 (if a = b = 0), ab / (a + b - ab) (otherwise)--></li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊤</mtext><msub><mi>H</mi><mn>0</mn></msub></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mstyle displaystyle="true" scriptlevel="0"><mfrac><mrow><mi>a</mi><mi>b</mi></mrow><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>−</mo><mi>a</mi><mi>b</mi></mrow></mfrac></mstyle></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>otherwise</mtext></mstyle></mtd></mtr></mtable></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(6)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊤_{H_0}(a, b) = \begin{cases}
+   0 &amp;\text{if  } a = b = 0 \\
+   \dfrac{ab}{a + b - ab} &amp;\text{otherwise}
+\end{cases} \tag{6}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0001em;vertical-align:-0.2501em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.49999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.20499em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.15001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.00501em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.30002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.040385em;"><span style="top:-4.403825em;"><span class="pstrut" style="height:3.3714399999999998em;"></span><span class="mord"><span class="mord">0</span></span></span><span style="top:-2.6003849999999997em;"><span class="pstrut" style="height:3.3714399999999998em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5403850000000001em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.040385em;"><span style="top:-4.403825em;"><span class="pstrut" style="height:3.3714399999999998em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span><span style="top:-2.6003849999999997em;"><span class="pstrut" style="height:3.3714399999999998em;"></span><span class="mord"><span class="mord text"><span class="mord">otherwise</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.5403850000000001em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:3.60004em;vertical-align:-1.55002em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">6</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<p><br></p>
+<p>The following table provides three case studies to illustrate the application of each of the aforementioned <strong>T-norm binary operations</strong>. They are presented in order from the less strict (<strong>⊤<sub>min</sub></strong>) to the most strict (<strong>⊤<sub>D</sub></strong>).</p>
+<table>
+<thead>
+<tr>
+<th align="left"><div style="width:230px">Source, Target</div></th>
+<th align="center">Levenshtein, Soundex</th>
+<th align="center">⊤<sub>min</sub></th>
+<th align="center">⊤<sub>H<sub>0</sub></sub></th>
+<th align="center">⊤<sub>prod</sub></th>
+<th align="center">⊤<sub>nM</sub></th>
+<th align="center">⊤<sub>Luk</sub></th>
+<th align="center">⊤<sub>D</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Src</strong>: Jasper Cornelisz. Lodder <br> <strong>Trg</strong>: Jaspar Cornelisz Lodder</td>
+<td align="center">0.92, 1.00</td>
+<td align="center">0.920</td>
+<td align="center">0.920</td>
+<td align="center">0.920</td>
+<td align="center">0.920</td>
+<td align="center">0.920</td>
+<td align="center">0.920</td>
+</tr>
+<tr>
+<td align="left"><strong>Src</strong>: Rembrand van Rijn <br> <strong>Trg</strong>: Rembrandt Harmensz van Rijn</td>
+<td align="center">0.63, 0.74</td>
+<td align="center">0.630</td>
+<td align="center">0.516</td>
+<td align="center">0.466</td>
+<td align="center">0.630</td>
+<td align="center">0.370</td>
+<td align="center">0.000</td>
+</tr>
+<tr>
+<td align="left"><strong>Src</strong>: Barent Teunis <br> <strong>Trg</strong>: Barent Teunisz gen. Drent</td>
+<td align="center">0.52, 0.47</td>
+<td align="center">0.470</td>
+<td align="center">0.328</td>
+<td align="center">0.244</td>
+<td align="center">0.000</td>
+<td align="center">0.000</td>
+<td align="center">0.000</td>
+</tr>
+</tbody>
+</table>
+<h5 id="2122-s-norms">2.1.2.2 S-norms<a class="headerlink" href="#2122-s-norms" title="Permanent link">&para;</a></h5>
+<p>A list of six different operations can also be applied when dealing with methods combined by <strong>Disjunction</strong>. Here, we present them:</p>
+<ul>
+<li>Maximum S-norm 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(7)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_{max} (a, b) = max(a, b) \tag{7}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">7</span></span><span class="mord">)</span></span></span></span></span></span></p></li>
+<li>
+<p>Probabilistic sum 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><mrow><mi>s</mi><mi>u</mi><mi>m</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>−</mo><mi>a</mi><mtext> . </mtext><mi>b</mi></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(8)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_{sum} (a, b) = a + b - a \text{ . } b \tag{8}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mord text"><span class="mord"> . </span></span><span class="mord mathnormal">b</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">8</span></span><span class="mord">)</span></span></span></span></span></span></p></p>
+</li>
+<li>
+<p>Bounded sum 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><mrow><mi>L</mi><mi>u</mi><mi>k</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(9)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_{Luk} (a, b) = min(a + b, 1) \tag{9}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mord mathnormal">i</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">9</span></span><span class="mord">)</span></span></span></span></span></span></p></p>
+</li>
+<li>
+<p>Drastic S-norm <!--⊥<sub>D</sub> (a, b) = b (if a=0), a (if b=0), 1 (otherwise)--></p>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><mi>D</mi></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>a</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>b</mi><mo>=</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>otherwise</mtext></mstyle></mtd></mtr></mtable></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(10)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_D(a, b) = \begin{cases}
+   b &amp;\text{if  }  a = 0 \\
+   a &amp;\text{if  }  b = 0 \\
+   1 &amp;\text{otherwise}
+\end{cases} \tag{10}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:4.32em;vertical-align:-1.9099999999999997em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35002em;"><span style="top:-2.19999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.19499em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-2.20499em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-3.15001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.2950099999999996em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.30501em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎪</span></span></span><span style="top:-4.60002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.8500199999999998em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">b</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">a</span></span></span><span style="top:-1.5300000000000002em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.9099999999999997em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.41em;"><span style="top:-4.41em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span><span style="top:-2.97em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span><span style="top:-1.5300000000000002em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">otherwise</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.9099999999999997em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:4.32em;vertical-align:-1.9099999999999997em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">0</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<ul>
+<li>Nilpotent maximum <!--⊥<sub>nM</sub> (a, b) = max(a, b) (if a + b < 1), 1 (otherwise)--></li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><mrow><mi>n</mi><mi>M</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mtext>if </mtext><mi>a</mi><mo>+</mo><mi>b</mi><mo>&lt;</mo><mn>1</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mtext>otherwise</mtext></mstyle></mtd></mtr></mtable></mrow></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(11)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_{nM}(a, b) = \begin{cases}
+   max(a, b) &amp;\text{if  }  a + b &lt; 1 \\
+   1 &amp;\text{otherwise}
+\end{cases} \tag{11}
+
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">M</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">if </span></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">1</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord text"><span class="mord">otherwise</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">1</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<p><br></p>
+<ul>
+<li>Einstein sum 
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><msub><mtext>⊥</mtext><msub><mi>H</mi><mn>2</mn></msub></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mrow><mn>1</mn><mo>+</mo><mi>a</mi><mi>b</mi></mrow></mfrac></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(12)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+⊥_{H_2} (a, b) = \dfrac{a + b} {1 + ab} \tag{12}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0001em;vertical-align:-0.2501em;"></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:-0.08125em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.14077em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">b</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="tag"><span class="strut" style="height:2.14077em;vertical-align:-0.7693300000000001em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">2</span></span><span class="mord">)</span></span></span></span></span></span></p></li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th align="left"><div style="width:230px">Source, Target</div></th>
+<th align="center">Levenshtein, Soundex</th>
+<th align="center">⊤<sub>D</sub></th>
+<th align="center">⊤<sub>Luk</sub></th>
+<th align="center">⊤<sub>H<sub>2</sub></sub></th>
+<th align="center">⊤<sub>sum</sub></th>
+<th align="center">⊤<sub>nM</sub></th>
+<th align="center">⊤<sub>max</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Src</strong>: Jasper Cornelisz. Lodder <br> <strong>Trg</strong>: Jaspar Cornelisz Lodder</td>
+<td align="center">0.92, 1.00</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+</tr>
+<tr>
+<td align="left"><strong>Src</strong>: Rembrand van Rijn <br> <strong>Trg</strong>: Rembrandt Harmensz van Rijn</td>
+<td align="center">0.63, 0.74</td>
+<td align="center">1.000</td>
+<td align="center">1.000</td>
+<td align="center">0.934</td>
+<td align="center">0.904</td>
+<td align="center">1.000</td>
+<td align="center">0.740</td>
+</tr>
+<tr>
+<td align="left"><strong>Src</strong>: Barent Teunis <br> <strong>Trg</strong>: Barent Teunisz gen. Drent</td>
+<td align="center">0.52, 0.47</td>
+<td align="center">1.000</td>
+<td align="center">0.990</td>
+<td align="center">0.796</td>
+<td align="center">0.746</td>
+<td align="center">0.520</td>
+<td align="center">0.520</td>
+</tr>
+</tbody>
+</table>
+<h4 id="213-examples">2.1.3 Examples<a class="headerlink" href="#213-examples" title="Permanent link">&para;</a></h4>
+<p>Suppose that, two data items E-1 and E-2 have the following information:</p>
+<ul>
+<li>
+<p>E-1</p>
+<ul>
+<li><strong>Name</strong>:  Titus Rembrandtsz. van Rijn</li>
+<li><strong>Mather</strong>: Saskia Uylenburgh</li>
+<li><strong>Father</strong>: Rembrand van Rijn</li>
+<li><strong>Parent&rsquo;s Marriage date</strong>: 1644-06-22
+<br></li>
+</ul>
+</li>
+<li>
+<p>E-2</p>
+<ul>
+<li><strong>Name</strong>: T. Rembrandtszoon van Rijn</li>
+<li><strong>Mather</strong>: Saske van Uijlenburg</li>
+<li><strong>Father</strong>: Rembrandt Harmensz van Rijn</li>
+<li><strong>Baptism date</strong>:1641-09-22</li>
+</ul>
+</li>
+</ul>
+<p>To interpret E-1 and E-2 as representing co-referent persons, the following four tests are proposed. </p>
+<details class="example"><summary><strong>Test-1 OR</strong></summary><p>Here, the names of E-1 and E-2 are to be compared using the <strong>Levenshtein</strong> and <strong>Soundex</strong> algorithms at a threshold of <strong>at least 0.7</strong>.</p>
+<div class="highlight"><pre><span></span><code>MATCHING RESULTS
+ - Levenshtein(Titus Rembrandtsz van Rijn, T. Rembrandtszoon van Rijn)  =&gt; 0.73 ✅
+ - sdx_1 = Soundex(Titus Rembrandtsz van Rijn) = T320 R516 V500 R250
+ - sdx_2 = Soundex(T. Rembrandtszoon van Rijn) = T000 R516 V500 R250
+ - Levenshtein(sdx_1, sdx_2)                                            =&gt; 0.89 ✅
+
+DISJUNCTIONS RESULTS
+ - names similarity   = S-norm(0.73, 0.88, &#39;MAXIMUM&#39;)                 =&gt; 0.89 ✅
+ - names similarity   = S-norm(0.73, 0.88, &#39;PROBABILISTIC&#39;)           =&gt; 0.97 ✅
+</code></pre></div>
+
+</details>
+<details class="example"><summary><strong>Test-2 AND</strong></summary><p>Names of the postulated mothers and fathers are to be similar at a threshold of at <strong>least 0.6</strong> using the <strong>Levenshtein</strong> algorithm.</p>
+<div class="highlight"><pre><span></span><code>MATCHING RESULTS
+ - Levenshtein(Saskia Uylenburgh, Saske van Uijlenburg)                 =&gt; 0.65 ✅
+ - Levenshtein(Rembrand van Rijn, Rembrandt Harmensz van Rijn)          =&gt; 0.63 ✅
+
+CONJUNCTION RESULTS
+ - Parent&#39;s names similarity  = t_norm(0.65, 0.63, &#39;MINIMUM&#39;)           =&gt; 0.63 ✅
+ - Parent&#39;s names similarity  = t_norm(0.65, 0.63, &#39;HAMACHER&#39;)          =&gt; 0.47 ❌
+</code></pre></div>
+
+</details>
+<details class="example"><summary><strong>Test-3</strong></summary><p>The period between the parent&rsquo;s <strong>marriage date</strong> on the one side and the <strong>child&rsquo;s baptism</strong> date on the other side are to be <strong>no more than 25 years apart</strong>.</p>
+<div class="highlight"><pre><span></span><code>MATCHING RESULTS
+ - Delta(1668-02-28, 1669-03-22, 25)                                       =&gt; 1.00 ✅
+</code></pre></div>
+
+</details>
+<details class="example" open="open"><summary><strong>Test-4 AND</strong></summary><p>Combining all above three tests considering a the conjunction fuzzy operator should result in a similarity score above or equal to 0.8.</p>
+<div class="highlight"><pre><span></span><code>--------------------------------------------------------------------------------------
+FINAL CONJUNCTIONS WITH A TRUTH VALUE LIST OF [0.850, 0.63, 1] 
+--------------------------------------------------------------------------------------
+  - t_norm_list([0.850, 0.63, 1], &#39;MINIMIUM&#39;)                           =&gt; 0.63 ❌
+  - t_norm_list([0.850, 0.63, 1], &#39;HAMACHER&#39;)                           =&gt; 0.58 ❌
+  - t_norm_list([0.850, 0.63, 1], &#39;PRODUCT&#39;)                            =&gt; 0.56 ❌
+  - t_norm_list([0.850, 0.63, 1], &#39;NILPOTENT&#39;)                          =&gt; 0.63 ❌
+  - t_norm_list([0.850, 0.63, 1], &#39;Łuk&#39;)                                =&gt; 0.52 ❌
+  - t_norm_list([0.850, 0.63, 1], &#39;DRASTIC&#39;)                            =&gt; 0.00 ❌
+
+--------------------------------------------------------------------------------------
+CONJUNCTIONS WITH A DIFFERENT LIST OF TRUTH VALUES [0.89, 0.82, 1]
+--------------------------------------------------------------------------------------
+ - t_norm_list([0.89, 0.82, 1], &quot;MINIMUM&quot;)                              =&gt; 0.82 ✅
+ - t_norm_list([0.89, 0.82, 1], &quot;HAMACHER&quot;)                             =&gt; 0.74 ❌
+ - t_norm_list([0.89, 0.82, 1], &quot;PRODUCT&quot;)                              =&gt; 0.73 ❌
+ - t_norm_list([0.89, 0.82, 1], &quot;NILPOTENYT&quot;)                           =&gt; 0.82 ✅
+ - t_norm_list([0.89, 0.82, 1], &quot;LUK&quot;)                                  =&gt; 0.71 ❌
+ - t_norm_list([0.89, 0.82, 1], &quot;DRASTIC&quot;)                              =&gt; 0.0  ❌
+
+--------------------------------------------------------------------------------------
+EXAMPLE USING MORE THAN ONE FUZZY LOGIC OPERATOR
+--------------------------------------------------------------------------------------
+  - Ops.t_norm(Ops.t_norm(0.850, 0.63, &#39;HAMACHER&#39;), 1, &#39;MINIMIUM&#39;)      =&gt; 0.57 ❌
+  - Ops.t_norm(Ops.t_norm(0.850, 0.63, &#39;MINIMIUM&#39;), 1, &#39;HAMACHER&#39;)      =&gt; 0.63 ❌
+</code></pre></div>
+
+</details>
+<p><strong>Conclusion</strong>: Given the <strong>evidence</strong> provided for E-1 and E-2  and the <strong>rules</strong> described above, the interpretation resulting from the chosen fuzzy logic operations leads to the conclusion that there is no sufficient evidence to infer that the underlying data items are co-referent. This rejection is mainly due to the low similarity of the parents&rsquo; names. If the resulting similarity were above 0.8, there would then be a better chance for the data items to be co-referent. Keep in mind that our conjectured rule asserts an identity relation for combination of scores only when above 0.8. A better data or more advanced algorithm could have helped.</p>
+<h3 id="22-combining-confidence-values">2.2 Combining Confidence Values<a class="headerlink" href="#22-combining-confidence-values" title="Permanent link">&para;</a></h3>
+<p>Understand how to combine uncertain events starts by a better understanding of uncertainty. The concept of uncertainty can be categorised into Aleatory (objective uncertainty originated from random behaviour) or Epistemic (Objective uncertainty originated from ignorance or lack of knowledge). Although there is no clear best representation of uncertainty, this demarkation enabled a group of researcher to claim the inability of traditional probability theory to deal with Epistemic Uncertainty, leading to the emergence of imprecise probabilities, possibility theory and evidence theory [<a href="../12.References/#Sentz2002">Sentz2002</a>]. </p>
+<p>Although not implemented in the Lenticular Lens, we introduce here these alternative representations of uncertainty.</p>
+<h3 id="221-probabilistic-logic">2.2.1 Probabilistic Logic<a class="headerlink" href="#221-probabilistic-logic" title="Permanent link">&para;</a></h3>
+<p>Using probability for combining confidence values with the logic operator <span class="SmallCaps">&ldquo;AND&rdquo;</span> and <span class="SmallCaps">&ldquo;OR&rdquo;</span> can be done in theory with the equations (13) and (14) respectively assuming that the events to be combined are independent (the occurrence of one event has no effect on the probability of the occurrence of the other).</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mi>P</mi><mo stretchy="false">(</mo><mtext>A and B</mtext><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mtext> </mtext><mo separator="true">⋅</mo><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(13)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+P(\text{A and B}) = P(A) \: \cdotp P(B) \tag{13}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">A and B</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">3</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mi>P</mi><mo stretchy="false">(</mo><mtext>A or B</mtext><mo stretchy="false">)</mo><mo>=</mo><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>+</mo><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo><mo>−</mo><mi>P</mi><mo stretchy="false">(</mo><mtext>A and B</mtext><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(14)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+P(\text{A or B}) = P(A) + P(B) - P(\text{A and B}) \tag{14}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">A or B</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">A and B</span></span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">4</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<p>On the one hand, assuming that events A and B <strong>are independent</strong>, equations (13) and (14) are somewhat similar to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊗</mo></mrow><annotation encoding="application/x-tex">\otimes</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">⊗</span></span></span></span>  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="false">(</mo><msub><mtext>⊤</mtext><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>d</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mtext> . </mtext><mi>b</mi><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">\big(⊤_{prod}(a, b) = a \text{ . } b\big)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="mord"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="mord mathnormal">a</span><span class="mord text"><span class="mord"> . </span></span><span class="mord mathnormal">b</span><span class="mord"><span class="delimsizing size1">)</span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⊕</mo></mrow><annotation encoding="application/x-tex">\oplus</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">⊕</span></span></span></span> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="false">(</mo><msub><mtext>⊥</mtext><mrow><mi>s</mi><mi>u</mi><mi>m</mi></mrow></msub><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>−</mo><mi>a</mi><mtext> . </mtext><mi>b</mi><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">\big(⊥_{sum}(a, b) = a + b - a \text{ . } b\big)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="mord"><span class="delimsizing size1">(</span></span><span class="mord"><span class="mord">⊥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.20001em;vertical-align:-0.35001em;"></span><span class="mord mathnormal">a</span><span class="mord text"><span class="mord"> . </span></span><span class="mord mathnormal">b</span><span class="mord"><span class="delimsizing size1">)</span></span></span></span></span> of Product Logic hens straightforward to implement when in the need of manipulating links such as applying an <span class="SmallCaps"> intersection </span> or a <span class="SmallCaps"> union </span> operator to two sets of links for example. </p>
+<p>On the other hand, in the event that A and B are <strong>not independent</strong>, the value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mtext>A and B</mtext><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(\text{A and B})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">A and B</span></span><span class="mclose">)</span></span></span></span> should be observable <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>A</mi><mtext> and </mtext><mi>B</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{n(A\text{ and } B)}{n(S)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.53em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.05764em;">S</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">A</span><span class="mord text mtight"><span class="mord mtight"> and </span></span><span class="mord mathnormal mtight" style="margin-right:0.05017em;">B</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>, provided or computed using conditional probability in equation (15).</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mi>𝑃</mi><mo stretchy="false">(</mo><mtext>A and B</mtext><mo stretchy="false">)</mo><mo>=</mo><mi>𝑃</mi><mo stretchy="false">(</mo><mi>𝐴</mi><mo stretchy="false">)</mo><mtext> . </mtext><mi>𝑃</mi><mo stretchy="false">(</mo><mi>𝐵</mi><mi mathvariant="normal">∣</mi><mi>𝐴</mi><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(15)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">
+𝑃(\text{A and B})=𝑃(𝐴)\text{ . }𝑃(𝐵|𝐴) \tag{15}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord text"><span class="mord">A and B</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">A</span><span class="mclose">)</span><span class="mord text"><span class="mord"> . </span></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord">∣</span><span class="mord mathnormal">A</span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span><span class="mord">5</span></span><span class="mord">)</span></span></span></span></span></span></p>
+
+<p>In the context of the Lenticular Lens, the computed confidence values are independent (the computation of a confidence value by method-1 has no effect on the computation of a confidence value by method-2). This being said, equation (15) is not applicable.</p>
+<h3 id="222-possibilistic-logic">2.2.2 Possibilistic Logic<a class="headerlink" href="#222-possibilistic-logic" title="Permanent link">&para;</a></h3>
+<h3 id="223-evidence-theorie">2.2.3 Evidence Theorie<a class="headerlink" href="#223-evidence-theorie" title="Permanent link">&para;</a></h3>
+<h3 id="23-from-truth-to-confidence">2.3. From Truth to Confidence<a class="headerlink" href="#23-from-truth-to-confidence" title="Permanent link">&para;</a></h3>
+<p>Similarly to the duck test, the modelling of ways to find supporting evidence for isolating potential entity matching candidates is crucial to inferring identity for a pair of resources. Section 3 already covers our take on how to combine truth values. What now remains is to understand &ldquo;<em>How to transition from truth value to uncertainty / degree of confidence?</em>&rdquo;. For illustration purpose, this means for example, how to move from [looks like a duck (0.8), swims like a duck (1.0), and quacks like a duck (0.95)] to [it probably is a duck (???)]. Applying <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mtext>⊤</mtext><mrow><mi>p</mi><mi>r</mi><mi>o</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">⊤_{prod}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord">⊤</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">d</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> to the evidence truth values result in a truth value of 0.76. Assuming that a <em>transition</em> from the evidence truth value to the degree of confidence carries a weight of 1, we argue that it is now possible to extrapolate a confidence of 0.76 for asserting that the entity that looks like a duck (0.8), swims like a duck (1.0), and quacks like a duck (0.95) is probably (0.76) a duck. Similarly, if this <em>transition weight</em> is now reset to 0.9 for example, it is also reasonable that the degree of confidence computed for the entity being a duck drops from 0.76 to 0.684.<!--⊤<sub>prod</sub>--></p>
+<p>This transition weight can easily be applied in the generation and manipulation of links. In a simplest setting where the transition weight is set to 1, discovered links can be annotated with an estimated degree of confidence by extrapolation of the evidence&rsquo;s truth value using an appropriate combination function. Things become a bit more complicated when dealing with the manipulation of links because we have options that range from classic / fuzzy logics to possibilistic / probabilistic logics. For example, <code>ex:lens-1</code> is the result of the union of of <code>ex:linkset-1</code> and <code>ex:linkset-2</code> using fuzzy logic over the respective evidence&rsquo;s truth value of links being united.</p>
+<details class="example" open="open"><summary><strong>Uncertainty in Identity</strong></summary><div class="highlight"><pre><span></span><code><span class="c">## Linkset meta-data</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">linkset-1</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">combination-unction</span><span class="w">      </span><span class="nn">ex:</span><span class="nt">t-norm-product</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">transition-weight</span><span class="w">        </span><span class="mf">1.0</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">## Annotated links</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">linkset-1</span><span class="w"></span>
+<span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">ex:</span><span class="nt">e1</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w"> </span><span class="nn">ex:</span><span class="nt">e2</span><span class="err">&gt;&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">degree-of-truth</span><span class="w">      </span><span class="mf">0.76</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">confidence</span><span class="w">           </span><span class="mf">0.76</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">## Linkset meta-data</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">linkset-2</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">combination-unction</span><span class="w">      </span><span class="nn">ex:</span><span class="nt">s-norm-max</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">transition-weight</span><span class="w">        </span><span class="mf">1.0</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">## Annotated links</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">linkset-2</span><span class="w"> </span>
+<span class="p">{</span><span class="w">   </span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">ex:</span><span class="nt">e1</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w"> </span><span class="nn">ex:</span><span class="nt">e2</span><span class="err">&gt;&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">degree-of-truth</span><span class="w">      </span><span class="mf">0.9</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">confidence</span><span class="w">           </span><span class="mf">0.9</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">## ex:lens-1: Fuzzy-logic-based UNION:</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">lens-1</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">operator</span><span class="w">                 </span><span class="nn">ex:</span><span class="nt">UNION</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">combination-function</span><span class="w">     </span><span class="nn">ex:</span><span class="nt">s-norm-sum</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">transition-weight</span><span class="w">        </span><span class="mf">1.0</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">lens-1</span><span class="w"></span>
+<span class="p">{</span><span class="w">       </span>
+<span class="w">    </span><span class="err">&lt;&lt;</span><span class="nn">ex:</span><span class="nt">e1</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w"> </span><span class="nn">ex:</span><span class="nt">e2</span><span class="err">&gt;&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">degree-of-truth</span><span class="w">      </span><span class="mf">0.976</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="nn">ex:</span><span class="nt">confidence</span><span class="w">           </span><span class="mf">0.976</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">## ex:lens-2: Possibilistic-logic-based UNION:</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">lens-2</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">operator</span><span class="w">                 </span><span class="nn">ex:</span><span class="nt">UNION</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">combination-function</span><span class="w">     </span><span class="nn">ex:</span><span class="nt">Possibilistic</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">transition-weight</span><span class="w">        </span><span class="mf">1.0</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">lens-2</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="c">## ex:lens-3: Probabilistic-logic-based UNION:</span><span class="w"></span>
+<span class="nn">ex:</span><span class="nt">lens-3</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">operator</span><span class="w">                 </span><span class="nn">ex:</span><span class="nt">UNION</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">combination-function</span><span class="w">     </span><span class="nn">ex:</span><span class="nt">Probabilistic</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">transition-weight</span><span class="w">        </span><span class="mf">1.0</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nn">ex:</span><span class="nt">lens-3</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>make explicit all arguments/pre-requisites (datasets, entity-type and property-value restrictions, matching properties…) of a matching algorithm including the conditions in which the algorithm is to accept a discovered link (threshold)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                4. Matching Algorithms
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                6. Linkset - Link Construction
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

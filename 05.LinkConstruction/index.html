@@ -1,0 +1,1610 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>6. Linkset - Link Construction - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#link-construction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              6. Linkset - Link Construction
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        6. Linkset - Link Construction
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="6. Linkset - Link Construction" class="md-nav__link md-nav__link--active">
+      6. Linkset - Link Construction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-scope" class="md-nav__link">
+    1. Scope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data" class="md-nav__link">
+    2. Data
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-data-selection" class="md-nav__link">
+    2.1 Data Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-data-restrictions" class="md-nav__link">
+    2.2 Data Restrictions
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Data Restrictions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-restriction-options" class="md-nav__link">
+    2.2.1 Restriction options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-data-exploration" class="md-nav__link">
+    2.3 Data Exploration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-matching-in-practice" class="md-nav__link">
+    3. Matching in Practice
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Matching in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-simple-methods" class="md-nav__link">
+    3.1 Simple Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Simple Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-grid" class="md-nav__link">
+    Case-1: Grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-complex-methods" class="md-nav__link">
+    3.2 Complex Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Complex Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-alternative" class="md-nav__link">
+    Case-1: Alternative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-getty" class="md-nav__link">
+    Case-2: Getty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-scope" class="md-nav__link">
+    1. Scope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data" class="md-nav__link">
+    2. Data
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-data-selection" class="md-nav__link">
+    2.1 Data Selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-data-restrictions" class="md-nav__link">
+    2.2 Data Restrictions
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Data Restrictions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-restriction-options" class="md-nav__link">
+    2.2.1 Restriction options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-data-exploration" class="md-nav__link">
+    2.3 Data Exploration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-matching-in-practice" class="md-nav__link">
+    3. Matching in Practice
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Matching in Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-simple-methods" class="md-nav__link">
+    3.1 Simple Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Simple Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-grid" class="md-nav__link">
+    Case-1: Grid
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-complex-methods" class="md-nav__link">
+    3.2 Complex Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Complex Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1-alternative" class="md-nav__link">
+    Case-1: Alternative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2-getty" class="md-nav__link">
+    Case-2: Getty
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="link-construction">LINK CONSTRUCTION <img alt="🛠️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f6e0.svg" title=":hammer_and_wrench:" /><a class="headerlink" href="#link-construction" title="Permanent link">&para;</a></h1>
+<p>Linking co-referent entities across a variety of datasources is a pragmatic and fast way to seamlessly navigate across datasets without having to agree in a uniform vocabulary. This solution offered in the Semantic Web architecture appears attractive as the ultimate goal for the researcher executing this task is not the integration of data but the extraction of vital information for reaching valid conclusions about problems under scrutiny. 
+This said, the <strong>Lenticular Lens</strong> offers means to reach that ultimate goal of the researcher while making sure that the steps taken by the researcher are documented such that other researchers can easily re-generate the data leading to specific conclusions if need be.</p>
+<p>Along the way of entity-based data integration and data extraction, the <strong>Lenticular Lens</strong> aims to document among others: </p>
+<ol>
+<li>
+<p>The datasources to integrate;</p>
+</li>
+<li>
+<p>The reasons behind a specific integration; </p>
+</li>
+<li>
+<p>The entity types and restrictions that ensure correctness in bridging across datasources of interest; </p>
+</li>
+<li>
+<p>The matching methods and specifications justifying the existence of a set of links. </p>
+</li>
+</ol>
+<p>The <strong>Lenticular Lens</strong> tool aims to provide generic methods that allows a broader audience suffering the same need for data integration. The first step in creating and documenting links using the <strong>Lenticular Lens</strong> is defining the scope in witch links are to be created and possibly validated. For that, the tool offers the <span class="inline">RESEARCH</span> menu followed by the <span class="inline">SELECT</span> and <span class="inline">CONSTRUCT</span> menus.</p>
+<p>We now go through each of these first three menus underlying the existence of links.</p>
+<h2 id="1-scope">1. Scope<a class="headerlink" href="#1-scope" title="Permanent link">&para;</a></h2>
+<p>The <span class="inline">RESEARCH</span> menu is the starting point in learning how to interact with the <strong>Lenticular Lens</strong> tool. In general, a research question somehow sets the scope in which link creations, manipulations or validation take place. This provides the first building block supporting the user with defining the context in which a particular alignment is generated. Using this menu, part of the context is made explicit by selecting the datasets and entity types necessary to continue the investigation.</p>
+<p>As an overview, the <span class="inline">RESEARCH</span> menu provides researchers with means to describe the research of interest in terms of:</p>
+<ul>
+<li>
+<p><span class="inline">Research Question</span> for inserting the main research question driving the integration. </p>
+</li>
+<li>
+<p><span class="inline">Hypothesis</span> for pointing out the hypothesis in mind prior to the data extraction. </p>
+</li>
+<li>
+<p><span class="inline">Link</span> and <span class="inline">Citation</span> to ensure that, if the results happen to be published, the researcher still has the facility to add a link to the publication and and a bibliographic reference for future reuse.</p>
+</li>
+</ul>
+<p>Fig. 4.1 illustrates the different fields to be filled in by the researcher for a quick overview of what can happen in this research project and why. Once providing the information is done, the <span class="inline">Save</span> button at the bottom of the page can be clicked to save the provided information and exit the <strong>Lenticular Lens</strong> if the user which to continue with other tasks. Or, should the user choose to continue the alternative <span class="inline">Save and next</span> button can be used to save the project and move to the next window.</p>
+<p><div align="center"> <img alt="The Lenticular Lens Research window" src="../Images/LL_Research.jpg" />Fig. 4.1:  Describing the scope of he research question. </div>
+ <br></p>
+<h2 id="2-data">2. Data<a class="headerlink" href="#2-data" title="Permanent link">&para;</a></h2>
+<p>In the previous step or window, the researcher has defined the scope of the research for which data are to be extracted and analysed. In this second window labelled <span class="inline">SELECT</span>, the user is to describe and select the entity types involved in his research. For that, the location of the datasource needs to be provided and the datasets in which the respective entities of interest reside need to be selected.</p>
+<h3 id="21-data-selection">2.1 Data Selection<a class="headerlink" href="#21-data-selection" title="Permanent link">&para;</a></h3>
+<p>As the user activates the <span class="inline">Saves and next</span> button at the end of the previous page, she is presented with a new window with a single  card labelled <span class="inline">Entity-Type Selection 1</span> as presented in Fig. 4.2.  The plus <img alt="LL_PlusButton" src="../Images/LL_PlusButton.jpg" /> button at the right side of the picture enables the user to create new cards when needed while the arrow-head <img alt="" src="../Images/LL_ArrowHead.jpg" /> button at the left side of the card&rsquo;s label allows for the unveiling of the card as displayed in Fig 3.</p>
+<p><div align="center"> <img alt="Explore Sample 1" src="../Images/LL_Enty-Type-Selection-1.jpg" /> Fig. 4.2:  The card view for data selection </div>
+<br></p>
+<p>Describing the type of an entity can be done using the <span class="inline">Description</span> text box for each entity type. To provide the location of the data, the <span class="inline">GraphQL Endpoint</span> text box can be use to fill in the URL of any GraphQL end point. Once the endpoint is given and loaded, a dataset can be selected from the list of datasets available at the provided endpoint. The selection of a dataset will prompt a new dropdown text box as <span class="inline">Entity type</span>, providing the user with the facility to select the entity type of interest. After loading the provided URL of the default Golden Agent&rsquo;s endpoint, Fig. 4.3 shows the list of datasets available at that location to choose from.</p>
+<p><div align="center"> <img alt="The Lenticular Lens Research window" src="../Images/LL_Enty-Type-Selection.jpg" /> Fig. 4.3:  List of datasets available at the default Golden Agent&rsquo;s GraphQL endpoint. </div> <br></p>
+<h3 id="22-data-restrictions">2.2 Data Restrictions<a class="headerlink" href="#22-data-restrictions" title="Permanent link">&para;</a></h3>
+<p>If need be to filter entities based on specific conditions, this is also possible with the <span class="inline">Filter</span> card shown in Fig. 4.6. <div align="center"> <img alt="Entities Restrictions" src="../Images/LL_Enty-Type-Selection-4-Filter.jpg" /> Fig. 4.6: The card for defining entity restrictions. </div> </p>
+<p>Once the <sub><img alt="" src="../Images/LL_PlusButton.jpg" /></sub> button is clicked, this card presents the user with a Filter-Logic box which enable the creation of a relatively complex and versatile entity restrictions. Fig. 4.7 for example show the list of available filtering options while Fig. 4.8 illustrates an example where the <span class="inline">has minimum date</span> and <span class="inline">has maximum date</span> filtering options are used to isolate entities of interest. These entities are now those between with a registration date between [1600, 1659] and having their respective literal name exempt of trailing dots (&hellip;).</p>
+<p><div align="center"> <img alt="List of restriction options" src="../Images/LL_Enty-Type-Selection-4-Filter-3.jpg" /> Fig. 4.7: List of restriction options. </div> <br></p>
+<p><div align="center"> <img alt="Entities Restrictions" src="../Images/LL_Enty-Type-Selection-4-Filter-2.jpg" /> Fig. 4.8: The card for defining entity restrictions. </div> <br></p>
+<h4 id="221-restriction-options">2.2.1 Restriction options<a class="headerlink" href="#221-restriction-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><span style="color:blue"> <strong>Equal to / Not Equal to.</strong> </span> This option allows one to select entities that have the value of a certain property equal (or not) to a certain value. For example, all entities with property <span class="inline">ex:workLocation</spam> equal (or not) to <span class="inline">Amsterdam</span>.<br></p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>Contains / Does not contain.</strong> </span> This option is used to make sure that the property-value of the entities of interest <strong>contains</strong> or <strong>does not contain</strong> a specific sequence of characters. For example, <code>%...%</code> could be used for (i) excluding people whose names contain trailing dots or (ii) to select those entities to apply a particular modification onto their names, like adding the surname of the father for a baptised child whose surname is given as <code>...</code>.</p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>Has property / Has no property.</strong> </span> This option is used to select entities based on the existence (or not) of a certain property. Let assume, for example, that the user is interested in entities that are parents. This option allows one to filter all entities for which the a value exists for the property <span class="inline">ex:parentOf</span> for example.  It also allows you to exclude all entities that are parents if the option <span class="inline">Has no property</span> is used instead.<br></p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>Has minimum / maximum value.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>number</strong> over which the restriction can be applied. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>Has minimum / maximum date.</strong> </span> This option allows for restricting entities to be <strong>within</strong> or <strong>outside</strong> a <strong>specified range</strong> given user&rsquo;s specified property-values of type <strong>date</strong> over which the restriction can be applied. Within this option, a date format can be specified. The default format is <code>YYYY-MM-DD</code>. The values 10, 300 and 1990 for example will be considered as year while 10-1, 300-1 and 1990-1 will be considered as the first month of the respective year values. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>Has minimum / maximum appearances.</strong> </span> This option allows for restricting entities for which a given property value occurs <strong>within</strong> a <strong>specified range</strong>. For example, to avoid excessive number of possible matches, one can delimit that only entities whose name value occur less than 5 times in the dataset will be included. To delimit both upper and lower bounds, the user can combine minimum and maximum using the logical box AND.</p>
+</li>
+<li>
+<p><span style="color:blue"> <strong>In set.</strong> </span> This option allows the filtering of a collection of resources of interest based on a set of resources. These set of resources is not manually provided but can be obtained through a list of existing linksets or lenses. The example below provides a detailed understanding of this filtering approach. </p>
+</li>
+</ul>
+<details class="example" open="open"><summary>Example 1: <span style="color:blue">IN SET</span></summary><p>Two collections A and B to be matched via whatever method would create a se of 
+links labelled linkset-AB. However, we are only interested in a subset of 
+linkset-AB, such that it&rsquo;s resources (subject, object or both) are present in 
+another given set, namely an input-linkset I. For efficiency purposes, 
+linkset-AB does not need to be fully created to be filtered later on. This 
+implies that the collections A and/or B need to be filtered such that 
+A&rsquo; = A ∩ I and/or B&rsquo; = B ∩ I before executing the matching algorithm.
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c">######################################################</span><span class="w"></span>
+<span class="w">    </span><span class="c">#           Linksets as named graphs                 #</span><span class="w"></span>
+<span class="w">    </span><span class="c">######################################################</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">input-linkset</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Chiara</span><span class="w">  </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">      </span><span class="nn">C:</span><span class="nt">Latronico</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Al</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">      </span><span class="nn">C:</span><span class="nt">Al_Idrissou</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Al</span><span class="w">      </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">      </span><span class="nn">C:</span><span class="nt">Al_Koudous</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">linkset-AB</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Chiara</span><span class="w">  </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">     </span><span class="nn">B:</span><span class="nt">Chiara</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Kerim</span><span class="w">   </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">     </span><span class="nn">B:</span><span class="nt">Kerim</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="c">######################################################</span><span class="w"></span>
+<span class="w">    </span><span class="c">#               In Resource Set                      #</span><span class="w"></span>
+<span class="w">    </span><span class="c">######################################################</span><span class="w"></span>
+<span class="w">    </span><span class="c">### The set S of resources from input-linkset is:</span><span class="w"></span>
+<span class="w">    </span><span class="c">### S = {A:Chiara, A:Al, C:Latronico, C:Al_Idrissou, C:Al_Koudous}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">ex:</span><span class="nt">linkset-SubjectInSet</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nn">A:</span><span class="nt">Chiara</span><span class="w">    </span><span class="nn">owl:</span><span class="nt">sameAs</span><span class="w">  </span><span class="nn">B:</span><span class="nt">Chiara</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div></p>
+</details>
+<p><br></p>
+<h3 id="23-data-exploration">2.3 Data Exploration<a class="headerlink" href="#23-data-exploration" title="Permanent link">&para;</a></h3>
+<p>At this point, successfully providing the required information (<span class="inline">Dataset</span> and <span class="inline">Entity-Type</span>) triggers the appearance of the <span class="inline">Explore Sample</span> button at the right side of the card&rsquo;s label (<span class="inline">Entity-type selection 1</span>) as displayed in Fig. 4.4. As illustrated in Fig. 4.5, with this button, users are now able to explore information of their choice about the entities of interest by selecting properties describing them. Keep in mind that this feature is only intended as exploration alternative to make sure of the choices (dataset, entity-type and restrictions) made.</p>
+<p><div align="center"> <img alt="Explore Sample 1" src="../Images/LL_Enty-Type-Selection-2.jpg" /> Fig. 4.4: The <span class="inline">Explore sample</span> button shows only after the entity type is selected. </div> <br></p>
+<p><div align="center"> <img alt="Explore Sample 1" src="../Images/LL_Enty-Type-Selection-3.jpg" /> Fig. 4.5:  Exploring the description of entities of choice, stemmed from the dataset of interest. </div> <br></p>
+<h2 id="3-matching-in-practice">3. Matching in Practice<a class="headerlink" href="#3-matching-in-practice" title="Permanent link">&para;</a></h2>
+<p>Now that we have gone through available matching methods and how to combine them in the <strong>Lenticular Lens</strong>, we show their application in some case-studies aligning resources stemmed from various datasources of one&rsquo;s choice.
+We also provide example on the rdf export of the resulting linksets with metadata. For this purpose we choose as syntax the turtle format and RDFstar reification.</p>
+<h3 id="31-simple-methods">3.1 Simple Methods<a class="headerlink" href="#31-simple-methods" title="Permanent link">&para;</a></h3>
+<p>This case-study section aims to showcase <strong>matching problems involving a SINGLE matching method</strong> (Embedded, Exact, Intermediate, Levenshtein Distance, Soundex Distance, Gerrit Bloothooft, Word Intersection, List Intersection, Numbers and TeAM) run over one or multiple datasets.</p>
+<p>We call them <strong>Simple Methods</strong> as opposed to <strong>Complex Methods</strong> illustrated in the sequel. Keep in mind that the terms <strong>Simple</strong> and <strong>Complex</strong> refer to the use of single or combined methods and not to the algorithm complexity of the underlying the method(s).</p>
+<h4 id="case-1-grid">Case-1: Grid<a class="headerlink" href="#case-1-grid" title="Permanent link">&para;</a></h4>
+<p>In this case study, displayed in Fig 4.10, the goal is to find out whether there exist duplicates Education Instances within the Grid&rsquo;s dataset. The dataset is composed of nine types of institutions including 27715 <strong>Companies</strong>, 19353 <strong>Educations</strong>, 12547 <strong>Nonprofit</strong> institutes, 12465  <strong>Healthcare</strong> institutes, 8499 <strong>Facility</strong> institutes, 5762 <strong>Government</strong> institutes, 2724 <strong>Archive</strong> institutes and 7823 institutes with no type specified. 
+Although the dataset is of multiple types of entities, the case-study here aims only to deduplicate instances of type <strong>Education</strong>. This is depicted in Fig 4.10 where the <span class="inline">Sources</span> and <span class="inline">Targets</span> cards are <span class="inline">GRID[Education]</span> showing that the entity type <span class="inline">Education</span> has been selected within the <span class="inline">GRID</span> dataset.</p>
+<details class="example" open="open"><summary><strong>Case-1: <span style="color:blue">Linkset Specifications</span></strong></summary><p><div align="center"><img alt="Grid's Education" src="../Images/LL_Case_1_GRID.jpg" />  Fig 4.10: An example showing how to deduplicate a dataset using edit distance with a user-defined threshold of 0.9. </div> </p>
+</details>
+<p>Also in the <span class="inline">Matching Methods</span> card, it can be seen that on both sides (source and target) two properties are selected for checking whether duplicates exist. This check relies on whether there exist entities that are documented within the GRID dataset with similar names using <span class="inline">rdfs_label</span> and <span class="inline">skos_prefLabel</span>.
+As the similarity score is measured in the interval 0 (not similar) to 1 (exactly similar), the threshold defined as 0.9 ensures that only paired entities with a high similarity (0.9 or above) are accepted.</p>
+<p>The same card shows the selected algorithm as <span class="inline">Levenshtein Distance</span>, which is run over the selected predicates generating 1,692 distinct links as shown in the statistics card (on the top). The latter card also provides statistics on:</p>
+<ul>
+<li>
+<p>The <span class="inline">number of entities</span> at the <span class="inline">Source</span> and <span class="inline">Target</span>. In this particular case, over 19K educational institutes at both source and target as they are the same dataset. Such information provides hints on the maximum number of links to expect in the worst case scenario  as well as an idea on how long the running algorithm could take.</p>
+</li>
+<li>
+<p>The <span class="inline">number of entities matched</span> at the <span class="inline">subject</span> and <span class="inline">object</span> positions.</p>
+</li>
+<li>
+<p>The <span class="inline">number of clusters</span> derived from the links found. Here, this provides a potentially better picture on the number of real entities, as co-referent are grouped together in clusters of various sizes.</p>
+</li>
+<li>
+<p>The <span class="inline">Runtime durations</span> informing on the elapsed time for (1) finding links and for (2) clustering them. </p>
+</li>
+</ul>
+<p>In this Image 1, we deliberately choose two properties at both the <span class="inline">Source</span> and <span class="inline">Target</span> datasets for the deduplication. Choosing for more than one property either for the <span class="inline">Source</span> or <span class="inline">Target</span> triggers a combination of pairwise property-value matching joined with the logic operator <strong>OR</strong>. For example choosing properties x and y at the source while choosing only z at the target triggers the following pairwise combinations: (<span class="inline">x AND z</span>) <strong>OR</strong> (<span class="inline">y AND z</span>). </p>
+<p>In the current use-case, choosing for example <span class="inline">rdfs_label</span> and <span class="inline">skos_prefLabel</span> at both <span class="inline">Source</span> AND <span class="inline">Target</span> generates the following combination: <span class="inline">rdfs_label AND rdfs_label</span> <strong>OR</strong> <span class="inline">rdfs_label AND skos_prefLabel</span> <strong>OR</strong> <span class="inline">skos_prefLabel AND skos_prefLabel</span>. 
+This explicit combination is implemented as an alternative complex method in the next section, where three executions of the `Levenshtein Distance</span> algorithm is required, instead of one. </p>
+<details class="example" open="open"><summary><strong>Case-1: <span style="color:blue">RDF Results.</span></strong></summary><p><!--#### Case-1: RDF Results-->
+This section provides the complete metadata of the resulting Linkset for the specification above in Example 4.15, plus a sample of 9 links due to space limitation.</p>
+<p>From this metadata, a number of general statistical information on the linkset can be obtained, such as the number of distinct <span class="inline">triples</span>, <span class="inline">entities</span> or <span class="inline">clusters</span>, the number of links <span class="inline">accepted</span> or <span class="inline">rejected</span> and more.</p>
+<p>The metadata also presents a detailed description on the methods used to generate the links. For example, for each algorithm used, a <span class="inline">uri</span> and <span class="inline">description</span> is provided. This algorithm can be used in one or more methods, provided the link acceptance <span class="inline">threshold</span>, the <span class="inline">vrange</span> of the similarity score, the <span class="inline">datasets</span>, <span class="inline">data-types</span> and <span class="inline">predicates</span> uris used for link findings.</p>
+<p>Furthermore, a specific annotation is provided in an RDFstar format for each generated link. In this example, we have the <span class="inline">strength</span> of the link and whether the link has been validated (<span class="inline">accepted</span>, <span class="inline">rejected</span> or <span class="inline">not_validated</span> ). <br></p>
+<details class="example"><summary>Case-1: <span style="color:blue"> Turtle file sample</span></summary><div class="highlight"><pre><span></span><code><span class="c">### PREDEFINED SHARED NAMESPACES ###    </span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">void:</span><span class="w"> </span><span class="nv">&lt;http://rdfs.org/ns/void#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">               </span><span class="nn">format:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/formats/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">pav:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/ontology/similarity/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                   </span><span class="nn">cc:</span><span class="w"> </span><span class="nv">&lt;http://creativecommons.org/ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">### PREDEFINED SPECIFIC NAMESPACES ###</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                   </span><span class="nn">ll:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">ll_algo:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/matching-method/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">               </span><span class="nn">ll_val:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/validation/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">linkset:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/resource/linkset/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">dataset:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">### AUTOMATED NAMESPACES ###</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">        </span><span class="nn">institutes_S1:</span><span class="w"> </span><span class="nv">&lt;http://www.grid.ac/institutes/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+
+<span class="c">###########################################</span><span class="w"></span>
+<span class="c">#            GENERIC METADATA             #</span><span class="w"></span>
+<span class="c">###########################################</span><span class="w"></span>
+
+
+<span class="nn">linkset:</span><span class="nt">Grid</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">a</span><span class="w">                                        </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">cc:</span><span class="nt">attributionName</span><span class="w">                       </span><span class="s">&quot;LenticularLens&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">feature</span><span class="w">                             </span><span class="nn">format:</span><span class="nt">Turtle</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">cc:</span><span class="nt">license</span><span class="w">                               </span><span class="nv">&lt;http://purl.org/NET/rdflicense/W3C1.0&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-logic-formulation</span><span class="w">                 </span><span class="nv">&lt;http://data.goldenagents.org/resource/PHbb54a8dab0d2954&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">void:</span><span class="nt">linkPredicate</span><span class="w">                       </span><span class="nn">skos:</span><span class="nt">exactMatch</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">subjectsTarget</span><span class="w">                      </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/Grid&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">objectsTarget</span><span class="w">                       </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/Grid&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">                      </span><span class="s">&quot;Deduplication of entities of type Education in the GRID dataset&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">                             </span><span class="mi">1692</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">entities</span><span class="w">                            </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">distinctSubjects</span><span class="w">                    </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">distinctObjects</span><span class="w">                     </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-clusters</span><span class="w">                          </span><span class="mi">619</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-validations</span><span class="w">                   </span><span class="mi">18</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-accepted</span><span class="w">                      </span><span class="mi">3</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-rejected</span><span class="w">                      </span><span class="mi">6</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-remaining</span><span class="w">                     </span><span class="mi">1683</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+
+<span class="w">               </span><span class="c">#############################################             </span><span class="w"></span>
+<span class="w">               </span><span class="c">#            LOGIC FORMULA PARTS            #</span><span class="w"></span>
+<span class="w">               </span><span class="c">#############################################              </span><span class="w"></span>
+
+
+<span class="nv">&lt;http://data.goldenagents.org/resource/PHbb54a8dab0d2954&gt;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">a</span><span class="w">                                       </span><span class="nn">ll:</span><span class="nt">LogicFormulation</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-method</span><span class="w">                           </span><span class="nv">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-formula-description</span><span class="w">              </span><span class="s">&quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt;</span>
+<span class="s">    &quot;&quot;&quot; .</span>
+
+
+<span class="s">               #############################################               </span>
+<span class="s">               #            METHOD SIGNATURES              #</span>
+<span class="s">               #############################################               </span>
+
+
+<span class="s">### ll_algo:Normalised-EditDistance ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H30d57e26e41bb04&gt;</span>
+
+<span class="s">    a                                       ll:MatchingMethod ;</span>
+<span class="s">    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;</span>
+<span class="s">    ll:has-threshold                        0.9 ;</span>
+<span class="s">    ll:has-threshold-range                  &quot;]0, 1]&quot; ;</span>
+<span class="s">    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;</span>
+
+<span class="s">    ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;</span>
+<span class="s">    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;</span>
+
+<span class="s">    ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;</span>
+<span class="s">    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .</span>
+
+
+<span class="s">               #############################################               </span>
+<span class="s">               #            METHOD DESCRIPTIONS            #</span>
+<span class="s">               #############################################               </span>
+
+
+<span class="s">ll_algo:Normalised-EditDistance </span>
+<span class="s">    a                                       ll:MatchingAlgorithm ;</span>
+<span class="s">    dcterms:description                      &quot;&quot;&quot;</span>
+<span class="s">        This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective </span>
+<span class="s">        user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. </span>
+<span class="s">        Edit distance is a way of quantifying how ​dissimilar two strings (e.g., words) are to one another by </span>
+<span class="s">        counting the minimum number of operations ​ε ​(​removal, insertion, or substitution of a character in the </span>
+<span class="s">        string)​ required to transform one string into the other. For example, ​the ​Levenshtein distance between </span>
+<span class="s">        kitten and sitting is ​ε ​= 3 as it requires a two substitutions (s for k and i for e) and one insertion  </span>
+<span class="s">        of g at the end [https://en.wikipedia.org/wiki/Edit_distance]​.</span>
+<span class="s">    &quot;&quot;&quot;@en .</span>
+
+
+<span class="s">               #############################################               </span>
+<span class="s">               #       DATASET AND ENTITY SELECTIONS       #</span>
+<span class="s">               #############################################               </span>
+
+
+<span class="s">### ENTITY SELECTION [SOURCE] N0: 1 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; </span>
+<span class="s">    a                                       ll:EntitySelection ;</span>
+<span class="s">    ll:has-dataset                          &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;</span>
+<span class="s">    ll:has-entity-type                      &lt;http://www.grid.ac/ontology/Education&gt; .</span>
+
+
+<span class="s">               #############################################               </span>
+<span class="s">               #           PREDICATE SELECTIONS            #</span>
+<span class="s">               #############################################               </span>
+
+
+<span class="s">### PREDICATE SELECTED [SOURCE]  N0: 1 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; </span>
+<span class="s">    a                                       ll:PropertySelection ;</span>
+<span class="s">    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .</span>
+
+
+<span class="s">### PREDICATE SELECTED [SOURCE]  N0: 2 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; </span>
+<span class="s">    a                                       ll:PropertySelection ;</span>
+<span class="s">    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-predicate                        &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .</span>
+
+
+<span class="s">###########################################</span>
+<span class="s">#            ANNOTATED LINKSET            #</span>
+<span class="s">###########################################</span>
+
+<span class="s">linkset:Grid</span>
+<span class="s">{</span>
+<span class="s">    &lt;&lt;institutes_S1:grid.1017.7    skos:exactMatch    institutes_S1:grid.501980.5&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; :</span>
+<span class="s">        ll:has-matching-strength            0.933 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.1019.9    skos:exactMatch    institutes_S1:grid.449929.b&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;accepted&quot; ;</span>
+<span class="s">        ll:has-matching-strength            1 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.1020.3    skos:exactMatch    institutes_S1:grid.266826.e&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;not_validated&quot; ;</span>
+<span class="s">        ll:has-matching-strength            1 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.10347.31&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.950 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.10595.38&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.900 .</span>
+
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.4462.4&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.900 .</span>
+
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.10595.38&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.900 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.441173.4&gt;&gt;</span>
+<span class="s">        ll_val:has-validation               &quot;rejected&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.900 .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.4462.4&gt;&gt;</span>
+<span class="s">        lll_val:has-validation              &quot;accepted&quot; ;</span>
+<span class="s">        ll:has-matching-strength            0.900 .</span>
+
+<span class="s">    • • •</span>
+<span class="s">}</span>
+</code></pre></div>
+
+</details>
+</details>
+<p><br></p>
+<h3 id="32-complex-methods">3.2 Complex Methods<a class="headerlink" href="#32-complex-methods" title="Permanent link">&para;</a></h3>
+<h4 id="case-1-alternative">Case-1: Alternative<a class="headerlink" href="#case-1-alternative" title="Permanent link">&para;</a></h4>
+<p>In Fig 4.11 is displayed an alternative where  </p>
+<details class="example" open="open"><summary><strong>Case-1: <span style="color:blue">Linkset Specifications</span></strong></summary><p><div align="center"><img alt="Grid's Education" src="../Images/LL_Case_3_GRID.jpg" />  Fig 4.11: An example showing how to deduplicate a dataset using an edit distance with threshold 0.9. </div></p>
+</details>
+<details class="example" open="open"><summary><strong>Case-1: <span style="color:blue">RDF Results</span></strong></summary><p><!--#### Case-1: RDF Results--> </p>
+<details class="example"><summary>Case-1: <strong><span style="color:blue">Turtle file sample</span></strong></summary><div class="highlight"><pre><span></span><code><span class="c">###########################################</span><span class="w"></span>
+<span class="c">#               NAMESPACES               #</span><span class="w"></span>
+<span class="c">###########################################</span><span class="w"></span>
+
+<span class="c">### PREDEFINED SHARED NAMESPACES    </span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">rdf:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">void:</span><span class="w"> </span><span class="nv">&lt;http://rdfs.org/ns/void#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">               </span><span class="nn">format:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/ns/formats/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                  </span><span class="nn">pav:</span><span class="w"> </span><span class="nv">&lt;http://purl.org/ontology/similarity/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                   </span><span class="nn">cc:</span><span class="w"> </span><span class="nv">&lt;http://creativecommons.org/ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">### PREDEFINED SPECIFIC NAMESPACES</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                   </span><span class="nn">ll:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">ll_algo:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/matching-method/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">               </span><span class="nn">ll_val:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/ontology/validation/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">linkset:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/resource/linkset/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">              </span><span class="nn">dataset:</span><span class="w"> </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="c">### AUTOMATED NAMESPACES</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">                 </span><span class="nn">skos:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2004/02/skos/core#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="k">@prefix</span><span class="w">        </span><span class="nn">institutes_S1:</span><span class="w"> </span><span class="nv">&lt;http://www.grid.ac/institutes/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+
+<span class="c">##############################################################################################################</span><span class="w"></span>
+<span class="c">#                                              GENERIC METADATA                                              #</span><span class="w"></span>
+<span class="c">##############################################################################################################</span><span class="w"></span>
+
+
+<span class="nn">linkset:</span><span class="nt">Grid_2</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">a</span><span class="w">                                        </span><span class="nn">void:</span><span class="nt">Linkset</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">cc:</span><span class="nt">attributionName</span><span class="w">                       </span><span class="s">&quot;LenticularLens&quot;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">feature</span><span class="w">                             </span><span class="nn">format:</span><span class="nt">Turtle</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">cc:</span><span class="nt">license</span><span class="w">                               </span><span class="nv">&lt;http://purl.org/NET/rdflicense/W3C1.0&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-logic-formulation</span><span class="w">                 </span><span class="nv">&lt;http://data.goldenagents.org/resource/PH1ec0ee6f368dd62&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">void:</span><span class="nt">linkPredicate</span><span class="w">                       </span><span class="nn">skos:</span><span class="nt">exactMatch</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">subjectsTarget</span><span class="w">                      </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/Grid&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">objectsTarget</span><span class="w">                       </span><span class="nv">&lt;http://data.goldenagents.org/resource/dataset/Grid&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">dcterms:</span><span class="nt">description</span><span class="w">                      </span><span class="s">&quot;Deduplication of entities of type Education in the GRID dataset&quot;</span><span class="o">@</span><span class="ge">en</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">void:</span><span class="nt">triples</span><span class="w">                             </span><span class="mi">1692</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">entities</span><span class="w">                            </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">distinctSubjects</span><span class="w">                    </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">void:</span><span class="nt">distinctObjects</span><span class="w">                     </span><span class="mi">1737</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-clusters</span><span class="w">                          </span><span class="mi">619</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-validations</span><span class="w">                   </span><span class="mi">18</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-accepted</span><span class="w">                      </span><span class="mi">3</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-rejected</span><span class="w">                      </span><span class="mi">6</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="nn">ll_val:</span><span class="nt">has-remaining</span><span class="w">                     </span><span class="mi">1683</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+
+<span class="w">               </span><span class="c">################################################################################               </span><span class="w"></span>
+<span class="w">               </span><span class="c">#                             LOGIC FORMULA PARTS                              #</span><span class="w"></span>
+<span class="w">               </span><span class="c">################################################################################               </span><span class="w"></span>
+
+
+<span class="nv">&lt;http://data.goldenagents.org/resource/PH1ec0ee6f368dd62&gt;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">a</span><span class="w">                                       </span><span class="nn">ll:</span><span class="nt">LogicFormulation</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-method</span><span class="w">                           </span><span class="nv">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-method</span><span class="w">                           </span><span class="nv">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-method</span><span class="w">                           </span><span class="nv">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt;</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nn">ll:</span><span class="nt">has-formula-description</span><span class="w">              </span><span class="s">&quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt;</span>
+<span class="s">     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt;</span>
+<span class="s">     and (⊤min) &lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt;</span>
+<span class="s">    &quot;&quot;&quot; .</span>
+
+
+<span class="s">               ################################################################################               </span>
+<span class="s">               #                              METHOD SIGNATURES                               #</span>
+<span class="s">               ################################################################################               </span>
+
+
+<span class="s">### ll_algo:Normalised-EditDistance</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H779a0ad1b5e5f93&gt;</span>
+
+<span class="s">    a                                       ll:MatchingMethod ;</span>
+<span class="s">    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;</span>
+<span class="s">    ll:has-threshold                        0.9 ;</span>
+<span class="s">    ll:has-threshold-range                  &quot;]0, 1]&quot; ;</span>
+<span class="s">    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;</span>
+
+<span class="s">    ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;</span>
+
+<span class="s">    ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; .</span>
+
+
+<span class="s">### ll_algo:Normalised-EditDistance</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H3de4966a0b8aa01&gt;</span>
+
+<span class="s">    a                                       ll:MatchingMethod ;</span>
+<span class="s">    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;</span>
+<span class="s">    ll:has-threshold                        0.9 ;</span>
+<span class="s">    ll:has-threshold-range                  &quot;]0, 1]&quot; ;</span>
+<span class="s">    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;</span>
+
+<span class="s">    ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; ;</span>
+
+<span class="s">    ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .</span>
+
+
+<span class="s">### ll_algo:Normalised-EditDistance</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/Normalised-EditDistance-H11cbb0cc77c44a9&gt;</span>
+
+<span class="s">    a                                       ll:MatchingMethod ;</span>
+<span class="s">    ll:has-algorithm                        ll_algo:Normalised-EditDistance ;</span>
+<span class="s">    ll:has-threshold                        0.9 ;</span>
+<span class="s">    ll:has-threshold-range                  &quot;]0, 1]&quot; ;</span>
+<span class="s">    ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;</span>
+
+<span class="s">    ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; ;</span>
+
+<span class="s">    ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; .</span>
+
+
+<span class="s">               ################################################################################               </span>
+<span class="s">               #                             METHOD DESCRIPTIONS                              #</span>
+<span class="s">               ################################################################################               </span>
+
+
+<span class="s">ll_algo:Normalised-EditDistance </span>
+<span class="s">    a                                       ll:MatchingAlgorithm ;</span>
+<span class="s">    dcterms:description                      &quot;&quot;&quot;</span>
+<span class="s">        This ​method is used to align ​​source a​nd ​​target’s IRIs whenever the similarity score of their respective </span>
+<span class="s">        user selected property values are ​​above a given ​Levenshtein (edit) Distance threshold​. </span>
+<span class="s">        Edit distance is a way of quantifying how ​dissimilar two strings (e.g., words) are to one another by </span>
+<span class="s">        counting the minimum number of operations ​ε ​(​removal, insertion, or substitution of a character in the </span>
+<span class="s">        string)​ required to transform one string into the other. For example, ​the ​Levenshtein distance between </span>
+<span class="s">        kitten and sitting is ​ε ​= 3 as it requires a two substitutions (s for k and i for e) and one insertion  </span>
+<span class="s">        of g at the end [https://en.wikipedia.org/wiki/Edit_distance]​.</span>
+<span class="s">    &quot;&quot;&quot;@en .</span>
+
+
+<span class="s">               ################################################################################               </span>
+<span class="s">               #                        DATASET AND ENTITY SELECTIONS                         #</span>
+<span class="s">               ################################################################################               </span>
+
+
+<span class="s">### ENTITY SELECTION [SOURCE] N0: 1 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; </span>
+<span class="s">    a                                       ll:EntitySelection ;</span>
+<span class="s">    ll:has-dataset                          &lt;http://data.goldenagents.org/resource/dataset/Grid&gt; ;</span>
+<span class="s">    ll:has-entity-type                      &lt;http://www.grid.ac/ontology/Education&gt; .</span>
+
+
+<span class="s">               ################################################################################               </span>
+<span class="s">               #                             PREDICATE SELECTIONS                             #</span>
+<span class="s">               ################################################################################               </span>
+
+
+<span class="s">### PREDICATE SELECTED [SOURCE]  N0: 1 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/PredicateSelection-PHab504e102405ab0&gt; </span>
+<span class="s">    a                                       ll:PropertySelection ;</span>
+<span class="s">    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-predicate                        &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; .</span>
+
+
+<span class="s">### PREDICATE SELECTED [TARGET]  N0: 2 ###</span>
+<span class="s">&lt;http://data.goldenagents.org/resource/PredicateSelection-PH0d712649af643f3&gt; </span>
+<span class="s">    a                                       ll:PropertySelection ;</span>
+<span class="s">    ll:has-entity-selection                 &lt;http://data.goldenagents.org/resource/EntitySelection-PH61bd543e4ce34c2&gt; ;</span>
+<span class="s">    ll:has-predicate                        &lt;http://www.w3.org/2004/02/skos/core#prefLabel&gt; .</span>
+
+
+<span class="s">##############################################################################################################</span>
+<span class="s">#                                             ANNOTATED LINKSET                                              #</span>
+<span class="s">##############################################################################################################</span>
+
+
+
+<span class="s">linkset:Grid_2</span>
+<span class="s">{</span>
+<span class="s">    &lt;&lt;institutes_S1:grid.1017.7    skos:exactMatch    institutes_S1:grid.501980.5&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.1019.9    skos:exactMatch    institutes_S1:grid.449929.b&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;accepted&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.1020.3    skos:exactMatch    institutes_S1:grid.266826.e&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;accepted&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.10347.31&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.10595.38&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10215.37    skos:exactMatch    institutes_S1:grid.4462.4&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.10595.38&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.441173.4&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;rejected&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10347.31    skos:exactMatch    institutes_S1:grid.4462.4&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;accepted&quot; .</span>
+
+<span class="s">    &lt;&lt;institutes_S1:grid.10373.36    skos:exactMatch    institutes_S1:grid.266769.a&gt;&gt;</span>
+<span class="s">        ll_val:has-validation                    &quot;not_validated&quot; .</span>
+
+<span class="s">• • •</span>
+<span class="s">}</span>
+</code></pre></div>
+
+</details>
+</details>
+<p><BR></p>
+<h4 id="case-2-getty">Case-2: Getty<a class="headerlink" href="#case-2-getty" title="Permanent link">&para;</a></h4>
+<p>In Fig 4.12 is displayed an alternative where </p>
+<details class="example" open="open"><summary><strong>Case-2: <span style="color:blue">Linkset Specifications.</span></strong></summary><p><div align="center"><br><img alt="Getty case" src="../Images/LL_Case_1_Getty.jpg" />  Fig 4.12: An example showing how to deduplicate a dataset using an edit distance with threshold 0.9. </div></p>
+</details>
+<details class="example" open="open"><summary><strong>Case-2: <span style="color:blue">RDF Results.</span></strong></summary><p><!--#### Case-2: RDF Results--> </p>
+<details class="example"><summary>Case-2: <strong><span style="color:blue">Turtle file sample.</span></strong></summary><div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<h6></h6>
+<h1 id="namespaces">NAMESPACES<a class="headerlink" href="#namespaces" title="Permanent link">&para;</a></h1>
+<h6></h6>
+<h3 id="predefined-shared-namespaces">PREDEFINED SHARED NAMESPACES<a class="headerlink" href="#predefined-shared-namespaces" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>@prefix                  rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix                 rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix                  owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix                 void: &lt;http://rdfs.org/ns/void#&gt; .
+@prefix              dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix               format: &lt;http://www.w3.org/ns/formats/&gt; .
+@prefix                  pav: &lt;http://purl.org/ontology/similarity/&gt; .
+@prefix                   cc: &lt;http://creativecommons.org/ns#&gt; .
+</code></pre></div>
+
+<h3 id="predefined-specific-namespaces">PREDEFINED SPECIFIC NAMESPACES<a class="headerlink" href="#predefined-specific-namespaces" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>@prefix                   ll: &lt;http://data.goldenagents.org/ontology/&gt; .
+@prefix              ll_algo: &lt;http://data.goldenagents.org/ontology/matching-method/&gt; .
+@prefix               ll_val: &lt;http://data.goldenagents.org/ontology/validation/&gt; .
+@prefix              linkset: &lt;http://data.goldenagents.org/resource/linkset/&gt; .
+@prefix              dataset: &lt;http://data.goldenagents.org/resource/dataset/&gt; .
+</code></pre></div>
+
+<h3 id="automated-namespaces">AUTOMATED NAMESPACES<a class="headerlink" href="#automated-namespaces" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>@prefix                 skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix        institutes_S1: &lt;http://www.grid.ac/institutes/&gt; .
+@prefix                 time: &lt;http://www.w3.org/2006/time#&gt; .
+@prefix                  owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix            Person_S1: &lt;http://goldenagents.org/uva/SAA/Person/&gt; .
+@prefix        PersonName_T1: &lt;https://data.goldenagents.org/datasets/SAA/PersonName/&gt; .
+</code></pre></div>
+
+<h6></h6>
+<h1 id="generic-metadata">GENERIC METADATA<a class="headerlink" href="#generic-metadata" title="Permanent link">&para;</a></h1>
+<h6></h6>
+<p>linkset:Getty</p>
+<div class="highlight"><pre><span></span><code>a                                        void:Linkset ;
+cc:attributionName                       &quot;LenticularLens&quot; ;
+void:feature                             format:Turtle ;
+cc:license                               &lt;http://purl.org/NET/rdflicense/W3C1.0&gt; ; 
+ll:has-logic-formulation                 &lt;http://data.goldenagents.org/resource/PH6d47b550d1695d5&gt; ;
+
+void:linkPredicate                       owl:sameAs ; 
+void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604&gt; ;
+void:subjectsTarget                      &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604&gt; ; 
+void:objectsTarget                       &lt;https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202&gt; ;
+dcterms:description                      &quot;Deduplication of entities of type Education in the GRID dataset&quot;@en ;
+
+void:triples                             147 ;
+void:entities                            261 ;
+void:distinctSubjects                    135 ;
+void:distinctObjects                     126 ;
+
+ll:has-clusters                          117 ;    
+ll_val:has-remaining                     147 .
+
+           ################################################################################               
+           #                             LOGIC FORMULA PARTS                              #
+           ################################################################################
+</code></pre></div>
+
+<p><a href="http://data.goldenagents.org/resource/PH6d47b550d1695d5">http://data.goldenagents.org/resource/PH6d47b550d1695d5</a></p>
+<div class="highlight"><pre><span></span><code>a                                       ll:LogicFormulation ;
+ll:has-method                           &lt;http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f&gt; ;
+ll:has-method                           &lt;http://data.goldenagents.org/resource/Exact-H918a02351d48ca9&gt; ;
+ll:has-method                           &lt;http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9&gt; ;
+
+ll:has-formula-description              &quot;&quot;&quot;&lt;http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f&gt;
+ and (⊤min) &lt;http://data.goldenagents.org/resource/Exact-H918a02351d48ca9&gt;
+ and (⊤min) &lt;http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9&gt;
+&quot;&quot;&quot; .
+
+           ################################################################################               
+           #                              METHOD SIGNATURES                               #
+           ################################################################################
+</code></pre></div>
+
+<h3 id="ll_algonormalised-soundex">ll_algo:Normalised-Soundex<a class="headerlink" href="#ll_algonormalised-soundex" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f">http://data.goldenagents.org/resource/Normalised-Soundex-H4970fc2fe79ea5f</a></p>
+<div class="highlight"><pre><span></span><code>a                                       ll:MatchingMethod ;
+ll:has-algorithm                        ll_algo:Normalised-Soundex ;
+ll:has-threshold                        0.85 ;
+ll:has-threshold-range                  &quot;]0, 1]&quot; ;
+ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Greater-than-or-equal-to&gt; ;
+
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf&gt; ;
+
+ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d&gt; .
+</code></pre></div>
+
+<h3 id="ll_algoexact">ll_algo:Exact<a class="headerlink" href="#ll_algoexact" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/Exact-H918a02351d48ca9">http://data.goldenagents.org/resource/Exact-H918a02351d48ca9</a></p>
+<div class="highlight"><pre><span></span><code>a                                       ll:MatchingMethod ;
+ll:has-algorithm                        ll_algo:Exact ;
+ll:has-threshold                        1 ;
+ll:has-threshold-range                  &quot;1&quot; ;
+ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Equal&gt; ;
+
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH46d91d4f6e2209e&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PH0df0471cb5df515&gt; ;
+
+ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHe3cb3236c5b11b1&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHb2a681013fbb430&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH9f7bd41ea902bd0&gt; .
+</code></pre></div>
+
+<h3 id="ll_algotime-delta">ll_algo:Time-Delta<a class="headerlink" href="#ll_algotime-delta" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9">http://data.goldenagents.org/resource/Time-Delta-Hdcc5070996853e9</a></p>
+<div class="highlight"><pre><span></span><code>a                                       ll:MatchingMethod ;
+ll:has-algorithm                        ll_algo:Time-Delta ;
+ll:has-threshold                        0 ;
+ll:has-threshold-range                  &quot;ℕ&quot; ;
+time:unitType                           time:unitYear ;
+ll:has-threshold-acceptance-operator    &lt;http://data.goldenagents.org/resource/Equal&gt; ;
+
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36&gt; ;
+ll:has-subj-entity-selection            &lt;http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHeb98e7f77b22fce&gt; ;
+ll:has-subj-predicate-selection         &lt;http://data.goldenagents.org/resource/PredicateSelection-PHf741a098569afb1&gt; ;
+
+ll:has-obj-entity-selection             &lt;http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHee886bb3d021a6a&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PH715d032180bd40c&gt; ;
+ll:has-obj-predicate-selection          &lt;http://data.goldenagents.org/resource/PredicateSelection-PHe349eb18e5ba638&gt; .
+
+           ################################################################################               
+           #                             METHOD DESCRIPTIONS                              #
+           ################################################################################
+</code></pre></div>
+
+<p>ll_algo:Normalised-Soundex 
+    a                                       ll:MatchingAlgorithm ;
+    dcterms:description                      &ldquo;&rdquo;&rdquo;
+        &ldquo;Soundex is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for ho-
+        mophones to be encoded to the same representation so that they can be matched despite minor differences in
+        spelling. The algorithm mainly encodes consonants; a vowel will not be encoded unless it is the first let-
+        ter” [<a href="https://en.wikipedia.org/wiki/Soundex">https://en.wikipedia.org/wiki/Soundex</a>]. 
+        In the Lenticular Lens, Soundex is used as a normaliser in the sense that an edit distance is run over the 
+        soundex code version of a name. For example, the in the table below, the normalisation of both Louijs Roc-
+        ourt and `Lowis Ricourt becomes L200 R263 leading to an edit distance of 0 and a relative strength of 1. 
+        However, computing the same names using directly an edit distance results in an edit distance of 3 and a 
+        relative matching strength of 0. 79.</p>
+<div class="highlight"><pre><span></span><code>    --------------
+    -- Example -- THE USE OF SOUNDEX CODE FOR STRING APPROXIMATION
+    --------------
+    The example below shows the implementation of Soundex Distance 
+    in the Lenticular Lens and how it compares with Edit Distance
+    over the original names (no soundex-based normalisation).
+
+    ------------------------------------------------------------------------------------------------------------------------------------------------------
+    Source                      Target                     E. Dist  Rel. distance  Source soundex       Target  soundex       Code E. Dist  Code Rel. Dist
+    ------------------------------------------------------------------------------------------------------------------------------------------------------
+    Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder          2           0.92  J216 C654 L360       J216 C654 L360                   0             1.0
+    Barent Teunis               Barent Teunisz gen. Drent       12           0.52  B653 T520            B653 T520 G500 D653             10            0.47
+    Louijs Rocourt              Louys Rocourt                    2           0.86  L200 R263            L200 R263                        0             1.0
+    Louijs Rocourt              Lowis Ricourt                    3           0.79  L200 R263            L200 R263                        0             1.0
+    Louys Rocourt               Lowis Ricourt                    3           0.77  L200 R263            L200 R263                        0             1.0
+    Cornelis Dircksz. Clapmus   Cornelis Clapmuts               10            0.6  C654 D620 C415       C654 C415                        5            0.64
+    Geertruydt van den Breemde  Geertruijd van den Bremde        4           0.85  G636 V500 D500 B653  G636 V500 D500 B653  
+&quot;&quot;&quot;@en .
+</code></pre></div>
+
+<p>ll_algo:Exact 
+    a                                       ll:MatchingAlgorithm ;
+    dcterms:description                      &ldquo;&rdquo;&rdquo;
+        Aligns source and target’s IRIs whenever their respective user selected property values are identical.&rdquo;&ldquo;&rdquo;@en .</p>
+<p>ll_algo:Time-Delta 
+    a                                       ll:MatchingAlgorithm ;
+    dcterms:description                      &ldquo;&rdquo;&rdquo;
+        10.1 Time Delta. This function allows for finding co-referent entities on the basis of a minimum time dif-
+        ference between the times reported by the source and the target entities. For example, if the value zero is 
+        assigned to the time difference parameter, then, for a matched to be found, the time of the target and the 
+        one of the source are to be the exact same times. While accounting for margins of error, one may consider a 
+        pair of entities to be co-referent if the real entities are born lambda days, months or years apart among 
+        other-things (similar name, place..).
+    &ldquo;&rdquo;&ldquo;@en .</p>
+<div class="highlight"><pre><span></span><code>           ################################################################################               
+           #                        DATASET AND ENTITY SELECTIONS                         #
+           ################################################################################
+</code></pre></div>
+
+<h3 id="entity-selection-source-n0-1">ENTITY SELECTION [SOURCE] N0: 1<a class="headerlink" href="#entity-selection-source-n0-1" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc">http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc</a> 
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          <a href="https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604">https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/frick_collection_montias_data_20200604</a> ;
+    ll:has-entity-type                      <a href="https://data.goldenagents.org/datasets/SAA/ontology/Person">https://data.goldenagents.org/datasets/SAA/ontology/Person</a> .</p>
+<h3 id="entity-selection-source-n0-2">ENTITY SELECTION [SOURCE] N0: 2<a class="headerlink" href="#entity-selection-source-n0-2" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36">http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36</a> 
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          <a href="https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604">https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/getty_provenance_index_montias_data_20200604</a> ;
+    ll:has-entity-type                      <a href="https://data.goldenagents.org/datasets/SAA/ontology/Person">https://data.goldenagents.org/datasets/SAA/ontology/Person</a> .</p>
+<h3 id="entity-selection-target-n0-3">ENTITY SELECTION [TARGET] N0: 3<a class="headerlink" href="#entity-selection-target-n0-3" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> 
+    a                                       ll:EntitySelection ;
+    ll:has-dataset                          <a href="https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202">https://data.goldenagents.org/datasets/ufab7d657a250e3461361c982ce9b38f3816e0c4b/index_op_notarieel_archief_enriched_20191202</a> ;
+    ll:has-entity-type                      <a href="https://w3id.org/pnv#PersonName">https://w3id.org/pnv#PersonName</a> .</p>
+<div class="highlight"><pre><span></span><code>           ################################################################################               
+           #                             PREDICATE SELECTIONS                             #
+           ################################################################################
+</code></pre></div>
+
+<h3 id="predicate-selected-source-n0-1">PREDICATE SELECTED [SOURCE]  N0: 1<a class="headerlink" href="#predicate-selected-source-n0-1" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4">http://data.goldenagents.org/resource/PredicateSelection-PH914a94c6f3c93b4</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc">http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc</a> ;
+    ll:has-predicate                        <a href="http://www.w3.org/2000/01/rdf-schema#label">http://www.w3.org/2000/01/rdf-schema#label</a> .</p>
+<h3 id="predicate-selected-source-n0-2">PREDICATE SELECTED [SOURCE]  N0: 2<a class="headerlink" href="#predicate-selected-source-n0-2" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf">http://data.goldenagents.org/resource/PredicateSelection-PH10aaeebb6832fdf</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36">http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36</a> ;
+    ll:has-predicate                        <a href="http://www.w3.org/2000/01/rdf-schema#label">http://www.w3.org/2000/01/rdf-schema#label</a> .</p>
+<h3 id="predicate-selected-target-n0-3">PREDICATE SELECTED [TARGET]  N0: 3<a class="headerlink" href="#predicate-selected-target-n0-3" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d">http://data.goldenagents.org/resource/PredicateSelection-PH7879419327d373d</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://www.w3.org/2000/01/rdf-schema#label">http://www.w3.org/2000/01/rdf-schema#label</a> .</p>
+<h3 id="predicate-selected-source-n0-4">PREDICATE SELECTED [SOURCE]  N0: 4<a class="headerlink" href="#predicate-selected-source-n0-4" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH46d91d4f6e2209e">http://data.goldenagents.org/resource/PredicateSelection-PH46d91d4f6e2209e</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36">http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8">http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8">http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Inventory">https://data.goldenagents.org/datasets/SAA/ontology/Inventory</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/documentedIn">https://data.goldenagents.org/datasets/SAA/ontology/documentedIn</a> ;
+    rdf:_4                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/InventoryBook">https://data.goldenagents.org/datasets/SAA/ontology/InventoryBook</a> ;
+    rdf:_5                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber">https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber</a> .</p>
+<h3 id="predicate-selected-source-n0-5">PREDICATE SELECTED [SOURCE]  N0: 5<a class="headerlink" href="#predicate-selected-source-n0-5" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH0df0471cb5df515">http://data.goldenagents.org/resource/PredicateSelection-PH0df0471cb5df515</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc">http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8">http://data.goldenagents.org/resource/PH1df7dbfdf1d1eb8</a> .</p>
+<h3 id="predicate-selected-target-n0-6">PREDICATE SELECTED [TARGET]  N0: 6<a class="headerlink" href="#predicate-selected-target-n0-6" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHe3cb3236c5b11b1">http://data.goldenagents.org/resource/PredicateSelection-PHe3cb3236c5b11b1</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH7334cc09b832a17">http://data.goldenagents.org/resource/PH7334cc09b832a17</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH7334cc09b832a17">http://data.goldenagents.org/resource/PH7334cc09b832a17</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden">https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber">https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber</a> .</p>
+<h3 id="predicate-selected-target-n0-7">PREDICATE SELECTED [TARGET]  N0: 7<a class="headerlink" href="#predicate-selected-target-n0-7" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHb2a681013fbb430">http://data.goldenagents.org/resource/PredicateSelection-PHb2a681013fbb430</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH00d91362d72928f">http://data.goldenagents.org/resource/PH00d91362d72928f</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH00d91362d72928f">http://data.goldenagents.org/resource/PH00d91362d72928f</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris">https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber">https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber</a> .</p>
+<h3 id="predicate-selected-target-n0-8">PREDICATE SELECTED [TARGET]  N0: 8<a class="headerlink" href="#predicate-selected-target-n0-8" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH9f7bd41ea902bd0">http://data.goldenagents.org/resource/PredicateSelection-PH9f7bd41ea902bd0</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH9f325d76d5fa623">http://data.goldenagents.org/resource/PH9f325d76d5fa623</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH9f325d76d5fa623">http://data.goldenagents.org/resource/PH9f325d76d5fa623</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding">https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber">https://data.goldenagents.org/datasets/SAA/ontology/inventoryNumber</a> .</p>
+<h3 id="predicate-selected-source-n0-9">PREDICATE SELECTED [SOURCE]  N0: 9<a class="headerlink" href="#predicate-selected-source-n0-9" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHeb98e7f77b22fce">http://data.goldenagents.org/resource/PredicateSelection-PHeb98e7f77b22fce</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36">http://data.goldenagents.org/resource/EntitySelection-PHb97c2bc9d29ba36</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH22c48ebe6b24223">http://data.goldenagents.org/resource/PH22c48ebe6b24223</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH22c48ebe6b24223">http://data.goldenagents.org/resource/PH22c48ebe6b24223</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Inventory">https://data.goldenagents.org/datasets/SAA/ontology/Inventory</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/registrationDate">https://data.goldenagents.org/datasets/SAA/ontology/registrationDate</a> .</p>
+<h3 id="predicate-selected-source-n0-10">PREDICATE SELECTED [SOURCE]  N0: 10<a class="headerlink" href="#predicate-selected-source-n0-10" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHf741a098569afb1">http://data.goldenagents.org/resource/PredicateSelection-PHf741a098569afb1</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc">http://data.goldenagents.org/resource/EntitySelection-PH4ba00e26b03e5dc</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH22c48ebe6b24223">http://data.goldenagents.org/resource/PH22c48ebe6b24223</a> .</p>
+<h3 id="predicate-selected-target-n0-11">PREDICATE SELECTED [TARGET]  N0: 11<a class="headerlink" href="#predicate-selected-target-n0-11" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHee886bb3d021a6a">http://data.goldenagents.org/resource/PredicateSelection-PHee886bb3d021a6a</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PHda68158d0b9f392">http://data.goldenagents.org/resource/PHda68158d0b9f392</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PHda68158d0b9f392">http://data.goldenagents.org/resource/PHda68158d0b9f392</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden">https://data.goldenagents.org/datasets/SAA/ontology/HuwelijkseVoorwaarden</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/registrationDate">https://data.goldenagents.org/datasets/SAA/ontology/registrationDate</a> .</p>
+<h3 id="predicate-selected-target-n0-12">PREDICATE SELECTED [TARGET]  N0: 12<a class="headerlink" href="#predicate-selected-target-n0-12" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PH715d032180bd40c">http://data.goldenagents.org/resource/PredicateSelection-PH715d032180bd40c</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH956023596f37d1b">http://data.goldenagents.org/resource/PH956023596f37d1b</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH956023596f37d1b">http://data.goldenagents.org/resource/PH956023596f37d1b</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris">https://data.goldenagents.org/datasets/SAA/ontology/Boedelinventaris</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/registrationDate">https://data.goldenagents.org/datasets/SAA/ontology/registrationDate</a> .</p>
+<h3 id="predicate-selected-target-n0-13">PREDICATE SELECTED [TARGET]  N0: 13<a class="headerlink" href="#predicate-selected-target-n0-13" title="Permanent link">&para;</a></h3>
+<p><a href="http://data.goldenagents.org/resource/PredicateSelection-PHe349eb18e5ba638">http://data.goldenagents.org/resource/PredicateSelection-PHe349eb18e5ba638</a> 
+    a                                       ll:PropertySelection ;
+    ll:has-entity-selection                 <a href="http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10">http://data.goldenagents.org/resource/EntitySelection-PH769c39438419b10</a> ;
+    ll:has-predicate                        <a href="http://data.goldenagents.org/resource/PH0ef342da86f3226">http://data.goldenagents.org/resource/PH0ef342da86f3226</a> .</p>
+<p><a href="http://data.goldenagents.org/resource/PH0ef342da86f3226">http://data.goldenagents.org/resource/PH0ef342da86f3226</a>
+    a                                       ll:SequenceSelection ;
+    rdf:_1                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/isInRecord">https://data.goldenagents.org/datasets/SAA/ontology/isInRecord</a> ;
+    rdf:_2                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding">https://data.goldenagents.org/datasets/SAA/ontology/Boedelscheiding</a> ;
+    rdf:_3                                  <a href="https://data.goldenagents.org/datasets/SAA/ontology/registrationDate">https://data.goldenagents.org/datasets/SAA/ontology/registrationDate</a> .</p>
+<h6></h6>
+<h1 id="annotated-linkset">ANNOTATED LINKSET<a class="headerlink" href="#annotated-linkset" title="Permanent link">&para;</a></h1>
+<h6></h6>
+<p>linkset:Getty
+{
+    &lt;<Person_S1:103owner01    owl:sameAs    PersonName_T1:9835737c-e770-2ebb-ff5b-fa61a3d022d0>&gt;
+    ll_val:has-validation                    &ldquo;not_validated&rdquo; .</p>
+<div class="highlight"><pre><span></span><code>• • •
+</code></pre></div>
+
+<p>}</p>
+<p>```</p>
+</details>
+</details>
+<p><br></p>
+<!----------------------------------------------------------->
+
+<!--
+
+<span style="color: purple">  **LINKSET.** </span>
+
+<span style="color: purple">  **LENS.** </span>-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                5. Understanding Matching Results
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                7. Lens - Link Manipulation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

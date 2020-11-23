@@ -1,0 +1,709 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>8. Visualising link Network - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visualisation-support-for-identity-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              8. Visualising link Network
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        8. Visualising link Network
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="8. Visualising link Network" class="md-nav__link md-nav__link--active">
+      8. Visualising link Network
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    1. Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-related-work" class="md-nav__link">
+    2. Related work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-a-visual-vocabulary-for-ilns" class="md-nav__link">
+    3. A Visual Vocabulary For ILNs
+  </a>
+  
+    <nav class="md-nav" aria-label="3. A Visual Vocabulary For ILNs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-compact-with-satellites" class="md-nav__link">
+    3.1 Compact with Satellites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-community-mode" class="md-nav__link">
+    3.2 Community mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-interlink" class="md-nav__link">
+    3.3 Interlink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-motivation" class="md-nav__link">
+    1. Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-related-work" class="md-nav__link">
+    2. Related work
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-a-visual-vocabulary-for-ilns" class="md-nav__link">
+    3. A Visual Vocabulary For ILNs
+  </a>
+  
+    <nav class="md-nav" aria-label="3. A Visual Vocabulary For ILNs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-compact-with-satellites" class="md-nav__link">
+    3.1 Compact with Satellites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-community-mode" class="md-nav__link">
+    3.2 Community mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-interlink" class="md-nav__link">
+    3.3 Interlink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="visualisation-support-for-identity-networks">Visualisation Support<sup><img alt="👓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f453.svg" title=":eyeglasses:" /></sup> for Identity Networks<a class="headerlink" href="#visualisation-support-for-identity-networks" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+</div>
+<p>For a single real world entity <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">e</span></span></span></span>, there exists in the digital world multiple representations. In the Semantic Web, these representations are called <em>resources</em> and are materialised using <em>Internationalised Resource Identifiers</em> also known as IRIs. To name a few examples, <em>Rembrandt Harmenszoon van Rijn</em> the painter is <span class="inline"><a href="https://www.wikidata.org/wiki/Q5598">https://www.wikidata.org/wiki/Q5598</a></span> in Wikidata, <span class="inline"><a href="http://vocab.getty.edu/ulan/500011051">http://vocab.getty.edu/ulan/500011051</a></span> in Getty, <span class="inline"><a href="https://viaf.org/viaf/64013650">https://viaf.org/viaf/64013650</a></span> in VIAF, and <span class="inline"><a href="http://dbpedia.org/resource/Rembrandt">http://dbpedia.org/resource/Rembrandt</a></span> in Dbpedia. 
+<!---->
+Like this, co-referents of <em>Rembrandt Harmenszoon van Rijn</em> are identified across these for datasets. Certainly, this bridging of resources across datasources brings us closer to a more complete view on the real life entities under investigation rather than the information available in a single or fewer datasources. This practice of <em>finding sets of co-referent resources across data-sources that together point to the same and unique real world</em> is the task of entity matching algorithms. During this process, matching entities then consists in <em>creating links &ndash; pairwise identity relationships between co-referent resources &ndash;</em> based on their computed matching degree of confidence using often times the <span class="inline"><a href="https://www.w3.org/TR/owl-ref/#sameAs-def">owl:sameAs</a></span> predicate [<a href="../12.References/#Raad2018">Raad2018</a>, <a href="../12.References/#Achichi2017">Achichi2017</a>, <a href="../12.References/#Volz2009">Volz2009</a>]. In this scope, the set of co-referent resources connected through such identity relationships forms what we denote in this paper as an Identity Link Network (<span class="SmallCaps">iln</span>) and define as an <em>undirected network of nodes denoting resources or IRIs, where edges representing identity relationships between nodes may or may not come with weight, which stands as a degree of confidence between matched resources</em>. Figure 1 provides a real life example of an <span class="SmallCaps">iln</span> bridging four datasources depicted in the four node colours [<mark>see Section XXX</mark>], where the  plain black lines denote full confidence according to the provided criteria, in contrast with dotted red lines that denote less confidence.</p>
+<p><div align="center"> <img alt="Identity" src="../Images/Vis-KipshavenLucas_Pos10_id_PH1dd515c880e5e84-2.jpg" /> <figcaption>Fig. 1:  An identity link network connecting nodes from four datasets (color of the node). This a candidate set of co-referent resources potentially pointing to “Kipshaven Lucas”</figcaption></div></p>
+<p>Depending on the data at hand, finding co-referents can turn out either trivial or complex. Across real-life data, this often appears to be a rather complex task [<a href="../12.References/#Raad2019">Raad2019</a>], leading to incorrect co-referents. Such errors could lead to erroneous analysis, wrong conclusions, bad-decision making, etc. Where there is error, there is a need for correction. The question is, &ldquo;<em>how to go about finding these errors?</em>&rdquo;. In other words, &ldquo;<em>how to efficiently validate links?</em>&rdquo;. Most importantly, whatever solution is proposed, it should cover the problems of <em>volume</em> (number of links to undergo validation) and <em>precision</em> (error free).</p>
+<h2 id="1-motivation">1. Motivation<a class="headerlink" href="#1-motivation" title="Permanent link">&para;</a></h2>
+<p>We motivate this work by showing the high likelihood of matching results to be imperfect, potentially too large to be manually corrected and complex enough to not be totally error free if automated.</p>
+<p>Semi-automated yes&hellip; but why visual?</p>
+<p>in general </p>
+<ul>
+<li>
+<p>Restructuring the network base on strength and not on based on the number of edges shared between nodes.</p>
+</li>
+<li></li>
+</ul>
+<p><span class="inline" style="color: blue"> Result Quality &nbsp;&nbsp; </span>
+An <span class="SmallCaps">iln</span> can be constructed automatically (through entity matching algorithms) or manually.  Either way, <span class="SmallCaps">ilns</span> may have their quality compromised by the inclusion of <em>false positives (i.e. resources that are in the same <span class="SmallCaps">iln</span> but do not denote the same real-world entity).</em> Here, we highlight a few reasons, either obvious or hidden.
+<!---->
+<!---->
+Obvious cases in which false positives are more likely to happen are, for example, (a) the low quality of data. Often enough, data come with several issues that may impair the matching process. For example, it can be of <em>low quality</em>; it can be <em>incomplete</em> in the sense that entities to disambiguate are not described at the same granularity; it may contain <em>inconsistencies</em> / <em>errors</em> such as misspellings, spelling variances, contradicting values; or yet it may rely on different calendars, among others.
+<!---->
+<!---->
+Further examples include (b) the problematic context-independent semantics of <span class="inline"><a href="https://www.w3.org/TR/owl-ref/#sameAs-def">owl:sameAs</a></span> or (c) the inadvertent misuse of the <span class="inline"><a href="https://www.w3.org/TR/owl-ref/#sameAs-def">owl:sameAs</a></span> predicate as highlighted in [<a href="../12.References/#Halpin2010">Halpin2010</a>], and (d) the inadequacy of matching algorithms to tackle the data-sources at hand.
+<!---->
+<!----></p>
+<p>In less obvious cases, false positives are consequence of challenges that need to be addressed across the matching process. These challenges can be categorised as ways of (i) <em>modelling how to compare the values of entities&rsquo;s properties</em>, and (ii) <em>inferring co-reference or identity</em>. </p>
+<!--(1) For matching approaches, a data input is a set of selected datasets holding all entities to be matched, one at a time against a subset (blocking strategy) of  the remaining entities. Often enough, these data comes with several issues that may impair the matching process. For example, it can be *incomplete* in the sense that entities to disambiguate are not described at the same granularity; it may contain *inconsistencies* / *errors* such as misspellings, spelling variances, contradictory values; it may rely on different calendars among others. As expected, this is likely to lead to incorrect matchings.-->
+
+<ul>
+<li>(i) &nbsp; The modelling of ways to find supporting evidence for isolating potential matching candidates is crucial to infering identity for a pair of resources. In this endeavour, some approaches may produce <em>discrete</em> / <em>precise</em> results while others may produce <em>continuous</em> / <em>vague</em> results.
+For example, comparing if two resources have the same name can be precise if exact-match is the method of choice, but the same comparison can also be evaluated with vagueness if similarity approximation is chosen instead. In the former case, comparing (Alessandra, Sandra) produces <em>false</em> or <em>0</em> as result, while in the second approach the comparison result space is the interval [0, 1] to describe the degree of truth such that (Alessandra and Alexandra) is more &ldquo;true&rdquo; than (Alessandra, Sandra), which is more &ldquo;true&rdquo; than (Alessandra, John). As expected, this too is likely to lead to incorrect matchings. 
+Although the precise modelling produces more reliable results, it appears limited [<a href="../12.References/#Schoenfisch2014">Schoenfisch2014</a>] as unable to cope with vagueness and thereby reducing the chance of finding all correct matches, leading to an increase of <em>false negatives</em>. On the other hand, the modelling of vagueness opens a range of possibilities but also increases the injection of <em>false positives</em> (noise).</li>
+</ul>
+<!--* (ii) &nbsp; Properly inferring identity for a pair of resources depends not only on how well ~~the challenges at (i) are~~ ==the aforementioned vagueness issue is== addressed but also on how strong is the *discriminating power* for inferring that a pair of entities are co-referent based on evidence computed at (i). Mind you that here too, another sliding scale between [0, 1] is introduced. Only now, it is known as *uncertainty*. For example inferring that entities <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">e_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">e_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> are the same whenever their share ~~(i)~~ similar names and place of location is a low discriminating criteria as there exists multiple entities materialised as *Jan Jansen* and *born in Amsterdam*. -->
+
+<ul>
+<li>(ii) &nbsp; Properly inferring identity for a pair of resources depends not only on how well the aforementioned vagueness issue is addressed as computed evidence (i) but also on how strong is the <em>discriminating power</em> of combined evidence to infer a pair of entities as co-referents. This is often worsen by data incompleteness: the less complete the less discriminative. For example inferring that entities <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">e_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">e_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> are the same whenever their share similar names and place of birth is a low discriminating criteria as there exists multiple entities materialised as <em>Jan Jans</em> and <em>born in Amsterdam</em>. 
+Mind you that here too the space solution of such comparison is a sliding scale between [0, 1] corresponding to a degree of confidence known as <em>uncertainty</em>. This means that inferring if a resource <em>Jan Jans born in Amsterdam</em> is co-referent of another resource <em>Jan Janzoon born in Amsterdam</em> is either true or false (not vague), but it does beg for a level of confidence that reflects both the vague comparison of their names (almost the same) but also the lack of discriminative enough criteria to be sure about it.</li>
+</ul>
+<p><span class="inline" style="color: blue"> Result Size &nbsp;&nbsp; </span> Data are getting larger by the years with the event of better technologies and the need for more digitisation. When it comes to entity matching, a consequence of large data is the discovery of a large amount of links mingled with a surplus of false positives. Mind you, it does so even more given the low quality of data of matching approaches. But, this is not all! The goal of entity matching in the Semantic Web is data integration, meaning that the concern is likely more ambitious than the discovery of links within a single data-source or even just two data-sources, but among several sources that often describe different/complimentary views on the same entities. In this setting, the size and the number of derived <span class="SmallCaps">iln</span> also increase.</p>
+<p><span class="inline" style="color: blue"> Possibilities &nbsp;&nbsp; </span> Results of entity matching bring about statement uncertainty (link). While uncertainty does not make a statement untrue, it does however raise the need for statement verification. Now, knowing that matching results are not perfect, however yet crucial for data integrating on the Semantic Web, <em>how do we remove false positive links?</em> They are the results of challenges aforementioned and partially addressed with the use of vagueness and uncertainty. In other words, <em>are the resources in an <span class="SmallCaps">iln</span> indeed co-referent?</em> Answering this specific question is philosophically complex [<a href="../12.References/#Frege1952">Frege1952</a>], but out of the scope of this paper. A simple solution that we adopt here is that <em>a correct <span class="SmallCaps">iln</span> is a set of resources pointing to the same real life object</em>.
+<!---->
+<!---->
+A direct consequence of this is that noise affects the quality of <span class="SmallCaps">ilns</span> in the sense that <em>they no longer point to a unique real object but to several objects</em>. To correct these errors (allow for statement verification), even though automation can be used, it too comes with imperfection and uncertainty. Ultimately, the most reliable solution is manual validation, though not exempted from error, the effect of size exacerbates it and makes increasingly tedious and sometimes humanly impossible. Opting for a semi-automated approach (human-computer interaction) however may combine benefits of both approaches. </p>
+<p>Our contribution to the semi-automation of identity statement verification is the visualisation of such identity network in a meaningful structure as their sizes and look can revealed daunting.</p>
+<!-- while the effect of size is that it makes statement verification difficult, increasingly tedious and sometimes humanly impossible.-->
+
+<!--
+This recurrently triggers the same question: *are the resources in an <span class="SmallCaps">iln</span> indeed co-referent?* Answering this specific question is both philosophically complex [[Frege1952](12.References.md#Frege1952)], but out of the scope of this paper, -->
+
+<!-- A simple solution that we adopt here is that *a correct ILN is a set of resources pointing to the same real life object, in other world, a set of co-referent resources*.-->
+
+<!--All this -- (1), (2) and (3) -- to illustrate the high chance of matching results ending-up with false positives. Again, mind you, this becomes even more alarming when all these aforementioned challenges are combined with large input data. A direct consequence of this noise is that it affects the quality of <span class="SmallCaps">ilns</span> in the sense that *they no longer point to a unique real object but to several objects*. This recurrently triggers the same question: *are the resources in an <span class="SmallCaps">iln</span> indeed co-referent?* Answering this specific question is both philosophically complex [[Frege1952](12.References.md#Frege1952)], but out of the scope of this paper, and manually increasingly tedious with the *size of the set* and *the number of sets* under scrutiny. A simple solution that we adopt here is that *a correct ILN is a set of resources pointing to the same real life object, in other world, a set of co-referent resources*.-->
+
+<!--==All this – (1), (2) and (3) – to illustrate the high chance of matching approaches producing false positives. A direct consequence of this noise is that it affects the quality of ilns in the sense that they no longer point to a unique real object but to several objects. This begs the recurrent question: are the matched resources clustered in an iln indeed co-referents?
+Answering this question can be philosophically complex [Frege1952], though this is out of the scope of this paper.
+We consider here that in a specific context a correct ILN is a set of resources pointing to the same real life object, in other world, a set of co-referent resources.
+Again, mind you, this issue becomes even more alarming when all these aforementioned 
+challenges are combined with large input data, 
+as the number of ILNs under scrutiny and/or their size increase with the size of the data at hand.==-->
+
+<!--Uncertainty (3) does not make a statement untrue. It however raises the need to verify it. So, knowing that matching results are not perfect, however yet crucial for integrating data on the Semantic Web, *how do we clean up the potential injection of noise (eliminate false positive links)?* -->
+
+<!---->
+
+<!--The cleaning up of noisy links can be automate. Only, this also comes with imperfection. It can be manually performed (validation). However, not only manual work is not exempted from error, it is also cumbersome and sometimes humanly impossible. Opting for a semi-automated approach (human-computer interaction) however combines the benefits of the former approaches.-->
+
+<!--==Finally, even though that matching results are not perfect, they are yet crucial for 
+integrating data on the Semantic Web. 
+The uncertain matches produced (3) do not make the identity statements untrue.
+It however raises the need to verify them.
+This begs again the question: how do we clean up the potential injection 
+of noise (eliminate false positive links)?
+Even if approaches meant for automatically cleaning up of noisy links can still be used,
+they also come with imperfection and uncertainty. 
+Ultimately, the most reliable solution is manual validation, though not exempted from error.
+It can also be too cumbersome or even humanly impossible given the size and amount of ILNs and data quality. 
+Opting for a semi-automated approach (human-computer interaction) however may combine benefits of both approaches.==
+-->
+
+<!—some approaches opt for **vagueness** by comparing the *similarity* of entities’ attribute-values. Some orient themselves towards **precision** with *logic models* while some others navigate the road of hybrid model. For example, about vagueness versus precision, there is no sliding scale in saying that—>
+<!--<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟨</mo></mrow><annotation encoding="application/x-tex">\lang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span></span></span></span>*Alexandra is Sandra*<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\rang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">⟩</span></span></span></span>. However, there is some degree of truth or vagueness in saying that *<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟨</mo></mrow><annotation encoding="application/x-tex">\lang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⟨</span></span></span></span>Alexandra is-similar-to Sandra*<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⟩</mo></mrow><annotation encoding="application/x-tex">\rang</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mclose">⟩</span></span></span></span>.-->
+
+<!--An attempt to understand challenges leading to incorrect matchings invites to looking at the phases of a matching process. These phases include *input*, *comparison model* and *uncertain identity inferencing*. -->
+
+<!--In order to infer identical identity for a pair of resources, a matching approach is to model a way to find supporting evidence for matched candidates. In this endeavour, some approaches opt for vagueness (comparing attribute-values of entities), others orient themselves towards precision (reasoner) or hybrid models. Although modelling precision improves the result’s quality, it appears limited as it is unable to cope with vagueness which is observed in real life data. On the other hand, the modelling of vagueness opens a range of possibilities but also increases the -->
+
+<!--Given (i) a number of datasets, an entity matching approach consists in (ii) comparing entities' attributes such that the result of the comparisons leads to (iii) identity inferencing. During this process, one should realise that the data is incomplete, the comparison model sometimes is precise but often bears vagueness,  -->
+
+<!--##                  | input               : incomplete data
+## Algorithm    | Computation Model   : vagueness (continuous), preciseness (discrete)
+##                  | uncertain inference : conclude identity for example with a level of confidence.-->
+
+<!--imperfect ==> false positives let alone when combined with large input data-->
+
+<!--How to clean it up (eliminate false positive links)?
+    Automate : still is imperfect
+    Manually : error prone, cumbersome and sometimes humanly impossible. 
+    semi-automated : combines the benefit of both.-->
+
+<!--being uncertain does not make the statement untrue however, it raises the need to crosscheck the statement.-->
+
+<!--For a single real world entity *e*, there exists in the digital world multiple representations. In the Semantic Web, these representations are called *resources* and are materialised using *Internationalized Resource Identifiers* also known as IRIs. For example, *Rembrandt Harmenszoon van Rijn* the painter is <span style="font-size:0.8em;">https://www.wikidata.org/wiki/Q5598</span> in *Wikidata*, <span style="font-size:0.8em;">http://vocab.getty.edu/ulan/500011051</span> in *Getty*, <span style="font-size:0.8em;">https://viaf.org/viaf/64013650/</span> in *VIAF* and <span style="font-size:0.8em;">http://dbpedia.org/resource/Rembrandt</span> in *Dbpedia* to name a few.-->
+
+<!--Given a number of data sources, *Wikidata*, *Getty*, *VIAF* and *Dbpedia* for example, finding sets of co-referent resources across data-sources that together point to the same and unique real world is the task of entity matching algorithms. During this process, matching entities then consists in creating pairwise identity relationships between co-referent resources based on their computed matching degree of confidence using most of the time the *owl:sameAs* predicate ==\cite{raad2018detecting,achichi2017legato,volz2009silk}==. In this scope, a set of co-referent resources connected through such identity relationships forms what we denote in this paper as an Identity Link Network (ILN).-->
+
+<h2 id="2-related-work">2. Related work<a class="headerlink" href="#2-related-work" title="Permanent link">&para;</a></h2>
+<h2 id="3-a-visual-vocabulary-for-ilns">3. A Visual Vocabulary For ILNs<a class="headerlink" href="#3-a-visual-vocabulary-for-ilns" title="Permanent link">&para;</a></h2>
+<p>As a network increases in size, its visualisation becomes difficult, because (i) it is  hard to make sense of its hidden structure as its visualisation resembles a meaningless cloud of points and (ii) rendering the data to display becomes expensive [<a href="../12.References/#Alhajj20014">Alhajj20014</a>].</p>
+<p>For an intuitive understanding of a graph&rsquo;s hidden structure and for reducing the amount of data to render, we display a compressed version of an original graph based on the weight of its links. This section presents the basic vocabulary for interpreting such a compressed visual representation of a network based on the weight-annotation of its links. Details on how to construct such a network and its use to detect identify communities is provided in Section <mark>XXX</mark>.</p>
+<h3 id="31-compact-with-satellites">3.1 Compact with Satellites<a class="headerlink" href="#31-compact-with-satellites" title="Permanent link">&para;</a></h3>
+<p>The term <span class="par"> compact node </span> is defined as a compressed representation of linked-nodes where the link(s) share the same <em>weight-annotation</em>. Such an annotation is perceive as an <em>annotation-pattern</em>. In this context, the shared annotation-pattern is the weight-annotation with the <em>highest strength</em>. <br/>
+<img alt="Compact" src="../Images/Vis-CategoryFiscalPolicy_%28Compact%29.jpg" title="title" /> A compact node &ndash; the blue node in the figure on the right &ndash; is given a <em>color</em>, a <em>label</em> (one of the labels of the nodes it represents) and its <em>size</em> is proportional to the number of nodes compressed. It also comes with two additional numerical data: <strong>N</strong> is the number of compressed nodes and <strong>L</strong> shows the number of links in the network as a fraction <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>N</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{N*(N-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">∗</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> of all possible links. In addition, the main color of the node is overlaid by a <em>white circular color</em> indicating the proportion of missing links, indicating the ``incompleteness&rsquo;&lsquo; of the sub-network represented by the compact node. <strong>S</strong> indicates the shared weight-annotation. <br/>
+<span class="par">A satellite node</span> &ndash; orange nodes in the figure &ndash; is a single node that connects to one or more compact nodes and do not share a pattern.  Such node is also given a <em>color</em>, a <em>label</em>, a fix size where N is always 1 and no L.</p>
+<p>Figure 1 illustrates an identity network of 30 nodes connected by 176 links annotated with strength value of 0.5 or 1 (discrete value annotation). The compact node coloured in blue compressed 20 nodes (N:20) that are all connected with links of strength 1 indicated by S:[1.0]. The white overlay color indicates the proportion of missing links and the number of exact missing links can be computed using the numeric data provided by L:166/190. In this case, 24 links are missing. The other 10 nodes in the figure are viewed as <em>first level satellites</em> of the compact node. In this example, the compressed representation reduces the number of initial nodes to be displayed from 30 to 11 and and the label pairs from 166 links to 10, showing the strength of our compressed visualisation. </p>
+<h3 id="32-community-mode">3.2 Community mode<a class="headerlink" href="#32-community-mode" title="Permanent link">&para;</a></h3>
+<p>In <em>community mode</em>, satellites are not allowed because they are direct neighbours of a compact node and are not network themselves (N=1). Whenever such a phenomenon occurs, in community mode, the compact node pulls in all satellites whenever they exist. It then updates accordingly its size and its counts of child-nodes and links. Finally, it turns its original plain black border into a dashed border to indicate the existence of satellites. </p>
+<p><img alt="Compact" src="../Images/Vis-CategoryFiscalPolicy_%28Amsterdam%29.jpg" /> Figure 2 shows Figure 1 in a community mode. It high-lights that in the original network  of  30  nodes,  no  secondary subnetwork exists, as all its satellites got pulled in. This is reflected in its dashed border as well as in its child and link counts, in contrast with the information displayed in Figure 1.</p>
+<h3 id="33-interlink">3.3 Interlink<a class="headerlink" href="#33-interlink" title="Permanent link">&para;</a></h3>
+<p>An interlink is a compressed link that (i) connects a satellite node (N=1) to a compact node (N<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\geq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≥</span></span></span></span>2) or, (ii) connects two compact nodes. When links are being compressed, the thickness of the interlink is proportionally increased. With quantitative <em>weight-annotation</em> in the interval ]0, 1], (i) dashed red links are of value ]0, 1[, (ii) black plain lines are of value 1, and (iii) the weaker the strength, the more sparse is the dashed red link.</p>
+<p><img alt="Compact" src="../Images/Vis-PineyroMarcelo_%28Amsterdam%29.jpg" /> The Figure on the right illustrates three interconnected communities: Orange (north), Green (north-east) and Blue (south). Orange and Green are small, composed of 3 children each and no satellite (no dash border). While Orange is fully connected (L=3), Green has one missing link indicated by the white overlay color and L=&#8532;. Blue, the biggest community node is of 24 children. It connects to Orange using 1 interlink and connects to the Green using 10 links hinted by the thicker interlink. Here, an initial network of of 30 nodes and 75 links is now reduced to 3 nodes and 2 links.</p>
+<!--![](Images/Vis-CategoryFiscalPolicy_(Compact).jpg) <figcaption>Fig. 1: Compact network</figcaption>-->
+
+<!-- <div align="center">![Compact](Images/Vis-CategoryFiscalPolicy_(Compact).jpg) <br>Fig 1: A compact network.</div>
+<br>-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                7. Lens - Link Manipulation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../08.LinkValidation/" title="9. Link Validation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                9. Link Validation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

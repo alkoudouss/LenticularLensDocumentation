@@ -1,0 +1,817 @@
+@prefix : <http://lenticularlens.org/voidPlus#> .
+@prefix cc: <https://creativecommons.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voidPlus: <http://lenticularlens.org/voidPlus/> .
+@base <http://lenticularlens.org/voidPlus> .
+
+<http://lenticularlens.org/voidPlus> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://lenticularlens.org/voidPlus/hasAlgorithm
+voidPlus:hasAlgorithm rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain voidPlus:MatchingMethod ;
+                      rdfs:range voidPlus:MatchingAlgorithm ;
+                      rdfs:comment "relates a voidPlus:MatchingMethod to its voidPlus:MatchingAlgorithm."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasClassPartition
+voidPlus:hasClassPartition rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf voidPlus:hasSubset ,
+                                              void:classPartition ;
+                           rdfs:comment "relates a void:Dataset to its subset voidPlus:ClassPartition. In practice, the main difference wrt void:classPartition is the name meant to avoid miss-usage as it can be read as \"is classPartition of\" as well."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasFormulation
+voidPlus:hasFormulation rdf:type owl:ObjectProperty ;
+                        rdfs:domain void:Dataset ;
+                        rdfs:range voidPlus:Formulation ;
+                        rdfs:comment "relates a voidPlus:Dataset to its voidPlus:Formulation."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasItem
+voidPlus:hasItem rdf:type owl:ObjectProperty ;
+                 rdfs:domain voidPlus:Formulation ;
+                 rdfs:comment "relates a voidPlus:Formulation to its formula-items."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasLanguagePartition
+voidPlus:hasLanguagePartition rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf voidPlus:hasSubset ;
+                              rdfs:comment "relates a void:Dataset to its subset voidPlus:LanguagePartition."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasObjectResourceSelection
+voidPlus:hasObjectResourceSelection rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf voidPlus:hasResourceSelection ;
+                                    rdfs:comment "a relation to assign a voidPlus:ResourceSelection as the source for the objects of triples under scrutiny."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasPropertyPartition
+voidPlus:hasPropertyPartition rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf voidPlus:hasSubset ,
+                                                 void:propertyPartition ;
+                              rdfs:comment "relates a void:Dataset to its subset voidPlus:PropertyPartition. In practice, the main difference wrt void:propertyPartition is the name meant to avoid miss-usage as it can be read as \"is propertyPartition of\" as well."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasResourceSelection
+voidPlus:hasResourceSelection rdf:type owl:ObjectProperty ;
+                              rdfs:range voidPlus:ResourceSelection ;
+                              rdfs:comment "a relation to assign a voidPlus:ResourceSelection as the source for entities under scrutiny.For example, the selection of a voidPlus:ResourceSelection for a voidPlus:MatchingMethod."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasSubjectResourceSelection
+voidPlus:hasSubjectResourceSelection rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf voidPlus:hasResourceSelection ;
+                                     rdfs:comment "a relation to assign a voidPlus:ResourceSelection as the source for the subjects of triples under scrutiny."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasSubset
+voidPlus:hasSubset rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf void:subset ;
+                   owl:inverseOf voidPlus:subsetOf ;
+                   rdfs:domain void:Dataset ;
+                   rdfs:range voidPlus:Partition ;
+                   rdfs:comment "relates a void:Dataset that has as subset a voidPlus:Partition (dataset). In practice, the main difference wrt void:subset is the name meant to avoid miss-usage as it can be read as \"is subset of\" as well. For a similar purpose, an inverse relation voidPlus:subsetOf is also defined."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasTarget
+voidPlus:hasTarget rdf:type owl:ObjectProperty ;
+                   rdfs:domain voidPlus:LinkDataset ;
+                   rdfs:range void:Dataset ;
+                   rdfs:comment "A relation that assigns one or more void:Datasets linked via a voidPlus:LinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasValidation
+voidPlus:hasValidation rdf:type owl:ObjectProperty ;
+                       rdfs:domain voidPlus:LinkDataset ;
+                       rdfs:range voidPlus:Validation ;
+                       rdfs:comment "A relation that assigns one or more voidPlus:Validations to a voidPlus:LinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/language
+voidPlus:language rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf voidPlus:partitionedBy ;
+                  rdfs:range voidPlus:Language ;
+                  rdfs:comment "A relation that assigns to a void:Dataset a voidPlus:Language (for ISO standard language codes) that is the rdf:language of all literals (objects) qualifying entities (subject) in a language-based partition."@en .
+
+
+###  http://lenticularlens.org/voidPlus/linkPredicate
+voidPlus:linkPredicate rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:comment "a link predicate that holds for a voidPlus:LinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/objectsTarget
+voidPlus:objectsTarget rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf voidPlus:hasTarget ;
+                       rdfs:domain voidPlus:DirectedLinkDataset ;
+                       rdfs:range void:Dataset ;
+                       rdfs:comment "A relation that assigns void:Datasets describing the object of triples contained in the voidPlus:DirectedLinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/partitionedBy
+voidPlus:partitionedBy rdf:type owl:ObjectProperty ;
+                       rdfs:domain void:Dataset ;
+                       rdfs:comment "A relation that assigns a void:Dataset to the conditions under which it is partitioned."@en .
+
+
+###  http://lenticularlens.org/voidPlus/property
+voidPlus:property rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf voidPlus:partitionedBy ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( rdf:Property
+                                             rdf:Seq
+                                           )
+                             ] ;
+                  rdfs:comment "A relation that assigns to a void:Dataset a rdf:Property or a rdf:Seq of properties that expresses the pattern of all triples in a property-based partition."@en .
+
+
+###  http://lenticularlens.org/voidPlus/subjectsTarget
+voidPlus:subjectsTarget rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf voidPlus:hasTarget ;
+                        rdfs:domain voidPlus:DirectedLinkDataset ;
+                        rdfs:range void:Dataset ;
+                        rdfs:comment "A relation that assigns void:Datasets describing the subjects of triples contained in the voidPlus:DirectedLinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/subsetOf
+voidPlus:subsetOf rdf:type owl:ObjectProperty ;
+                  rdfs:comment "relates a voidPlus:Partition to its void:Dataset superset. Defined as the inverse relation of voidPlus:hasSubset."@en .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:ObjectProperty ;
+                rdfs:comment "The range for dcterms:creator is dcterms:Agent. All values used with this property have to be instances of the class [dcterms:Agent] .  <span style=\"color: red\">must not be used with literal values</span>. You may use it only with non-literal values."@en .
+
+
+###  http://purl.org/dc/terms/publisher
+dcterms:publisher rdf:type owl:ObjectProperty ;
+                  rdfs:range dcterms:Agent ;
+                  rdfs:comment "The range for dcterms:publisher is dcterms:Agent. All values used with this property have to be instances of the class [dcterms:Agent] . <span style=\"color: red\">must not be used with literal values</span>. You may use it only with non-literal values."@en .
+
+
+###  http://rdfs.org/ns/void#__linkPredicate
+void:__linkPredicate rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf voidPlus:linkPredicate ;
+                     rdfs:domain void:Linkset ;
+                     rdfs:range rdf:Property ;
+                     rdfs:comment "a link predicate that holds for a void:Linkset."@en .
+
+
+###  http://rdfs.org/ns/void#class
+void:class rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf voidPlus:partitionedBy ;
+           rdfs:range rdfs:Class ;
+           rdfs:comment "A relation that assigns to a void:Dataset a rdfs:Class that is the rdf:type of all entities (subject) in a class-based partition."@en .
+
+
+###  http://rdfs.org/ns/void#classPartition
+void:classPartition rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf void:subset ;
+                    rdfs:comment "A relation between a void:Dataset and its Partition, which is a subset of a void:Dataset that contains only entities of an explicitly defined rdfs:Class."@en .
+
+
+###  http://rdfs.org/ns/void#feature
+void:feature rdf:type owl:ObjectProperty ;
+             rdfs:domain void:Dataset ;
+             rdfs:range void:TechnicalFeature ;
+             rdfs:comment "relates a void:TechnicalFeature supported by a void:Datset."@en .
+
+
+###  http://rdfs.org/ns/void#objectsTarget
+void:objectsTarget rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf voidPlus:objectsTarget ,
+                                      void:target ;
+                   rdfs:domain void:Linkset ;
+                   rdfs:comment "A relation that assigns the void:Dataset describing the objects of triples contained in the void:Linkset."@en .
+
+
+###  http://rdfs.org/ns/void#property
+void:property rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf voidPlus:property ;
+              rdfs:domain void:Dataset ;
+              rdfs:range rdf:Property ;
+              rdfs:comment "A relation that assigns to a void:Dataset a rdf:Property that is the predicate of all triples in a property-based partition."@en .
+
+
+###  http://rdfs.org/ns/void#propertyPartition
+void:propertyPartition rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf void:subset ;
+                       rdfs:comment "A relation between a void:Dataset and its Partition, which is a subset of a void:Dataset that contains  only triples composed with an explicitly defined rdf:Property."@en .
+
+
+###  http://rdfs.org/ns/void#subjectsTarget
+void:subjectsTarget rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf voidPlus:subjectsTarget ,
+                                       void:target ;
+                    rdfs:domain void:Linkset ;
+                    rdfs:comment "A relation that assigns the void:Dataset describing the subjects of triples contained in the void:Linkset."@en .
+
+
+###  http://rdfs.org/ns/void#subset
+void:subset rdf:type owl:ObjectProperty ;
+            rdfs:domain void:Dataset ;
+            rdfs:range void:Dataset ;
+            rdfs:comment "relates a void:Dataset that has subset another void:Dataset."@en .
+
+
+###  http://rdfs.org/ns/void#target
+void:target rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf voidPlus:hasTarget ;
+            rdfs:domain void:Linkset ;
+            rdfs:range void:Dataset ;
+            rdfs:comment "A relation that assigns one of the two void:Datasets linked by the void:Linkset."@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#member
+rdfs:member rdf:type owl:ObjectProperty ;
+            rdfs:comment "rdfs:member is an instance of rdf:Property that is a super-property of all the container membership properties. In particular, properties called rdf:_1, rdf:_2, rdf:_3... etc., used for rdf:Seq are sub-properties of rdfs:member."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://creativecommons.org/ns#attributionName
+<http://creativecommons.org/ns#attributionName> rdf:type owl:DatatypeProperty ;
+                                                rdfs:comment "The name the creator of a Work would like used when attributing re-use."@en .
+
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:DatatypeProperty ;
+                                        rdfs:comment "A work has license a License."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasAccepted
+voidPlus:hasAccepted rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( voidPlus:LinkDataset
+                                                 voidPlus:Validation
+                                               )
+                                 ] ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "The amount of accepted links for a voidPlus:LinkDataset or voidPlus:Validation."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasClusters
+voidPlus:hasClusters rdf:type owl:DatatypeProperty ;
+                     rdfs:domain voidPlus:LinkDataset ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "The amount of clusters computed for a voidPlus:LinkDataset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasContradictions
+voidPlus:hasContradictions rdf:type owl:DatatypeProperty ;
+                           rdfs:domain voidPlus:LinkDataset ;
+                           rdfs:range xsd:integer ;
+                           rdfs:comment "The amount of links of a voidPlus:LinkDataset for which contradicting validations are found."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasFilterFunction
+voidPlus:hasFilterFunction rdf:type owl:DatatypeProperty ;
+                           rdfs:domain voidPlus:PropertyPartition ;
+                           rdfs:comment "It relates a property partition to a filter function, such as \"contains\" or \"minimal_date\". When restricting a property partition, in addition to the property for which a value is expected to exist, a filter can also be applied to the value. This filter is composed of \"function\", a \"value\" and a \"format\"."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasFormatFunction
+voidPlus:hasFormatFunction rdf:type owl:DatatypeProperty ;
+                           rdfs:domain voidPlus:PropertyPartition ;
+                           rdfs:comment "It relates a property partition to a format restriction which is applicable to the value used by an explicitly defined filter function, such as \"YYYY-MM-DD\" for filter \"minimal_date\". When restricting a property partition, in addition to the property for which a value is expected to exist, a filter can also be applied to the value. This filter is composed of \"function\", a \"value\" and a \"format\"."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasFormulaDescription
+voidPlus:hasFormulaDescription rdf:type owl:DatatypeProperty ;
+                               rdfs:domain voidPlus:Formulation ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Describes how items listed in a formulation are combined. For example, using logic or set-like operators."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasRejected
+voidPlus:hasRejected rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( voidPlus:LinkDataset
+                                                 voidPlus:Validation
+                                               )
+                                 ] ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "The amount of rejected links for a voidPlus:LinkDataset or voidPlus:Validation."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasThreshold
+voidPlus:hasThreshold rdf:type owl:DatatypeProperty ;
+                      rdfs:domain voidPlus:MatchingMethod ;
+                      rdfs:comment "Relates a voidPlus:MatchingMethod to a link-acceptance-threshold value. Upon the choice of a voidPlus:MatchingAlgorithm, the user should provide the parameters for guiding the acceptance of results. This may include a threshold value (e.g. 0,7 or 20), a threshold unit (e.g. \"Year\"), a threshold operator (e.g. \">=\") and a threshold range (e.g. \"]0,1]\" or \"ℕ\")."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasThresholdAcceptanceOperator
+voidPlus:hasThresholdAcceptanceOperator rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain voidPlus:MatchingMethod ;
+                                        rdfs:comment "Relates a voidPlus:MatchingMethod to a link-acceptance-threshold operator. Upon the choice of a voidPlus:MatchingAlgorithm, the user should inform the parameters for guiding the acceptance of results. This may include a threshold value (e.g. 0,7 or 20), a threshold unit (e.g. \"Year\"), a threshold operator (e.g. \">=\") and a threshold range (e.g. \"]0,1]\" or \"ℕ\")."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasThresholdRange
+voidPlus:hasThresholdRange rdf:type owl:DatatypeProperty ;
+                           rdfs:domain voidPlus:MatchingMethod ;
+                           rdfs:comment "Relates a voidPlus:MatchingMethod to a link-acceptance-threshold range. Upon the choice of a voidPlus:MatchingAlgorithm, the user should inform the parameters for guiding the acceptance of results. This may include a threshold value (e.g. 0,7 or 20), a threshold unit (e.g. \"Year\"), a threshold operator (e.g. \">=\") and a threshold range (e.g. \"]0,1]\" or \"ℕ\")."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasValidations
+voidPlus:hasValidations rdf:type owl:DatatypeProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( voidPlus:LinkDataset
+                                                    voidPlus:Validation
+                                                  )
+                                    ] ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "The amount of validated links in a voidPlus:LinkDataset or voidPlus:Validation."@en .
+
+
+###  http://lenticularlens.org/voidPlus/hasValueFunction
+voidPlus:hasValueFunction rdf:type owl:DatatypeProperty ;
+                          rdfs:domain voidPlus:PropertyPartition ;
+                          rdfs:comment "It relates a property partition to a value for a filter function, such as \"%van%\" for filter \"contains\" or \"01/01/1600\" for filter \"minimal_date\". When restricting a property partition, in addition to the property for which a value is expected to exist, a filter can also be applied to the value. This filter is composed of \"function\", a \"value\" and a \"format\"."@en .
+
+
+###  http://lenticularlens.org/voidPlus/toBeValidated
+voidPlus:toBeValidated rdf:type owl:DatatypeProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( voidPlus:LinkDataset
+                                                   voidPlus:Validation
+                                                 )
+                                   ] ;
+                       rdfs:range xsd:integer ;
+                       rdfs:comment "The amount of links yet to be validated in a voidPlus:LinkDataset or voidPlus:Validation."@en .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:DatatypeProperty ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "The range defined for dcterms:created is the class of rdfs:Literal. Values used with this property therefore have to be literal values."@en .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:DatatypeProperty ;
+                    rdfs:comment "There is no range defined for dcterms:description. Therefore you can use it with literal values."@en .
+
+
+###  http://rdfs.org/ns/void#distinctObjects
+void:distinctObjects rdf:type owl:DatatypeProperty ;
+                     rdfs:domain void:Dataset ;
+                     rdfs:range xsd:integer ;
+                     rdfs:comment "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count." .
+
+
+###  http://rdfs.org/ns/void#distinctSubjects
+void:distinctSubjects rdf:type owl:DatatypeProperty ;
+                      rdfs:domain void:Dataset ;
+                      rdfs:range xsd:integer ;
+                      rdfs:comment "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset." .
+
+
+###  http://rdfs.org/ns/void#entities
+void:entities rdf:type owl:DatatypeProperty ;
+              rdfs:domain void:Dataset ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The total number of entities that are described in a void:Dataset." .
+
+
+###  http://rdfs.org/ns/void#triples
+void:triples rdf:type owl:DatatypeProperty ;
+             rdfs:domain void:Dataset ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The total number of triples contained in a void:Dataset."@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lenticularlens.org/voidPlus/ClassPartition
+voidPlus:ClassPartition rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty [ owl:inverseOf voidPlus:hasClassPartition
+                                                             ] ;
+                                              owl:someValuesFrom void:Dataset
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty void:class ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass rdfs:Class
+                                            ] ;
+                        rdfs:subClassOf voidPlus:Partition ;
+                        rdfs:comment "A voidPlus:Partition that is a collection of resources partitioned on the basis of an rdfs:Class."@en .
+
+
+###  http://lenticularlens.org/voidPlus/DirectedLinkDataset
+voidPlus:DirectedLinkDataset rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty voidPlus:objectsTarget ;
+                                                                          owl:someValuesFrom void:Dataset
+                                                                        ]
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty voidPlus:subjectsTarget ;
+                                                                          owl:someValuesFrom void:Dataset
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf voidPlus:LinkDataset ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty void:distinctObjects ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onDataRange xsd:integer
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty void:distinctSubjects ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onDataRange xsd:integer
+                                             ] ;
+                             rdfs:comment "A voidPlus:LinkDataset that imposes that subjects always belong to the same datasets as well as objects."@en .
+
+
+###  http://lenticularlens.org/voidPlus/DocumentedLinkDataset
+voidPlus:DocumentedLinkDataset rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( voidPlus:LinkDataset
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty voidPlus:hasFormulation ;
+                                                                            owl:someValuesFrom voidPlus:Formulation
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty voidPlus:hasTarget ;
+                                                                            owl:someValuesFrom voidPlus:ResourceSelection
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty voidPlus:hasTarget ;
+                                                                            owl:allValuesFrom voidPlus:ResourceSelection
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf voidPlus:LinkDataset ;
+                               rdfs:comment "A voidPlus:LinkDataset that requires detailed documentation, namely it imposes that targets are described as voidPlus:ResourceSelection and  requires a voidPlus:Formulation."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Formulation
+voidPlus:Formulation rdf:type owl:Class ;
+                     rdfs:comment "A (reusable) formulation that lists a number of items (e.g. matching methods or linksets) and describes how they are meant to be combined (e.g. using logic or set operators)."@en .
+
+
+###  http://lenticularlens.org/voidPlus/IntegrationView
+voidPlus:IntegrationView rdf:type owl:Class ;
+                         rdfs:subClassOf void:Dataset ,
+                                         [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty voidPlus:hasSubset ;
+                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                  owl:onClass voidPlus:LinkDataset
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty voidPlus:hasSubset ;
+                                                                  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                  owl:onClass voidPlus:ResourceSelection
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                         rdfs:comment "A set of RDF triples that are stemmed from two or more voidPlus:ResourceSelections that are linked by at least one voidPlus:LinkDataset. One may add voidPlus:PropertyPartitions for both filtering or for data visualisation and analysis."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Language
+voidPlus:Language rdf:type owl:Class ;
+                  rdfs:comment "A set of standardised language (ISO 639 not 3166) codes. For example, use nl, nld or dut to indicate the Dutch or Flemish languages."@en .
+
+
+###  http://lenticularlens.org/voidPlus/LanguagePartition
+voidPlus:LanguagePartition rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty voidPlus:language ;
+                                                 owl:someValuesFrom voidPlus:Language
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty [ owl:inverseOf voidPlus:hasLanguagePartition
+                                                                ] ;
+                                                 owl:someValuesFrom void:Dataset
+                                               ] ;
+                           rdfs:subClassOf voidPlus:Partition ;
+                           rdfs:comment "A voidPlus:Partition that is a collection of resources based on a voidPlus:Language restriction, i.e. an ISO 639 standardised language code."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Lens
+voidPlus:Lens rdf:type owl:Class ;
+              owl:equivalentClass [ owl:intersectionOf ( voidPlus:DocumentedLinkDataset
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty voidPlus:hasFormulation ;
+                                                           owl:someValuesFrom voidPlus:LensFormulation
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+              rdfs:subClassOf voidPlus:DocumentedLinkDataset ;
+              rdfs:comment "Similar to a voidPlus:Linkset (in the sense that it is a collection of links sharing the same linktype) also involving one, two or more datasets, but not necessarilly directed. Moreover, context-wise, it differs from a linkset as it is generated using different processes (set-like link manipulation operators such as Union, Intersection, Difference or Transitivity) as compared to how a linkset comes about (matching algorithms)."@en .
+
+
+###  http://lenticularlens.org/voidPlus/LensFormulation
+voidPlus:LensFormulation rdf:type owl:Class ;
+                         rdfs:subClassOf voidPlus:Formulation ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty voidPlus:hasItem ;
+                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                           owl:onClass voidPlus:LinkDataset
+                                         ] ;
+                         rdfs:comment "A resource that makes explicit all voidPlus:LinkDatasets involved in the creation of a voidPlus:Lens and how the they are combined."@en .
+
+
+###  http://lenticularlens.org/voidPlus/LinkDataset
+voidPlus:LinkDataset rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty voidPlus:hasTarget ;
+                                                                  owl:someValuesFrom void:Dataset
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty voidPlus:linkPredicate ;
+                                                                  owl:someValuesFrom rdf:Property
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf void:Dataset ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty dcterms:description ;
+                                       owl:someValuesFrom rdfs:Literal
+                                     ] ;
+                     rdfs:comment "A collection of RDF links between dataset(s), using the same link predicate (regardless of the link being an equality predicate or not). This predicate is called the linktype of the linkset. The links may have been stabilished among one (deduplication), two or many datasets."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Linkset
+voidPlus:Linkset rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( voidPlus:DirectedLinkDataset
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty voidPlus:hasFormulation ;
+                                                              owl:someValuesFrom voidPlus:LinksetFormulation
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf voidPlus:DirectedLinkDataset ,
+                                 voidPlus:DocumentedLinkDataset ;
+                 rdfs:comment "A collection of RDF links between <em>one</em>, <em>two</em> or  <em>more</em> void:Datasets. Only, all links share the same link-predicate and all subjects stem from a set of void datasets (D<sub>1</sub>) while all objects stem from either the same D<sub>1</sub> or a different set of void datasets D<sub>2</sub>."@en .
+
+
+###  http://lenticularlens.org/voidPlus/LinksetFormulation
+voidPlus:LinksetFormulation rdf:type owl:Class ;
+                            rdfs:subClassOf voidPlus:Formulation ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty voidPlus:hasItem ;
+                                              owl:someValuesFrom voidPlus:MatchingMethod
+                                            ] ;
+                            rdfs:comment "A resource that makes explicit all voidPlus:MatchingMethods involved in the creation of a voidPlus:Linkset and how the methods are logically joint."@en .
+
+
+###  http://lenticularlens.org/voidPlus/MatchingAlgorithm
+voidPlus:MatchingAlgorithm rdf:type owl:Class ;
+                           rdfs:comment "A set of rules followed by a computer for finding pairs of matching resources. An algorithm can be further categorised as automated or semi-automated depending on whether it requires user assistance or not. Most matching algorithms employed in the Lenticular Lens are semi-automated."@en .
+
+
+###  http://lenticularlens.org/voidPlus/MatchingMethod
+voidPlus:MatchingMethod rdf:type owl:Class ;
+                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                              owl:onProperty voidPlus:hasAlgorithm ;
+                                              owl:someValuesFrom voidPlus:MatchingAlgorithm
+                                            ] ;
+                        rdfs:comment "A resource that makes explicit all parameters/pre-requisites (datasets, entity-type and property-value restrictions, matching properties...) of a matching algorithm including the conditions in which the algorithm is to accept a discovered link (threshold)."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Partition
+voidPlus:Partition rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty void:subset ;
+                                         owl:someValuesFrom void:Dataset
+                                       ] ;
+                   rdfs:subClassOf void:Dataset ;
+                   rdfs:comment "A void:Daset that is subset of another void:Daset."@en .
+
+
+###  http://lenticularlens.org/voidPlus/PartitionFormulation
+voidPlus:PartitionFormulation rdf:type owl:Class ;
+                              rdfs:subClassOf voidPlus:Formulation ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty voidPlus:hasItem ;
+                                                owl:someValuesFrom voidPlus:Partition
+                                              ] .
+
+
+###  http://lenticularlens.org/voidPlus/PropertyPartition
+voidPlus:PropertyPartition rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty [ owl:inverseOf voidPlus:hasPropertyPartition
+                                                                ] ;
+                                                 owl:someValuesFrom void:Dataset
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty voidPlus:property ;
+                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onClass [ rdf:type owl:Class ;
+                                                               owl:unionOf ( rdf:Property
+                                                                             rdf:Seq
+                                                                           )
+                                                             ]
+                                               ] ;
+                           rdfs:subClassOf voidPlus:Partition ;
+                           rdfs:comment "A voidPlus:Partition that is is a collection of resources described using either a rdf:Property or sequence of them (voidPlus:PropertySequence or  voidPlus:TypedPropertySequence)."@en .
+
+
+###  http://lenticularlens.org/voidPlus/PropertySequence
+voidPlus:PropertySequence rdf:type owl:Class ;
+                          owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty rdfs:member ;
+                                                                       owl:allValuesFrom rdf:Property
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty rdfs:member ;
+                                                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                       owl:onClass rdf:Property
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ;
+                          rdfs:subClassOf rdf:Seq ;
+                          rdfs:comment "A resource that represents a sequence of properties, analogously to a property path."@en .
+
+
+###  http://lenticularlens.org/voidPlus/ResourceSelection
+voidPlus:ResourceSelection rdf:type owl:Class ;
+                           owl:equivalentClass [ owl:intersectionOf ( voidPlus:Partition
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty voidPlus:hasFormulation ;
+                                                                        owl:someValuesFrom voidPlus:PartitionFormulation
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ] ;
+                           rdfs:subClassOf void:Dataset ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty voidPlus:hasSubset ;
+                                             owl:someValuesFrom voidPlus:Partition
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty void:subset ;
+                                             owl:someValuesFrom void:Dataset
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty dcterms:description ;
+                                             owl:someValuesFrom rdfs:Literal
+                                           ] ;
+                           rdfs:comment "A collection of resources stemmed from the same void:Dataset. It is expected to have a voidPlus:ClassPartition as partition, directly or indirectly (i.e. as a subset). It can also have voidPlus:PropertyPartitions, where property-value(s) can be restricted, as well as voidPlus:LanguagePartitions, where the language of the property-value(s) can be restricted."@en .
+
+
+###  http://lenticularlens.org/voidPlus/TypedPropertySequence
+voidPlus:TypedPropertySequence rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rdfs:member ;
+                                                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                                owl:unionOf ( rdf:Property
+                                                                                                              rdfs:Class
+                                                                                                            )
+                                                                                              ]
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rdfs:member ;
+                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onClass rdfs:Class
+                                                                          ]
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty rdfs:member ;
+                                                                            owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                            owl:onClass rdf:Property
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf rdf:Seq ;
+                               rdfs:comment """A resource that represents a sequence of properties and classes, as in a different type of property path with class restriction in between:
+property -> class -> property -> class -> property"""@en .
+
+
+###  http://lenticularlens.org/voidPlus/ValidatedLinkDataset
+voidPlus:ValidatedLinkDataset rdf:type owl:Class ;
+                              owl:equivalentClass [ owl:intersectionOf ( voidPlus:LinkDataset
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty voidPlus:hasValidation ;
+                                                                           owl:someValuesFrom voidPlus:Validation
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ] ;
+                              rdfs:subClassOf voidPlus:LinkDataset ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty voidPlus:hasContradictions ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:integer
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty voidPlus:hasValidations ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:integer
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty voidPlus:toBeValidated ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:integer
+                                              ] ;
+                              rdfs:comment "A voidPlus:LinkDataset that has been validated."@en .
+
+
+###  http://lenticularlens.org/voidPlus/Validation
+voidPlus:Validation rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty [ owl:inverseOf voidPlus:hasValidation
+                                                         ] ;
+                                          owl:someValuesFrom voidPlus:LinkDataset
+                                        ] ;
+                    rdfs:subClassOf void:Dataset ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty voidPlus:hasAccepted ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:integer
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty voidPlus:hasRejected ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:integer
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty voidPlus:hasValidations ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:integer
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty voidPlus:toBeValidated ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:integer
+                                    ] ;
+                    rdfs:comment "A void:Dataset that contains triples describing the validaty of links stemmed from a voidPlus:LinkDataset."@en .
+
+
+###  http://purl.org/dc/terms/Agent
+dcterms:Agent rdf:type owl:Class ;
+              rdfs:comment "A resource that acts or has the power to act."@en .
+
+
+###  http://rdfs.org/ns/void#Dataset
+void:Dataset rdf:type owl:Class ;
+             rdfs:comment "A set of RDF triples that are published, maintained or aggregated by a single provider."@en .
+
+
+###  http://rdfs.org/ns/void#Linkset
+void:Linkset rdf:type owl:Class ;
+             rdfs:subClassOf voidPlus:DirectedLinkDataset ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty void:objectsTarget ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass void:Dataset
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty void:subjectsTarget ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass void:Dataset
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:comment "A collection of RDF links between *two* void:Datasets."@en .
+
+
+###  http://rdfs.org/ns/void#TechnicalFeature
+void:TechnicalFeature rdf:type owl:Class ;
+                      rdfs:comment "A technical feature of a void:Dataset, such as a supported RDF serialization format."@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+rdf:Property rdf:type owl:Class ;
+             rdfs:comment "The class of RDF properties."@en .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq
+rdf:Seq rdf:type owl:Class ;
+        rdfs:comment "The class of RDF 'Sequence' containers."@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class ;
+           rdfs:comment "This is the class of resources that are RDF classes."@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
