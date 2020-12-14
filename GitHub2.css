@@ -136,6 +136,16 @@ img[alt="Generic"] {
   margin-left: 1em; 
 }
 
+img[alt="Generic-2"] { 
+  max-width:  70%; 
+  height: auto;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  /* float: right; */
+  margin-left: 1em; 
+}
+
 <figcaption>{{ .Inner | Markdownify }}</figcaption>
 
 img + em {

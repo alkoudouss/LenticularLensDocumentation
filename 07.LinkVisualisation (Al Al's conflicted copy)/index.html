@@ -1,0 +1,518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+    
+    
+      
+        <title>Visualisation Support:eyeglasses: for Identity Networks - Lenticular Lens</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../GitHub2.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visualisation-support-for-identity-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Lenticular Lens" class="md-header-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Lenticular Lens
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Visualisation Support<sup>:eyeglasses:</sup> for Identity Networks
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Lenticular Lens" class="md-nav__button md-logo" aria-label="Lenticular Lens">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Lenticular Lens
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01.Introduction/" title="1. Introduction" class="md-nav__link">
+      1. Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02.Terminology/" title="2. Terminology" class="md-nav__link">
+      2. Terminology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03.Ontology/" title="3. Link Annotation Ontology" class="md-nav__link">
+      3. Link Annotation Ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.Algorithms/" title="4. Matching Algorithms" class="md-nav__link">
+      4. Matching Algorithms
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04.ResultsCombination/" title="5. Understanding Matching Results" class="md-nav__link">
+      5. Understanding Matching Results
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05.LinkConstruction/" title="6. Linkset - Link Construction" class="md-nav__link">
+      6. Linkset - Link Construction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06.LinkManipulation/" title="7. Lens - Link Manipulation" class="md-nav__link">
+      7. Lens - Link Manipulation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07.LinkVisualisation/" title="8. Visualising link Network" class="md-nav__link">
+      8. Visualising link Network
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08.LinkValidation/" title="9. Link Validation" class="md-nav__link">
+      9. Link Validation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09.LinkExport/" title="10. Link Export" class="md-nav__link">
+      10. Link Export
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10.DataIntegration/" title="11. Data Integration" class="md-nav__link">
+      11. Data Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11.Installation/" title="12. Using Lenticular Lens" class="md-nav__link">
+      12. Using Lenticular Lens
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12.References/" title="13. References" class="md-nav__link">
+      13. References
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-incomplete-data" class="md-nav__link">
+    | input               : incomplete data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm-computation-model-vagueness-continuous-preciseness-discrete" class="md-nav__link">
+    Algorithm    | Computation Model   : vagueness (continuous), preciseness (discrete)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncertain-inference-conclude-identity-for-example-with-a-level-of-confidence" class="md-nav__link">
+    | uncertain inference : conclude identity for example with a level of confidence.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-visual-vocabulary-for-ilns" class="md-nav__link">
+    A Visual Vocabulary For ILNs
+  </a>
+  
+    <nav class="md-nav" aria-label="A Visual Vocabulary For ILNs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compact-and-satellite-nodes" class="md-nav__link">
+    Compact and Satellite Nodes.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-mode" class="md-nav__link">
+    Community mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interlink" class="md-nav__link">
+    Interlink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+    crossorigin="anonymous" />
+
+<style type="text/css">
+    .katex img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+</style>
+<h1 id="visualisation-support-for-identity-networks">Visualisation Support<sup><img alt="👓" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f453.svg" title=":eyeglasses:" /></sup> for Identity Networks<a class="headerlink" href="#visualisation-support-for-identity-networks" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The results of entity matching approaches hardly perfect. Issue </p>
+<p>The first layer deals with the set of datasets holding all entities to be matched, one against a subset of  the others at a time. Often enough, these data are incomplete and/or inconsistent. This data quality issue constitutes an impediment to matching results, leading an increasing number of incorrect matchings. The second layer is where the comparison model is defined. Here, the comparison of attribute-values of entities introduces a second matching impediment.  Comparing the similarity of two strings fro example introduces concept vagueness  </p>
+<p>Given (i) a number of datasets, an entity matching approach consists in (ii) comparing entities&rsquo; attributes such that the result of the comparisons leads to (iii) identity inferencing. During this process, one should realise that the data is incomplete, the comparison model sometimes is precise but often bears vagueness,  </p>
+<h2 id="input-incomplete-data">| input               : incomplete data<a class="headerlink" href="#input-incomplete-data" title="Permanent link">&para;</a></h2>
+<h2 id="algorithm-computation-model-vagueness-continuous-preciseness-discrete">Algorithm    | Computation Model   : vagueness (continuous), preciseness (discrete)<a class="headerlink" href="#algorithm-computation-model-vagueness-continuous-preciseness-discrete" title="Permanent link">&para;</a></h2>
+<h2 id="uncertain-inference-conclude-identity-for-example-with-a-level-of-confidence">| uncertain inference : conclude identity for example with a level of confidence.<a class="headerlink" href="#uncertain-inference-conclude-identity-for-example-with-a-level-of-confidence" title="Permanent link">&para;</a></h2>
+<p>imperfect ==&gt; false positives let alone when combined with large input data</p>
+<p>How to clean it up (eliminate false positive links)?
+    Automate : still is imperfect
+    Manually : error prone, cumbersome and sometimes humanly impossible. 
+    semi-automated : combines the benefit of both.</p>
+<p>being uncertain does not make the statement untrue however, it raises the need to crosscheck the statement.</p>
+<p>what is being highlighted in community detection algorithms?</p>
+<!--For a single real world entity *e*, there exists in the digital world multiple representations. In the Semantic Web, these representations are called *resources* and are materialised using *Internationalized Resource Identifiers* also known as IRIs. For example, *Rembrandt Harmenszoon van Rijn* the painter is <span style="font-size:0.8em;">https://www.wikidata.org/wiki/Q5598</span> in *Wikidata*, <span style="font-size:0.8em;">http://vocab.getty.edu/ulan/500011051</span> in *Getty*, <span style="font-size:0.8em;">https://viaf.org/viaf/64013650/</span> in *VIAF* and <span style="font-size:0.8em;">http://dbpedia.org/resource/Rembrandt</span> in *Dbpedia* to name a few.-->
+
+<!--Given a number of data sources, *Wikidata*, *Getty*, *VIAF* and *Dbpedia* for example, finding sets of co-referent resources across data-sources that together point to the same and unique real world is the task of entity matching algorithms. During this process, matching entities then consists in creating pairwise identity relationships between co-referent resources based on their computed matching degree of confidence using most of the time the *owl:sameAs* predicate ==\cite{raad2018detecting,achichi2017legato,volz2009silk}==. In this scope, a set of co-referent resources connected through such identity relationships forms what we denote in this paper as an Identity Link Network (ILN).-->
+
+<p><div align="center"> <img alt="" src="../Images/Vis-KipshavenLucas_Pos10_id_PH1dd515c880e5e84-2.jpg" /> <figcaption>Fig. 1:  An identity link network connecting nodes from four datasets (color of the node). This a candidate set of co-referent resources potentially pointing to “Kipshaven Lucas”</figcaption></div></p>
+<h2 id="a-visual-vocabulary-for-ilns">A Visual Vocabulary For ILNs<a class="headerlink" href="#a-visual-vocabulary-for-ilns" title="Permanent link">&para;</a></h2>
+<p>As a network increases in size, its visualisation becomes difficult, because (i) it is  hard to make sense of its hidden structure as its visualisation resembles a meaningless cloud of points and (ii) rendering the data to display becomes expensive \cite{alhajj2014encyclopedia}.</p>
+<p>For an intuitive understanding of a graph&rsquo;s hidden structure and for reducing the amount of data to render, we display a compressed version of an original graph based on the weight of its links. This section presents the basic vocabulary for interpreting such a compressed visual representation of a network based on the weight-annotation of its links. Details on how to construct such a network and its use to detect identify communities is provided in Section <mark>XXX</mark>.</p>
+<h3 id="compact-and-satellite-nodes">Compact and Satellite Nodes.<a class="headerlink" href="#compact-and-satellite-nodes" title="Permanent link">&para;</a></h3>
+<p>The term <span class="par"> compact node </span> is defined as a compressed representation of linked-nodes where the link(s) share the same <em>weight-annotation</em>. Such an annotation is perceive as an <em>annotation-pattern</em>. In this context, the shared annotation-pattern is the weight-annotation with the <em>highest strength</em>. <br/>
+<img alt="Compact" src="../Images/Vis-CategoryFiscalPolicy_%28Compact%29.jpg" title="title" /> A compact node &ndash; the blue node in the figure on the right &ndash; is given a <em>color</em>, a <em>label</em> (one of the labels of the nodes it represents) and its <em>size</em> is proportional to the number of nodes compressed. It also comes with two additional numerical data: <strong>N</strong> is the number of compressed nodes and <strong>L</strong> shows the number of links in the network as a fraction <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>N</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>N</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{N*(N-1)}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.355em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">∗</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span> of all possible links. In addition, the main color of the node is overlaid by a <em>white circular color</em> indicating the proportion of missing links, indicating the ``incompleteness&rsquo;&lsquo; of the sub-network represented by the compact node. <strong>S</strong> indicates the shared weight-annotation. <br/>
+<span class="par">A satellite node</span> &ndash; orange nodes in the figure &ndash; is a single node that connects to one or more compact nodes and do not share a pattern.  Such node is also given a <em>color</em>, a <em>label</em>, a fix size where N is always 1 and no L.</p>
+<p>Figure 1 illustrates an identity network of 30 nodes connected by 176 links annotated with strength value of 0.5 or 1 (discrete value annotation). The compact node coloured in blue compressed 20 nodes (N:20) that are all connected with links of strength 1 indicated by S:[1.0]. The white overlay color indicates the proportion of missing links and the number of exact missing links can be computed using the numeric data provided by L:166/190. In this case, 24 links are missing. The other 10 nodes in the figure are viewed as <em>first level satellites</em> of the compact node. In this example, the compressed representation reduces the number of initial nodes to be displayed from 30 to 11 and and the label pairs from 166 links to 10, showing the strength of our compressed visualisation. </p>
+<h3 id="community-mode">Community mode<a class="headerlink" href="#community-mode" title="Permanent link">&para;</a></h3>
+<p>In <em>community mode</em>, satellites are not allowed because they are direct neighbours of a compact node and are not network themselves (N=1). Whenever such a phenomenon occurs, in community mode, the compact node pulls in all satellites whenever they exist. It then updates accordingly its size and its counts of child-nodes and links. Finally, it turns its original plain black border into a dashed border to indicate the existence of satellites. </p>
+<p><img alt="Compact" src="../Images/Vis-CategoryFiscalPolicy_%28Amsterdam%29.jpg" /> Figure 2 shows Figure 1 in a community mode. It high-lights that in the original network  of  30  nodes,  no  secondary subnetwork exists, as all its satellites got pulled in. This is reflected in its dashed border as well as in its child and link counts, in contrast with the information displayed in Figure 1.</p>
+<h3 id="interlink">Interlink<a class="headerlink" href="#interlink" title="Permanent link">&para;</a></h3>
+<p>An interlink is a compressed link that (i) connects a satellite node (N=1) to a compact node (N<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo></mrow><annotation encoding="application/x-tex">\geq</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mrel">≥</span></span></span></span>2) or, (ii) connects two compact nodes. When links are being compressed, the thickness of the interlink is proportionally increased. With quantitative <em>weight-annotation</em> in the interval ]0, 1], (i) dashed red links are of value ]0, 1[, (ii) black plain lines are of value 1, and (iii) the weaker the strength, the more sparse is the dashed red link.</p>
+<p><img alt="Compact" src="Images/Vis-PiñeyroMarcelo_(Amsterdam).jpg" /> The Figure on the right illustrates three interconnected communities: Orange (north), Green (north-east) and Blue (south). Orange and Green are small, composed of 3 children each and no satellite (no dash border). While Orange is fully connected (L=3), Green has one missing link indicated by the white overlay color and L=&#8532;. Blue, the biggest community node is of 24 children. It connects to Orange using 1 interlink and connects to the Green using 10 links hinted by the thicker interlink. Here, an initial network of of 30 nodes and 75 links is now reduced to 3 nodes and 2 links.</p>
+<!--![](Images/Vis-CategoryFiscalPolicy_(Compact).jpg) <figcaption>Fig. 1: Compact network</figcaption>-->
+
+<!-- <div align="center">![Compact](Images/Vis-CategoryFiscalPolicy_(Compact).jpg) <br>Fig 1: A compact network.</div>
+<br>-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ['navigation.instant', 'navigation.expand'],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

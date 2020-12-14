@@ -208,8 +208,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-gui-menus" class="md-nav__link">
-    2. GUI Menus
+  <a href="#2-disambiguation-proposal" class="md-nav__link">
+    2. Disambiguation Proposal
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Disambiguation Proposal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-workflow" class="md-nav__link">
+    2.1 Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-dataflow" class="md-nav__link">
+    2.1 Dataflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gui-menus" class="md-nav__link">
+    3. GUI Menus
   </a>
   
 </li>
@@ -396,8 +423,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-gui-menus" class="md-nav__link">
-    2. GUI Menus
+  <a href="#2-disambiguation-proposal" class="md-nav__link">
+    2. Disambiguation Proposal
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Disambiguation Proposal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-workflow" class="md-nav__link">
+    2.1 Workflow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21-dataflow" class="md-nav__link">
+    2.1 Dataflow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gui-menus" class="md-nav__link">
+    3. GUI Menus
   </a>
   
 </li>
@@ -437,7 +491,11 @@ This begs for questions regarding the aboutness and correctness of the links, su
 However, some of theses tools have been developed for specific datasets, while others have limited applicability as they have mainly been tested in domain specific areas using synthetic or simplistic data, generally from at most two datasets. For example, as research in social sciences is increasingly based on multiple heterogeneous datasources, it becomes problematic to be limited to the integration of two datasets. 
 Furthermore, in practice, the heterogeneity, messiness, incompleteness of data raise the bar higher in terms of entity matching complexity. <br>
 In other words, most matching algorithms have been successfully applied in limited and controlled environments. This motivates the need for having the means to (re)use and combine generic matching approaches in order to solve specific problems.</p>
-<p><span style="color: purple"> <strong>ENTITY DISAMBIGUATION PROPOSAL.</strong> </span> In this document, we present a tool that supports disambiguation over multiple datasets: the <strong>Lenticular Lens</strong>. As a domain agnostic approach, the <strong>Lenticular Lens</strong> tool reuses existing matching approaches to allow for the user to reach their goals in ways that alleviates some of the main aforementioned issues:</p>
+<!--<span style="color: purple"> **ENTITY DISAMBIGUATION PROPOSAL.** </span> 
+-->
+
+<h2 id="2-disambiguation-proposal">2. Disambiguation Proposal<a class="headerlink" href="#2-disambiguation-proposal" title="Permanent link">&para;</a></h2>
+<p>In this document, we present a tool that supports disambiguation over multiple datasets: the <strong>Lenticular Lens</strong>. As a domain agnostic approach, the <strong>Lenticular Lens</strong> tool reuses existing matching approaches to allow for the user to reach their goals in ways that alleviates some of the main aforementioned issues:</p>
 <ul>
 <li>
 <p>User-dependent and context-specific link discovery.</p>
@@ -462,7 +520,13 @@ In other words, most matching algorithms have been successfully applied in limit
 </li>
 </ul>
 <p>The context dependent link discovery idea developed and implemented in the <strong>Lenticular Lens</strong> [<a href="../12.References/#Idrissou2017">Idrissou 2017</a>, <a href="../12.References/#Idrissou2018">2018</a>, <a href="../12.References/#Idrissou2018">2019</a>] is an extension of the Linkset and Lens concepts introduced by the [<a href="../12.References/#OpenPhacts">OpenPhacts</a>] project in the quests for building an infrastructure for integrating pharmacological data. Our extension and broadening of these concepts enabled us to design and build a flexible tool for undertaking entity disambiguation in a broader perspective.</p>
-<h2 id="2-gui-menus">2. GUI Menus<a class="headerlink" href="#2-gui-menus" title="Permanent link">&para;</a></h2>
+<h3 id="21-workflow">2.1 Workflow<a class="headerlink" href="#21-workflow" title="Permanent link">&para;</a></h3>
+<p>The Lenticular Lens tool offers the users a number of matching-related mandatory and optional tasks to achieve their integration-goals. A workflow depicting possible sequences of executions for those tasks is presented in Figure 1. The process starts with (1) Data Selection and is followed by (2) Link Creation (Linkset). The next optional steps include: (3) Link Manipulation (Lens) for combining previously obtained links; (4) Link Validation for the curation of the obtained links; (5) Link Visualisation to support the verification of the quality of the obtained links; (6) Export Linksets/Lenses to extract the obtained links from the tool and finally (7) Export Integrated Data of Interest to support the user on the  extraction of specific descriptions (property values) of integrated entities.</p>
+<p><div align="center"> <img alt="Generic-2" src="../Images/LL-WorkFlow.jpg" /><figcaption>Fig. 1:  The Lenticular Lens&rsquo; workflow.</figcaption></div></p>
+<h3 id="21-dataflow">2.1 Dataflow<a class="headerlink" href="#21-dataflow" title="Permanent link">&para;</a></h3>
+<p>The data used as input to the Lenticular Lens originates from a Timbuctoo Endpoint. The pulled data is then stored and manipulated in PostgreSQL for efficiency purposes. The resultant links generated by the Lenticular Lens tool can be injected back into the Timbuctoo Enpoint, which in turn also enables communication with a SPARQL Enpoint.</p>
+<p><div align="center"> <img alt="Generic-2" src="../Images/LL-Dataflow.jpg" /><figcaption>Fig. 2:  The Lenticular Lens&rsquo; dataflow.</figcaption></div></p>
+<h2 id="3-gui-menus">3. GUI Menus<a class="headerlink" href="#3-gui-menus" title="Permanent link">&para;</a></h2>
 <p><img alt="LL" src="../Images/LL.jpg" />
 <!---------------------------------------------------------------------></p>
 <p>As a preview of what can be done with the <strong>Lenticular Lens</strong> tool, we list here the main menus composing the tool and provide a brief description of what can be done in each of the menu. </p>
@@ -542,7 +606,7 @@ This menu provides means to:</p>
 <p>The menu here enables the user to materialise an entity-based integration of her selected datasources for the extraction of information vital to her analysis. </p>
 </div>
 <p><br></p>
-<p>The rest of the manual will first discuss</p>
+<p>The rest of the manual will discuss</p>
 <ul>
 <li><strong>Terminology</strong></li>
 <li><strong>Link Annotation Ontology</strong></li>
