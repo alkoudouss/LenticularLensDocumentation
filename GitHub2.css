@@ -110,6 +110,10 @@ em { font-family::Garamond; font-size:0.9em; color: gray}
 	column-gap: 0; 
 }
 
+.img-left {
+  float: left;
+  margin-right: 1em;
+}
 
 img[alt="Compact"] { 
   max-width:  300px; 
@@ -120,6 +124,13 @@ img[alt="Compact"] {
 
 img[alt="Identity"] { 
   max-width:  450px; 
+  display: block;
+  float: right;
+  margin-left: 1em; 
+}
+
+img[alt="Identity2"] { 
+  max-width: 250px; 
   display: block;
   float: right;
   margin-left: 1em; 
@@ -146,13 +157,34 @@ img[alt="Generic-2"] {
   margin-left: 1em; 
 }
 
-<figcaption>{{ .Inner | Markdownify }}</figcaption>
+img[alt="Generic-3"] { 
+  max-width: 50%; 
+  height: auto;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  /* float: right; */
+  margin-left: 1em; 
+}
+
+/* <figcaption>{{ .Inner | Markdownify }}</figcaption> */
 
 img + em {
 	/* styles here */
 	float: right;
+	display: inherit;
+    text-align: center;
 }
 
+figcaption {
+  background-color: white;
+  color: purple;
+  font-style: italic;
+  padding: 5px;
+  text-align: center;
+  display: block;
+  /* float: right; */
+}
 
 div.polaroid {
   width: 80%;
@@ -167,6 +199,12 @@ div.container {
   padding: 10px 20px;
 }
 
+/* 
+.inline {
+        display: inline-block;
+        width: 300px;
+    }
+ */
 
 
 
