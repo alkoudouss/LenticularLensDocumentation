@@ -245,6 +245,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#unknown" class="md-nav__link">
+    Unknown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exact" class="md-nav__link">
     Exact
   </a>
@@ -307,6 +314,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#same-year-month" class="md-nav__link">
+    Same Year Month
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -337,6 +351,13 @@
           <li class="md-nav__item">
   <a href="#levenshtein" class="md-nav__link">
     Levenshtein
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigram" class="md-nav__link">
+    Trigram
   </a>
   
 </li>
@@ -535,6 +556,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#unknown" class="md-nav__link">
+    Unknown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#exact" class="md-nav__link">
     Exact
   </a>
@@ -597,6 +625,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#same-year-month" class="md-nav__link">
+    Same Year Month
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -627,6 +662,13 @@
           <li class="md-nav__item">
   <a href="#levenshtein" class="md-nav__link">
     Levenshtein
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigram" class="md-nav__link">
+    Trigram
   </a>
   
 </li>
@@ -767,6 +809,8 @@ Here by, we describe the ones currently offered by the system and how they are m
 </ul>
 <h2 id="1-discrete-strength">1. Discrete Strength<a class="headerlink" href="#1-discrete-strength" title="Permanent link">&para;</a></h2>
 <p>Her we present algorithms for which the resulting strength of a matched pair of resources is assigned the value of 1 as 0 means a match could not be found.</p>
+<h3 id="unknown">Unknown<a class="headerlink" href="#unknown" title="Permanent link">&para;</a></h3>
+<p>A resource used to denote that the method used to generate the current set of links is unknown.</p>
 <h3 id="exact">Exact<a class="headerlink" href="#exact" title="Permanent link">&para;</a></h3>
 <p>This method is used to align source and target’s IRIs whenever their respective user selected property values are identical.</p>
 <p>In Example-1, the linkset <span class="inline">ex:ExactLinkset</span> is generated using the exact method over the predicate <span class="inline">rdfs:label</span>. Although only sharing the exact same name, these two entities are clearly not the same.</p>
@@ -898,7 +942,7 @@ using the the authoritative intermediate dataset as it contains information desc
 <p><br></p>
 <h3 id="soundex">Soundex<a class="headerlink" href="#soundex" title="Permanent link">&para;</a></h3>
 <p><a href="https://en.wikipedia.org/wiki/Soundex">Soundex</a> is a phonetic algorithm for indexing names by sound, as pronounced in English. The goal is for homophones to be encoded to the same representation so that they can be matched despite minor differences in spelling. The algorithm mainly encodes consonants; a vowel will not be encoded unless it is the first letter. <br></p>
-<details class="example" open="open"><summary><strong>Example 4</strong>: <span style="color:blue">Generating a linkset using the Soundex algorithm</span></summary><p>The examples below shows the encoding of different names. Here, the size 
+<details class="example"><summary><strong>Example 4.a</strong>: <span style="color:blue">Generating a linkset using the Soundex algorithm</span></summary><p>The examples below shows the encoding of different names. Here, the size 
 parameter indicates a degree of similarity through the length of the 
 respective soundex codes. For example at  size=3, Albert and Albertine 
 have the same soundex representation while at size=5 their  respective 
@@ -928,15 +972,37 @@ to 3.
 <span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 </details>
-<p><br></p>
+<p>In the Lenticular Lens, <strong>Soundex is used as a normaliser</strong> in the sense that an edit distance is run over the soundex code version of a name. For example, in the table below, the normalisation/encoding of both <span class="inline"><strong>Louijs Rocourt</strong></span> and <span class="inline"><strong>Lowis Ricourt</strong></span> becomes <span class="inline"><strong>L200 R263</strong></span> leading to an edit distance of 0 and a relative strength of 1. However, computing the same names using directly an edit distance results in an edit distance of 3 and a relative matching strength of 0. 79.</p>
+<details class="example"><summary><strong>Example 4.b</strong>: <span style="color:blue">Soundex implementation in the Lenticular Lens</span></summary><div class="highlight"><pre><span></span><code>--------------
+-- Example -- THE USE OF SOUNDEX CODE FOR STRING APPROXIMATION
+--------------
+The example below shows the implementation of Soundex Distance 
+in the Lenticular Lens and how it compares with Edit Distance
+over the original names (no soundex-based normalisation).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Source                      Target                     E. Dist  Rel. distance  Source soundex       Target  soundex       Code E. Dist  Code Rel. Dist
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Jasper Cornelisz. Lodder    Jaspar Cornelisz Lodder          2           0.92  J216 C654 L360       J216 C654 L360                   0             1.0
+Barent Teunis               Barent Teunisz gen. Drent       12           0.52  B653 T520            B653 T520 G500 D653             10            0.47
+Louijs Rocourt              Louys Rocourt                    2           0.86  L200 R263            L200 R263                        0             1.0
+Louijs Rocourt              Lowis Ricourt                    3           0.79  L200 R263            L200 R263                        0             1.0
+Louys Rocourt               Lowis Ricourt                    3           0.77  L200 R263            L200 R263                        0             1.0
+Cornelis Dircksz. Clapmus   Cornelis Clapmuts               10            0.6  C654 D620 C415       C654 C415                        5            0.64
+Geertruydt van den Breemde  Geertruijd van den Bremde        4           0.85  G636 V500 D500 B653  G636 V500 D500 B653  
+</code></pre></div>
+
+</details>
+<p>See <a href="#approx-over-same-soundex">approximation over same soundex</a> and <a href="#soundex-approximation">approximation over soundex encoding</a> for more information on how the algorithm is implemented in the Lenticular Lens.</p>
 <h3 id="metaphone">Metaphone<a class="headerlink" href="#metaphone" title="Permanent link">&para;</a></h3>
 <p>Designed by Lawrence Philips in 1990, <a href="https://en.wikipedia.org/wiki/Metaphone">Metaphone</a> is a phonetic algorithm for a more accurate encoding of words by sound (as compared to SOUNDEX) as pronounced in English. In this algorithm as with SOUNDEX, similar-sounding words should share the same encoding key which is an approximate phonetic representation of the original word.</p>
 <p>For more accuracy, consider the use of <a href="https://xlinux.nist.gov/dads/HTML/doubleMetaphone.html">Double Metaphone</a> as it is an improvement of the Original Metaphone. In turn, for an even better improved accuracy, consider the use of <a href="https://en.wikipedia.org/wiki/Metaphone">Metaphone 3</a>. </p>
+<p>See <a href="#approx-over-same-soundex">approximation over same soundex</a> and <a href="#soundex-approximation">approximation over soundex encoding</a> for more information on how the algorithm is implemented in the Lenticular Lens.</p>
 <h3 id="double-metaphone">Double Metaphone<a class="headerlink" href="#double-metaphone" title="Permanent link">&para;</a></h3>
 <p><a href="https://xlinux.nist.gov/dads/HTML/doubleMetaphone.html">Double Metaphone</a> is a third generation phonetic algorithm improvement after <a href="https://en.wikipedia.org/wiki/Soundex">Soundex</a> and <a href="https://en.wikipedia.org/wiki/Metaphone">Metaphone</a> for an accurate encoding of words by sound as pronounced in English. For more accuracy, consider the use of METAPHONE 3 as it is an improvement of the <a href="https://xlinux.nist.gov/dads/HTML/doubleMetaphone.html">Double Metaphone</a> algorithm.</p>
 <p>It is called &ldquo;Double&rdquo; because it can return both a primary and a secondary code for a string; this accounts for some ambiguous cases as well as for multiple variants of surnames with common ancestry. For example, encoding the name &ldquo;Smith&rdquo; yields a primary code of SM0 and a secondary code of XMT, while the name &ldquo;Schmidt&rdquo; yields a primary code of XMT and a secondary code of SMT—both have XMT in common.</p>
 <p>Double Metaphone tries to account for myriad irregularities in English of Slavic, Germanic, Celtic, Greek, French, Italian, Spanish, Chinese, and other origin. Thus it uses a much more complex ruleset for coding than its predecessor; for example, it tests for approximately 100 different contexts of the use of the letter C alone.</p>
-<p>See [<a href="https://en.wikipedia.org/wiki/Metaphone">https://en.wikipedia.org/wiki/Metaphone</a>] for mor information.</p>
+<p>See [<a href="https://en.wikipedia.org/wiki/Metaphone">https://en.wikipedia.org/wiki/Metaphone</a>] for mor information. See also <a href="#approx-over-same-soundex">approximation over same soundex</a> and <a href="#soundex-approximation">approximation over soundex encoding</a> for more information on how the algorithm is implemented in the Lenticular Lens.</p>
 <h3 id="nyiis">NYIIS<a class="headerlink" href="#nyiis" title="Permanent link">&para;</a></h3>
 <details class="worning"><summary>TODO</summary></details>
 <details class="example" open="open"><summary><strong>Example 7</strong>: <span style="color:blue">  </span></summary><div class="highlight"><pre><span></span><code>
@@ -957,6 +1023,8 @@ Other ways of using time delta are also possible. Because Time Delta has no dire
 
 </details>
 <p><br></p>
+<h3 id="same-year-month">Same Year Month<a class="headerlink" href="#same-year-month" title="Permanent link">&para;</a></h3>
+<p>This option is used to align source and target’s IRIs whenever an exact match of the year or year and month is observed between source and target&rsquo;s input dates.</p>
 <h2 id="2-continuous-strength">2.  Continuous Strength<a class="headerlink" href="#2-continuous-strength" title="Permanent link">&para;</a></h2>
 <p>Her we present algorithms for which the resulting strength of a matched pair of resources is in the range ]0, 1] where 0 means a match could not be found while 1 means a perfect match is found.</p>
 <h3 id="jaro">Jaro<a class="headerlink" href="#jaro" title="Permanent link">&para;</a></h3>
@@ -1068,8 +1136,15 @@ STRENGTH              : s = 1/3 * ( 8/9 + 8/10 + (8 - 0/2)/8) = 0.8963
 
 </details>
 <p><br></p>
+<h3 id="trigram">Trigram<a class="headerlink" href="#trigram" title="Permanent link">&para;</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Trigram">Trigrams</a> are a special case of the <a href="https://en.wikipedia.org/wiki/N-gram">n-gram</a>, where n is 3. It is a contiguous sequence of three items from a given sample. To be more concrete, In the case of string similarity, where an application of <strong>name</strong> is a sample and a 
+<strong>character</strong> is an item, we obtain a sequence of 4 trigrams { <span style="color: purple">mar | art | rth | tha</span> } from the sample <span class="inline"><strong>martha</strong></span>. If we now consider a <strong>word</strong> as an item in the sample <span class="inline"><strong>&ldquo;the quick red fox jumps over the lazy brown dog&rdquo;</strong></span>, 
+we then obtain a sequence of 8 word-level trigrams { <span style="color:purple">the quick red | quick red fox | red fox jumps | 
+fox jumps over | jumps over the | over the lazy | the lazy brown | lazy brown dog</span> }. </p>
+<p><a href="https://en.wikipedia.org/wiki/N-gram">N-grams</a> can be used for approximate matching by comparing two trigram sequences using metrics such as 
+cosine distance, z-scores or g-test. In such a use case, the method is used to align the source and the target IRIs whenever the computed similarity strength is equal to or above a user-predefine value.</p>
 <h3 id="soundex-approximation">Soundex Approximation<a class="headerlink" href="#soundex-approximation" title="Permanent link">&para;</a></h3>
-<p>This option is performed in two phases. First, the string values of the user selected properties are normalised (converted to a soundex code). Then a user selected matcher (Levenshtein, Jaro, jaro-Winkler&hellip;) is run over the normalised string (Soundex code).</p>
+<p>This option is performed in two phases to align the source and the target IRIs. First, the string values of the user selected properties are encoded (converted to a soundex code). Then a user selected matcher (Levenshtein, Jaro, jaro-Winkler&hellip;) is <strong>run over the encoded string</strong> (Soundex code).</p>
 <details class="example" open="open"><summary><strong>Example 13:</strong> <span style="color:blue">Links found using soundex</span></summary><p>In the example below, given <code>ex:E1</code> and <code>ex:E2</code>, the matching strength using Edit Distance is 1 - &#8539; = 0.875. When directly performing an Edit distance match or a Soundex, we respectively get 0.625 and 0 as strengths.
 <div class="highlight"><pre><span></span><code><span class="c"># -------------------------------</span><span class="w"></span>
 <span class="c"># INPUT          SIZE 3   SIZE 4  </span><span class="w"></span>
@@ -1088,7 +1163,7 @@ STRENGTH              : s = 1/3 * ( 8/9 + 8/10 + (8 - 0/2)/8) = 0.8963
 </details>
 <p><br></p>
 <h3 id="approx-over-same-soundex">Approx over Same-Soundex<a class="headerlink" href="#approx-over-same-soundex" title="Permanent link">&para;</a></h3>
-<p>In the <strong>Lenticular Lens</strong>, Soundex can also be used as a first filtering step (string normalisation). This means that first we select all pairs sharing the same Soundex code. Then, for each of these pairs an extra string sequence matching algorithm such as (Levenshtein, Jaro, Jaro-Winkler&hellip;) is applied to the original pair of matched strings (not the Soundex codes) to determine the strength of the match in the interval ]0, 1].</p>
+<p>In the <strong>Lenticular Lens</strong>, Soundex can also be used as a first filtering step (string normalisation). This means that first we select all pairs sharing the same Soundex code. Then, for each of these pairs an extra string sequence matching algorithm such as (Levenshtein, Jaro, Jaro-Winkler&hellip;) is <strong>applied to the original pair of matched strings</strong> (not the Soundex codes) to determine the strength of the match in the interval ]0, 1].</p>
 <details class="example" open="open"><summary><strong>Example 14</strong>: <span style="color:blue">Generating a linkset using the Soundex algorithm.</span></summary><p>In the table below, the normalisation of both <span class="inline">Louijs Rocourt</span> and <span class="inline">Lowis Ricourt</span> 
 becomes <span class="inline">L200 R263</span> leading to an edit distance of 0 and a relative strength of 1. However,
 computing the same names using directly an edit distance results in an edit distance of 3 
